@@ -12,18 +12,18 @@
 # Copyright 2019 Alexander Pyhalov
 #
 
-include include/common.mk
+include ../include/common.mk
 
-SUBDIRS = utils usr
+SUBDIRS = hd_detect
 
 all:		TARGET= all
-clean:		TARGET= clean 
+clean:		TARGET= clean
 install:	TARGET= install
 
 .PHONY: $(SUBDIRS)
 
 all clean install: $(SUBDIRS)
-	
+
 $(SUBDIRS):
 	@cd $@; pwd; $(MAKE) $(TARGET) 
 

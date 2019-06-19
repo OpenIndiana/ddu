@@ -12,19 +12,24 @@
 # Copyright 2019 Alexander Pyhalov
 #
 
-include include/common.mk
+include ../../include/common.mk
 
-SUBDIRS = utils usr
+PROGRAM	=hd_detect
 
-all:		TARGET= all
-clean:		TARGET= clean 
-install:	TARGET= install
+SRCS	=	\
+	hd_detect.c     \
+	disk_info.c     \
+	mpath.c
 
-.PHONY: $(SUBDIRS)
+OBJS	=	$(SRCS:.c=.o)
 
-all clean install: $(SUBDIRS)
-	
-$(SUBDIRS):
-	@cd $@; pwd; $(MAKE) $(TARGET) 
+LIBS += -ldevinfo
+LIBS += -lMPAPI
 
-clean:
+CLEANOBJS += $(PROGRAM)
+
+all:	$(PROGRAM)
+
+install: $(BIN_ROOT) $(BIN_ROOT)/$(PROGRAM)
+
+include $(WS_TOP)/include/target.mk

@@ -12,19 +12,21 @@
 # Copyright 2019 Alexander Pyhalov
 #
 
-include include/common.mk
+CLEANOBJS += $(OBJS)
 
-SUBDIRS = utils usr
+$(BIN_ROOT):
+	$(MKDIR) $@
 
-all:		TARGET= all
-clean:		TARGET= clean 
-install:	TARGET= install
+$(BIN_ROOT)/$(PROGRAM): MODE=0755
 
-.PHONY: $(SUBDIRS)
+$(BIN_ROOT)/$(PROGRAM): $(PROGRAM)
+	$(INSTALL) $(PROGRAM) $@
 
-all clean install: $(SUBDIRS)
-	
-$(SUBDIRS):
-	@cd $@; pwd; $(MAKE) $(TARGET) 
+%.o: %.c
+	$(COMPILE.c) $<
+
+$(PROGRAM):	$(OBJS)
+	$(LINK.c) $^ -o $@
 
 clean:
+	$(RM) $(CLEANOBJS)

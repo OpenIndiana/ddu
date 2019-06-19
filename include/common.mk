@@ -12,7 +12,31 @@
 # Copyright 2019 Alexander Pyhalov
 #
 
+ifeq ($(origin WS_TOP), undefined)
+export WS_TOP := \
+        $(shell git rev-parse --show-toplevel)
+endif
+
 DESTDIR?=/
 
 MKDIR=/usr/bin/mkdir -p
 CP=/usr/bin/cp -rp
+RM=/usr/bin/rm -f
+
+ARCH=$(shell uname -p)
+
+BIN_ROOT=$(DESTDIR)/usr/ddu/bin/$(ARCH)
+
+MODE=0644
+
+INSTALL=/usr/gnu/bin/install -m $(MODE)
+
+CC:=/usr/bin/gcc
+
+#AS=/usr/bin/gas
+
+CPPFLAGS = -I$(WS_TOP)/include
+
+COMPILE.c	= $(CC) $(CFLAGS) $(CPPFLAGS) -c
+#COMPILE.s	= $(AS) $(ASFLAGS) $(CPPFLAGS)
+LINK.c  = $(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LIBS)
