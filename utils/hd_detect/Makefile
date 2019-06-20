@@ -30,6 +30,10 @@ CLEANOBJS += $(PROGRAM)
 
 all:	$(PROGRAM)
 
-install: $(BIN_ROOT) $(BIN_ROOT)/$(PROGRAM)
+install: $(BIN_ROOT) $(BIN_ROOT)/$(PROGRAM) $(BIN_ROOT)/cd_detect
 
 include $(WS_TOP)/include/target.mk
+
+$(BIN_ROOT)/cd_detect: $(BIN_ROOT)/$(PROGRAM)
+	$(RM) $(BIN_ROOT)/cd_detect
+	$(LN) $(BIN_ROOT)/hd_detect $(BIN_ROOT)/cd_detect

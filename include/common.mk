@@ -19,6 +19,7 @@ endif
 
 DESTDIR?=/
 
+LN=/usr/bin/ln -f
 MKDIR=/usr/bin/mkdir -p
 CP=/usr/bin/cp -rp
 RM=/usr/bin/rm -f

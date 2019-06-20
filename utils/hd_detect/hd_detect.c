@@ -18,13 +18,12 @@
  */
 
 
-#pragma ident	"@(#)hd_detect.c 1.3 08/11/12 SMI"
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <strings.h>
 #include <sys/types.h>
 #include <libdevinfo.h>
+#include <libgen.h>
 #include <unistd.h>
 #include <sys/stat.h>
 #include <fcntl.h>
@@ -418,6 +417,9 @@ check_hddev(di_node_t node, di_minor_t minor, void *arg)
 	int	ret;
 
 	ret = strncmp(CD_MINOR_TYPE, di_minor_nodetype(minor), 15);
+	if (arg && *(int *)arg) {
+		ret = !ret;
+	}
 	if (ret != 0) {
 		minor_path = di_devfs_minor_path(minor);
 		if (minor_path) {
@@ -560,8 +562,16 @@ DestroyLinkInfo()
 int
 main(int argc, char **argv)
 {
-	int			c;
-	char 			*dev_path;
+	int			c, look_for_cd;
+	char 			*dev_path, *opts;
+
+	if (strcmp(basename(argv[0]), "cd_detect") == 0) {
+		look_for_cd = 1;
+		opts = "l";
+	} else {
+		look_for_cd = 0;
+		opts = "lc:m:";
+	}
 
 	while ((c = getopt(argc, argv, "lc:m:")) != EOF) {
 		switch (c) {
@@ -572,7 +582,7 @@ main(int argc, char **argv)
 				exit(1);
 			}
 			(void) di_walk_minor(root_node, BLOCK_TYPE,
-					0, NULL, check_hddev);
+					0, &look_for_cd, check_hddev);
 			DestroyLinkInfo();
 			DestroyDevInfo();
 			break;

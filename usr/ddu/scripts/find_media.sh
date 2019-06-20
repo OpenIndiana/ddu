@@ -76,7 +76,7 @@ function probe_s
     IFS='
 '
     for i in $(/usr/bin/pfexec ${bin_dir}/cd_detect -l | \
-        awk -F'|' '{print $1,"|",$2}' 2>>$err_log); do
+        awk -F':' '{print $3,"|",$1}' 2>>$err_log); do
 
         dev_path=$(echo $i | cut -d'|' -f1 | sed 's/rdsk/dsk/' | tr -d " ")
         name=$(echo $i | cut -d'|' -f2 | tr -d " ")
