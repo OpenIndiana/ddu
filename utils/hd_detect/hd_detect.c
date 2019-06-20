@@ -34,6 +34,8 @@
 #include "mpath.h"
 #include "license.h"
 
+typedef enum	{ HD, CD, REMOVABLE }  device_type_t;
+
 di_node_t		root_node = DI_NODE_NIL;	/* root node handle */
 di_prom_handle_t	hProm = DI_PROM_HANDLE_NIL;	/* node rom handle */
 di_devlink_handle_t	hDevLink = NULL;	/* devices link path handle */
@@ -414,13 +416,19 @@ int
 check_hddev(di_node_t node, di_minor_t minor, void *arg)
 {
 	char *minor_path;
-	int	ret;
+	int	iscd = 0, isremovable = 0, *i;
+	device_type_t dt = HD;
 
-	ret = strncmp(CD_MINOR_TYPE, di_minor_nodetype(minor), 15);
-	if (arg && *(int *)arg) {
-		ret = !ret;
-	}
-	if (ret != 0) {
+	if (arg)
+		dt = *(device_type_t*) arg;
+
+	if (strncmp(CD_MINOR_TYPE, di_minor_nodetype(minor), 15) == 0)
+		iscd = 1;
+
+	if (di_prop_lookup_ints(DDI_DEV_T_ANY, node, "removable-media",&i) >=0)
+		isremovable = 1;
+
+	if ((dt == CD && iscd ) || (dt == HD && !iscd) || (dt == REMOVABLE && isremovable)) {
 		minor_path = di_devfs_minor_path(minor);
 		if (minor_path) {
 			(void) di_devlink_walk(hDevLink, NULL, minor_path, 0,
@@ -562,19 +570,23 @@ DestroyLinkInfo()
 int
 main(int argc, char **argv)
 {
-	int			c, look_for_cd;
+	int			c;
+	device_type_t		look_for;
 	char 			*dev_path, *opts;
 
 	if (strcmp(basename(argv[0]), "cd_detect") == 0) {
-		look_for_cd = 1;
+		look_for = CD;
 		opts = "l";
 	} else {
-		look_for_cd = 0;
-		opts = "lc:m:";
+		look_for = HD;
+		opts = "lc:m:r";
 	}
 
-	while ((c = getopt(argc, argv, "lc:m:")) != EOF) {
+	while ((c = getopt(argc, argv, opts)) != EOF) {
 		switch (c) {
+		case 'r':
+			look_for = REMOVABLE;
+			/* FALLTHROUGH */
 		case 'l':
 			CreateDevInfo();
 			if (CreateLinkInfo() > 0) {
@@ -582,7 +594,7 @@ main(int argc, char **argv)
 				exit(1);
 			}
 			(void) di_walk_minor(root_node, BLOCK_TYPE,
-					0, &look_for_cd, check_hddev);
+					0, &look_for, check_hddev);
 			DestroyLinkInfo();
 			DestroyDevInfo();
 			break;
