@@ -19,10 +19,13 @@ endif
 
 DESTDIR?=/
 
+SUDO?=sudo
+
 LN=/usr/bin/ln -f
 MKDIR=/usr/bin/mkdir -p
 CP=/usr/bin/cp -rp
 RM=/usr/bin/rm -f
+PKG=/usr/bin/pkg
 
 ARCH=$(shell uname -p)
 
@@ -41,3 +44,7 @@ CPPFLAGS = -I$(WS_TOP)/include
 COMPILE.c	= $(CC) $(CFLAGS) $(CPPFLAGS) -c
 #COMPILE.s	= $(AS) $(ASFLAGS) $(CPPFLAGS)
 LINK.c  = $(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LIBS)
+
+REQUIRED_PACKAGES += developer/gcc-7
+REQUIRED_PACKAGES += developer/versioning/git
+REQUIRED_PACKAGES += system/library/storage/libmpapi

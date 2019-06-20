@@ -28,3 +28,7 @@ $(SUBDIRS):
 	@cd $@; pwd; $(MAKE) $(TARGET) 
 
 clean:
+
+env_prep:
+# Don't fail when no updates are needed
+	$(SUDO) $(PKG) install $(REQUIRED_PACKAGES:%=pkg:/%) || [ $$? -eq 4 ]
