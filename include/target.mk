@@ -25,6 +25,9 @@ $(BIN_ROOT)/$(PROGRAM): $(PROGRAM)
 %.o: %.c
 	$(COMPILE.c) $<
 
+%.o: %.s
+	$(COMPILE.s) $<
+
 $(PROGRAM):	$(OBJS)
 	$(LINK.c) $^ -o $@
 

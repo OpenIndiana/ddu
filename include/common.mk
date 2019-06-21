@@ -42,7 +42,7 @@ CC:=/usr/bin/gcc
 CPPFLAGS = -I$(WS_TOP)/include
 
 COMPILE.c	= $(CC) $(CFLAGS) $(CPPFLAGS) -c
-#COMPILE.s	= $(AS) $(ASFLAGS) $(CPPFLAGS)
+COMPILE.s	= $(CC) $(CFLAGS) $(CPPFLAGS) -c -s
 LINK.c  = $(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LIBS)
 
 REQUIRED_PACKAGES += developer/gcc-7
