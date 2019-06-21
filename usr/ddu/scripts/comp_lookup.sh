@@ -134,12 +134,12 @@ function find_driver
         # Search for the missing driver package via local driver db
         #
 
-        if [[ ! -x ${bin_dir}/find_driver ]]; then
-            echo "Can not find ${bin_dir}/find_driver or not executable." \
+        if [[ ! -x ${base_dir}/find_driver.py ]]; then
+            echo "Can not find ${base_dir}/find_driver.py or not executable." \
                 >>$err_log
             exit 1
         fi
-        candi_probe=$(${bin_dir}/find_driver -n "$com_name_str")
+        candi_probe=$(${base_dir}/find_driver.py "$com_name_str")
         if [ $? -eq 0 ]; then
             candi_drv=$(echo $candi_probe | cut -d'|' -f2)
             if [ ! -z "$candi_drv" ]; then
@@ -160,10 +160,8 @@ function find_driver
 
 		#
 		#drv_type:
-		# 1: Solaris Driver
-		# 2: Third-Party Driver
-		# 3: Opensolaris Driver,
-		# 4: No Driver found"
+		# 1: illumos driver
+		# 0: No Driver found"
 		#
                 if [ $ret_val -eq 0 ] && [ ! -z $s_result ]; then
                     matched_drv=$candi_drv
@@ -172,16 +170,6 @@ function find_driver
                         > /tmp/${matched_drv}_info.tmp    
                     echo $s_result | awk '{print $2}' \
                         > /tmp/${matched_drv}_dlink.tmp    
-                else
-                    drv_type=$(echo $candi_probe | cut -d'|' -f1)
-                    if [ "$drv_type" -eq 2 ] || [ "$drv_type" -eq 3 ]; then
-                        matched_drv=$(echo $candi_probe | cut -d'|' -f2)
-                        matched_drv_pkg_type=$(echo $candi_probe | cut -d'|' -f5)
-                        echo $candi_probe | cut -d'|' -f3 \
-                            > /tmp/${matched_drv}_info.tmp
-                        echo $candi_probe | cut -d'|' -f6 \
-                            > /tmp/${matched_drv}_dlink.tmp
-                    fi
                 fi
             fi
         fi
