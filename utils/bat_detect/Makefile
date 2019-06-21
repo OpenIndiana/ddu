@@ -12,19 +12,24 @@
 # Copyright 2019 Alexander Pyhalov
 #
 
-include ../include/common.mk
+include ../../include/common.mk
 
-SUBDIRS = bat_detect hd_detect media_event
+PROGRAM	=bat_detect
 
-all:		TARGET= all
-clean:		TARGET= clean
-install:	TARGET= install
+SRCS	=	bat_detect.c
 
-.PHONY: $(SUBDIRS)
+OBJS	=	$(SRCS:.c=.o)
 
-all clean install: $(SUBDIRS)
+CPPFLAGS	+= -I/usr/include/hal -I/usr/include/dbus-1.0
+CPPFLAGS	+= -I/usr/lib/dbus-1.0/include
 
-$(SUBDIRS):
-	@cd $@; pwd; $(MAKE) $(TARGET) 
+LIBS	+= -ldbus-1
+LIBS	+= -lhal
 
-clean:
+CLEANOBJS += $(PROGRAM)
+
+all:	$(PROGRAM)
+
+install: $(BIN_ROOT) $(BIN_ROOT)/$(PROGRAM)
+
+include $(WS_TOP)/include/target.mk

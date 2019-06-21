@@ -47,4 +47,7 @@ LINK.c  = $(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LIBS)
 
 REQUIRED_PACKAGES += developer/gcc-7
 REQUIRED_PACKAGES += developer/versioning/git
+REQUIRED_PACKAGES += service/hal
+REQUIRED_PACKAGES += system/header
+REQUIRED_PACKAGES += system/library/libdbus
 REQUIRED_PACKAGES += system/library/storage/libmpapi
