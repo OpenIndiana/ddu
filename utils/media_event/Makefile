@@ -12,19 +12,21 @@
 # Copyright 2019 Alexander Pyhalov
 #
 
-include ../include/common.mk
+include ../../include/common.mk
 
-SUBDIRS = hd_detect media_event
+PROGRAM	=media_event
 
-all:		TARGET= all
-clean:		TARGET= clean
-install:	TARGET= install
+SRCS	=	media_event.c
 
-.PHONY: $(SUBDIRS)
+OBJS	=	$(SRCS:.c=.o)
 
-all clean install: $(SUBDIRS)
+#LIBS += -ldevinfo
+#LIBS += -lMPAPI
 
-$(SUBDIRS):
-	@cd $@; pwd; $(MAKE) $(TARGET) 
+CLEANOBJS += $(PROGRAM)
 
-clean:
+all:	$(PROGRAM)
+
+install: $(BIN_ROOT) $(BIN_ROOT)/$(PROGRAM)
+
+include $(WS_TOP)/include/target.mk
