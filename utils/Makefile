@@ -14,7 +14,7 @@
 
 include ../include/common.mk
 
-SUBDIRS = bat_detect dmi_info hd_detect media_event
+SUBDIRS = all_devices bat_detect dmi_info hd_detect media_event
 
 all:		TARGET= all
 clean:		TARGET= clean
