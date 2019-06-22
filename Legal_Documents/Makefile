@@ -12,23 +12,20 @@
 # Copyright 2019 Alexander Pyhalov
 #
 
-include include/common.mk
+include ../include/common.mk
 
-SUBDIRS = config data ddu ddu-text po utils usr scripts Legal_Documents
+DOCS = \
+	DDU_license.txt \
+	DDU_ThirdPartyLicenseReadMe.txt \
+	Legal_Notice.txt
 
-all:		TARGET= all
-clean:		TARGET= clean 
-install:	TARGET= install
+DESTFILES = $(DOCS:%=$(USRDDULEGALDOCS)/%)
 
-.PHONY: $(SUBDIRS)
+DESTDIRS= \
+        $(USRDDULEGALDOCS)
 
-all clean install: $(SUBDIRS)
-	
-$(SUBDIRS):
-	@cd $@; pwd; $(MAKE) $(TARGET) 
+all:
 
-clean:
+install: $(DESTDIRS) $(DESTFILES)
 
-env_prep:
-# Don't fail when no updates are needed
-	$(SUDO) $(PKG) install $(REQUIRED_PACKAGES:%=pkg:/%) || [ $$? -eq 4 ]
+include $(WS_TOP)/include/target.mk

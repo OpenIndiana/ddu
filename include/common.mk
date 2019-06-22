@@ -42,6 +42,8 @@ USRDDU=$(DESTDIR)/usr/ddu
 
 USRDDUDATA=$(USRDDU)/data
 
+USRDDULEGALDOCS=$(USRDDU)/Legal_Documents
+
 USRDDUSCRIPTS=$(USRDDU)/scripts
 
 USRDDUTEXTUTILS=$(USRDDU)/ddu-text/utils
