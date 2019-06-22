@@ -28,7 +28,13 @@ MSGFMT=/usr/bin/msgfmt
 PKG=/usr/bin/pkg
 RM=/usr/bin/rm -f
 
+PYTHON_VERSION = 2.7
+
 ARCH=$(shell uname -p)
+
+PYTHON_VENDOR=$(DESTDIR)/usr/lib/python$(PYTHON_VERSION)/vendor-packages
+
+PYTHON_VENDOR_DDU=$(PYTHON_VENDOR)/DDU
 
 USRBIN=$(DESTDIR)/usr/bin
 

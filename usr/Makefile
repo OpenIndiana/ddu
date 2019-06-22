@@ -14,7 +14,7 @@
 
 include ../include/common.mk
 
-SUBDIRS = ddu lib
+SUBDIRS = ddu
 
 all clean:
 
