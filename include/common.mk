@@ -30,9 +30,17 @@ RM=/usr/bin/rm -f
 
 ARCH=$(shell uname -p)
 
-BIN_ROOT=$(DESTDIR)/usr/ddu/bin/$(ARCH)
+USRDDU=$(DESTDIR)/usr/ddu
 
-I18N_ROOT=$(DESTDIR)/usr/ddu/i18n
+USRDDUDATA=$(DESTDIR)/usr/ddu/data
+
+BIN_ROOT=$(USRDDU)/bin/$(ARCH)
+
+I18N_ROOT=$(USRDDDU)/i18n
+
+USRSHARE=$(DESTDIR)/usr/share
+USRSHAREAPPS=$(USRSHARE)/applications
+USRSHAREPIXMAPS=$(USRSHARE)/pixmaps
 
 MODE=0644
 

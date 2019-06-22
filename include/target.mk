@@ -17,12 +17,41 @@ CLEANOBJS += $(OBJS)
 $(BIN_ROOT):
 	$(MKDIR) $@
 
+$(USRSHAREPIXMAPS):
+	$(MKDIR) $@
+
+$(USRSHAREAPPS):
+	$(MKDIR) $@
+
+$(USRDDU):
+	$(MKDIR) $@
+
+$(USRDDUDATA):
+	$(MKDIR) $@
+
 $(BIN_ROOT)/$(PROGRAM): MODE=0755
 
 $(BIN_ROOT)/$(PROGRAM): $(PROGRAM)
 	$(INSTALL) $(PROGRAM) $@
 
 $(I18N_ROOT)/%/LC_MESSAGES/ddu.mo: %.mo
+	$(INSTALL) $< $@
+
+$(USRSHAREAPPS)/%: $(USRSHAREAPPS)
+
+$(USRSHAREPIXMAPS)/%: $(USRSHAREPIXMAPS)
+
+$(USRDDU)/%: $(USRDDU)
+
+$(USRDDUDATA)/%: $(USRDDUDATA)
+
+$(USRDDUDATA)/%: %
+	$(INSTALL) $< $@
+
+$(USRSHAREAPPS)/%: %
+	$(INSTALL) $< $@
+
+$(USRSHAREPIXMAPS)/%: %
 	$(INSTALL) $< $@
 
 %.o: %.c

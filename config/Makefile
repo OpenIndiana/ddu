@@ -12,23 +12,23 @@
 # Copyright 2019 Alexander Pyhalov
 #
 
-include include/common.mk
+include ../include/common.mk
 
-SUBDIRS = config data po utils usr
+DESTDIRS= \
+	$(USRSHARE)/applications \
+	$(USRSHARE)/pixmaps \
+	$(USRDDU)
 
-all:		TARGET= all
-clean:		TARGET= clean 
-install:	TARGET= install
+DESTFILES = \
+	$(USRSHARE)/applications/ddu.desktop \
+	$(USRSHARE)/pixmaps/ddu.png \
+	$(USRDDU)/ddu.conf
 
-.PHONY: $(SUBDIRS)
+all:
 
-all clean install: $(SUBDIRS)
-	
-$(SUBDIRS):
-	@cd $@; pwd; $(MAKE) $(TARGET) 
+$(USRDDU)/%:	%
+	$(INSTALL) $< $@
 
-clean:
+install: $(DESTDIRS) $(DESTFILES)
 
-env_prep:
-# Don't fail when no updates are needed
-	$(SUDO) $(PKG) install $(REQUIRED_PACKAGES:%=pkg:/%) || [ $$? -eq 4 ]
+include $(WS_TOP)/include/target.mk
