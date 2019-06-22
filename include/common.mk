@@ -40,11 +40,13 @@ USRBIN=$(DESTDIR)/usr/bin
 
 USRDDU=$(DESTDIR)/usr/ddu
 
-USRDDUDATA=$(DESTDIR)/usr/ddu/data
+USRDDUDATA=$(USRDDU)/data
 
-USRDDUSCRIPTS=$(DESTDIR)/usr/ddu/scripts
+USRDDUSCRIPTS=$(USRDDU)/scripts
 
-USRDDUTEXTUTILS=$(DESTDIR)/usr/ddu/ddu-text/utils
+USRDDUTEXTUTILS=$(USRDDU)/ddu-text/utils
+
+USRDDUUTILS=$(USRDDU)/utils
 
 BIN_ROOT=$(USRDDU)/bin/$(ARCH)
 

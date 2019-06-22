@@ -12,19 +12,27 @@
 # Copyright 2019 Alexander Pyhalov
 #
 
-include ../include/common.mk
+include ../../include/common.mk
 
-SUBDIRS = all_devices bat_detect dmi_info hd_detect media_event python
+SRCS = \
+	__init__.py \
+	browse_media.py \
+	CellRendererUrl.py \
+	detail.py \
+	executingterminal.py \
+	functions.py \
+	install_drv.py \
+	message_box.py \
+	repo_manage.py \
+	submit.py \
 
-all:		TARGET= all
-clean:		TARGET= clean
-install:	TARGET= install
+DESTFILES = $(SRCS:%=$(USRDDUUTILS)/%)
 
-.PHONY: $(SUBDIRS)
+DESTDIRS= \
+        $(USRDDUUTILS)
 
-all clean install: $(SUBDIRS)
+all:
 
-$(SUBDIRS):
-	@cd $@; pwd; $(MAKE) $(TARGET) 
+install: $(DESTDIRS) $(DESTFILES)
 
-clean:
+include $(WS_TOP)/include/target.mk
