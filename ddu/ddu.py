@@ -1116,7 +1116,12 @@ class HDDgui:
     def help_clicked(self, widget):
         """show help dialog"""
         del widget
-        subprocess.Popen(["yelp", "ghelp://%s/help/gnome/help/ddu/C/ddu.xml" % (ABSPATH) ])
+        # yelp uses g_get_user_data_dir() to look for data directory.
+        # We overwrite it here to use DDU help path.
+        # This allows us to use yelp internal logic to find localized help.
+        penv = os.environ.copy()
+        penv["XDG_DATA_HOME"] = "%s/help" % (ABSPATH)
+        subprocess.Popen(["yelp", "ghelp:ddu"], env=penv)
 
     def drv_clicked(self, widget):
         """
