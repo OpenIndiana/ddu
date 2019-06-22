@@ -1,0 +1,406 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DDU\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-01-26 12:00+CST\n"
+"PO-Revision-Date: 2010-01-26 12:00+CST\n"
+"Last-Translator: Polish l10n group <lead@opensolaris.org.pl>\n"
+"Language-Team: Polish <lead@opensolaris.org.pl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+msgid "<b>Driver Information</b>"
+msgstr "<b>Informacje o sterowniku</b>"
+
+msgid "<b>Driver Problems: %s</b>"
+msgstr "<b>Problemy ze sterownikiem: %s</b>"
+
+msgid "<b>Hardware Information</b>"
+msgstr "<b>Informacje o sprzęcie</b>"
+
+msgid "<b>Install driver......</b>"
+msgstr "<b>Zainstaluj sterownik.....</b>"
+
+msgid "<b>Submit To HCL</b>"
+msgstr "<b>Wyślij do HCL</b>"
+
+msgid "<span foreground=\"#FF0000\">Submission failed!</span>"
+msgstr "<span foreground=\"#FF0000\">Wysyłanie nie powiodło się!</span>"
+
+msgid "<span foreground=\"blue\"><b>*Submission Tips</b></span>"
+msgstr "<span foreground=\"blue\"><b>*Przedstaw Porady</b></span>"
+
+msgid "<span size=\"small\" color=\"gray\">SVR4, DU, or p5i</span>"
+msgstr "<span size=\"small\" color=\"gray\">SVR4, DU, or p5i</span>"
+
+msgid ""
+"<span size=\"smaller\">Oracle respects your privacy. We will use your "
+"personal information for communications regarding your submission to the "
+"Oracle Solaris OS: Hardware Compatibility List. For more information see "
+"http://www.oracle.com/html/privacy.html or contact privacy_ww@oracle.com.</"
+"span>"
+msgstr ""
+"<span size=\"smaller\">Oracle respects your privacy. We will use your "
+"personal information for communications regarding your submission to the "
+"Oracle Solaris OS: Hardware Compatibility List. For more information see "
+"http://www.oracle.com/html/privacy.html or contact privacy_ww@oracle.com.</"
+"span>"
+
+msgid "<span weight=\"bold\">Add new repositories:</span>"
+msgstr "<span weight=\"bold\">Add new repositories:</span>"
+
+msgid "<span weight=\"bold\">Driver</span>"
+msgstr "<span weight=\"bold\">Driver</span>"
+
+msgid "<span weight=\"bold\">Location:</span>"
+msgstr "<span weight=\"bold\">Location:</span>"
+
+msgid "<span><b>Submission Privacy Policy</b></span>"
+msgstr "<span><b>Polityka prywatności wysyłania</b></span>"
+
+msgid "Add Driver"
+msgstr "Add Driver"
+
+msgid "Add repo"
+msgstr "Add repo"
+
+msgid "Add repository..."
+msgstr "Add repository..."
+
+msgid "All files"
+msgstr "All files"
+
+msgid "Audio"
+msgstr "Dźwięk"
+
+msgid "Battery"
+msgstr "Bateria"
+
+msgid "Browse Driver Packages"
+msgstr "Browse Driver Packages"
+
+msgid "C_PU Type:"
+msgstr "C_PU Type:"
+
+msgid "Can not get smbios information"
+msgstr "Nie można otrzymać danych smbios"
+
+msgid "Cannot proceed with the installation"
+msgstr "Nie można kontynuować instalacji"
+
+msgid "Components"
+msgstr "Składniki"
+
+msgid "DVD"
+msgstr "DVD"
+
+msgid "Device"
+msgstr "Urządzenie"
+
+msgid "Device Driver Utility"
+msgstr "Zarządzanie sterownikami urządzeń"
+
+msgid "Device and Driver Detail Information"
+msgstr "Szczegółowe informacje o urządzeniu i sterowniku"
+
+msgid "Do not need to install driver!"
+msgstr "Nie trzeba instalować sterownika!"
+
+msgid "Driver"
+msgstr "Sterownik"
+
+msgid "Driver Available"
+msgstr "Sterownik dostępny"
+
+msgid "Driver Unavailable"
+msgstr "Sterownik niedostępny"
+
+msgid "Driver already installed"
+msgstr "Sterownik jest już zainstalowany"
+
+msgid "Driver not found in the repository"
+msgstr "Nie znaleziono sterownika w repozytorium"
+
+msgid "Driver not installed"
+msgstr "Sterownik nie jest zainstalowany"
+
+msgid "File/URL:"
+msgstr "File/URL:"
+
+msgid "Hardware configuration was not submitted"
+msgstr "Konfiguracja sprzętowa nie została przesłana."
+
+msgid "Info"
+msgstr "Info"
+
+msgid ""
+"Information cannot be collected for systems running in this virtual "
+"environment."
+msgstr ""
+"Informacje nie mogły być zebrane dla systemu działającego w tym wirtualnym "
+"środowisku."
+
+msgid "Install Driver"
+msgstr "Zainstaluj sterownik"
+
+msgid "Install third-party driver manually"
+msgstr "Zainstaluj ręcznie sterownik niezależnego dostawcy"
+
+msgid "Installation Failed!"
+msgstr "Instalacja nie powiodła się!"
+
+msgid "Installation Successful!"
+msgstr "Instalacja powiodła się!"
+
+msgid "Installing"
+msgstr "Instaluje"
+
+msgid "List CPU maker and type (e.g. AMD Opteron 885)."
+msgstr "Lista producentów i typów procesorów (np. AMD Opteron 885)"
+
+msgid "Memory"
+msgstr "Pamięć"
+
+msgid "Misconfigured"
+msgstr "Nieskonfigurowany"
+
+msgid "Model:"
+msgstr "Model:"
+
+msgid "Name"
+msgstr "Imię"
+
+msgid ""
+"Name of the system or component maker such as Hewlett-Packard, Dell, or "
+"Compaq."
+msgstr ""
+"Nazwa producenta systemu lub komponentu (np. Hewlett-Packard, Dell lub "
+"Compaq)."
+
+msgid "Name:"
+msgstr "Nazwa:"
+
+msgid "Network"
+msgstr "Sieć"
+
+msgid "No missing driver"
+msgstr "Nie ma brakujących sterowników"
+
+msgid ""
+"Oracle respects your privacy. We will use your personal information for "
+"communications regarding your submission to the Oracle Solaris OS: Hardware "
+"Compatibility List. For more information see http://www.oracle.com/html/"
+"privacy.html or contact privacy_ww@oracle.com."
+msgstr ""
+"Oracle respects your privacy. We will use your personal information for "
+"communications regarding your submission to the Oracle Solaris OS: Hardware "
+"Compatibility List. For more information see http://www.oracle.com/html/"
+"privacy.html or contact privacy_ww@oracle.com."
+
+msgid "Other"
+msgstr "Inne"
+
+msgid "Package:"
+msgstr "Package:"
+
+msgid "Reboot your system after installing the driver if necessary\n"
+msgstr "Reboot your system after installing the driver if necessary\n"
+
+msgid "Refresh the device list and install the driver again"
+msgstr "Odśwież listę urządzeń i zainstaluj ponownie sterownik"
+
+msgid "Removable Device"
+msgstr "Removable Device"
+
+msgid "Repo not installed"
+msgstr "Repo not installed"
+
+msgid "Repositories manager"
+msgstr "Repositories manager"
+
+msgid "S_ave"
+msgstr "Z_apisz"
+
+msgid "S_ystem Type:"
+msgstr "S_ystem Type:"
+
+msgid "Save..."
+msgstr "Zapisz..."
+
+msgid "Smbios error"
+msgstr "Błąd smbios"
+
+msgid "Storage"
+msgstr "Pamięć masowa"
+
+msgid "Submission Successful!\n"
+msgstr "Wysyłanie powiodło się!\n"
+
+msgid "Submission failed"
+msgstr "Wysyłanie nie powiodło się"
+
+msgid "Submit"
+msgstr "Wyślij"
+
+msgid "Submit Error"
+msgstr "Zgłoś błąd"
+
+msgid "Submit Information To Hardware Compatibility List"
+msgstr "Wyślij dane do Listy Kompatybilnych Urządzeń"
+
+msgid "Submit information to Hardware Compatibility List"
+msgstr "Wyślij dane do Listy Kompatybilnych Urządzeń (HCL)"
+
+msgid "System does not export an SMBIOS table"
+msgstr "System nie mógł wyeksportować tablicy SMBIOS"
+
+msgid "Thank you for your submission.\n"
+msgstr "Dziękujemy za wysłanie.\n"
+
+msgid "The complete model number for the system."
+msgstr "Kompletna nazwa modelu Twojego systemu."
+
+msgid ""
+"The driver is not in the repository\n"
+"\n"
+msgstr ""
+"Sterownika nie ma w repozytorium\n"
+"\n"
+
+msgid "The driver package is empty."
+msgstr "The driver package is empty."
+
+msgid "The driver path is empty."
+msgstr "The driver path is empty."
+
+msgid "The information will be sent back to Oracle."
+msgstr "Informacja zostanie wysłana z powrotem do firmy Oracle."
+
+msgid "The repo name or URL is invalid."
+msgstr "The repo name or URL is invalid."
+
+msgid "The repository is currently unavailable"
+msgstr "Repozytorium jest obecnie niedostępne"
+
+msgid "The server is currently unavailable"
+msgstr "Serwer jest tymczasowo nieosiągalny"
+
+msgid "Third-party"
+msgstr "Niezależny dostawca"
+
+msgid "Third-party driver not installed!"
+msgstr "Sterownik niezależnego dostawcy nie został zainstalowany!"
+
+msgid ""
+"This can be used for any additional information to document how you "
+"successfully got the system or component to work with the Oracle Solaris."
+msgstr ""
+"Użyj do zapisania dodatkowych informacji na temat stopnia w jakim Twój "
+"system lub komponent współpracują z systemem Oracle Solaris."
+
+msgid ""
+"This is often displayed in the BIOS Setup screens. It usually displays at "
+"system boot time."
+msgstr ""
+"Jest to częsty komunikat na ekranie ustawień BIOSu. Zazwyczaj wyświetlany "
+"jest podczas ładowania systemu."
+
+msgid "This window will be closed in a few seconds"
+msgstr "Okno zostanie zamknięte w ciągu kilku sekund"
+
+msgid "Types"
+msgstr "Rodzaje"
+
+msgid "URL:"
+msgstr "URL:"
+
+msgid "USB"
+msgstr "USB"
+
+msgid "Video"
+msgstr "Wideo"
+
+msgid ""
+"Your submission will now be reviewed before being posted to the Oracle "
+"Solaris HCL.\n"
+msgstr ""
+"Your submission will now be reviewed before being posted to the Oracle "
+"Solaris HCL.\n"
+
+msgid "_Add"
+msgstr "_Dodaj"
+
+msgid "_BIOS/Firmware Maker:"
+msgstr "_BIOS/Firmware Maker:"
+
+msgid "_Browse..."
+msgstr "_Browse..."
+
+msgid "_Cancel"
+msgstr "_Anuluj"
+
+msgid "_Close"
+msgstr "_Zamknij"
+
+msgid "_Detail"
+msgstr "_Detail"
+
+msgid "_Detail Information"
+msgstr "_Szczegółowe informacje"
+
+msgid "_Eject"
+msgstr "_Eject"
+
+msgid "_Email address:"
+msgstr "_Email address:"
+
+msgid ""
+"_General Notes:\n"
+"(English Preferred)"
+msgstr ""
+"_General Notes:\n"
+"(English Preferred)"
+
+msgid "_Help"
+msgstr "Pomo_c"
+
+msgid "_Information Collected:"
+msgstr "_Information Collected:"
+
+msgid "_Install"
+msgstr "_Instaluj"
+
+msgid "_Install All DrIver"
+msgstr "_Zainstaluj wszystkie sterowniki"
+
+msgid "_Install All Drivers"
+msgstr "Zainstaluj wszystkie sterowniki"
+
+msgid "_Install Driver"
+msgstr "_Zainstaluj sterownik"
+
+msgid "_Manufacturer Name:"
+msgstr "_Manufacturer Name:"
+
+msgid "_Name:"
+msgstr "_Name:"
+
+msgid "_OK"
+msgstr "_OK"
+
+msgid "_Refresh"
+msgstr "_Odśwież"
+
+msgid "_Show Details"
+msgstr "_Pokaż szczegóły"
+
+msgid "_Submit"
+msgstr "_Wyślij"
+
+msgid "_Submit..."
+msgstr "_Wyślij..."
+
+msgid "_UP"
+msgstr "_UP"

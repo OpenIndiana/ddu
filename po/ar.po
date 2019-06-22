@@ -1,0 +1,397 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DDU\n"
+"POT-Creation-Date: 2009-12-02 00:00+CST\n"
+"PO-Revision-Date: 2010-01-26 12:00+CST\n"
+"Last-Translator: Hosam Al Ali <a.hosam@gmail.com>\n"
+"Language-Team: Arabic <g11n-ar-discuss@opensolaris.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: utf-8\n"
+"Generated-By: pygettext.py 1.5\n"
+
+msgid "<b>Driver Information</b>"
+msgstr "<b>معلومات التعريفات</b>"
+
+msgid "<b>Driver Problems: %s</b>"
+msgstr "<b>مشاكل التعريفات: %s</b>"
+
+msgid "<b>Hardware Information</b>"
+msgstr "<b>معلومات Hardware</b>"
+
+msgid "<b>Install driver......</b>"
+msgstr "<b>تنصيب التعريف ....</b>"
+
+msgid "<b>Submit To HCL</b>"
+msgstr "<b>إرسال الى HCL</b>"
+
+msgid "<span foreground=\"#FF0000\">Submission failed!</span>"
+msgstr "<span foreground=\"#FF0000\">فشل الإرسال!</span>"
+
+msgid "<span foreground=\"blue\"><b>*Submission Tips</b></span>"
+msgstr "<span foreground=\"blue\"><b>*إرسالTips</b></span>"
+
+msgid "<span size=\"small\" color=\"gray\">SVR4, DU, or p5i</span>"
+msgstr "<span size=\"small\" color=\"gray\">SVR4, DU, or p5i</span>"
+
+msgid ""
+"<span size=\"smaller\">Oracle respects your privacy. We will use your "
+"personal information for communications regarding your submission to the "
+"Oracle Solaris OS: Hardware Compatibility List. For more information see "
+"http://www.oracle.com/html/privacy.html or contact privacy_ww@oracle.com.</"
+"span>"
+msgstr ""
+"<span size=\"smaller\">Oracle respects your privacy. We will use your "
+"personal information for communications regarding your submission to the "
+"Oracle Solaris OS: Hardware Compatibility List. For more information see "
+"http://www.oracle.com/html/privacy.html or contact privacy_ww@oracle.com.</"
+"span>"
+
+msgid "<span weight=\"bold\">Add new repositories:</span>"
+msgstr "<span weight=\"bold\">إضافة مستودعات للحزم جديدة:</span>"
+
+msgid "<span weight=\"bold\">Driver</span>"
+msgstr "<span weight=\"bold\">تعريف</span>"
+
+msgid "<span weight=\"bold\">Location:</span>"
+msgstr "<span weight=\"bold\">Location:</span>"
+
+msgid "<span><b>Submission Privacy Policy</b></span>"
+msgstr "<span><b>إرسال سياسة الخصوصية </b></span>"
+
+msgid "Add Driver"
+msgstr "Add Driver"
+
+msgid "Add repo"
+msgstr "إضافة مستودع"
+
+msgid "Add repository..."
+msgstr "Add repository..."
+
+msgid "All files"
+msgstr "All files"
+
+msgid "Audio"
+msgstr "صوت"
+
+msgid "Battery"
+msgstr "البطارية "
+
+msgid "Browse Driver Packages"
+msgstr "Browse Driver Packages"
+
+msgid "C_PU Type:"
+msgstr "_المعالج نوع:"
+
+msgid "Can not get smbios information"
+msgstr "لا يمكن على معلومات smbios "
+
+msgid "Cannot proceed with the installation"
+msgstr "لايمكن الإكمال بعملية التنصيب "
+
+msgid "Components"
+msgstr "مكونات"
+
+msgid "DVD"
+msgstr "القرص المضغوط(DVD)"
+
+msgid "Device"
+msgstr "تجهيزة"
+
+msgid "Device Driver Utility"
+msgstr "برنامج إدارة التجهيزات "
+
+msgid "Device and Driver Detail Information"
+msgstr "تفاصيل الممعلومات للتجهيزات والتعريفات "
+
+msgid "Do not need to install driver!"
+msgstr "لا تريد تنصيب التعريف !"
+
+msgid "Driver"
+msgstr "تعريفات"
+
+msgid "Driver Available"
+msgstr "التعريفات متوفرة "
+
+msgid "Driver Unavailable"
+msgstr "التعريفات غير متوفرة "
+
+msgid "Driver already installed"
+msgstr "التعريف منصب مسبقا"
+
+msgid "Driver not found in the repository"
+msgstr "التعريف غير موجود ضمن المستودع"
+
+msgid "Driver not installed"
+msgstr "التعريف ليس منصب"
+
+msgid "File/URL:"
+msgstr "ملف/URL:"
+
+msgid "Hardware configuration was not submitted"
+msgstr "إعدادات التجهيزات لم ترسل "
+
+msgid "Info"
+msgstr "معلومات "
+
+msgid ""
+"Information cannot be collected for systems running in this virtual "
+"environment."
+msgstr "المعلومات لم يتم جمعها حول النظام الذي يعمل ببيئة وهمية (virtual)"
+
+msgid "Install Driver"
+msgstr "تنصيب التعريف "
+
+msgid "Install third-party driver manually"
+msgstr "تنصيب التعريفات الغير موجودة بشكل يدوي "
+
+msgid "Installation Failed!"
+msgstr "فشل التنصيب !"
+
+msgid "Installation Successful!"
+msgstr "نجاح التنصيب !"
+
+msgid "Installing"
+msgstr "جاري التنصيب"
+
+msgid "List CPU maker and type (e.g. AMD Opteron 885)."
+msgstr "قائمة بمصنعي المعالجات وأنواعها (e.g. AMD Opteron 885)"
+
+msgid "Memory"
+msgstr "ذواكر "
+
+msgid "Misconfigured"
+msgstr "خطأ بالإعدادات "
+
+msgid "Model:"
+msgstr "موديل:"
+
+msgid "Name"
+msgstr "الإسم "
+
+msgid ""
+"Name of the system or component maker such as Hewlett-Packard, Dell, or "
+"Compaq."
+msgstr "إسم النظام أو المكونات مثل Hewlett-Packard, Dell, or Compaq."
+
+msgid "Name:"
+msgstr "إسم : "
+
+msgid "Network"
+msgstr "شبكة"
+
+msgid "No missing driver"
+msgstr "لايوجد أخطاء بالتعريف "
+
+msgid ""
+"Oracle respects your privacy. We will use your personal information for "
+"communications regarding your submission to the Oracle Solaris OS: Hardware "
+"Compatibility List. For more information see http://www.oracle.com/html/"
+"privacy.html or contact privacy_ww@oracle.com."
+msgstr ""
+"Oracle respects your privacy. We will use your personal information for "
+"communications regarding your submission to the Oracle Solaris OS: Hardware "
+"Compatibility List. For more information see http://www.oracle.com/html/"
+"privacy.html or contact privacy_ww@oracle.com."
+
+msgid "Other"
+msgstr "أخرى"
+
+msgid "Package:"
+msgstr "حزمة:"
+
+msgid "Reboot your system after installing the driver if necessary\n"
+msgstr "إعادة تشغيل الجهاز بعد تنصيب التعريف إذا كان من الضروري \n"
+
+msgid "Refresh the device list and install the driver again"
+msgstr "تحديث قائمة التحهيزات وتنصيب التعريف مجددا"
+
+msgid "Removable Device"
+msgstr "Removable Device"
+
+msgid "Repo not installed"
+msgstr "المستودع غير منصب "
+
+msgid "Repositories manager"
+msgstr "مدير مستودعات الحزم"
+
+msgid "S_ave"
+msgstr "S_ave"
+
+msgid "S_ystem Type:"
+msgstr "_نوع النظام:"
+
+msgid "Save..."
+msgstr "حفظ..."
+
+msgid "Smbios error"
+msgstr "خطأ smbios"
+
+msgid "Storage"
+msgstr "وحدة تخزين"
+
+msgid "Submission Successful!\n"
+msgstr "نجاح الإرسال !\n"
+
+msgid "Submission failed"
+msgstr "فشل عملية الإرسال"
+
+msgid "Submit"
+msgstr "إرسال"
+
+msgid "Submit Error"
+msgstr "خطأ بالإرسال "
+
+msgid "Submit Information To Hardware Compatibility List"
+msgstr "إرسال المعلومات الى قائمة التجهيزات المتوافقة "
+
+msgid "Submit information to Hardware Compatibility List"
+msgstr "أرسل المعلومات الى قائمة الأجهزة المتوافقة"
+
+msgid "System does not export an SMBIOS table"
+msgstr "النظام لا يمكن تصديره كجدول SMBIOS"
+
+msgid "Thank you for your submission.\n"
+msgstr "شكرا لإرسالك .\n"
+
+msgid "The complete model number for the system."
+msgstr "الرقم الكامل لموديل النظام "
+
+msgid ""
+"The driver is not in the repository\n"
+"\n"
+msgstr ""
+"التعريف ليس موجود ضمن المستودع \n"
+"\n"
+
+msgid "The driver package is empty."
+msgstr "The driver package is empty."
+
+msgid "The driver path is empty."
+msgstr "The driver path is empty."
+
+msgid "The information will be sent back to Oracle."
+msgstr "المعلومات سوف يعاد إرسالها لشركة Oracle"
+
+msgid "The repo name or URL is invalid."
+msgstr "إسم المستودع او عنوانه غير فعال "
+
+msgid "The repository is currently unavailable"
+msgstr "المستودع غير متوفر حاليا "
+
+msgid "The server is currently unavailable"
+msgstr "المخدم غير متوفر حاليا"
+
+msgid "Third-party"
+msgstr "غير موجودة ضمن النظام"
+
+msgid "Third-party driver not installed!"
+msgstr "التعريفات الغير موجودة ليست منصبة "
+
+msgid ""
+"This can be used for any additional information to document how you "
+"successfully got the system or component to work with the Oracle Solaris."
+msgstr ""
+"هذه تستخدم لأي معلومات إضافية أو مستندات تشرح كيف تم نجاح عمل النظام "
+"ومكوناته مع نظام Oracle Solaris "
+
+msgid ""
+"This is often displayed in the BIOS Setup screens. It usually displays at "
+"system boot time."
+msgstr "هذه عادة ما تظهر ضمن نافذة إعدادات BIOSوهي عادة تظهر عند إقلاع النظام"
+
+msgid "This window will be closed in a few seconds"
+msgstr "هذه النافذة ستغلق خلال ثواني "
+
+msgid "Types"
+msgstr "أنواع "
+
+msgid "URL:"
+msgstr "URL:"
+
+msgid "USB"
+msgstr "USB"
+
+msgid "Video"
+msgstr "فيديو"
+
+msgid ""
+"Your submission will now be reviewed before being posted to the Oracle "
+"Solaris HCL.\n"
+msgstr "عملية الإرسال سيعاد النظر بها قبل إرسالها الى Oracle Solaris HCL.\n"
+
+msgid "_Add"
+msgstr "_إضافة"
+
+msgid "_BIOS/Firmware Maker:"
+msgstr "_BIOS/Firmware Maker:"
+
+msgid "_Browse..."
+msgstr "_Browse..."
+
+msgid "_Cancel"
+msgstr "_إلغاء"
+
+msgid "_Close"
+msgstr "_رجوع "
+
+msgid "_Detail"
+msgstr "_تفاصيل "
+
+msgid "_Detail Information"
+msgstr "_تفاصيل المعلومات "
+
+msgid "_Eject"
+msgstr "_Eject"
+
+msgid "_Email address:"
+msgstr "_عنوان البريد الإلكتروني:"
+
+msgid ""
+"_General Notes:\n"
+"(English Preferred)"
+msgstr ""
+"_ملاحظة عامة:\n"
+"(الانجليزية المفضلة)"
+
+msgid "_Help"
+msgstr "_مساعدة "
+
+msgid "_Information Collected:"
+msgstr "_المعلومات التي يتم جمعها"
+
+msgid "_Install"
+msgstr "_تنصيب"
+
+msgid "_Install All DrIver"
+msgstr "_تنصيب كامل التعريفات"
+
+msgid "_Install All Drivers"
+msgstr "_تنصيب كامل التعريفات "
+
+msgid "_Install Driver"
+msgstr "_تنصيب التعريف "
+
+msgid "_Manufacturer Name:"
+msgstr "_إسم الصانع:"
+
+msgid "_Name:"
+msgstr "_إسم: "
+
+msgid "_OK"
+msgstr "_موافق"
+
+msgid "_Refresh"
+msgstr "_تحديث "
+
+msgid "_Show Details"
+msgstr "_إظهار التفاصيل "
+
+msgid "_Submit"
+msgstr "_إرسال "
+
+msgid "_Submit..."
+msgstr "_إرسال..."
+
+msgid "_UP"
+msgstr "_UP"

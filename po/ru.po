@@ -1,0 +1,405 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DDU\n"
+"POT-Creation-Date: 2010-01-26 12:00+CST\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: utf-8\n"
+"Generated-By: pygettext.py 1.5\n"
+
+msgid "<b>Driver Information</b>"
+msgstr "<b>Информация о драйвере</b>"
+
+msgid "<b>Driver Problems: %s</b>"
+msgstr "<b>Неполадки драйвера: %s</b>"
+
+msgid "<b>Hardware Information</b>"
+msgstr "<b>Информация об аппаратном обеспечении</b>"
+
+msgid "<b>Install driver......</b>"
+msgstr "<b>Установка драйвера......</b>"
+
+msgid "<b>Submit To HCL</b>"
+msgstr "<b>Отправить в список HCL</b>"
+
+msgid "<span foreground=\"#FF0000\">Submission failed!</span>"
+msgstr "<span foreground=\"#FF0000\">Ошибка отправки.</span>"
+
+msgid "<span foreground=\"blue\"><b>*Submission Tips</b></span>"
+msgstr "<span foreground=\"blue\"><b>*Советы по отправке</b></span>"
+
+msgid "<span size=\"small\" color=\"gray\">SVR4, DU, or p5i</span>"
+msgstr "<span size=\"small\" color=\"gray\">SVR4, DU или p5i</span>"
+
+msgid ""
+"<span size=\"smaller\">Oracle respects your privacy. We will use your "
+"personal information for communications regarding your submission to the "
+"Oracle Solaris OS: Hardware Compatibility List. For more information see "
+"http://www.oracle.com/html/privacy.html or contact privacy_ww@oracle.com.</"
+"span>"
+msgstr ""
+"<span size=\"smaller\">Oracle respects your privacy. We will use your "
+"personal information for communications regarding your submission to the "
+"Oracle Solaris OS: Hardware Compatibility List. For more information see "
+"http://www.oracle.com/html/privacy.html or contact privacy_ww@oracle.com.</"
+"span>"
+
+msgid "<span weight=\"bold\">Add new repositories:</span>"
+msgstr "<span weight=\"bold\">Добавить хранилища:</span>"
+
+msgid "<span weight=\"bold\">Driver</span>"
+msgstr "<span weight=\"bold\">Драйвер</span>"
+
+msgid "<span weight=\"bold\">Location:</span>"
+msgstr "<span weight=\"bold\">Местоположение:</span>"
+
+msgid "<span><b>Submission Privacy Policy</b></span>"
+msgstr "<span><b>Политика конфиденциальности при отправке</b></span>"
+
+msgid "Add Driver"
+msgstr "Добавить драйвер"
+
+msgid "Add repo"
+msgstr "Добавить хранилище"
+
+msgid "Add repository..."
+msgstr "Добавить хранилище..."
+
+msgid "All files"
+msgstr "Все файлы"
+
+msgid "Audio"
+msgstr "Аудиоустройства"
+
+msgid "Battery"
+msgstr "Батарея"
+
+msgid "Browse Driver Packages"
+msgstr "Обзор пакетов драйверов"
+
+msgid "C_PU Type:"
+msgstr "Тип _процессора:"
+
+msgid "Can not get smbios information"
+msgstr "Не удается получить информацию smbios"
+
+msgid "Cannot proceed with the installation"
+msgstr "Не удается выполнить установку"
+
+msgid "Components"
+msgstr "Компоненты"
+
+msgid "DVD"
+msgstr "DVD-устройства"
+
+msgid "Device"
+msgstr "Устройства"
+
+msgid "Device Driver Utility"
+msgstr "Служебная программа драйверов устройств"
+
+msgid "Device and Driver Detail Information"
+msgstr "Подробная информация об устройстве и драйвере"
+
+msgid "Do not need to install driver!"
+msgstr "Драйвер устанавливать не нужно!"
+
+msgid "Driver"
+msgstr "Драйвер"
+
+msgid "Driver Available"
+msgstr "Драйвер доступен"
+
+msgid "Driver Unavailable"
+msgstr "Драйвер недоступен"
+
+msgid "Driver already installed"
+msgstr "Драйвер уже установлен"
+
+msgid "Driver not found in the repository"
+msgstr "Драйвер не найден в хранилище"
+
+msgid "Driver not installed"
+msgstr "Драйвер не установлен"
+
+msgid "File/URL:"
+msgstr "Файл/URL:"
+
+msgid "Hardware configuration was not submitted"
+msgstr "Конфигурация аппаратного обеспечения не была отправлена"
+
+msgid "Info"
+msgstr "Информация"
+
+msgid ""
+"Information cannot be collected for systems running in this virtual "
+"environment."
+msgstr ""
+"Не удается собрать информацию для систем, работающих в данной виртуальной "
+"среде."
+
+msgid "Install Driver"
+msgstr "Установить драйвер"
+
+msgid "Install third-party driver manually"
+msgstr "Установить драйвер стороннего производителя вручную"
+
+msgid "Installation Failed!"
+msgstr "Установка не выполнена."
+
+msgid "Installation Successful!"
+msgstr "Установка выполнена успешно."
+
+msgid "Installing"
+msgstr "Установка"
+
+msgid "List CPU maker and type (e.g. AMD Opteron 885)."
+msgstr "Производитель и тип процессора (например, AMD Opteron 885)."
+
+msgid "Memory"
+msgstr "Память"
+
+msgid "Misconfigured"
+msgstr "Неправильно настроен"
+
+msgid "Model:"
+msgstr "Модель:"
+
+msgid "Name"
+msgstr "Имя"
+
+msgid ""
+"Name of the system or component maker such as Hewlett-Packard, Dell, or "
+"Compaq."
+msgstr ""
+"Название производителя системы или компонента, например, Hewlett-Packard, "
+"Dell или Compaq."
+
+msgid "Name:"
+msgstr "Имя:"
+
+msgid "Network"
+msgstr "Сеть"
+
+msgid "No missing driver"
+msgstr "Нет отсутствующих драйверов"
+
+msgid ""
+"Oracle respects your privacy. We will use your personal information for "
+"communications regarding your submission to the Oracle Solaris OS: Hardware "
+"Compatibility List. For more information see http://www.oracle.com/html/"
+"privacy.html or contact privacy_ww@oracle.com."
+msgstr ""
+"Oracle respects your privacy. We will use your personal information for "
+"communications regarding your submission to the Oracle Solaris OS: Hardware "
+"Compatibility List. For more information see http://www.oracle.com/html/"
+"privacy.html or contact privacy_ww@oracle.com."
+
+msgid "Other"
+msgstr "Прочее"
+
+msgid "Package:"
+msgstr "Пакет:"
+
+msgid "Reboot your system after installing the driver if necessary\n"
+msgstr "При необходимости перезагрузите систему после установки драйвера\n"
+
+msgid "Refresh the device list and install the driver again"
+msgstr "Обновить список устройств и установить драйвер заново"
+
+msgid "Removable Device"
+msgstr "Сменное устройство"
+
+msgid "Repo not installed"
+msgstr "Хранилище не установлено"
+
+msgid "Repositories manager"
+msgstr "Диспетчер хранилищ"
+
+msgid "S_ave"
+msgstr "_Сохранить"
+
+msgid "S_ystem Type:"
+msgstr "_Тип системы:"
+
+msgid "Save..."
+msgstr "Сохранить..."
+
+msgid "Smbios error"
+msgstr "Ошибка Smbios"
+
+msgid "Storage"
+msgstr "Хранилище"
+
+msgid "Submission Successful!\n"
+msgstr "Отправка выполнена успешно.\n"
+
+msgid "Submission failed"
+msgstr "Отправка не выполнена"
+
+msgid "Submit"
+msgstr "Отправить"
+
+msgid "Submit Error"
+msgstr "Ошибка отправки"
+
+msgid "Submit Information To Hardware Compatibility List"
+msgstr "Отправить информацию в список совместимости аппаратного обеспечения"
+
+msgid "Submit information to Hardware Compatibility List"
+msgstr "Отправить информацию в список совместимости аппаратного обеспечения"
+
+msgid "System does not export an SMBIOS table"
+msgstr "Система не экспортирует таблицу SMBIOS"
+
+msgid "Thank you for your submission.\n"
+msgstr "Благодарим за подачу сведений.\n"
+
+msgid "The complete model number for the system."
+msgstr "Полный номер модели системы."
+
+msgid ""
+"The driver is not in the repository\n"
+"\n"
+msgstr ""
+"В хранилище нет драйвера\n"
+"\n"
+
+msgid "The driver package is empty."
+msgstr "Пакет драйвера пуст."
+
+msgid "The driver path is empty."
+msgstr "Путь драйвера пуст."
+
+msgid "The information will be sent back to Oracle."
+msgstr "Эта информация будет отправлена в корпорацию Oracle."
+
+msgid "The repo name or URL is invalid."
+msgstr "Имя или адрес URL хранилища некорректны"
+
+msgid "The repository is currently unavailable"
+msgstr "Хранилище недоступно"
+
+msgid "The server is currently unavailable"
+msgstr "Сервер недоступен"
+
+msgid "Third-party"
+msgstr "Сторонний"
+
+msgid "Third-party driver not installed!"
+msgstr "Драйвер стороннего производителя не установлен."
+
+msgid ""
+"This can be used for any additional information to document how you "
+"successfully got the system or component to work with the Oracle Solaris."
+msgstr ""
+"Может использоваться для добавления в документ дополнительной информации об "
+"успешной работе системы или компонента с Oracle Solaris."
+
+msgid ""
+"This is often displayed in the BIOS Setup screens. It usually displays at "
+"system boot time."
+msgstr ""
+"Эти данные часто отображаются в программе BIOS Setup. Обычно они "
+"отображаются во время загрузки системы."
+
+msgid "This window will be closed in a few seconds"
+msgstr "Это окно закроется через несколько секунд"
+
+msgid "Types"
+msgstr "Типы"
+
+msgid "URL:"
+msgstr "URL-адрес:"
+
+msgid "USB"
+msgstr "USB-устройства"
+
+msgid "Video"
+msgstr "Видеоустройства"
+
+msgid ""
+"Your submission will now be reviewed before being posted to the Oracle "
+"Solaris HCL.\n"
+msgstr ""
+"Поданные сведения будут рассмотрены перед их публикацией в списке HCL "
+"OpenSolairs.\n"
+
+msgid "_Add"
+msgstr "_Добавить"
+
+msgid "_BIOS/Firmware Maker:"
+msgstr "_Разработчик BIOS/микропрограммы:"
+
+msgid "_Browse..."
+msgstr "_Просмотреть..."
+
+msgid "_Cancel"
+msgstr "О_тменить"
+
+msgid "_Close"
+msgstr "_Закрыть"
+
+msgid "_Detail"
+msgstr "_Подробно"
+
+msgid "_Detail Information"
+msgstr "_Подробные сведения"
+
+msgid "_Eject"
+msgstr "_Извлечь"
+
+msgid "_Email address:"
+msgstr "_Адрес эл. почты:"
+
+msgid ""
+"_General Notes:\n"
+"(English Preferred)"
+msgstr ""
+"_Общие замечания:\n"
+"(желательно на английском языке)"
+
+msgid "_Help"
+msgstr "_Справка"
+
+msgid "_Information Collected:"
+msgstr "_Информация собрана:"
+
+msgid "_Install"
+msgstr "_Установить"
+
+msgid "_Install All DrIver"
+msgstr "_Установить все драйверы"
+
+msgid "_Install All Drivers"
+msgstr "_Установить все драйверы"
+
+msgid "_Install Driver"
+msgstr "_Установить драйвер"
+
+msgid "_Manufacturer Name:"
+msgstr "_Название изготовителя:"
+
+msgid "_Name:"
+msgstr "_Название:"
+
+msgid "_OK"
+msgstr "_OK"
+
+msgid "_Refresh"
+msgstr "О_бновить"
+
+msgid "_Show Details"
+msgstr "Ото_бразить подробности"
+
+msgid "_Submit"
+msgstr "О_тправить"
+
+msgid "_Submit..."
+msgstr "О_тправить..."
+
+msgid "_UP"
+msgstr "_Вверх"

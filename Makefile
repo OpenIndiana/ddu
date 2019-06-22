@@ -14,7 +14,7 @@
 
 include include/common.mk
 
-SUBDIRS = utils usr
+SUBDIRS = po utils usr
 
 all:		TARGET= all
 clean:		TARGET= clean 

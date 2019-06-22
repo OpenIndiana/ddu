@@ -1,0 +1,405 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DDU\n"
+"POT-Creation-Date: 2010-01-26 12:00+CST\n"
+"PO-Revision-Date: 2010-01-26 12:00+CST\n"
+"Last-Translator: Apostolos Syropoulos <asyropoulos@yahoo.com>\n"
+"Language-Team: Greek\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+msgid "<b>Driver Information</b>"
+msgstr "<b>Driver Information</b>"
+
+msgid "<b>Driver Problems: %s</b>"
+msgstr "<b>Driver Problems: %s</b>"
+
+msgid "<b>Hardware Information</b>"
+msgstr "<b>Hardware Information</b>"
+
+msgid "<b>Install driver......</b>"
+msgstr "<b>Install driver......</b>"
+
+msgid "<b>Submit To HCL</b>"
+msgstr "<b>Submit To HCL</b>"
+
+msgid "<span foreground=\"#FF0000\">Submission failed!</span>"
+msgstr "<span foreground=\"#FF0000\">Submission failed!</span>"
+
+msgid "<span foreground=\"blue\"><b>*Submission Tips</b></span>"
+msgstr "<span foreground=\"blue\"><b>*Submission Tips</b></span>"
+
+msgid "<span size=\"small\" color=\"gray\">SVR4, DU, or p5i</span>"
+msgstr "<span size=\"small\" color=\"gray\">SVR4, DU, or p5i</span>"
+
+msgid ""
+"<span size=\"smaller\">Oracle respects your privacy. We will use your "
+"personal information for communications regarding your submission to the "
+"Oracle Solaris OS: Hardware Compatibility List. For more information see "
+"http://www.oracle.com/html/privacy.html or contact privacy_ww@oracle.com.</"
+"span>"
+msgstr ""
+"<span size=\"smaller\">Oracle respects your privacy. We will use your "
+"personal information for communications regarding your submission to the "
+"Oracle Solaris OS: Hardware Compatibility List. For more information see "
+"http://www.oracle.com/html/privacy.html or contact privacy_ww@oracle.com.</"
+"span>"
+
+msgid "<span weight=\"bold\">Add new repositories:</span>"
+msgstr "<span weight=\"bold\">Add new repositories:</span>"
+
+msgid "<span weight=\"bold\">Driver</span>"
+msgstr "<span weight=\"bold\">Driver</span>"
+
+msgid "<span weight=\"bold\">Location:</span>"
+msgstr "<span weight=\"bold\">Location:</span>"
+
+msgid "<span><b>Submission Privacy Policy</b></span>"
+msgstr "<span><b>Submission Privacy Policy</b></span>"
+
+msgid "Add Driver"
+msgstr "Add Driver"
+
+msgid "Add repo"
+msgstr "Add repo"
+
+msgid "Add repository..."
+msgstr "Add repository..."
+
+msgid "All files"
+msgstr "All files"
+
+msgid "Audio"
+msgstr "Audio"
+
+msgid "Battery"
+msgstr "Battery"
+
+msgid "Browse Driver Packages"
+msgstr "Browse Driver Packages"
+
+msgid "C_PU Type:"
+msgstr "C_PU Type:"
+
+msgid "Can not get smbios information"
+msgstr "Can not get smbios information"
+
+msgid "Cannot proceed with the installation"
+msgstr "Cannot proceed with the installation"
+
+msgid "Components"
+msgstr "Components"
+
+msgid "DVD"
+msgstr "DVD"
+
+msgid "Device"
+msgstr "Device"
+
+msgid "Device Driver Utility"
+msgstr "Εργαλείο οδηγών συσκευών"
+
+msgid "Device and Driver Detail Information"
+msgstr "Device and Driver Detail Information"
+
+msgid "Do not need to install driver!"
+msgstr "Do not need to install driver!"
+
+msgid "Driver"
+msgstr "Driver"
+
+msgid "Driver Available"
+msgstr "Driver Available"
+
+msgid "Driver Unavailable"
+msgstr "Driver Unavailable"
+
+msgid "Driver already installed"
+msgstr "Driver already installed"
+
+msgid "Driver not found in the repository"
+msgstr "Driver not found in the repository"
+
+msgid "Driver not installed"
+msgstr "Driver not installed"
+
+msgid "File/URL:"
+msgstr "File/URL:"
+
+msgid "Hardware configuration was not submitted"
+msgstr "Hardware configuration was not submitted"
+
+msgid "Info"
+msgstr "Info"
+
+msgid ""
+"Information cannot be collected for systems running in this virtual "
+"environment."
+msgstr ""
+"Information cannot be collected for systems running in this virtual "
+"environment."
+
+msgid "Install Driver"
+msgstr "Install Driver"
+
+msgid "Install third-party driver manually"
+msgstr "Install third-party driver manually"
+
+msgid "Installation Failed!"
+msgstr "Installation Failed!"
+
+msgid "Installation Successful!"
+msgstr "Installation Successful!"
+
+msgid "Installing"
+msgstr "Εγκατάσταση"
+
+msgid "List CPU maker and type (e.g. AMD Opteron 885)."
+msgstr "List CPU maker and type (e.g. AMD Opteron 885)."
+
+msgid "Memory"
+msgstr "Μνήμη"
+
+msgid "Misconfigured"
+msgstr "Misconfigured"
+
+msgid "Model:"
+msgstr "Model:"
+
+msgid "Name"
+msgstr "Όνομα"
+
+msgid ""
+"Name of the system or component maker such as Hewlett-Packard, Dell, or "
+"Compaq."
+msgstr ""
+"Name of the system or component maker such as Hewlett-Packard, Dell, or "
+"Compaq."
+
+msgid "Name:"
+msgstr "Name:"
+
+msgid "Network"
+msgstr "Network"
+
+msgid "No missing driver"
+msgstr "No missing driver"
+
+msgid ""
+"Oracle respects your privacy. We will use your personal information for "
+"communications regarding your submission to the Oracle Solaris OS: Hardware "
+"Compatibility List. For more information see http://www.oracle.com/html/"
+"privacy.html or contact privacy_ww@oracle.com."
+msgstr ""
+"Oracle respects your privacy. We will use your personal information for "
+"communications regarding your submission to the Oracle Solaris OS: Hardware "
+"Compatibility List. For more information see http://www.oracle.com/html/"
+"privacy.html or contact privacy_ww@oracle.com."
+
+msgid "Other"
+msgstr "Other"
+
+msgid "Package:"
+msgstr "Package:"
+
+msgid "Reboot your system after installing the driver if necessary\n"
+msgstr "Reboot your system after installing the driver if necessary\n"
+
+msgid "Refresh the device list and install the driver again"
+msgstr "Refresh the device list and install the driver again"
+
+msgid "Removable Device"
+msgstr "Removable Device"
+
+msgid "Repo not installed"
+msgstr "Repo not installed"
+
+msgid "Repositories manager"
+msgstr "Repositories manager"
+
+msgid "S_ave"
+msgstr "S_ave"
+
+msgid "S_ystem Type:"
+msgstr "S_ystem Type:"
+
+msgid "Save..."
+msgstr "Save..."
+
+msgid "Smbios error"
+msgstr "Smbios error"
+
+msgid "Storage"
+msgstr "Storage"
+
+msgid "Submission Successful!\n"
+msgstr "Submission Successful!\n"
+
+msgid "Submission failed"
+msgstr "Submission failed"
+
+msgid "Submit"
+msgstr "Submit"
+
+msgid "Submit Error"
+msgstr "Submit Error"
+
+msgid "Submit Information To Hardware Compatibility List"
+msgstr "Submit Information To Hardware Compatibility List"
+
+msgid "Submit information to Hardware Compatibility List"
+msgstr "Submit information to Hardware Compatibility List"
+
+msgid "System does not export an SMBIOS table"
+msgstr "System does not export an SMBIOS table"
+
+msgid "Thank you for your submission.\n"
+msgstr "Thank you for your submission.\n"
+
+msgid "The complete model number for the system."
+msgstr "The complete model number for the system."
+
+msgid ""
+"The driver is not in the repository\n"
+"\n"
+msgstr ""
+"The driver is not in the repository\n"
+"\n"
+
+msgid "The driver package is empty."
+msgstr "The driver package is empty."
+
+msgid "The driver path is empty."
+msgstr "The driver path is empty."
+
+msgid "The information will be sent back to Oracle."
+msgstr "The information will be sent back to Oracle."
+
+msgid "The repo name or URL is invalid."
+msgstr "The repo name or URL is invalid."
+
+msgid "The repository is currently unavailable"
+msgstr "The repository is currently unavailable"
+
+msgid "The server is currently unavailable"
+msgstr "The server is currently unavailable"
+
+msgid "Third-party"
+msgstr "Third-party"
+
+msgid "Third-party driver not installed!"
+msgstr "Third-party driver not installed!"
+
+msgid ""
+"This can be used for any additional information to document how you "
+"successfully got the system or component to work with the Oracle Solaris."
+msgstr ""
+"This can be used for any additional information to document how you "
+"successfully got the system or component to work with the Oracle Solaris."
+
+msgid ""
+"This is often displayed in the BIOS Setup screens. It usually displays at "
+"system boot time."
+msgstr ""
+"This is often displayed in the BIOS Setup screens. It usually displays at "
+"system boot time."
+
+msgid "This window will be closed in a few seconds"
+msgstr "This window will be closed in a few seconds"
+
+msgid "Types"
+msgstr "Types"
+
+msgid "URL:"
+msgstr "URL:"
+
+msgid "USB"
+msgstr "USB"
+
+msgid "Video"
+msgstr "Video"
+
+msgid ""
+"Your submission will now be reviewed before being posted to the Oracle "
+"Solaris HCL.\n"
+msgstr ""
+"Your submission will now be reviewed before being posted to the Oracle "
+"Solaris HCL.\n"
+
+msgid "_Add"
+msgstr "_Add"
+
+msgid "_BIOS/Firmware Maker:"
+msgstr "_BIOS/Firmware Maker:"
+
+msgid "_Browse..."
+msgstr "_Browse..."
+
+msgid "_Cancel"
+msgstr "_Cancel"
+
+msgid "_Close"
+msgstr "_Close"
+
+msgid "_Detail"
+msgstr "_Detail"
+
+msgid "_Detail Information"
+msgstr "_Detail Information"
+
+msgid "_Eject"
+msgstr "_Eject"
+
+msgid "_Email address:"
+msgstr "_Email address:"
+
+msgid ""
+"_General Notes:\n"
+"(English Preferred)"
+msgstr ""
+"_General Notes:\n"
+"(English Preferred)"
+
+msgid "_Help"
+msgstr "_Help"
+
+msgid "_Information Collected:"
+msgstr "_Information Collected:"
+
+msgid "_Install"
+msgstr "_Εγκατάσταση"
+
+msgid "_Install All DrIver"
+msgstr "_Install All DrIver"
+
+msgid "_Install All Drivers"
+msgstr "_Install All Drivers"
+
+msgid "_Install Driver"
+msgstr "_Install Driver"
+
+msgid "_Manufacturer Name:"
+msgstr "_Manufacturer Name:"
+
+msgid "_Name:"
+msgstr "_Name:"
+
+msgid "_OK"
+msgstr "_OK"
+
+msgid "_Refresh"
+msgstr "_Refresh"
+
+msgid "_Show Details"
+msgstr "_Show Details"
+
+msgid "_Submit"
+msgstr "_Submit"
+
+msgid "_Submit..."
+msgstr "_Submit..."
+
+msgid "_UP"
+msgstr "_UP"

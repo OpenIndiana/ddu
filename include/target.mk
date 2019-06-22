@@ -22,11 +22,17 @@ $(BIN_ROOT)/$(PROGRAM): MODE=0755
 $(BIN_ROOT)/$(PROGRAM): $(PROGRAM)
 	$(INSTALL) $(PROGRAM) $@
 
+$(I18N_ROOT)/%/LC_MESSAGES/ddu.mo: %.mo
+	$(INSTALL) $< $@
+
 %.o: %.c
 	$(COMPILE.c) $<
 
 %.o: %.s
 	$(COMPILE.s) $<
+
+%.mo: %.po
+	$(MSGFMT) -o $@ $<
 
 $(PROGRAM):	$(OBJS)
 	$(LINK.c) $^ -o $@

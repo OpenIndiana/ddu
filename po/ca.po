@@ -1,0 +1,407 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DDU\n"
+"POT-Creation-Date: 2010-01-26 12:00+CST\n"
+"PO-Revision-Date:2010-01-26 12:00+CST\n"
+"Last-Translator: Oracle Solaris CTI <cti@sun.com>\n"
+"Language-Team: Catalan <i18n-discuss@opensolaris.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+msgid "<b>Driver Information</b>"
+msgstr "<b>Informació Controlador</b>"
+
+msgid "<b>Driver Problems: %s</b>"
+msgstr "<b>Problemes amb controladors: %s</b>"
+
+msgid "<b>Hardware Information</b>"
+msgstr "<b>Informació Maquinari</b>"
+
+msgid "<b>Install driver......</b>"
+msgstr "<b>Instal·lar controlador.......</b>"
+
+msgid "<b>Submit To HCL</b>"
+msgstr "<b>Enviar a HCL</b>"
+
+msgid "<span foreground=\"#FF0000\">Submission failed!</span>"
+msgstr "<span foreground=\"#FF0000\">Error d'enviament!</span>"
+
+msgid "<span foreground=\"blue\"><b>*Submission Tips</b></span>"
+msgstr "<span foreground=\"blue\"><b>*Enviar Correu</b></span>"
+
+msgid "<span size=\"small\" color=\"gray\">SVR4, DU, or p5i</span>"
+msgstr "<span size=\"small\" color=\"gray\">SVR4, DU, o p5i</span>"
+
+msgid ""
+"<span size=\"smaller\">Oracle respects your privacy. We will use your "
+"personal information for communications regarding your submission to the "
+"Oracle Solaris OS: Hardware Compatibility List. For more information see "
+"http://www.oracle.com/html/privacy.html or contact privacy_ww@oracle.com.</"
+"span>"
+msgstr ""
+"<span size=\"smaller\">Oracle respects your privacy. We will use your "
+"personal information for communications regarding your submission to the "
+"Oracle Solaris OS: Hardware Compatibility List. For more information see "
+"http://www.oracle.com/html/privacy.html or contact privacy_ww@oracle.com.</"
+"span>"
+
+msgid "<span weight=\"bold\">Add new repositories:</span>"
+msgstr "<span weight=\"bold\">Afegir nous repositoris:</span>"
+
+msgid "<span weight=\"bold\">Driver</span>"
+msgstr "<span weight=\"bold\">Controlador</span>"
+
+msgid "<span weight=\"bold\">Location:</span>"
+msgstr "<span weight=\"bold\">Localització:</span>"
+
+msgid "<span><b>Submission Privacy Policy</b></span>"
+msgstr "<span><b>Política de privacitat d'enviament</b></span>"
+
+msgid "Add Driver"
+msgstr "Afegir controlador"
+
+msgid "Add repo"
+msgstr "Afegir repositori"
+
+msgid "Add repository..."
+msgstr "Afegir repositori..."
+
+msgid "All files"
+msgstr "Tots els fitxers"
+
+msgid "Audio"
+msgstr "Àudio"
+
+msgid "Battery"
+msgstr "Bateria"
+
+msgid "Browse Driver Packages"
+msgstr "Explorar paquets controladors"
+
+msgid "C_PU Type:"
+msgstr "Tipus C_PU:"
+
+msgid "Can not get smbios information"
+msgstr "No puc obtenir informació de smbios"
+
+msgid "Cannot proceed with the installation"
+msgstr "No puc continuar amb la instal·lació"
+
+msgid "Components"
+msgstr "Components"
+
+msgid "DVD"
+msgstr "DVD"
+
+msgid "Device"
+msgstr "Dispositiu"
+
+msgid "Device Driver Utility"
+msgstr "Utilitat de Controladors de Dispositius"
+
+msgid "Device and Driver Detail Information"
+msgstr "Informació detallada dels dispositius i controladors"
+
+msgid "Do not need to install driver!"
+msgstr "No es necessita instal·lar cap controlador!"
+
+msgid "Driver"
+msgstr "Controlador"
+
+msgid "Driver Available"
+msgstr "Controlador disponible"
+
+msgid "Driver Unavailable"
+msgstr "Controlador no disponible"
+
+msgid "Driver already installed"
+msgstr "Controlador ja instal·lat"
+
+msgid "Driver not found in the repository"
+msgstr "Controlador no trobat al repositori"
+
+msgid "Driver not installed"
+msgstr "Controlador no instal·lat"
+
+msgid "File/URL:"
+msgstr "Fitxer/URL:"
+
+msgid "Hardware configuration was not submitted"
+msgstr "No s'ha enviat la configuració del maquinari"
+
+msgid "Info"
+msgstr "Informació"
+
+msgid ""
+"Information cannot be collected for systems running in this virtual "
+"environment."
+msgstr ""
+"No es pot recollir informació de sistemes que s'estiguin executant des d'un "
+"entorn virtual."
+
+msgid "Install Driver"
+msgstr "Instal·lar controlador"
+
+msgid "Install third-party driver manually"
+msgstr "Instal·lar manualment un controlador de tercers"
+
+msgid "Installation Failed!"
+msgstr "S'ha produït un error en la instal·lació!"
+
+msgid "Installation Successful!"
+msgstr "Instal·lació amb èxit!"
+
+msgid "Installing"
+msgstr "Instal·lant"
+
+msgid "List CPU maker and type (e.g. AMD Opteron 885)."
+msgstr "Llistar el fabricant i model de la CPU (pex. AMD Opteron 885)."
+
+msgid "Memory"
+msgstr "Memòria"
+
+msgid "Misconfigured"
+msgstr "Sense configurar"
+
+msgid "Model:"
+msgstr "Model:"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid ""
+"Name of the system or component maker such as Hewlett-Packard, Dell, or "
+"Compaq."
+msgstr ""
+"Nom del sistema o fabricant del component, com Hewlett-Packard, Dell, o "
+"Compaq."
+
+msgid "Name:"
+msgstr "Nom:"
+
+msgid "Network"
+msgstr "Xarxa"
+
+msgid "No missing driver"
+msgstr "No falta cap controlador"
+
+msgid ""
+"Oracle respects your privacy. We will use your personal information for "
+"communications regarding your submission to the Oracle Solaris OS: Hardware "
+"Compatibility List. For more information see http://www.oracle.com/html/"
+"privacy.html or contact privacy_ww@oracle.com."
+msgstr ""
+"Oracle respects your privacy. We will use your personal information for "
+"communications regarding your submission to the Oracle Solaris OS: Hardware "
+"Compatibility List. For more information see http://www.oracle.com/html/"
+"privacy.html or contact privacy_ww@oracle.com."
+
+msgid "Other"
+msgstr "Altres"
+
+msgid "Package:"
+msgstr "Paquet:"
+
+msgid "Reboot your system after installing the driver if necessary\n"
+msgstr ""
+"Es necessari reiniciar el vostre sistema després de la instal·lació del "
+"controlador\n"
+
+msgid "Refresh the device list and install the driver again"
+msgstr "Refresca el llistat de dispositius i instal·la el controlador"
+
+msgid "Removable Device"
+msgstr "Dispositius extraibles"
+
+msgid "Repo not installed"
+msgstr "Repositori no instal·lat"
+
+msgid "Repositories manager"
+msgstr "Gestor de repositoris"
+
+msgid "S_ave"
+msgstr "_Desar"
+
+msgid "S_ystem Type:"
+msgstr "Tipus sistema:"
+
+msgid "Save..."
+msgstr "Desar..."
+
+msgid "Smbios error"
+msgstr "Error smbios"
+
+msgid "Storage"
+msgstr "Emmagatzemament"
+
+msgid "Submission Successful!\n"
+msgstr "Enviament correcte!\n"
+
+msgid "Submission failed"
+msgstr "S'ha produït un error a l'enviar"
+
+msgid "Submit"
+msgstr "Enviar"
+
+msgid "Submit Error"
+msgstr "Enviar error"
+
+msgid "Submit Information To Hardware Compatibility List"
+msgstr "Enviar informació a la llista de compatibilitat de maquinari"
+
+msgid "Submit information to Hardware Compatibility List"
+msgstr "Enviar el llistat de compatibilitat de maquinari"
+
+msgid "System does not export an SMBIOS table"
+msgstr "El sistema no exporta la taula SMBIOS"
+
+msgid "Thank you for your submission.\n"
+msgstr "Gràcies pel vostre enviament.\n"
+
+msgid "The complete model number for the system."
+msgstr "El número de model sencer del sistema."
+
+msgid ""
+"The driver is not in the repository\n"
+"\n"
+msgstr ""
+"El controlador no està al repositori\n"
+"\n"
+
+msgid "The driver package is empty."
+msgstr "El paquet del controlador està buit."
+
+msgid "The driver path is empty."
+msgstr "La ruta del controlador està buida."
+
+msgid "The information will be sent back to Oracle."
+msgstr "La informació serà enviada a Oracle."
+
+msgid "The repo name or URL is invalid."
+msgstr "El nom del repositori o la URL no són vàlids."
+
+msgid "The repository is currently unavailable"
+msgstr "El repositori actualment no està disponible"
+
+msgid "The server is currently unavailable"
+msgstr "El servidor actualment no està disponible"
+
+msgid "Third-party"
+msgstr "Tercers"
+
+msgid "Third-party driver not installed!"
+msgstr "Controlador de tercers no instal·lat!"
+
+msgid ""
+"This can be used for any additional information to document how you "
+"successfully got the system or component to work with the Oracle Solaris."
+msgstr ""
+"Aquest pot ser utilitzat per qualsevol informació addicional al document com "
+"vostè tè el sistema o component per a treballar amb Oracle Solaris."
+
+msgid ""
+"This is often displayed in the BIOS Setup screens. It usually displays at "
+"system boot time."
+msgstr ""
+"Aquest és sovint mostrat a la pantalla de configuració de la BIOS. "
+"Normalment es mostra a l'arrancar el sistema."
+
+msgid "This window will be closed in a few seconds"
+msgstr "La finestra es tancarà d'aquí a uns segons"
+
+msgid "Types"
+msgstr "Tipus"
+
+msgid "URL:"
+msgstr "URL:"
+
+msgid "USB"
+msgstr "USB"
+
+msgid "Video"
+msgstr "Vídeo"
+
+msgid ""
+"Your submission will now be reviewed before being posted to the Oracle "
+"Solaris HCL.\n"
+msgstr ""
+"El vostre enviament serà revisat abans de se publicat al HCL d'Oracle "
+"Solaris.\n"
+
+msgid "_Add"
+msgstr "_Afegir"
+
+msgid "_BIOS/Firmware Maker:"
+msgstr "Fabricant _BIOS/Firmware:"
+
+msgid "_Browse..."
+msgstr "_Navegar..."
+
+msgid "_Cancel"
+msgstr "_Cancel·lar"
+
+msgid "_Close"
+msgstr "_Tancar"
+
+msgid "_Detail"
+msgstr "_Detall"
+
+msgid "_Detail Information"
+msgstr "_Informació detallada"
+
+msgid "_Eject"
+msgstr "_Expulsar"
+
+msgid "_Email address:"
+msgstr "Adreça de correu electrònic:"
+
+msgid ""
+"_General Notes:\n"
+"(English Preferred)"
+msgstr ""
+"Notes _generals:\n"
+"(Preferiblement en anglès)"
+
+msgid "_Help"
+msgstr "_Ajuda"
+
+msgid "_Information Collected:"
+msgstr "_Informació recopilada:"
+
+msgid "_Install"
+msgstr "_Instal·lar"
+
+msgid "_Install All DrIver"
+msgstr "_Instal·lar tots els controladors"
+
+msgid "_Install All Drivers"
+msgstr "_Instal·lar tots els controladors"
+
+msgid "_Install Driver"
+msgstr "_Instal·lar controlador"
+
+msgid "_Manufacturer Name:"
+msgstr "Nom fabricant:"
+
+msgid "_Name:"
+msgstr "_Nom:"
+
+msgid "_OK"
+msgstr "_Acceptar"
+
+msgid "_Refresh"
+msgstr "_Refrescar"
+
+msgid "_Show Details"
+msgstr "_Mostrar detalls"
+
+msgid "_Submit"
+msgstr "_Enviar"
+
+msgid "_Submit..."
+msgstr "_Enviar..."
+
+msgid "_UP"
+msgstr "A_munt"

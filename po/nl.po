@@ -1,0 +1,409 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DDU\n"
+"POT-Creation-Date: 2010-02-04 12:00+CST\n"
+"PO-Revision-Date: 2010-02-04 12:00+CST\n"
+"Last-Translator: SIMON DEVOS <INFO@SIMONDEVOS.BE>\n"
+"Language-Team: DUTCH <nl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: utf-8\n"
+"Generated-By: pygettext.py 1.5\n"
+
+msgid "<b>Driver Information</b>"
+msgstr "<b>Stuurprogramma informatie</b>"
+
+msgid "<b>Driver Problems: %s</b>"
+msgstr "<b>Stuurprogramma problemen: %s</b>"
+
+msgid "<b>Hardware Information</b>"
+msgstr "<b>Hardware informatie</b>"
+
+msgid "<b>Install driver......</b>"
+msgstr "<b>Stuurprogramma installeren......</b>"
+
+msgid "<b>Submit To HCL</b>"
+msgstr "<b>Indienen by HCL</b>"
+
+msgid "<span foreground=\"#FF0000\">Submission failed!</span>"
+msgstr "<span foreground=\"#FF0000\">Indiening mislukt!</span>"
+
+msgid "<span foreground=\"blue\"><b>*Submission Tips</b></span>"
+msgstr "<span foreground=\"blue\"><b>*Indiening tips</b></span>"
+
+msgid "<span size=\"small\" color=\"gray\">SVR4, DU, or p5i</span>"
+msgstr "<span size=\"small\" color=\"gray\">SVR4, DU, of p5i</span>"
+
+msgid ""
+"<span size=\"smaller\">Oracle respects your privacy. We will use your "
+"personal information for communications regarding your submission to the "
+"Oracle Solaris OS: Hardware Compatibility List. For more information see "
+"http://www.oracle.com/html/privacy.html or contact privacy_ww@oracle.com.</"
+"span>"
+msgstr ""
+"<span size=\"smaller\">Oracle respects your privacy. We will use your "
+"personal information for communications regarding your submission to the "
+"Oracle Solaris OS: Hardware Compatibility List. For more information see "
+"http://www.oracle.com/html/privacy.html or contact privacy_ww@oracle.com.</"
+"span>"
+
+msgid "<span weight=\"bold\">Add new repositories:</span>"
+msgstr "<span weight=\"bold\">Nieuwe opslagplaatsen toevoegen:</span>"
+
+msgid "<span weight=\"bold\">Driver</span>"
+msgstr "<span weight=\"bold\">Stuurprogramma</span>"
+
+msgid "<span weight=\"bold\">Location:</span>"
+msgstr "<span weight=\"bold\">Locatie:</span>"
+
+msgid "<span><b>Submission Privacy Policy</b></span>"
+msgstr "<span><b>Indiening privacybeleid</b></span>"
+
+msgid "Add Driver"
+msgstr "Driver toevoegen"
+
+msgid "Add repo"
+msgstr "Repo toevoegen"
+
+msgid "Add repository..."
+msgstr "Voeg repository toe"
+
+msgid "All files"
+msgstr "Alle bestanden"
+
+msgid "Audio"
+msgstr "Audio"
+
+msgid "Battery"
+msgstr "Batterij"
+
+msgid "Browse Driver Packages"
+msgstr "Blader door de driverpakketten"
+
+msgid "C_PU Type:"
+msgstr "C_PU Type:"
+
+msgid "Can not get smbios information"
+msgstr "Kan de smbios informatie niet bemachtigen"
+
+msgid "Cannot proceed with the installation"
+msgstr "Kan niet doorgaan met installeren"
+
+msgid "Components"
+msgstr "Onderdelen"
+
+msgid "DVD"
+msgstr "DVD"
+
+msgid "Device"
+msgstr "Apparaat"
+
+msgid "Device Driver Utility"
+msgstr "Apparaatstuurprogramma hulpmiddel "
+
+msgid "Device and Driver Detail Information"
+msgstr "Apparaat en gedetailleerde stuurprogramma informatie"
+
+msgid "Do not need to install driver!"
+msgstr "Het is niet nodig om het stuurprogramma te installeren"
+
+msgid "Driver"
+msgstr "Stuurprogramma"
+
+msgid "Driver Available"
+msgstr "Stuurprogramma beschikbaar"
+
+msgid "Driver Unavailable"
+msgstr "Stuurprogramma niet beschikbaar"
+
+msgid "Driver already installed"
+msgstr "Stuurprogramma is al geïnstalleerd"
+
+msgid "Driver not found in the repository"
+msgstr "Stuurprogramma niet gevonden in het repository"
+
+msgid "Driver not installed"
+msgstr "Stuurprogramma is niet geïnstalleerd"
+
+msgid "File/URL:"
+msgstr "Bestand/URL:"
+
+msgid "Hardware configuration was not submitted"
+msgstr "Hardware-configuratie was niet ingediend"
+
+msgid "Info"
+msgstr "Info"
+
+msgid ""
+"Information cannot be collected for systems running in this virtual "
+"environment."
+msgstr ""
+"Informatie niet kan worden verzameld voor systemen die in deze virtuele "
+"omgeving uitgevoerd worden."
+
+msgid "Install Driver"
+msgstr "Installeer stuurprogramma"
+
+msgid "Install third-party driver manually"
+msgstr "Installeer derde-partij stuurprogramma handmatig"
+
+msgid "Installation Failed!"
+msgstr "Installatie mislukt!"
+
+msgid "Installation Successful!"
+msgstr "Installatie geslaagd!"
+
+msgid "Installing"
+msgstr "Installeren"
+
+msgid "List CPU maker and type (e.g. AMD Opteron 885)."
+msgstr "Noteer CPU fabrikant en type (bijv. AMD Opteron 885)."
+
+msgid "Memory"
+msgstr "Geheugen"
+
+msgid "Misconfigured"
+msgstr "Onjuist geconfigureerd"
+
+msgid "Model:"
+msgstr "Model:"
+
+msgid "Name"
+msgstr "Naam"
+
+msgid ""
+"Name of the system or component maker such as Hewlett-Packard, Dell, or "
+"Compaq."
+msgstr ""
+"Naam van de fabrikant van het systeem of onderdeel bijvoorbeeld Hewlett-"
+"Packard, Dell, of Compaq."
+
+msgid "Name:"
+msgstr "Naam:"
+
+msgid "Network"
+msgstr "Netwerk"
+
+msgid "No missing driver"
+msgstr "Geen ontbrekende stuurprogramma"
+
+msgid ""
+"Oracle respects your privacy. We will use your personal information for "
+"communications regarding your submission to the Oracle Solaris OS: Hardware "
+"Compatibility List. For more information see http://www.oracle.com/html/"
+"privacy.html or contact privacy_ww@oracle.com."
+msgstr ""
+"Oracle respects your privacy. We will use your personal information for "
+"communications regarding your submission to the Oracle Solaris OS: Hardware "
+"Compatibility List. For more information see http://www.oracle.com/html/"
+"privacy.html or contact privacy_ww@oracle.com."
+
+msgid "Other"
+msgstr "Andere"
+
+msgid "Package:"
+msgstr "Pakket:"
+
+msgid "Reboot your system after installing the driver if necessary\n"
+msgstr ""
+"Indien nodig, uw systeem herstarten nadat het stuurprogramma geinstalleerd "
+"is\n"
+
+msgid "Refresh the device list and install the driver again"
+msgstr ""
+"Vernieuw de lijst met apparaten en installeert het stuurprogramma opnieuw"
+
+msgid "Removable Device"
+msgstr "Verwijderbaar onderdeel"
+
+msgid "Repo not installed"
+msgstr "Repo niet installeren"
+
+msgid "Repositories manager"
+msgstr "Opslaglokaties beheerder"
+
+msgid "S_ave"
+msgstr "O_pslaan"
+
+msgid "S_ystem Type:"
+msgstr "S_ystem Type:"
+
+msgid "Save..."
+msgstr "Opslaan..."
+
+msgid "Smbios error"
+msgstr "Smbios fout"
+
+msgid "Storage"
+msgstr "Opslagruimte"
+
+msgid "Submission Successful!\n"
+msgstr "Indiening geslaagd!\n"
+
+msgid "Submission failed"
+msgstr "Indiening mislukt"
+
+msgid "Submit"
+msgstr "Indienen"
+
+msgid "Submit Error"
+msgstr "Dien een fout in"
+
+msgid "Submit Information To Hardware Compatibility List"
+msgstr "Stuur informatie naar de hardware compatibiliteitslijst"
+
+msgid "Submit information to Hardware Compatibility List"
+msgstr "Dien informatie in bij de hardware comptabiliteit lijst"
+
+msgid "System does not export an SMBIOS table"
+msgstr "Systeem exporteert geen SMBIOS tabel"
+
+msgid "Thank you for your submission.\n"
+msgstr "Bedankt voor je inzending.\n"
+
+msgid "The complete model number for the system."
+msgstr "Het volledige model nummer van het systeem"
+
+msgid ""
+"The driver is not in the repository\n"
+"\n"
+msgstr ""
+"Het aansturingsprogramma  is niet in het repository\n"
+"\n"
+
+msgid "The driver package is empty."
+msgstr "Het driverpakket is leeg."
+
+msgid "The driver path is empty."
+msgstr "Het driver-pad is leeg."
+
+msgid "The information will be sent back to Oracle."
+msgstr "De informatie zal worden teruggestuurd naar Oracle."
+
+msgid "The repo name or URL is invalid."
+msgstr "De repo-naam of URL is ongeldig."
+
+msgid "The repository is currently unavailable"
+msgstr "De repository is momenteel niet beschikbaar"
+
+msgid "The server is currently unavailable"
+msgstr "De server is momenteel niet beschikbaar"
+
+msgid "Third-party"
+msgstr "Derde-partij"
+
+msgid "Third-party driver not installed!"
+msgstr "Derde-partij stuurprogramma niet geïnstalleerd!"
+
+msgid ""
+"This can be used for any additional information to document how you "
+"successfully got the system or component to work with the Oracle Solaris."
+msgstr ""
+"Dit kan gebruikt worden om eventuele aanvullende informatie te documenteren "
+"over hoe je met succes je het systeem of onderdeel aan het werk kreeg met "
+"Oracle Solaris."
+
+msgid ""
+"This is often displayed in the BIOS Setup screens. It usually displays at "
+"system boot time."
+msgstr ""
+"Dit wordt vaak weergegeven in het BIOS Set-up schermen. Het wordt meestal "
+"weergegeven gedurende systeem opstart."
+
+msgid "This window will be closed in a few seconds"
+msgstr "Dit venster zal in enkele seconden gesloten worden"
+
+msgid "Types"
+msgstr "Types"
+
+msgid "URL:"
+msgstr "URL:"
+
+msgid "USB"
+msgstr "USB"
+
+msgid "Video"
+msgstr "Video"
+
+msgid ""
+"Your submission will now be reviewed before being posted to the Oracle "
+"Solaris HCL.\n"
+msgstr ""
+"Uw inzending zal nu worden geëvalueerd alvorens op het Oracle Solaris HCL "
+"geplaatst te worden.\n"
+
+msgid "_Add"
+msgstr "_Toevoegen"
+
+msgid "_BIOS/Firmware Maker:"
+msgstr "_BIOS/Firmware Fabrikant:"
+
+msgid "_Browse..."
+msgstr "_Bladeren..."
+
+msgid "_Cancel"
+msgstr "_Annuleren"
+
+msgid "_Close"
+msgstr "_Sluiten"
+
+msgid "_Detail"
+msgstr "_Detail"
+
+msgid "_Detail Information"
+msgstr "_Detail informatie"
+
+msgid "_Eject"
+msgstr "_Uitwerpen"
+
+msgid "_Email address:"
+msgstr "_Email address:"
+
+msgid ""
+"_General Notes:\n"
+"(English Preferred)"
+msgstr ""
+"_Algemene opmerkingen:\n"
+"(Engels geprefereerd)"
+
+msgid "_Help"
+msgstr "_Help"
+
+msgid "_Information Collected:"
+msgstr "_Verzamelde informatie:"
+
+msgid "_Install"
+msgstr "_Installeren"
+
+msgid "_Install All DrIver"
+msgstr "_Installeer alle DrIver"
+
+msgid "_Install All Drivers"
+msgstr "_Installeer alle stuurprogrammas"
+
+msgid "_Install Driver"
+msgstr "_Installeer stuurprogramma"
+
+msgid "_Manufacturer Name:"
+msgstr "_Fabrikant Naam:"
+
+msgid "_Name:"
+msgstr "_Naam:"
+
+msgid "_OK"
+msgstr "_OK"
+
+msgid "_Refresh"
+msgstr "_Vernieuw"
+
+msgid "_Show Details"
+msgstr "_Vertoon de details"
+
+msgid "_Submit"
+msgstr "_Indienen"
+
+msgid "_Submit..."
+msgstr "_Indienen..."
+
+msgid "_UP"
+msgstr "_UP"

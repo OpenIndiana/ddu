@@ -1,0 +1,399 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DDU\n"
+"POT-Creation-Date: 2010-01-26 12:00+CST\n"
+"PO-Revision-Date: 2010-01-28 13:19+0800\n"
+"Last-Translator: desktop-discuss@opensolaris.org\n"
+"Language-Team: desktop-discuss@opensolaris.org\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: utf-8\n"
+"Generated-By: pygettext.py 1.5\n"
+
+msgid "<b>Driver Information</b>"
+msgstr "<b>드라이버 정보</b>"
+
+msgid "<b>Driver Problems: %s</b>"
+msgstr "<b>드라이버 문제: %s</b>"
+
+msgid "<b>Hardware Information</b>"
+msgstr "<b>하드웨어 정보</b>"
+
+msgid "<b>Install driver......</b>"
+msgstr "<b>드라이버 설치......</b>"
+
+msgid "<b>Submit To HCL</b>"
+msgstr "<b>HCL에 제출</b>"
+
+msgid "<span foreground=\"#FF0000\">Submission failed!</span>"
+msgstr "<span foreground=\"#FF0000\">제출 실패!</span>"
+
+msgid "<span foreground=\"blue\"><b>*Submission Tips</b></span>"
+msgstr "<span foreground=\"blue\"><b>*제출 팁</b></span>"
+
+msgid "<span size=\"small\" color=\"gray\">SVR4, DU, or p5i</span>"
+msgstr "<span size=\"small\" color=\"gray\">SVR4, DU 또는 p5i</span>"
+
+msgid ""
+"<span size=\"smaller\">Oracle respects your privacy. We will use your "
+"personal information for communications regarding your submission to the "
+"Oracle Solaris OS: Hardware Compatibility List. For more information see "
+"http://www.oracle.com/html/privacy.html or contact privacy_ww@oracle.com.</"
+"span>"
+msgstr ""
+"<span size=\"smaller\">Oracle는 귀하의 개인 정보를 보호합니다. 당사는 귀하의 "
+"개인 정보를 귀하가 Oracle Solaris OS: 하드웨어 호환성 목록에 제출한 것과 관련"
+"된 용도로만 사용합니다. 자세한 내용은 http://www.oracle.com/html/privacy.html"
+"를 참조하거나 privacy_ww@oracle.com으로 문의하십시오.</span>"
+
+msgid "<span weight=\"bold\">Add new repositories:</span>"
+msgstr "<span weight=\"bold\">새 저장소 추가:</span>"
+
+msgid "<span weight=\"bold\">Driver</span>"
+msgstr "<span weight=\"bold\">드라이버</span>"
+
+msgid "<span weight=\"bold\">Location:</span>"
+msgstr "<span weight=\"bold\">위치:</span>"
+
+msgid "<span><b>Submission Privacy Policy</b></span>"
+msgstr "<span><b>제출 개인 정보 보호 정책</b></span>"
+
+msgid "Add Driver"
+msgstr "드라이버 추가"
+
+msgid "Add repo"
+msgstr "저장소 추가"
+
+msgid "Add repository..."
+msgstr "저장소 추가..."
+
+msgid "All files"
+msgstr "모든 파일"
+
+msgid "Audio"
+msgstr "오디오"
+
+msgid "Battery"
+msgstr "배터리"
+
+msgid "Browse Driver Packages"
+msgstr "드라이버 패키지 찾아보기"
+
+msgid "C_PU Type:"
+msgstr "CPU 유형(_P):"
+
+msgid "Can not get smbios information"
+msgstr "Smbios 정보를 가져올 수 없습니다."
+
+msgid "Cannot proceed with the installation"
+msgstr "설치를 계속할 수 없습니다."
+
+msgid "Components"
+msgstr "구성 요소 "
+
+msgid "DVD"
+msgstr "DVD"
+
+msgid "Device"
+msgstr "장치"
+
+msgid "Device Driver Utility"
+msgstr "장치 드라이버 유틸리티"
+
+msgid "Device and Driver Detail Information"
+msgstr "장치 및 드라이버 세부 정보"
+
+msgid "Do not need to install driver!"
+msgstr "드라이버를 설치하지 않아도 됩니다."
+
+msgid "Driver"
+msgstr "드라이버"
+
+msgid "Driver Available"
+msgstr "드라이버를 사용할 수 있음 "
+
+msgid "Driver Unavailable"
+msgstr "드라이버를 사용할 수 없음"
+
+msgid "Driver already installed"
+msgstr "드라이버가 이미 설치되었습니다."
+
+msgid "Driver not found in the repository"
+msgstr "저장소에서 드라이버를 찾을 수 없습니다."
+
+msgid "Driver not installed"
+msgstr "드라이버가 설치되어 있지 않습니다."
+
+msgid "File/URL:"
+msgstr "파일/URL:"
+
+msgid "Hardware configuration was not submitted"
+msgstr "하드웨어 구성이 제출되지 않았습니다."
+
+msgid "Info"
+msgstr "정보"
+
+msgid ""
+"Information cannot be collected for systems running in this virtual "
+"environment."
+msgstr "이 가상 환경에서 실행 중인 시스템에 대한 정보를 수집할 수 없습니다."
+
+msgid "Install Driver"
+msgstr "드라이버 설치"
+
+msgid "Install third-party driver manually"
+msgstr "수동으로 타사 드라이버를 설치합니다."
+
+msgid "Installation Failed!"
+msgstr "설치 실패!"
+
+msgid "Installation Successful!"
+msgstr "설치 성공!"
+
+msgid "Installing"
+msgstr "설치 중"
+
+msgid "List CPU maker and type (e.g. AMD Opteron 885)."
+msgstr "CPU 제조업체 및 유형 나열(예: AMD Opteron 885)."
+
+msgid "Memory"
+msgstr "메모리"
+
+msgid "Misconfigured"
+msgstr "잘못 구성됨"
+
+msgid "Model:"
+msgstr "모델:"
+
+msgid "Name"
+msgstr "이름"
+
+msgid ""
+"Name of the system or component maker such as Hewlett-Packard, Dell, or "
+"Compaq."
+msgstr ""
+"Hewlett-Packard, Dell 또는 Compaq과 같은 시스템이나 구성 요소 제조업체 이름입"
+"니다."
+
+msgid "Name:"
+msgstr "이름:"
+
+msgid "Network"
+msgstr "네트워크"
+
+msgid "No missing driver"
+msgstr "누락된 드라이버가 없습니다."
+
+msgid ""
+"Oracle respects your privacy. We will use your personal information for "
+"communications regarding your submission to the Oracle Solaris OS: Hardware "
+"Compatibility List. For more information see http://www.oracle.com/html/"
+"privacy.html or contact privacy_ww@oracle.com."
+msgstr ""
+"Oracle는 귀하의 개인 정보를 보호합니다. 당사는 귀하의 개인 정보를 귀하가 "
+"Oracle Solaris OS: 하드웨어 호환성 목록에 제출한 것과 관련된 용도로만 사용합"
+"니다. 자세한 내용은 http://www.oracle.com/html/privacy.html를 참조하거나 "
+"privacy_ww@oracle.com으로 문의하십시오."
+
+msgid "Other"
+msgstr "기타"
+
+msgid "Package:"
+msgstr "패키지:"
+
+msgid "Reboot your system after installing the driver if necessary\n"
+msgstr "필요한 경우 드라이버를 설치한 후 시스템을 재부트하십시오.\n"
+
+msgid "Refresh the device list and install the driver again"
+msgstr "장치 목록을 새로 고치고 드라이버를 다시 설치합니다."
+
+msgid "Removable Device"
+msgstr "이동식 장치"
+
+msgid "Repo not installed"
+msgstr "저장소가 설치되지 않음"
+
+msgid "Repositories manager"
+msgstr "저장소 관리자"
+
+msgid "S_ave"
+msgstr "저장(_A)"
+
+msgid "S_ystem Type:"
+msgstr "시스템 유형(_Y):"
+
+msgid "Save..."
+msgstr "저장..."
+
+msgid "Smbios error"
+msgstr "Smbios 오류"
+
+msgid "Storage"
+msgstr "저장소"
+
+msgid "Submission Successful!\n"
+msgstr "제출 성공!\n"
+
+msgid "Submission failed"
+msgstr "제출 실패"
+
+msgid "Submit"
+msgstr "제출"
+
+msgid "Submit Error"
+msgstr "제출 오류"
+
+msgid "Submit Information To Hardware Compatibility List"
+msgstr "하드웨어 호환성 목록에 정보 제출"
+
+msgid "Submit information to Hardware Compatibility List"
+msgstr "하드웨어 호환성 목록에 정보 제출"
+
+msgid "System does not export an SMBIOS table"
+msgstr "시스템에서 SMBIOS 테이블을 내보내지 않습니다."
+
+msgid "Thank you for your submission.\n"
+msgstr "제출해 주셔서 감사합니다.\n"
+
+msgid "The complete model number for the system."
+msgstr "시스템의 전체 모델 번호입니다."
+
+msgid ""
+"The driver is not in the repository\n"
+"\n"
+msgstr ""
+"저장소에 해당 드라이버가 없습니다.\n"
+"\n"
+
+msgid "The driver package is empty."
+msgstr "드라이버 패키지가 비어 있습니다."
+
+msgid "The driver path is empty."
+msgstr "드라이버 경로가 비어 있습니다."
+
+msgid "The information will be sent back to Oracle."
+msgstr "이 정보는 Oracle으로 다시 전송됩니다."
+
+msgid "The repo name or URL is invalid."
+msgstr "저장소 이름 또는 URL이 잘못되었습니다."
+
+msgid "The repository is currently unavailable"
+msgstr "현재 저장소를 사용할 수 없습니다."
+
+msgid "The server is currently unavailable"
+msgstr "현재 서버를 사용할 수 없습니다."
+
+msgid "Third-party"
+msgstr "타사"
+
+msgid "Third-party driver not installed!"
+msgstr "타사 드라이버가 설치되어 있지 않습니다."
+
+msgid ""
+"This can be used for any additional information to document how you "
+"successfully got the system or component to work with the Oracle Solaris."
+msgstr ""
+"설명서에 Oracle Solaris와 함께 작동하는 시스템이나 구성 요소를 성공적으로 가"
+"져오는 방법에 대한 정보를 추가하는 데 사용할 수 있습니다."
+
+msgid ""
+"This is often displayed in the BIOS Setup screens. It usually displays at "
+"system boot time."
+msgstr ""
+"이것은 종종 BIOS 설정 화면에 표시되며 보통 시스템 부트 시에 표시됩니다."
+
+msgid "This window will be closed in a few seconds"
+msgstr "몇 초 후에 창이 닫힙니다."
+
+msgid "Types"
+msgstr "유형"
+
+msgid "URL:"
+msgstr "URL: "
+
+msgid "USB"
+msgstr "USB"
+
+msgid "Video"
+msgstr "비디오"
+
+msgid ""
+"Your submission will now be reviewed before being posted to the Oracle "
+"Solaris HCL.\n"
+msgstr "Oracle Solaris HCL에 게시되기 전에 해당 제출을 검토합니다.\n"
+
+msgid "_Add"
+msgstr "추가(_A)"
+
+msgid "_BIOS/Firmware Maker:"
+msgstr "BIOS/펌웨어 제조업체(_B):"
+
+msgid "_Browse..."
+msgstr "찾아보기(_B)..."
+
+msgid "_Cancel"
+msgstr "취소(_C)"
+
+msgid "_Close"
+msgstr "닫기(_C)"
+
+msgid "_Detail"
+msgstr "세부 정보(_D)"
+
+msgid "_Detail Information"
+msgstr "세부 정보(_D)"
+
+msgid "_Eject"
+msgstr "꺼내기(_E)"
+
+msgid "_Email address:"
+msgstr "전자 메일 주소(_E):"
+
+msgid ""
+"_General Notes:\n"
+"(English Preferred)"
+msgstr ""
+"일반 사항(_G):\n"
+"(영어 선호)"
+
+msgid "_Help"
+msgstr "도움말(_H)"
+
+msgid "_Information Collected:"
+msgstr "수집된 정보(_I):"
+
+msgid "_Install"
+msgstr "설치(_I)"
+
+msgid "_Install All DrIver"
+msgstr "모든 드라이버 설치(_I)"
+
+msgid "_Install All Drivers"
+msgstr "모든 드라이버 설치(_I)"
+
+msgid "_Install Driver"
+msgstr "드라이버 설치(_I)"
+
+msgid "_Manufacturer Name:"
+msgstr "제조업체 이름(_M):"
+
+msgid "_Name:"
+msgstr "이름(_N): "
+
+msgid "_OK"
+msgstr "확인(_O)"
+
+msgid "_Refresh"
+msgstr "새로 고침(_R)"
+
+msgid "_Show Details"
+msgstr "세부 정보 표시(_S)"
+
+msgid "_Submit"
+msgstr "제출(_S)"
+
+msgid "_Submit..."
+msgstr "제출(_S)..."
+
+msgid "_UP"
+msgstr "위로(_U)"

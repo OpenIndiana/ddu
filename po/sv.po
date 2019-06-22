@@ -1,0 +1,405 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DDU\n"
+"POT-Creation-Date: 2010-01-26 12:00+CST\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: utf-8\n"
+"Generated-By: pygettext.py 1.5\n"
+
+msgid "<b>Driver Information</b>"
+msgstr "<b>Drivrutinsinformation</b>"
+
+msgid "<b>Driver Problems: %s</b>"
+msgstr "<b>Drivrutinsproblem: %s</b>"
+
+msgid "<b>Hardware Information</b>"
+msgstr "<b>Maskinvaruinformation</b>"
+
+msgid "<b>Install driver......</b>"
+msgstr "<b>Installera drivrutin......</b>"
+
+msgid "<b>Submit To HCL</b>"
+msgstr "<b>Skicka till HCL</b>"
+
+msgid "<span foreground=\"#FF0000\">Submission failed!</span>"
+msgstr "<span foreground=\"#FF0000\">Sändningen misslyckades!</span>"
+
+msgid "<span foreground=\"blue\"><b>*Submission Tips</b></span>"
+msgstr "<span foreground=\"blue\"><b>*Sändningstips</b></span>"
+
+msgid "<span size=\"small\" color=\"gray\">SVR4, DU, or p5i</span>"
+msgstr "<span size=\"small\" color=\"gray\">SVR4, DU eller p5i</span>"
+
+msgid ""
+"<span size=\"smaller\">Oracle respects your privacy. We will use your "
+"personal information for communications regarding your submission to the "
+"Oracle Solaris OS: Hardware Compatibility List. For more information see "
+"http://www.oracle.com/html/privacy.html or contact privacy_ww@oracle.com.</"
+"span>"
+msgstr ""
+"<span size=\"smaller\">Oracle respects your privacy. We will use your "
+"personal information for communications regarding your submission to the "
+"Oracle Solaris OS: Hardware Compatibility List. For more information see "
+"http://www.oracle.com/html/privacy.html or contact privacy_ww@oracle.com.</"
+"span>"
+
+msgid "<span weight=\"bold\">Add new repositories:</span>"
+msgstr "<span weight=\"bold\">Lägg till nya databaser:</span>"
+
+msgid "<span weight=\"bold\">Driver</span>"
+msgstr "<span weight=\"bold\">Drivrutin</span>"
+
+msgid "<span weight=\"bold\">Location:</span>"
+msgstr "<span weight=\"bold\">Plats:</span>"
+
+msgid "<span><b>Submission Privacy Policy</b></span>"
+msgstr "<span><b>Sekretesspolicy vid sändning</b></span>"
+
+msgid "Add Driver"
+msgstr "Lägg till drivrutin"
+
+msgid "Add repo"
+msgstr "Lägg till databas"
+
+msgid "Add repository..."
+msgstr "Lägg till databas..."
+
+msgid "All files"
+msgstr "Alla filer"
+
+msgid "Audio"
+msgstr "Ljud"
+
+msgid "Battery"
+msgstr "Batteri"
+
+msgid "Browse Driver Packages"
+msgstr "Bläddra bland paket med drivrutiner"
+
+msgid "C_PU Type:"
+msgstr "_Processortyp:"
+
+msgid "Can not get smbios information"
+msgstr " Det går inte att komma åt smbios-information"
+
+msgid "Cannot proceed with the installation"
+msgstr "Det går inte att fortsätta med installationen"
+
+msgid "Components"
+msgstr "Komponenter"
+
+msgid "DVD"
+msgstr "Dvd"
+
+msgid "Device"
+msgstr "Enhet"
+
+msgid "Device Driver Utility"
+msgstr "Device Driver Utility"
+
+msgid "Device and Driver Detail Information"
+msgstr "Detaljerad information om enhet och drivrutin"
+
+msgid "Do not need to install driver!"
+msgstr "Behöver inte installera drivrutin!"
+
+msgid "Driver"
+msgstr "Drivrutin"
+
+msgid "Driver Available"
+msgstr "Drivrutin tillgänglig"
+
+msgid "Driver Unavailable"
+msgstr "Drivrutin ej tillgänglig"
+
+msgid "Driver already installed"
+msgstr "Drivrutin redan installerad"
+
+msgid "Driver not found in the repository"
+msgstr "Drivrutin kunde inte hittas i databasen"
+
+msgid "Driver not installed"
+msgstr "Drivrutin är inte installerad"
+
+msgid "File/URL:"
+msgstr "Fil/webbadress:"
+
+msgid "Hardware configuration was not submitted"
+msgstr "Maskinvarukonfigurationen har inte skickats"
+
+msgid "Info"
+msgstr "Info"
+
+msgid ""
+"Information cannot be collected for systems running in this virtual "
+"environment."
+msgstr ""
+"Det går inte att samla in information för system som körs i den här "
+"virtuella miljön."
+
+msgid "Install Driver"
+msgstr "Installera drivrutin"
+
+msgid "Install third-party driver manually"
+msgstr "Installera drivrutin från tredje part manuellt"
+
+msgid "Installation Failed!"
+msgstr "Installationen misslyckades!"
+
+msgid "Installation Successful!"
+msgstr "Installationen lyckades!"
+
+msgid "Installing"
+msgstr "Installerar"
+
+msgid "List CPU maker and type (e.g. AMD Opteron 885)."
+msgstr "Ange processorns tillverkare och typ (till exempel AMD Opteron 885)."
+
+msgid "Memory"
+msgstr "Minne"
+
+msgid "Misconfigured"
+msgstr "Felkonfigurerad"
+
+msgid "Model:"
+msgstr "Modell:"
+
+msgid "Name"
+msgstr "Namn"
+
+msgid ""
+"Name of the system or component maker such as Hewlett-Packard, Dell, or "
+"Compaq."
+msgstr ""
+"Namn på systemets eller komponentens tillverkare, som till exempel Hewlett-"
+"Packard, Dell eller Compaq."
+
+msgid "Name:"
+msgstr "Namn:"
+
+msgid "Network"
+msgstr "Nätverk"
+
+msgid "No missing driver"
+msgstr "Ingen saknad drivrutin"
+
+msgid ""
+"Oracle respects your privacy. We will use your personal information for "
+"communications regarding your submission to the Oracle Solaris OS: Hardware "
+"Compatibility List. For more information see http://www.oracle.com/html/"
+"privacy.html or contact privacy_ww@oracle.com."
+msgstr ""
+"Oracle respects your privacy. We will use your personal information for "
+"communications regarding your submission to the Oracle Solaris OS: Hardware "
+"Compatibility List. For more information see http://www.oracle.com/html/"
+"privacy.html or contact privacy_ww@oracle.com."
+
+msgid "Other"
+msgstr "Övrigt"
+
+msgid "Package:"
+msgstr "Paket:"
+
+msgid "Reboot your system after installing the driver if necessary\n"
+msgstr "Starta om systemet om det behövs när drivrutinen är installerad\n"
+
+msgid "Refresh the device list and install the driver again"
+msgstr "Uppdatera enhetslistan och installera drivrutinen igen"
+
+msgid "Removable Device"
+msgstr "Flyttbar enhet"
+
+msgid "Repo not installed"
+msgstr "Databas är inte installerad"
+
+msgid "Repositories manager"
+msgstr "Databashanteraren"
+
+msgid "S_ave"
+msgstr "Spa_ra"
+
+msgid "S_ystem Type:"
+msgstr "_Systemtyp:"
+
+msgid "Save..."
+msgstr "Spara..."
+
+msgid "Smbios error"
+msgstr "Smbios-fel"
+
+msgid "Storage"
+msgstr "Lagring"
+
+msgid "Submission Successful!\n"
+msgstr "Sändningen lyckades!\n"
+
+msgid "Submission failed"
+msgstr "Sändningen misslyckades"
+
+msgid "Submit"
+msgstr "Skicka"
+
+msgid "Submit Error"
+msgstr "Sändningsfel"
+
+msgid "Submit Information To Hardware Compatibility List"
+msgstr "Skicka information till HCL (listan över kompatibel maskinvara)"
+
+msgid "Submit information to Hardware Compatibility List"
+msgstr "Skicka information till HCL (listan över kompatibel maskinvara)"
+
+msgid "System does not export an SMBIOS table"
+msgstr "Systemet exporterar inte någon SMBIOS-tabell"
+
+msgid "Thank you for your submission.\n"
+msgstr "Tack för ditt bidrag.\n"
+
+msgid "The complete model number for the system."
+msgstr "Systemets fullständiga modellnummer."
+
+msgid ""
+"The driver is not in the repository\n"
+"\n"
+msgstr ""
+"Drivrutinen finns inte i databasen\n"
+"\n"
+
+msgid "The driver package is empty."
+msgstr "Paketet med drivrutin."
+
+msgid "The driver path is empty."
+msgstr "Ingen sökväg har angetts för drivrutinen."
+
+msgid "The information will be sent back to Oracle."
+msgstr "Informationen kommer att skickas tillbaka till Oracle."
+
+msgid "The repo name or URL is invalid."
+msgstr "Databasen har ett ogiltigt namn eller en ogiltig webbadress."
+
+msgid "The repository is currently unavailable"
+msgstr "Databasen är för närvarande inte tillgänglig"
+
+msgid "The server is currently unavailable"
+msgstr "Servern är för närvarande inte tillgänglig"
+
+msgid "Third-party"
+msgstr "Tredje part"
+
+msgid "Third-party driver not installed!"
+msgstr "Drivrutin från tredje part är inte installerad!"
+
+msgid ""
+"This can be used for any additional information to document how you "
+"successfully got the system or component to work with the Oracle Solaris."
+msgstr ""
+"Här kan du ange ytterligare information för att dokumentera hur du lyckades "
+"få systemet eller komponenten att fungera med Oracle Solaris."
+
+msgid ""
+"This is often displayed in the BIOS Setup screens. It usually displays at "
+"system boot time."
+msgstr ""
+"Visas ofta på skärmen för BIOS-inställningar och vanligtvis i samband med "
+"systemstart."
+
+msgid "This window will be closed in a few seconds"
+msgstr "Fönstret kommer att stängas om några sekunder"
+
+msgid "Types"
+msgstr "Typer"
+
+msgid "URL:"
+msgstr "Webbadress:"
+
+msgid "USB"
+msgstr "USB"
+
+msgid "Video"
+msgstr "Video"
+
+msgid ""
+"Your submission will now be reviewed before being posted to the Oracle "
+"Solaris HCL.\n"
+msgstr ""
+"Ditt bidrag kommer nu att granskas innan det postas på listan Oracle Solaris "
+"HCL.\n"
+
+msgid "_Add"
+msgstr "_Lägg till"
+
+msgid "_BIOS/Firmware Maker:"
+msgstr "_Tillverkare av BIOS/inbyggd programvara:"
+
+msgid "_Browse..."
+msgstr "_Bläddra..."
+
+msgid "_Cancel"
+msgstr "_Avbryt"
+
+msgid "_Close"
+msgstr "_Stäng"
+
+msgid "_Detail"
+msgstr "_Detaljerad"
+
+msgid "_Detail Information"
+msgstr "_Detaljerad information"
+
+msgid "_Eject"
+msgstr "_Mata ut"
+
+msgid "_Email address:"
+msgstr "_E-postadress:"
+
+msgid ""
+"_General Notes:\n"
+"(English Preferred)"
+msgstr ""
+"_Allmän information:\n"
+"(helst på engelska)"
+
+msgid "_Help"
+msgstr "_Hjälp"
+
+msgid "_Information Collected:"
+msgstr "_Insamlad information:"
+
+msgid "_Install"
+msgstr "_Installera"
+
+msgid "_Install All DrIver"
+msgstr "_Installera alla drivrutiner"
+
+msgid "_Install All Drivers"
+msgstr "_Installera alla drivrutiner"
+
+msgid "_Install Driver"
+msgstr "_Installera drivrutin"
+
+msgid "_Manufacturer Name:"
+msgstr "_Tillverkare:"
+
+msgid "_Name:"
+msgstr "_Namn: "
+
+msgid "_OK"
+msgstr "_OK"
+
+msgid "_Refresh"
+msgstr "_Uppdatera"
+
+msgid "_Show Details"
+msgstr "_Visa information"
+
+msgid "_Submit"
+msgstr "_Skicka"
+
+msgid "_Submit..."
+msgstr "_Skicka..."
+
+msgid "_UP"
+msgstr "_UP"

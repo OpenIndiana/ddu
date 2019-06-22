@@ -21,15 +21,18 @@ DESTDIR?=/
 
 SUDO?=sudo
 
+CP=/usr/bin/cp -rp
 LN=/usr/bin/ln -f
 MKDIR=/usr/bin/mkdir -p
-CP=/usr/bin/cp -rp
-RM=/usr/bin/rm -f
+MSGFMT=/usr/bin/msgfmt
 PKG=/usr/bin/pkg
+RM=/usr/bin/rm -f
 
 ARCH=$(shell uname -p)
 
 BIN_ROOT=$(DESTDIR)/usr/ddu/bin/$(ARCH)
+
+I18N_ROOT=$(DESTDIR)/usr/ddu/i18n
 
 MODE=0644
 
@@ -51,3 +54,4 @@ REQUIRED_PACKAGES += service/hal
 REQUIRED_PACKAGES += system/header
 REQUIRED_PACKAGES += system/library/libdbus
 REQUIRED_PACKAGES += system/library/storage/libmpapi
+REQUIRED_PACKAGES += text/locale

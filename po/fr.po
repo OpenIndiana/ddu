@@ -1,0 +1,407 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DDU\n"
+"POT-Creation-Date: 2010-01-26 12:00+CST\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: utf-8\n"
+"Generated-By: pygettext.py 1.5\n"
+
+msgid "<b>Driver Information</b>"
+msgstr "<b>Informations sur le pilote</b>"
+
+msgid "<b>Driver Problems: %s</b>"
+msgstr "<b>Problèmes de pilote : %s</b>"
+
+msgid "<b>Hardware Information</b>"
+msgstr "<b>Informations sur le matériel</b>"
+
+msgid "<b>Install driver......</b>"
+msgstr "<b>Installer le pilote...</b>"
+
+msgid "<b>Submit To HCL</b>"
+msgstr "<b>Envoyer vers la HCL</b>"
+
+msgid "<span foreground=\"#FF0000\">Submission failed!</span>"
+msgstr "<span foreground=\"#FF0000\">Échec de l'envoi</span>"
+
+msgid "<span foreground=\"blue\"><b>*Submission Tips</b></span>"
+msgstr "<span foreground=\"blue\"><b>*Conseils d'envoi</b></span>"
+
+msgid "<span size=\"small\" color=\"gray\">SVR4, DU, or p5i</span>"
+msgstr "<span size=\"small\" color=\"gray\">SVR4, PND (DU) ou p5i</span>"
+
+msgid ""
+"<span size=\"smaller\">Oracle respects your privacy. We will use your "
+"personal information for communications regarding your submission to the "
+"Oracle Solaris OS: Hardware Compatibility List. For more information see "
+"http://www.oracle.com/html/privacy.html or contact privacy_ww@oracle.com.</"
+"span>"
+msgstr ""
+"<span size=\"smaller\">Oracle respecte votre vie privée. Vos informations "
+"personnelles seront utilisées dans le cadre des envois vers la liste de "
+"compatibilité matérielle. Pour en savoir plus, rendez-vous sur http://www."
+"oracle.com/html/privacy.html ou contactez-nous à l'adresse privacy_ww@oracle."
+"com.</span>"
+
+msgid "<span weight=\"bold\">Add new repositories:</span>"
+msgstr "<span weight=\"bold\">Ajouter de nouveaux référentiels :</span>"
+
+msgid "<span weight=\"bold\">Driver</span>"
+msgstr "<span weight=\"bold\">Pilote</span>"
+
+msgid "<span weight=\"bold\">Location:</span>"
+msgstr "<span weight=\"bold\">Emplacement :</span>"
+
+msgid "<span><b>Submission Privacy Policy</b></span>"
+msgstr "<span><b>Politique de confidentialité appliquée aux envois</b></span>"
+
+msgid "Add Driver"
+msgstr "Ajouter un pilote"
+
+msgid "Add repo"
+msgstr "Ajouter un référentiel"
+
+msgid "Add repository..."
+msgstr "Ajouter un dépôt..."
+
+msgid "All files"
+msgstr "Tous les fichiers"
+
+msgid "Audio"
+msgstr "Audio"
+
+msgid "Battery"
+msgstr "Batterie"
+
+msgid "Browse Driver Packages"
+msgstr "Parcourir les packages de pilotes"
+
+msgid "C_PU Type:"
+msgstr "Type de C_PU :"
+
+msgid "Can not get smbios information"
+msgstr "Impossible d'obtenir les informations du SMBIOS"
+
+msgid "Cannot proceed with the installation"
+msgstr "Installation impossible"
+
+msgid "Components"
+msgstr "Composants"
+
+msgid "DVD"
+msgstr "DVD"
+
+msgid "Device"
+msgstr "Périphérique"
+
+msgid "Device Driver Utility"
+msgstr "Utilitaire des pilotes de périphérique"
+
+msgid "Device and Driver Detail Information"
+msgstr "Informations détaillées sur le pilote et le périphérique"
+
+msgid "Do not need to install driver!"
+msgstr "Il n'est pas nécessaire d'installer le pilote."
+
+msgid "Driver"
+msgstr "Pilote"
+
+msgid "Driver Available"
+msgstr "Pilote disponible"
+
+msgid "Driver Unavailable"
+msgstr "Pilote non disponible"
+
+msgid "Driver already installed"
+msgstr "Pilote déjà installé"
+
+msgid "Driver not found in the repository"
+msgstr "Pilote introuvable dans le référentiel"
+
+msgid "Driver not installed"
+msgstr "Pilote non installé"
+
+msgid "File/URL:"
+msgstr "Fichier/URL :"
+
+msgid "Hardware configuration was not submitted"
+msgstr "La configuration matérielle n'a pas été envoyée"
+
+msgid "Info"
+msgstr "Info"
+
+msgid ""
+"Information cannot be collected for systems running in this virtual "
+"environment."
+msgstr ""
+"Les informations sur les systèmes s'exécutant dans cet environnement virtuel "
+"ne peuvent pas être collectées."
+
+msgid "Install Driver"
+msgstr "Installer le pilote"
+
+msgid "Install third-party driver manually"
+msgstr "Installer manuellement le pilote tiers"
+
+msgid "Installation Failed!"
+msgstr "Échec de l'installation"
+
+msgid "Installation Successful!"
+msgstr "Installation terminée"
+
+msgid "Installing"
+msgstr "Installation"
+
+msgid "List CPU maker and type (e.g. AMD Opteron 885)."
+msgstr "Liste des types de CPU et fabricants (par exemple : AMD Opteron 885)."
+
+msgid "Memory"
+msgstr "Mémoire"
+
+msgid "Misconfigured"
+msgstr "Configuration incorrecte"
+
+msgid "Model:"
+msgstr "Modèle :"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid ""
+"Name of the system or component maker such as Hewlett-Packard, Dell, or "
+"Compaq."
+msgstr ""
+"Nom du fabricant du système ou des composants (Hewlett-Packard, Dell, "
+"Compaq, etc.)."
+
+msgid "Name:"
+msgstr "Nom :"
+
+msgid "Network"
+msgstr "Réseau"
+
+msgid "No missing driver"
+msgstr "Aucun pilote manquant"
+
+msgid ""
+"Oracle respects your privacy. We will use your personal information for "
+"communications regarding your submission to the Oracle Solaris OS: Hardware "
+"Compatibility List. For more information see http://www.oracle.com/html/"
+"privacy.html or contact privacy_ww@oracle.com."
+msgstr ""
+"Oracle respecte votre vie privée. Vos informations personnelles seront "
+"utilisées dans le cadre des envois vers la liste de compatibilité "
+"matérielle. Pour en savoir plus, rendez-vous sur http://www.oracle.com/html/"
+"privacy.html ou contactez-nous à l'adresse privacy_ww@oracle.com."
+
+msgid "Other"
+msgstr "Autre"
+
+msgid "Package:"
+msgstr "Package :"
+
+msgid "Reboot your system after installing the driver if necessary\n"
+msgstr ""
+"Si nécessaire, réinitialisez le système après l'installation du pilote\n"
+
+msgid "Refresh the device list and install the driver again"
+msgstr "Actualiser la liste des périphériques et réinstaller le pilote"
+
+msgid "Removable Device"
+msgstr "Périphérique amovible"
+
+msgid "Repo not installed"
+msgstr "Référentiel non installé"
+
+msgid "Repositories manager"
+msgstr "Gestionnaire des référentiels"
+
+msgid "S_ave"
+msgstr "_Enregistrer"
+
+msgid "S_ystem Type:"
+msgstr "T_ype de système :"
+
+msgid "Save..."
+msgstr "Enregistrer..."
+
+msgid "Smbios error"
+msgstr "Erreur de SMBIOS"
+
+msgid "Storage"
+msgstr "Stockage"
+
+msgid "Submission Successful!\n"
+msgstr "Envoi réussi\n"
+
+msgid "Submission failed"
+msgstr "Échec de l'envoi"
+
+msgid "Submit"
+msgstr "Envoyer"
+
+msgid "Submit Error"
+msgstr "Erreur d'envoi"
+
+msgid "Submit Information To Hardware Compatibility List"
+msgstr "Envoyer les informations vers la liste de compatibilité matérielle"
+
+msgid "Submit information to Hardware Compatibility List"
+msgstr "Envoyer les informations vers la liste de compatibilité matérielle"
+
+msgid "System does not export an SMBIOS table"
+msgstr "Le système n'exporte pas une table SMBIOS"
+
+msgid "Thank you for your submission.\n"
+msgstr "Merci de votre envoi.\n"
+
+msgid "The complete model number for the system."
+msgstr "Numéro de modèle complet du système."
+
+msgid ""
+"The driver is not in the repository\n"
+"\n"
+msgstr ""
+"Le pilote n'est pas dans le référentiel\n"
+"\n"
+
+msgid "The driver package is empty."
+msgstr "Le package de pilote est vide."
+
+msgid "The driver path is empty."
+msgstr "Le chemin du pilote est vide."
+
+msgid "The information will be sent back to Oracle."
+msgstr "Ces informations seront transmises à Oracle."
+
+msgid "The repo name or URL is invalid."
+msgstr "Le nom ou l'URL du référentiel n'est pas valide."
+
+msgid "The repository is currently unavailable"
+msgstr "Le référentiel n'est pas disponible pour l'instant"
+
+msgid "The server is currently unavailable"
+msgstr "Le serveur n'est pas disponible pour l'instant"
+
+msgid "Third-party"
+msgstr "Tiers"
+
+msgid "Third-party driver not installed!"
+msgstr "Pilote tiers non installé"
+
+msgid ""
+"This can be used for any additional information to document how you "
+"successfully got the system or component to work with the Oracle Solaris."
+msgstr ""
+"Permet de consigner tout complément d'information sur la manière dont vous "
+"avez réussi à faire fonctionner Oracle Solaris sur le système et ses "
+"composants."
+
+msgid ""
+"This is often displayed in the BIOS Setup screens. It usually displays at "
+"system boot time."
+msgstr ""
+"Ce numéro apparaît souvent sur les écrans de configuration du BIOS. Il "
+"s'affiche généralement au moment du démarrage du système."
+
+msgid "This window will be closed in a few seconds"
+msgstr "Cette fenêtre va se fermer dans quelques secondes"
+
+msgid "Types"
+msgstr "Types"
+
+msgid "URL:"
+msgstr "URL : "
+
+msgid "USB"
+msgstr "USB"
+
+msgid "Video"
+msgstr "Vidéo"
+
+msgid ""
+"Your submission will now be reviewed before being posted to the Oracle "
+"Solaris HCL.\n"
+msgstr ""
+"Votre envoi sera examiné avant d'être publié dans la liste de compatibilité "
+"matérielle (HCL) Oracle Solaris.\n"
+
+msgid "_Add"
+msgstr "_Ajouter"
+
+msgid "_BIOS/Firmware Maker:"
+msgstr "Fabricant _BIOS/microprogramme :"
+
+msgid "_Browse..."
+msgstr "_Parcourir..."
+
+msgid "_Cancel"
+msgstr "A_nnuler"
+
+msgid "_Close"
+msgstr "_Fermer"
+
+msgid "_Detail"
+msgstr "_Détail"
+
+msgid "_Detail Information"
+msgstr "Informations _détaillées"
+
+msgid "_Eject"
+msgstr "_Éjecter"
+
+msgid "_Email address:"
+msgstr "_Adresse e-mail :"
+
+msgid ""
+"_General Notes:\n"
+"(English Preferred)"
+msgstr ""
+"Note_s :\n"
+"(en anglais de préférence)"
+
+msgid "_Help"
+msgstr "Aid_e"
+
+msgid "_Information Collected:"
+msgstr "_Informations recueillies :"
+
+msgid "_Install"
+msgstr "_Installer"
+
+msgid "_Install All DrIver"
+msgstr "_Installer tous les pilotes"
+
+msgid "_Install All Drivers"
+msgstr "_Installer tous les pilotes"
+
+msgid "_Install Driver"
+msgstr "_Installer le pilote"
+
+msgid "_Manufacturer Name:"
+msgstr "_Nom du fabricant :"
+
+msgid "_Name:"
+msgstr "_Nom : "
+
+msgid "_OK"
+msgstr "_OK"
+
+msgid "_Refresh"
+msgstr "Ac_tualiser"
+
+msgid "_Show Details"
+msgstr "A_fficher les détails"
+
+msgid "_Submit"
+msgstr "_Envoyer"
+
+msgid "_Submit..."
+msgstr "_Envoyer..."
+
+msgid "_UP"
+msgstr "_UP"

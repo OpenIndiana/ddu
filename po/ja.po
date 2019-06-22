@@ -1,0 +1,401 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DDU\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-01-26 12:00+CST\n"
+"PO-Revision-Date: 2010-01-26 12:00+CST\n"
+"Last-Translator: Japanese L10n Team <i18n-discuss@opensolaris.org>\n"
+"Language-Team: Japanese <i18n-discuss@opensolaris.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+msgid "<b>Driver Information</b>"
+msgstr "<b>ドライバ情報</b>"
+
+msgid "<b>Driver Problems: %s</b>"
+msgstr "<b>ドライバの問題: %s</b>"
+
+msgid "<b>Hardware Information</b>"
+msgstr "<b>ハードウェア情報</b>"
+
+msgid "<b>Install driver......</b>"
+msgstr "<b>ドライバをインストールします......</b>"
+
+msgid "<b>Submit To HCL</b>"
+msgstr "<b>HCL に送信</b>"
+
+msgid "<span foreground=\"#FF0000\">Submission failed!</span>"
+msgstr "<span foreground=\"#FF0000\">送信に失敗しました。</span>"
+
+msgid "<span foreground=\"blue\"><b>*Submission Tips</b></span>"
+msgstr "<span foreground=\"blue\"><b>* 送信のヒント</b></span>"
+
+msgid "<span size=\"small\" color=\"gray\">SVR4, DU, or p5i</span>"
+msgstr "<span size=\"small\" color=\"gray\">SVR4、DU ないし p5i</span>"
+
+msgid ""
+"<span size=\"smaller\">Oracle respects your privacy. We will use your "
+"personal information for communications regarding your submission to the "
+"Oracle Solaris OS: Hardware Compatibility List. For more information see "
+"http://www.oracle.com/html/privacy.html or contact privacy_ww@oracle.com.</"
+"span>"
+msgstr ""
+"<span size=\"smaller\">Oracle はお客様のプライバシーを尊重いたします。お客様"
+"の個人情報は、Oracle Solaris OS: ハードウェア互換リストへの情報送信に関わる通"
+"信用として使用されます。詳細については、http://www.oracle.com/html/privacy."
+"html を参照するか、privacy_ww@oracle.com までご連絡ください。</span>"
+
+msgid "<span weight=\"bold\">Add new repositories:</span>"
+msgstr "<span weight=\"bold\">新規リポジトリを追加</span>"
+
+msgid "<span weight=\"bold\">Driver</span>"
+msgstr "<span weight=\"bold\">ドライバ</span>"
+
+msgid "<span weight=\"bold\">Location:</span>"
+msgstr "<span weight=\"bold\">場所:</span>"
+
+msgid "<span><b>Submission Privacy Policy</b></span>"
+msgstr "<span><b>送信のプライバシポリシー</b></span>"
+
+msgid "Add Driver"
+msgstr "ドライバを追加"
+
+msgid "Add repo"
+msgstr "リポジトリを追加"
+
+msgid "Add repository..."
+msgstr "リポジトリを追加..."
+
+msgid "All files"
+msgstr "すべてのファイル"
+
+msgid "Audio"
+msgstr "オーディオ"
+
+msgid "Battery"
+msgstr "バッテリ"
+
+msgid "Browse Driver Packages"
+msgstr "ドライバパッケージをブラウズ"
+
+msgid "C_PU Type:"
+msgstr "CPU タイプ(_P):"
+
+msgid "Can not get smbios information"
+msgstr "smbios 情報を取得できません"
+
+msgid "Cannot proceed with the installation"
+msgstr "インストールを続行できません"
+
+msgid "Components"
+msgstr "コンポーネント"
+
+msgid "DVD"
+msgstr "DVD"
+
+msgid "Device"
+msgstr "デバイス"
+
+msgid "Device Driver Utility"
+msgstr "デバイスドライバユーティリティー"
+
+msgid "Device and Driver Detail Information"
+msgstr "デバイスおよびドライバの詳細情報"
+
+msgid "Do not need to install driver!"
+msgstr "ドライバをインストールする必要はありません。"
+
+msgid "Driver"
+msgstr "ドライバ"
+
+msgid "Driver Available"
+msgstr "ドライバは利用可能"
+
+msgid "Driver Unavailable"
+msgstr "ドライバは利用不可"
+
+msgid "Driver already installed"
+msgstr "ドライバはすでにインストールされています"
+
+msgid "Driver not found in the repository"
+msgstr "リポジトリ内でドライバが見つかりません"
+
+msgid "Driver not installed"
+msgstr "ドライバがインストールされていません"
+
+msgid "File/URL:"
+msgstr "ファイル/URL:"
+
+msgid "Hardware configuration was not submitted"
+msgstr "ハードウェア構成が送信されませんでした"
+
+msgid "Info"
+msgstr "情報"
+
+msgid ""
+"Information cannot be collected for systems running in this virtual "
+"environment."
+msgstr "この仮想環境内で稼働するシステムの情報を収集できません。"
+
+msgid "Install Driver"
+msgstr "ドライバのインストール"
+
+msgid "Install third-party driver manually"
+msgstr "他社製ドライバを手動でインストールします"
+
+msgid "Installation Failed!"
+msgstr "インストールに失敗しました。"
+
+msgid "Installation Successful!"
+msgstr "インストールに成功しました。"
+
+msgid "Installing"
+msgstr "インストール中"
+
+msgid "List CPU maker and type (e.g. AMD Opteron 885)."
+msgstr "CPU のメーカーとタイプ (AMD Opteron 885 など) を表示します。"
+
+msgid "Memory"
+msgstr "メモリー"
+
+msgid "Misconfigured"
+msgstr "構成が不適切"
+
+msgid "Model:"
+msgstr "モデル:"
+
+msgid "Name"
+msgstr "名前"
+
+msgid ""
+"Name of the system or component maker such as Hewlett-Packard, Dell, or "
+"Compaq."
+msgstr ""
+"Hewlett-Packard、Dell、Compaq など、システムまたはコンポーネントのメーカーの"
+"名前。"
+
+msgid "Name:"
+msgstr "名前:"
+
+msgid "Network"
+msgstr "ネットワーク"
+
+msgid "No missing driver"
+msgstr "不足しているドライバはありません。"
+
+msgid ""
+"Oracle respects your privacy. We will use your personal information for "
+"communications regarding your submission to the Oracle Solaris OS: Hardware "
+"Compatibility List. For more information see http://www.oracle.com/html/"
+"privacy.html or contact privacy_ww@oracle.com."
+msgstr ""
+"Oracle はお客様のプライバシーを尊重いたします。お客様の個人情報は、Oracle "
+"Solaris OS: ハードウェア互換リストへの情報送信に関わる通信用として使用されま"
+"す。詳細については、http://www.oracle.com/html/privacy.html を参照するか、"
+"privacy_ww@oracle.com までご連絡ください。"
+
+msgid "Other"
+msgstr "その他"
+
+msgid "Package:"
+msgstr "パッケージ:"
+
+msgid "Reboot your system after installing the driver if necessary\n"
+msgstr "必要があればドライバのインストール後にシステムをリブートします\n"
+
+msgid "Refresh the device list and install the driver again"
+msgstr "デバイス一覧を再表示し、ドライバを再度インストールします"
+
+msgid "Removable Device"
+msgstr "リムーバブルデバイス"
+
+msgid "Repo not installed"
+msgstr "リポジトリがインストールされていません"
+
+msgid "Repositories manager"
+msgstr "リポジトリマネージャー"
+
+msgid "S_ave"
+msgstr "保存(_A)"
+
+msgid "S_ystem Type:"
+msgstr "システムタイプ(_Y):"
+
+msgid "Save..."
+msgstr "保存..."
+
+msgid "Smbios error"
+msgstr "smbios エラー"
+
+msgid "Storage"
+msgstr "ストレージ"
+
+msgid "Submission Successful!\n"
+msgstr "送信に成功しました。\n"
+
+msgid "Submission failed"
+msgstr "送信に失敗しました"
+
+msgid "Submit"
+msgstr "送信"
+
+msgid "Submit Error"
+msgstr "送信エラー"
+
+msgid "Submit Information To Hardware Compatibility List"
+msgstr "ハードウェア互換リストに情報を送信"
+
+msgid "Submit information to Hardware Compatibility List"
+msgstr "ハードウェア互換リストに情報を送信"
+
+msgid "System does not export an SMBIOS table"
+msgstr "システムは SMBIOS テーブルをエクスポートしません"
+
+msgid "Thank you for your submission.\n"
+msgstr "ご送信いただきありがとうございます。\n"
+
+msgid "The complete model number for the system."
+msgstr "システムの完全なモデル番号。"
+
+msgid ""
+"The driver is not in the repository\n"
+"\n"
+msgstr ""
+"ドライバがリポジトリ内に存在しません\n"
+"\n"
+
+msgid "The driver package is empty."
+msgstr "ドライバパッケージが空です。"
+
+msgid "The driver path is empty."
+msgstr "ドライバのパスが空です。"
+
+msgid "The information will be sent back to Oracle."
+msgstr "この情報は Oracle に送り返されます。"
+
+msgid "The repo name or URL is invalid."
+msgstr "リポジトリ名か URL が無効です。"
+
+msgid "The repository is currently unavailable"
+msgstr "リポジトリは現在使用できません"
+
+msgid "The server is currently unavailable"
+msgstr "サーバーは現在使用できません"
+
+msgid "Third-party"
+msgstr "他社製"
+
+msgid "Third-party driver not installed!"
+msgstr "他社製ドライバがインストールされていません。"
+
+msgid ""
+"This can be used for any additional information to document how you "
+"successfully got the system or component to work with the Oracle Solaris."
+msgstr ""
+"ここには、システムやコンポーネントを Oracle Solaris で正しく動作させた方法を"
+"追加で記載できます。"
+
+msgid ""
+"This is often displayed in the BIOS Setup screens. It usually displays at "
+"system boot time."
+msgstr "通常はシステムブート時に表示される BIOS 設定画面に表示されます。"
+
+msgid "This window will be closed in a few seconds"
+msgstr "このウィンドウは数秒で閉じます。"
+
+msgid "Types"
+msgstr "タイプ"
+
+msgid "URL:"
+msgstr "URL: "
+
+msgid "USB"
+msgstr "USB"
+
+msgid "Video"
+msgstr "ビデオ"
+
+msgid ""
+"Your submission will now be reviewed before being posted to the Oracle "
+"Solaris HCL.\n"
+msgstr ""
+"お送りいただいた内容は、確認完了後に、Oracle Solaris ハードウェア互換リストに"
+"反映します。\n"
+
+msgid "_Add"
+msgstr "追加(_A)"
+
+msgid "_BIOS/Firmware Maker:"
+msgstr "BIOS/ファームウェアのメーカー(_B):"
+
+msgid "_Browse..."
+msgstr "参照(_B)..."
+
+msgid "_Cancel"
+msgstr "取り消し(_C)"
+
+msgid "_Close"
+msgstr "閉じる(_C)"
+
+msgid "_Detail"
+msgstr "詳細(_D)"
+
+msgid "_Detail Information"
+msgstr "詳細情報(_D)"
+
+msgid "_Eject"
+msgstr "取り出す(_E)"
+
+msgid "_Email address:"
+msgstr "電子メールアドレス(_E):"
+
+msgid ""
+"_General Notes:\n"
+"(English Preferred)"
+msgstr ""
+"備考(_G):\n"
+"(英語を推奨)"
+
+msgid "_Help"
+msgstr "ヘルプ(_H)"
+
+msgid "_Information Collected:"
+msgstr "収集された情報(_I):"
+
+msgid "_Install"
+msgstr "インストール(_I)"
+
+msgid "_Install All DrIver"
+msgstr "すべてのドライバをインストール(_I)"
+
+msgid "_Install All Drivers"
+msgstr "すべてのドライバをインストール(_I)"
+
+msgid "_Install Driver"
+msgstr "ドライバのインストール(_I)"
+
+msgid "_Manufacturer Name:"
+msgstr "製造元名(_M):"
+
+msgid "_Name:"
+msgstr "名前(_N): "
+
+msgid "_OK"
+msgstr "了解(_O)"
+
+msgid "_Refresh"
+msgstr "再表示(_R)"
+
+msgid "_Show Details"
+msgstr "詳細を表示(_S)"
+
+msgid "_Submit"
+msgstr "送信(_S)"
+
+msgid "_Submit..."
+msgstr "送信... (_S)"
+
+msgid "_UP"
+msgstr "上へ(_U)"

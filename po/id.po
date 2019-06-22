@@ -1,0 +1,404 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DDU\n"
+"POT-Creation-Date: 2010-01-26 12:00+CST\n"
+"PO-Revision-Date: 2010-01-26 12:00+CST\n"
+"Last-Translator: Indonesian l10n team <i18n-discuss@opensolaris.org>\n"
+"Language-Team: Indonesian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+msgid "<b>Driver Information</b>"
+msgstr "<b>Informasi Driver</b>"
+
+msgid "<b>Driver Problems: %s</b>"
+msgstr "<b>Masalah Driver: %s</b>"
+
+msgid "<b>Hardware Information</b>"
+msgstr "<b>Informasi Perangkat Keras</b>"
+
+msgid "<b>Install driver......</b>"
+msgstr "<b>Instalasi driver......</b>"
+
+msgid "<b>Submit To HCL</b>"
+msgstr "<b>Kirim ke HCL</b>"
+
+msgid "<span foreground=\"#FF0000\">Submission failed!</span>"
+msgstr "<span foreground=\"#FF0000\">Pengiriman gagal!</span>"
+
+msgid "<span foreground=\"blue\"><b>*Submission Tips</b></span>"
+msgstr "<span foreground=\"blue\"><b>*Tips Pengiriman</b></span>"
+
+msgid "<span size=\"small\" color=\"gray\">SVR4, DU, or p5i</span>"
+msgstr "<span size=\"small\" color=\"gray\">SVR4, DU, or p5i</span>"
+
+msgid ""
+"<span size=\"smaller\">Oracle respects your privacy. We will use your "
+"personal information for communications regarding your submission to the "
+"Oracle Solaris OS: Hardware Compatibility List. For more information see "
+"http://www.oracle.com/html/privacy.html or contact privacy_ww@oracle.com.</"
+"span>"
+msgstr ""
+"<span size=\"smaller\">Oracle respects your privacy. We will use your "
+"personal information for communications regarding your submission to the "
+"Oracle Solaris OS: Hardware Compatibility List. For more information see "
+"http://www.oracle.com/html/privacy.html or contact privacy_ww@oracle.com.</"
+"span>"
+
+msgid "<span weight=\"bold\">Add new repositories:</span>"
+msgstr "<span weight=\"bold\">Tambah repository baru:</span>"
+
+msgid "<span weight=\"bold\">Driver</span>"
+msgstr "<span weight=\"bold\">Driver</span>"
+
+msgid "<span weight=\"bold\">Location:</span>"
+msgstr "<span weight=\"bold\">Lokasi:</span>"
+
+msgid "<span><b>Submission Privacy Policy</b></span>"
+msgstr "<span><b>Kebijakan Privasi Pengiriman</b></span>"
+
+msgid "Add Driver"
+msgstr "Tambah Driver"
+
+msgid "Add repo"
+msgstr "Menambah repo"
+
+msgid "Add repository..."
+msgstr "Tambah repository..."
+
+msgid "All files"
+msgstr "Semua berkas"
+
+msgid "Audio"
+msgstr "Suara"
+
+msgid "Battery"
+msgstr "Baterai"
+
+msgid "Browse Driver Packages"
+msgstr "Jelajah Paket Driver"
+
+msgid "C_PU Type:"
+msgstr "Tipe C_PU:"
+
+msgid "Can not get smbios information"
+msgstr "Tidak dapat mendapatkan informasi smbios"
+
+msgid "Cannot proceed with the installation"
+msgstr "Tidak dapat melanjutkan ke tahap instalasi"
+
+msgid "Components"
+msgstr "Komponen"
+
+msgid "DVD"
+msgstr "DVD"
+
+msgid "Device"
+msgstr "Perangkat"
+
+msgid "Device Driver Utility"
+msgstr "Utilitas Driver Perangkat"
+
+msgid "Device and Driver Detail Information"
+msgstr "Keterangan Lengkap Perangkat Keras dan Driver"
+
+msgid "Do not need to install driver!"
+msgstr "Tidak memerlukan instalasi driver!"
+
+msgid "Driver"
+msgstr "Driver"
+
+msgid "Driver Available"
+msgstr "Driver tersedia"
+
+msgid "Driver Unavailable"
+msgstr "Driver tidak tersedia"
+
+msgid "Driver already installed"
+msgstr "Driver sudah terinstal"
+
+msgid "Driver not found in the repository"
+msgstr "Driver tidak ditemukan didalam repository"
+
+msgid "Driver not installed"
+msgstr "Driver tidak terinstal"
+
+msgid "File/URL:"
+msgstr "Berkas/URL:"
+
+msgid "Hardware configuration was not submitted"
+msgstr "Pengaturan perangkat keras tidak di kirimkan"
+
+msgid "Info"
+msgstr "Keterangan"
+
+msgid ""
+"Information cannot be collected for systems running in this virtual "
+"environment."
+msgstr ""
+"Informasi tidak bisa didapatkan karena sistem sedang berjalan pada "
+"lingkungan emulasi (virtual)"
+
+msgid "Install Driver"
+msgstr "Instal driver"
+
+msgid "Install third-party driver manually"
+msgstr "Instal driver pihak ketiga secara manual"
+
+msgid "Installation Failed!"
+msgstr "Proses instalasi gagal!"
+
+msgid "Installation Successful!"
+msgstr "Proses instalasi berhasil!"
+
+msgid "Installing"
+msgstr "Menginstal"
+
+msgid "List CPU maker and type (e.g. AMD Opteron 885)."
+msgstr "Daftar pembuat CPU dan tipenya (contoh AMD Opteron 885)"
+
+msgid "Memory"
+msgstr "Memori (RAM)"
+
+msgid "Misconfigured"
+msgstr "Terdapat kesalahan pengaturan"
+
+msgid "Model:"
+msgstr "Model:"
+
+msgid "Name"
+msgstr "Nama"
+
+msgid ""
+"Name of the system or component maker such as Hewlett-Packard, Dell, or "
+"Compaq."
+msgstr ""
+"Nama pembuat sistem atau komponen, seperti Hewlett-Packard, Dell, atau "
+"Compaq."
+
+msgid "Name:"
+msgstr "Nama:"
+
+msgid "Network"
+msgstr "Jaringan"
+
+msgid "No missing driver"
+msgstr "Driver lengkap"
+
+msgid ""
+"Oracle respects your privacy. We will use your personal information for "
+"communications regarding your submission to the Oracle Solaris OS: Hardware "
+"Compatibility List. For more information see http://www.oracle.com/html/"
+"privacy.html or contact privacy_ww@oracle.com."
+msgstr ""
+"Oracle respects your privacy. We will use your personal information for "
+"communications regarding your submission to the Oracle Solaris OS: Hardware "
+"Compatibility List. For more information see http://www.oracle.com/html/"
+"privacy.html or contact privacy_ww@oracle.com."
+
+msgid "Other"
+msgstr "Lain"
+
+msgid "Package:"
+msgstr "Paket:"
+
+msgid "Reboot your system after installing the driver if necessary\n"
+msgstr "Restart sistem anda setelah proses instalasi jka diperlukan\n"
+
+msgid "Refresh the device list and install the driver again"
+msgstr "Memperbarui daftar perangkat keras dan menginstal driverya lagi"
+
+msgid "Removable Device"
+msgstr "Perangkat Removable"
+
+msgid "Repo not installed"
+msgstr "Repo tidak terinstal"
+
+msgid "Repositories manager"
+msgstr "Pengatur repositori"
+
+msgid "S_ave"
+msgstr "S_impan"
+
+msgid "S_ystem Type:"
+msgstr "Tipe S_istem:"
+
+msgid "Save..."
+msgstr "Menyimpan..."
+
+msgid "Smbios error"
+msgstr "Kesalahan Smbios"
+
+msgid "Storage"
+msgstr "Penyimpanan"
+
+msgid "Submission Successful!\n"
+msgstr "Kiriman Berhasil!\n"
+
+msgid "Submission failed"
+msgstr "Kiriman gagal"
+
+msgid "Submit"
+msgstr "Kirim"
+
+msgid "Submit Error"
+msgstr "Kesalahan pengiriman"
+
+msgid "Submit Information To Hardware Compatibility List"
+msgstr "Mengirimkan informasi kepada Daftar Dukungan Perangkat Keras"
+
+msgid "Submit information to Hardware Compatibility List"
+msgstr "Mengirimkan informasi kepada Daftar Dukungan Perangkat Keras"
+
+msgid "System does not export an SMBIOS table"
+msgstr "Sistem tidak mendukung proses export sebuah tabel SMBIOS`"
+
+msgid "Thank you for your submission.\n"
+msgstr "Terima kasih atas kiriman anda.\n"
+
+msgid "The complete model number for the system."
+msgstr "Nomor model lengkap untuk sistem"
+
+msgid ""
+"The driver is not in the repository\n"
+"\n"
+msgstr ""
+"Driver tidak berada didalam repository\n"
+"\n"
+
+msgid "The driver package is empty."
+msgstr "Paket driver kosong."
+
+msgid "The driver path is empty."
+msgstr "Lokasi driver kosong."
+
+msgid "The information will be sent back to Oracle."
+msgstr "Informasi ini akan dikirim kembali kepada Oracle."
+
+msgid "The repo name or URL is invalid."
+msgstr "Nama repo dan URL kelihatannya tidak valid"
+
+msgid "The repository is currently unavailable"
+msgstr "Repositori sedang tidak tersedia untuk saat ini"
+
+msgid "The server is currently unavailable"
+msgstr "Server sedang tidak bekerja untuk saat ini"
+
+msgid "Third-party"
+msgstr "Pihak-ketiga"
+
+msgid "Third-party driver not installed!"
+msgstr "Driver pihak ketiga tidak terinstal"
+
+msgid ""
+"This can be used for any additional information to document how you "
+"successfully got the system or component to work with the Oracle Solaris."
+msgstr ""
+"Hal ini bisa digunakan sebagai tambahan untuk dokumentasi tentang bagaimana "
+"anda mengatur sistem atau komponen agar bisa bekerja dengan Oracle Solaris"
+
+msgid ""
+"This is often displayed in the BIOS Setup screens. It usually displays at "
+"system boot time."
+msgstr ""
+"Hal ini biasa ditampilkan pada layar pengaturan BIOS. Biasanya ditampilkan "
+"pada waktu booting sistem"
+
+msgid "This window will be closed in a few seconds"
+msgstr "Jendela ini akan tertutup dalam beberapa detik"
+
+msgid "Types"
+msgstr "Jenis-jenis"
+
+msgid "URL:"
+msgstr "URL (Alamat situs):"
+
+msgid "USB"
+msgstr "USB"
+
+msgid "Video"
+msgstr "Gambar Bergerak (Video)"
+
+msgid ""
+"Your submission will now be reviewed before being posted to the Oracle "
+"Solaris HCL.\n"
+msgstr ""
+"Kiriman anda akan diterima sebelum ditampilkan ke HCL Oracle Solaris.\n"
+
+msgid "_Add"
+msgstr "_Menambah"
+
+msgid "_BIOS/Firmware Maker:"
+msgstr "_Pembuat BIOS/Firmware:"
+
+msgid "_Browse..."
+msgstr "_Jelajah..."
+
+msgid "_Cancel"
+msgstr "_Batal"
+
+msgid "_Close"
+msgstr "_Menutup"
+
+msgid "_Detail"
+msgstr "_Keterangan / Info lengkap"
+
+msgid "_Detail Information"
+msgstr "_Informasi secara detail"
+
+msgid "_Eject"
+msgstr "_Cabut"
+
+msgid "_Email address:"
+msgstr "_Alamat Email:"
+
+msgid ""
+"_General Notes:\n"
+"(English Preferred)"
+msgstr ""
+"_Catatan Umum:\n"
+"(Bahasa Inggris lebih disukai)"
+
+msgid "_Help"
+msgstr "_Bantuan"
+
+msgid "_Information Collected:"
+msgstr "_Informasi yang terkumpul:"
+
+msgid "_Install"
+msgstr "_Instal"
+
+msgid "_Install All DrIver"
+msgstr "_Menginstal semua driver"
+
+msgid "_Install All Drivers"
+msgstr "_Menginstal seluruh driver"
+
+msgid "_Install Driver"
+msgstr "_Menginstal Driver"
+
+msgid "_Manufacturer Name:"
+msgstr "_Nama Pembuat:"
+
+msgid "_Name:"
+msgstr "_Nama:"
+
+msgid "_OK"
+msgstr "_OK"
+
+msgid "_Refresh"
+msgstr "_Perbarui"
+
+msgid "_Show Details"
+msgstr "_Perlihatkan keterangan lengkap"
+
+msgid "_Submit"
+msgstr "_Mengirimkan"
+
+msgid "_Submit..."
+msgstr "_Mengirimkan..."
+
+msgid "_UP"
+msgstr "_Atas"

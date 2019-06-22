@@ -1,0 +1,407 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DDU\n"
+"POT-Creation-Date: 2010-01-26 12:00+CST\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: utf-8\n"
+"Generated-By: pygettext.py 1.5\n"
+
+msgid "<b>Driver Information</b>"
+msgstr "<b>Información del controlador</b>"
+
+msgid "<b>Driver Problems: %s</b>"
+msgstr "<b>Problemas de controlador: %s</b>"
+
+msgid "<b>Hardware Information</b>"
+msgstr "<b>Información de hardware</b>"
+
+msgid "<b>Install driver......</b>"
+msgstr "<b>Instalar controlador......</b>"
+
+msgid "<b>Submit To HCL</b>"
+msgstr "<b>Enviar a HCL</b>"
+
+msgid "<span foreground=\"#FF0000\">Submission failed!</span>"
+msgstr "<span foreground=\"#FF0000\">El envío no se ha podido efectuar</span>"
+
+msgid "<span foreground=\"blue\"><b>*Submission Tips</b></span>"
+msgstr "<span foreground=\"blue\"><b>*Consejos de envío</b></span>"
+
+msgid "<span size=\"small\" color=\"gray\">SVR4, DU, or p5i</span>"
+msgstr "<span size=\"small\" color=\"gray\">SVR4, DU o p5i</span>"
+
+msgid ""
+"<span size=\"smaller\">Oracle respects your privacy. We will use your "
+"personal information for communications regarding your submission to the "
+"Oracle Solaris OS: Hardware Compatibility List. For more information see "
+"http://www.oracle.com/html/privacy.html or contact privacy_ww@oracle.com.</"
+"span>"
+msgstr ""
+"<span size=\"smaller\">Oracle respeta su confidencialidad. Utilizaremos su "
+"información personal para comunicaciones relacionadas con el envío a la "
+"lista de compatibilidad de hardware de Oracle Solaris OS. Para obtener más "
+"información, consulte http://www.oracle.com/html/privacy.html o póngase en "
+"contacto con privacy_ww@oracle.com.</span>"
+
+msgid "<span weight=\"bold\">Add new repositories:</span>"
+msgstr "<span weight=\"bold\">Agregar depósitos nuevos:</span>"
+
+msgid "<span weight=\"bold\">Driver</span>"
+msgstr "<span weight=\"bold\">Controlador</span>"
+
+msgid "<span weight=\"bold\">Location:</span>"
+msgstr "<span weight=\"bold\">Ubicación:</span>"
+
+msgid "<span><b>Submission Privacy Policy</b></span>"
+msgstr "<span><b>Normas de confidencialidad de envíos</b></span>"
+
+msgid "Add Driver"
+msgstr "Agregar controlador"
+
+msgid "Add repo"
+msgstr "Agregar depósito"
+
+msgid "Add repository..."
+msgstr "Agregar depósito..."
+
+msgid "All files"
+msgstr "Todos los archivos"
+
+msgid "Audio"
+msgstr "Audio"
+
+msgid "Battery"
+msgstr "Batería"
+
+msgid "Browse Driver Packages"
+msgstr "Examinar paquetes de controladores"
+
+msgid "C_PU Type:"
+msgstr "Tipo de C_PU:"
+
+msgid "Can not get smbios information"
+msgstr "No se puede obtener información de smbios"
+
+msgid "Cannot proceed with the installation"
+msgstr "No se puede continuar con la instalación"
+
+msgid "Components"
+msgstr "Componentes"
+
+msgid "DVD"
+msgstr "DVD"
+
+msgid "Device"
+msgstr "Dispositivo"
+
+msgid "Device Driver Utility"
+msgstr "Utilidad de controlador de dispositivos"
+
+msgid "Device and Driver Detail Information"
+msgstr "Información detallada del controlador y el dispositivo"
+
+msgid "Do not need to install driver!"
+msgstr "No es necesario instalar el controlador"
+
+msgid "Driver"
+msgstr "Controlador"
+
+msgid "Driver Available"
+msgstr "Controlador disponible"
+
+msgid "Driver Unavailable"
+msgstr "Controlador no disponible"
+
+msgid "Driver already installed"
+msgstr "El controlador ya está instalado"
+
+msgid "Driver not found in the repository"
+msgstr "No se ha podido encontrar el controlador en el depósito"
+
+msgid "Driver not installed"
+msgstr "El controlador no está instalado"
+
+msgid "File/URL:"
+msgstr "Archivo/URL:"
+
+msgid "Hardware configuration was not submitted"
+msgstr "La configuración de hardware no se ha enviado"
+
+msgid "Info"
+msgstr "Información"
+
+msgid ""
+"Information cannot be collected for systems running in this virtual "
+"environment."
+msgstr ""
+"No se puede recopilar información para los sistemas que se ejecutan en este "
+"entorno virtual."
+
+msgid "Install Driver"
+msgstr "Instalar controlador"
+
+msgid "Install third-party driver manually"
+msgstr "Instale manualmente el controlador de otro fabricante"
+
+msgid "Installation Failed!"
+msgstr "La instalación no se ha podido efectuar"
+
+msgid "Installation Successful!"
+msgstr "La instalación se ha realizado correctamente"
+
+msgid "Installing"
+msgstr "Instalación"
+
+msgid "List CPU maker and type (e.g. AMD Opteron 885)."
+msgstr "Especificar tipo y fabricante de CPU (por ejemplo, AMD Opteron 885)."
+
+msgid "Memory"
+msgstr "Memoria"
+
+msgid "Misconfigured"
+msgstr "Mal configurado"
+
+msgid "Model:"
+msgstr "Modelo:"
+
+msgid "Name"
+msgstr "Nombre"
+
+msgid ""
+"Name of the system or component maker such as Hewlett-Packard, Dell, or "
+"Compaq."
+msgstr ""
+"Nombre del fabricante del componente o del sistema, como Hewlett-Packard, "
+"Dell o Compaq."
+
+msgid "Name:"
+msgstr "Nombre:"
+
+msgid "Network"
+msgstr "Red"
+
+msgid "No missing driver"
+msgstr "No falta ningún controlador"
+
+msgid ""
+"Oracle respects your privacy. We will use your personal information for "
+"communications regarding your submission to the Oracle Solaris OS: Hardware "
+"Compatibility List. For more information see http://www.oracle.com/html/"
+"privacy.html or contact privacy_ww@oracle.com."
+msgstr ""
+"Oracle respeta su confidencialidad. Utilizaremos su información personal "
+"para comunicaciones relacionadas con el envío a la lista de compatibilidad "
+"de hardware (HCL) de Oracle Solaris OS. Para obtener más información, "
+"consulte http://www.oracle.com/html/privacy.html o póngase en contacto con "
+"nosotros mediante privacy_ww@oracle.com."
+
+msgid "Other"
+msgstr "Otro"
+
+msgid "Package:"
+msgstr "Paquete:"
+
+msgid "Reboot your system after installing the driver if necessary\n"
+msgstr "Si es necesario, tras instalar el controlador rearranque el sistema\n"
+
+msgid "Refresh the device list and install the driver again"
+msgstr "Actualice la lista de dispositivos y vuelva a instalar el controlador"
+
+msgid "Removable Device"
+msgstr "Dispositivo extraíble"
+
+msgid "Repo not installed"
+msgstr "El depósito no está instalado"
+
+msgid "Repositories manager"
+msgstr "Administrador de depósitos"
+
+msgid "S_ave"
+msgstr "G_uardar"
+
+msgid "S_ystem Type:"
+msgstr "Tipo de _sistema:"
+
+msgid "Save..."
+msgstr "Guardar..."
+
+msgid "Smbios error"
+msgstr "Error de smbios"
+
+msgid "Storage"
+msgstr "Almacenamiento"
+
+msgid "Submission Successful!\n"
+msgstr "El envío se ha realizado correctamente\n"
+
+msgid "Submission failed"
+msgstr "El envío no ha sido correcto"
+
+msgid "Submit"
+msgstr "Enviar"
+
+msgid "Submit Error"
+msgstr "Error de envío"
+
+msgid "Submit Information To Hardware Compatibility List"
+msgstr "Enviar información a la lista de compatibilidad de hardware (HCL)"
+
+msgid "Submit information to Hardware Compatibility List"
+msgstr "Enviar información a la lista de compatibilidad de hardware (HCL)"
+
+msgid "System does not export an SMBIOS table"
+msgstr "El sistema no exporta tablas SMBIOS"
+
+msgid "Thank you for your submission.\n"
+msgstr "Gracias por su envío.\n"
+
+msgid "The complete model number for the system."
+msgstr "El número de modelo completo del sistema."
+
+msgid ""
+"The driver is not in the repository\n"
+"\n"
+msgstr ""
+"El controlador no está en el depósito\n"
+"\n"
+
+msgid "The driver package is empty."
+msgstr "El paquete del controlador está vacío."
+
+msgid "The driver path is empty."
+msgstr "La ruta del controlador está vacía."
+
+msgid "The information will be sent back to Oracle."
+msgstr "La información se enviará a Oracle."
+
+msgid "The repo name or URL is invalid."
+msgstr "El nombre o la URL del depósito no son válidos."
+
+msgid "The repository is currently unavailable"
+msgstr "El depósito no está disponible"
+
+msgid "The server is currently unavailable"
+msgstr "El servidor no está disponible"
+
+msgid "Third-party"
+msgstr "Otro fabricante"
+
+msgid "Third-party driver not installed!"
+msgstr "No se ha instalado el controlador de otro fabricante"
+
+msgid ""
+"This can be used for any additional information to document how you "
+"successfully got the system or component to work with the Oracle Solaris."
+msgstr ""
+"Se puede utilizar para agregar cualquier tipo de información adicional, a "
+"fin de documentar si ha recibido correctamente el sistema o componente para "
+"trabajar con el sistema operativo Oracle Solaris."
+
+msgid ""
+"This is often displayed in the BIOS Setup screens. It usually displays at "
+"system boot time."
+msgstr ""
+"Normalmente se muestra en las pantallas de configuración del BIOS. Suele "
+"aparecer al arrancar el sistema."
+
+msgid "This window will be closed in a few seconds"
+msgstr "Esta ventana se cerrará en pocos segundos"
+
+msgid "Types"
+msgstr "Tipos"
+
+msgid "URL:"
+msgstr "URL: "
+
+msgid "USB"
+msgstr "USB"
+
+msgid "Video"
+msgstr "Vídeo"
+
+msgid ""
+"Your submission will now be reviewed before being posted to the Oracle "
+"Solaris HCL.\n"
+msgstr ""
+"Su envío se examinará antes de publicarse en la lista de compatibilidad de "
+"hardware de Oracle Solaris.\n"
+
+msgid "_Add"
+msgstr "_Agregar"
+
+msgid "_BIOS/Firmware Maker:"
+msgstr "_BIOS/Fabricante de firmware:"
+
+msgid "_Browse..."
+msgstr "_Buscar..."
+
+msgid "_Cancel"
+msgstr "_Cancelar"
+
+msgid "_Close"
+msgstr "_Cerrar"
+
+msgid "_Detail"
+msgstr "_Detalles"
+
+msgid "_Detail Information"
+msgstr "_Información detallada"
+
+msgid "_Eject"
+msgstr "_Eject"
+
+msgid "_Email address:"
+msgstr "_Dirección de correo electrónico:"
+
+msgid ""
+"_General Notes:\n"
+"(English Preferred)"
+msgstr ""
+"_Comentarios generales:\n"
+"(Preferiblemente en inglés)"
+
+msgid "_Help"
+msgstr "Ay_uda"
+
+msgid "_Information Collected:"
+msgstr "_Información recopilada:"
+
+msgid "_Install"
+msgstr "_Instalar"
+
+msgid "_Install All DrIver"
+msgstr "_Instalar todos los controladores"
+
+msgid "_Install All Drivers"
+msgstr "_Instalar todos los controladores"
+
+msgid "_Install Driver"
+msgstr "_Instalar controlador"
+
+msgid "_Manufacturer Name:"
+msgstr "_Nombre del fabricante:"
+
+msgid "_Name:"
+msgstr "_Nombre:"
+
+msgid "_OK"
+msgstr "_Aceptar"
+
+msgid "_Refresh"
+msgstr "_Actualizar"
+
+msgid "_Show Details"
+msgstr "_Mostrar detalles"
+
+msgid "_Submit"
+msgstr "_Enviar"
+
+msgid "_Submit..."
+msgstr "_Enviar..."
+
+msgid "_UP"
+msgstr "_ARRIBA"

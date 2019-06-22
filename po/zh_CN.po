@@ -1,0 +1,395 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DDU\n"
+"POT-Creation-Date: 2010-01-26 12:00+CST\n"
+"PO-Revision-Date: 2010-01-28 13:19+0800\n"
+"Last-Translator: desktop-discuss@opensolaris.org\n"
+"Language-Team: desktop-discuss@opensolaris.org\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: utf-8\n"
+"Generated-By: pygettext.py 1.5\n"
+
+msgid "<b>Driver Information</b>"
+msgstr "<b>驱动程序信息</b>"
+
+msgid "<b>Driver Problems: %s</b>"
+msgstr "<b>驱动程序问题: %s</b>"
+
+msgid "<b>Hardware Information</b>"
+msgstr "<b>硬件信息</b>"
+
+msgid "<b>Install driver......</b>"
+msgstr "<b>安装驱动程序......</b>"
+
+msgid "<b>Submit To HCL</b>"
+msgstr "<b>提交至 HCL</b>"
+
+msgid "<span foreground=\"#FF0000\">Submission failed!</span>"
+msgstr "<span foreground=\"#FF0000\">提交失败！</span>"
+
+msgid "<span foreground=\"blue\"><b>*Submission Tips</b></span>"
+msgstr "<span foreground=\"blue\"><b>*提交提示</b></span>"
+
+msgid "<span size=\"small\" color=\"gray\">SVR4, DU, or p5i</span>"
+msgstr "<span size=\"small\" color=\"gray\">SVR4、DU 或 p5i</span>"
+
+msgid ""
+"<span size=\"smaller\">Oracle respects your privacy. We will use your "
+"personal information for communications regarding your submission to the "
+"Oracle Solaris OS: Hardware Compatibility List. For more information see "
+"http://www.oracle.com/html/privacy.html or contact privacy_ww@oracle.com.</"
+"span>"
+msgstr ""
+"<span size=\"smaller\">Oracle 尊重您的隐私。在需要与您对于提交至 Oracle "
+"Solaris OS: 硬件兼容性列表的内容进行沟通时，我们会使用您的个人信息。有关更多"
+"信息，请访问 http://www.oracle.com/html/privacy.html 或联系 "
+"privacy_ww@oracle.com。</span>"
+
+msgid "<span weight=\"bold\">Add new repositories:</span>"
+msgstr "<span weight=\"bold\">添加新系统信息库：</span>"
+
+msgid "<span weight=\"bold\">Driver</span>"
+msgstr "<span weight=\"bold\">驱动程序</span>"
+
+msgid "<span weight=\"bold\">Location:</span>"
+msgstr "<span weight=\"bold\">位置：</span>"
+
+msgid "<span><b>Submission Privacy Policy</b></span>"
+msgstr "<span><b>提交隐私政策</b></span>"
+
+msgid "Add Driver"
+msgstr "添加驱动程序"
+
+msgid "Add repo"
+msgstr "添加系统信息库"
+
+msgid "Add repository..."
+msgstr "添加系统信息库..."
+
+msgid "All files"
+msgstr "所有文件"
+
+msgid "Audio"
+msgstr "音频"
+
+msgid "Battery"
+msgstr "电池"
+
+msgid "Browse Driver Packages"
+msgstr "浏览驱动程序软件包"
+
+msgid "C_PU Type:"
+msgstr "CPU 类型(_P)："
+
+msgid "Can not get smbios information"
+msgstr "无法获取 smbios 信息"
+
+msgid "Cannot proceed with the installation"
+msgstr "无法继续安装"
+
+msgid "Components"
+msgstr "组件"
+
+msgid "DVD"
+msgstr "DVD"
+
+msgid "Device"
+msgstr "设备"
+
+msgid "Device Driver Utility"
+msgstr "设备驱动实用程序"
+
+msgid "Device and Driver Detail Information"
+msgstr "设备和驱动程序详细信息"
+
+msgid "Do not need to install driver!"
+msgstr "不需要安装驱动程序！"
+
+msgid "Driver"
+msgstr "驱动程序"
+
+msgid "Driver Available"
+msgstr "驱动程序可用"
+
+msgid "Driver Unavailable"
+msgstr "驱动程序不可用"
+
+msgid "Driver already installed"
+msgstr "已经安装驱动程序"
+
+msgid "Driver not found in the repository"
+msgstr "系统信息库中找不到驱动程序"
+
+msgid "Driver not installed"
+msgstr "未安装驱动程序"
+
+msgid "File/URL:"
+msgstr "文件/URL："
+
+msgid "Hardware configuration was not submitted"
+msgstr "未提交硬件配置"
+
+msgid "Info"
+msgstr "信息"
+
+msgid ""
+"Information cannot be collected for systems running in this virtual "
+"environment."
+msgstr "无法收集在此虚拟环境中运行的系统的信息。"
+
+msgid "Install Driver"
+msgstr "安装驱动程序"
+
+msgid "Install third-party driver manually"
+msgstr "手动安装第三方驱动程序"
+
+msgid "Installation Failed!"
+msgstr "安装失败！"
+
+msgid "Installation Successful!"
+msgstr "安装成功！"
+
+msgid "Installing"
+msgstr "正在安装"
+
+msgid "List CPU maker and type (e.g. AMD Opteron 885)."
+msgstr "列出 CPU 制造商和类型（例如 AMD Opteron 885）。"
+
+msgid "Memory"
+msgstr "内存"
+
+msgid "Misconfigured"
+msgstr "配置错误"
+
+msgid "Model:"
+msgstr "型号："
+
+msgid "Name"
+msgstr "名称"
+
+msgid ""
+"Name of the system or component maker such as Hewlett-Packard, Dell, or "
+"Compaq."
+msgstr "系统或组件制造商的名称，如 Hewlett-Packard、Dell 或 Compaq。"
+
+msgid "Name:"
+msgstr "名称："
+
+msgid "Network"
+msgstr "网络"
+
+msgid "No missing driver"
+msgstr "不缺少驱动程序"
+
+msgid ""
+"Oracle respects your privacy. We will use your personal information for "
+"communications regarding your submission to the Oracle Solaris OS: Hardware "
+"Compatibility List. For more information see http://www.oracle.com/html/"
+"privacy.html or contact privacy_ww@oracle.com."
+msgstr ""
+"Oracle 尊重您的隐私。在需要与您对于提交至 Oracle Solaris OS: 硬件兼容性列表的"
+"内容进行沟通时，我们会使用您的个人信息。有关更多信息，请访问 http://www."
+"oracle.com/html/privacy.html 或联系 privacy_ww@oracle.com。"
+
+msgid "Other"
+msgstr "其他"
+
+msgid "Package:"
+msgstr "软件包："
+
+msgid "Reboot your system after installing the driver if necessary\n"
+msgstr "如有必要，安装驱动程序后重新引导系统\n"
+
+msgid "Refresh the device list and install the driver again"
+msgstr "刷新设备列表，并再次安装驱动程序"
+
+msgid "Removable Device"
+msgstr "可移除设备"
+
+msgid "Repo not installed"
+msgstr "未安装系统信息库"
+
+msgid "Repositories manager"
+msgstr "系统信息库管理器"
+
+msgid "S_ave"
+msgstr "保存(_A)"
+
+msgid "S_ystem Type:"
+msgstr "系统类型(_Y)："
+
+msgid "Save..."
+msgstr "保存..."
+
+msgid "Smbios error"
+msgstr "Smbios 错误"
+
+msgid "Storage"
+msgstr "存储"
+
+msgid "Submission Successful!\n"
+msgstr "提交成功！\n"
+
+msgid "Submission failed"
+msgstr "提交失败"
+
+msgid "Submit"
+msgstr "提交"
+
+msgid "Submit Error"
+msgstr "提交错误"
+
+msgid "Submit Information To Hardware Compatibility List"
+msgstr "将信息提交至硬件兼容性列表"
+
+msgid "Submit information to Hardware Compatibility List"
+msgstr "将信息提交至硬件兼容性列表"
+
+msgid "System does not export an SMBIOS table"
+msgstr "系统不导出 SMBIOS 表"
+
+msgid "Thank you for your submission.\n"
+msgstr "感谢您进行提交。\n"
+
+msgid "The complete model number for the system."
+msgstr "系统的完整型号。"
+
+msgid ""
+"The driver is not in the repository\n"
+"\n"
+msgstr ""
+"驱动程序不在系统信息库中\n"
+"\n"
+
+msgid "The driver package is empty."
+msgstr "驱动程序软件包为空。"
+
+msgid "The driver path is empty."
+msgstr "驱动程序路径为空。"
+
+msgid "The information will be sent back to Oracle."
+msgstr "该信息将被发送回给 Oracle。"
+
+msgid "The repo name or URL is invalid."
+msgstr "系统信息库名称或 URL 无效。"
+
+msgid "The repository is currently unavailable"
+msgstr "系统信息库当前不可用"
+
+msgid "The server is currently unavailable"
+msgstr "服务器当前不可用"
+
+msgid "Third-party"
+msgstr "第三方"
+
+msgid "Third-party driver not installed!"
+msgstr "未安装第三方驱动程序！"
+
+msgid ""
+"This can be used for any additional information to document how you "
+"successfully got the system or component to work with the Oracle Solaris."
+msgstr ""
+"这可用于提供任何其他信息，以记录您如何使系统或组件与 Oracle Solaris 成功协同"
+"工作。"
+
+msgid ""
+"This is often displayed in the BIOS Setup screens. It usually displays at "
+"system boot time."
+msgstr "BIOS 设置屏幕中通常会显示此信息，通常在系统引导时显示。"
+
+msgid "This window will be closed in a few seconds"
+msgstr "此窗口将在几秒钟内关闭"
+
+msgid "Types"
+msgstr "类型"
+
+msgid "URL:"
+msgstr "URL："
+
+msgid "USB"
+msgstr "USB"
+
+msgid "Video"
+msgstr "视频"
+
+msgid ""
+"Your submission will now be reviewed before being posted to the Oracle "
+"Solaris HCL.\n"
+msgstr "在发布到 Oracle Solaris HCL 之前，将立即对您的提交进行检查。\n"
+
+msgid "_Add"
+msgstr "添加(_A)"
+
+msgid "_BIOS/Firmware Maker:"
+msgstr "BIOS/固件制造商(_B)："
+
+msgid "_Browse..."
+msgstr "浏览(_B)..."
+
+msgid "_Cancel"
+msgstr "取消(_C)"
+
+msgid "_Close"
+msgstr "关闭(_C)"
+
+msgid "_Detail"
+msgstr "详细信息(_D)"
+
+msgid "_Detail Information"
+msgstr "详细信息(_D)"
+
+msgid "_Eject"
+msgstr "弹出(_E)"
+
+msgid "_Email address:"
+msgstr "电子邮件地址(_E):"
+
+msgid ""
+"_General Notes:\n"
+"(English Preferred)"
+msgstr ""
+"一般说明(_G)：\n"
+"（英文首选）"
+
+msgid "_Help"
+msgstr "帮助(_H)"
+
+msgid "_Information Collected:"
+msgstr "已收集信息(_I)："
+
+msgid "_Install"
+msgstr "安装(_I)"
+
+msgid "_Install All DrIver"
+msgstr "安装所有驱动程序(_I)"
+
+msgid "_Install All Drivers"
+msgstr "安装所有驱动程序(_I)"
+
+msgid "_Install Driver"
+msgstr "安装驱动程序(_I)"
+
+msgid "_Manufacturer Name:"
+msgstr "生产商名称(_M)："
+
+msgid "_Name:"
+msgstr "名称(_N): "
+
+msgid "_OK"
+msgstr "确定(_O)"
+
+msgid "_Refresh"
+msgstr "刷新(_R)"
+
+msgid "_Show Details"
+msgstr "显示详细信息(_S)"
+
+msgid "_Submit"
+msgstr "提交(_S)"
+
+msgid "_Submit..."
+msgstr "提交(_S)..."
+
+msgid "_UP"
+msgstr "向上(_U)"

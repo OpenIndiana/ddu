@@ -1,0 +1,404 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DDU\n"
+"POT-Creation-Date: 2010-01-26 12:00+CST\n"
+"PO-Revision-Date: 2010-01-26 12:00+CST\n"
+"Last-Translator: Czech l10n team <i18n-discuss@opensolaris.org>\n"
+"Language-Team: Czech <i18n-discuss@opensolaris.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: utf-8\n"
+"Generated-By: pygettext.py 1.5\n"
+
+msgid "<b>Driver Information</b>"
+msgstr "<b>Informace o ovladači</b>"
+
+msgid "<b>Driver Problems: %s</b>"
+msgstr "<b>Problémy s ovladačem: %s</b>"
+
+msgid "<b>Hardware Information</b>"
+msgstr "<b>Informace o Hardware</b>"
+
+msgid "<b>Install driver......</b>"
+msgstr "<b>Instalovat Ovladač......</b>"
+
+msgid "<b>Submit To HCL</b>"
+msgstr "<b>Odeslání do HCL</b>"
+
+msgid "<span foreground=\"#FF0000\">Submission failed!</span>"
+msgstr "<span foreground=\"#FF0000\">Odeslání selhalo!</span>"
+
+msgid "<span foreground=\"blue\"><b>*Submission Tips</b></span>"
+msgstr "<span foreground=\"blue\"><b>*Tipy pro potvrzení</b></span>"
+
+msgid "<span size=\"small\" color=\"gray\">SVR4, DU, or p5i</span>"
+msgstr "<span size=\"small\" color=\"gray\">SVR4, DU, nebo p5i</span>"
+
+msgid ""
+"<span size=\"smaller\">Oracle respects your privacy. We will use your "
+"personal information for communications regarding your submission to the "
+"Oracle Solaris OS: Hardware Compatibility List. For more information see "
+"http://www.oracle.com/html/privacy.html or contact privacy_ww@oracle.com.</"
+"span>"
+msgstr ""
+"<span size=\"smaller\">Oracle respects your privacy. We will use your "
+"personal information for communications regarding your submission to the "
+"Oracle Solaris OS: Hardware Compatibility List. For more information see "
+"http://www.oracle.com/html/privacy.html or contact privacy_ww@oracle.com.</"
+"span>"
+
+msgid "<span weight=\"bold\">Add new repositories:</span>"
+msgstr "<span weight=\"bold\">Přidat nový repozitář:</span>"
+
+msgid "<span weight=\"bold\">Driver</span>"
+msgstr "<span weight=\"bold\">Ovladač</span>"
+
+msgid "<span weight=\"bold\">Location:</span>"
+msgstr "<span weight=\"bold\">Umístění:</span>"
+
+msgid "<span><b>Submission Privacy Policy</b></span>"
+msgstr "<span><b>Odeslání soukromých dat</b></span>"
+
+msgid "Add Driver"
+msgstr "Přidat ovladač"
+
+msgid "Add repo"
+msgstr "Přidat repozitář"
+
+msgid "Add repository..."
+msgstr "Přidat repozitář...."
+
+msgid "All files"
+msgstr "Všechny soubory"
+
+msgid "Audio"
+msgstr "Audio"
+
+msgid "Battery"
+msgstr "Baterie"
+
+msgid "Browse Driver Packages"
+msgstr "Prohledat Balíčky Ovladačů"
+
+msgid "C_PU Type:"
+msgstr "C_PU typ:"
+
+msgid "Can not get smbios information"
+msgstr "Nelze získat Smbios informace"
+
+msgid "Cannot proceed with the installation"
+msgstr "Instalaci nelze provést"
+
+msgid "Components"
+msgstr "Komponenty"
+
+msgid "DVD"
+msgstr "DVD"
+
+msgid "Device"
+msgstr "Zařízení"
+
+msgid "Device Driver Utility"
+msgstr "Device Driver Utility"
+
+msgid "Device and Driver Detail Information"
+msgstr "Podrobné informace o zařízení a ovladači"
+
+msgid "Do not need to install driver!"
+msgstr "Nepotřebujete nainstalovat ovladač!"
+
+msgid "Driver"
+msgstr "Ovladač"
+
+msgid "Driver Available"
+msgstr "Ovladač je dostupný"
+
+msgid "Driver Unavailable"
+msgstr "Ovladač není dostupný"
+
+msgid "Driver already installed"
+msgstr "Ovladač je již nainstalován"
+
+msgid "Driver not found in the repository"
+msgstr "Ovladač nebyl nalezen v repozitáři"
+
+msgid "Driver not installed"
+msgstr "Ovladač není nainstalován"
+
+msgid "File/URL:"
+msgstr "Soubor/URL:"
+
+msgid "Hardware configuration was not submitted"
+msgstr "Hardwarová komunikace nebyla potvzena"
+
+msgid "Info"
+msgstr "Info"
+
+msgid ""
+"Information cannot be collected for systems running in this virtual "
+"environment."
+msgstr ""
+"Nelze shromáždit informace o právě běžícím systému ve virtuálním prostředí."
+
+msgid "Install Driver"
+msgstr "Instalace Ovladače"
+
+msgid "Install third-party driver manually"
+msgstr "Nainstalovat third-party ovladač ručně"
+
+msgid "Installation Failed!"
+msgstr "Instalace selhala!"
+
+msgid "Installation Successful!"
+msgstr "Instalace byla úspěšná!"
+
+msgid "Installing"
+msgstr "Instaluji"
+
+msgid "List CPU maker and type (e.g. AMD Opteron 885)."
+msgstr "Seznam označení a typu CPU (např. AMD Opteron 885)."
+
+msgid "Memory"
+msgstr "Paměť"
+
+msgid "Misconfigured"
+msgstr "Špatně nakonfigurován"
+
+msgid "Model:"
+msgstr "Model:"
+
+msgid "Name"
+msgstr "Jméno"
+
+msgid ""
+"Name of the system or component maker such as Hewlett-Packard, Dell, or "
+"Compaq."
+msgstr ""
+"Název systému nebo komponentu jako je Hewlett-Packard, Dell nebo Compaq."
+
+msgid "Name:"
+msgstr "Jméno:"
+
+msgid "Network"
+msgstr "Síť"
+
+msgid "No missing driver"
+msgstr "Žádný ovladač nechybí"
+
+msgid ""
+"Oracle respects your privacy. We will use your personal information for "
+"communications regarding your submission to the Oracle Solaris OS: Hardware "
+"Compatibility List. For more information see http://www.oracle.com/html/"
+"privacy.html or contact privacy_ww@oracle.com."
+msgstr ""
+"Oracle respects your privacy. We will use your personal information for "
+"communications regarding your submission to the Oracle Solaris OS: Hardware "
+"Compatibility List. For more information see http://www.oracle.com/html/"
+"privacy.html or contact privacy_ww@oracle.com."
+
+msgid "Other"
+msgstr "Jiné"
+
+msgid "Package:"
+msgstr "Balíček:"
+
+msgid "Reboot your system after installing the driver if necessary\n"
+msgstr ""
+"Pokud to je nezbytné, restartujte Váš systém po skončení procesu instalace "
+"ovladače\n"
+
+msgid "Refresh the device list and install the driver again"
+msgstr "Obnovte seznam zařízení a nainstalujte ovladač znovu"
+
+msgid "Removable Device"
+msgstr "Odnímatelné zařízení"
+
+msgid "Repo not installed"
+msgstr "Repozitář není nainstalovaný"
+
+msgid "Repositories manager"
+msgstr "Správce repozitářů"
+
+msgid "S_ave"
+msgstr "U_ložit"
+
+msgid "S_ystem Type:"
+msgstr "Typ S_ystému:"
+
+msgid "Save..."
+msgstr "Uložit..."
+
+msgid "Smbios error"
+msgstr "chyba v Smbios"
+
+msgid "Storage"
+msgstr "Paměť"
+
+msgid "Submission Successful!\n"
+msgstr "Odeslání bylo úspěšné!\n"
+
+msgid "Submission failed"
+msgstr "Odeslání selhalo"
+
+msgid "Submit"
+msgstr "Odeslat"
+
+msgid "Submit Error"
+msgstr "Chyba při odesílání"
+
+msgid "Submit Information To Hardware Compatibility List"
+msgstr "Odeslat Informace do Seznamu Hardwarové Kompatibility"
+
+msgid "Submit information to Hardware Compatibility List"
+msgstr "Odeslat  informace do Seznamu Hardwarové kompatibility "
+
+msgid "System does not export an SMBIOS table"
+msgstr "Systém nevyexportuje tabulku SMBIOS"
+
+msgid "Thank you for your submission.\n"
+msgstr "Děkujeme Vám za odeslání.\n"
+
+msgid "The complete model number for the system."
+msgstr "Kompletní sériové číslo systému."
+
+msgid ""
+"The driver is not in the repository\n"
+"\n"
+msgstr ""
+"Ovladač není v repozitáři\n"
+"\n"
+
+msgid "The driver package is empty."
+msgstr "Balíček pro ovladač je prázdný."
+
+msgid "The driver path is empty."
+msgstr "Cesta k ovladači je prázdná."
+
+msgid "The information will be sent back to Oracle."
+msgstr "Tyto informace budou zaslány zpět do společnosti Oracle."
+
+msgid "The repo name or URL is invalid."
+msgstr "Jméno repozitáře nebo URL je neplatné"
+
+msgid "The repository is currently unavailable"
+msgstr "Repozitář není právě k dispozici"
+
+msgid "The server is currently unavailable"
+msgstr "Server je nyní nedostupný"
+
+msgid "Third-party"
+msgstr "Third-party"
+
+msgid "Third-party driver not installed!"
+msgstr "Third-party ovladač není nainstalován!"
+
+msgid ""
+"This can be used for any additional information to document how you "
+"successfully got the system or component to work with the Oracle Solaris."
+msgstr ""
+"Toto může být použito pro další informace v dokumentu, jak úspěšně Váš "
+"systém nebo komponent pracuje s Oracle Solarisem."
+
+msgid ""
+"This is often displayed in the BIOS Setup screens. It usually displays at "
+"system boot time."
+msgstr ""
+"Toto je často zobrazeno v okně Nastavení BIOSu a obvykle se zobrazuje při "
+"zavádění systému."
+
+msgid "This window will be closed in a few seconds"
+msgstr "Toto okno bude zavřeno za několik vteřin"
+
+msgid "Types"
+msgstr "Typy"
+
+msgid "URL:"
+msgstr "URL:"
+
+msgid "USB"
+msgstr "USB"
+
+msgid "Video"
+msgstr "Video"
+
+msgid ""
+"Your submission will now be reviewed before being posted to the Oracle "
+"Solaris HCL.\n"
+msgstr ""
+"Váš dotazník bude nejdříve ověřen, než bude zveřejněn v Oracle Solaris HCL.\n"
+
+msgid "_Add"
+msgstr "Při_dat"
+
+msgid "_BIOS/Firmware Maker:"
+msgstr "Označení _Biosu/Firmwaru:"
+
+msgid "_Browse..."
+msgstr "_Procházet..."
+
+msgid "_Cancel"
+msgstr "_Zrušit"
+
+msgid "_Close"
+msgstr "_Zavřít"
+
+msgid "_Detail"
+msgstr "Po_drobnosti"
+
+msgid "_Detail Information"
+msgstr "_Podrobné informace"
+
+msgid "_Eject"
+msgstr "_Vysunout"
+
+msgid "_Email address:"
+msgstr "_Emailová adresa:"
+
+msgid ""
+"_General Notes:\n"
+"(English Preferred)"
+msgstr ""
+"_Obecné poznámky:\n"
+"(preferovaná angličtina)"
+
+msgid "_Help"
+msgstr "_Nápověda"
+
+msgid "_Information Collected:"
+msgstr "_Sesbírané Informace:"
+
+msgid "_Install"
+msgstr "_Instalovat"
+
+msgid "_Install All DrIver"
+msgstr "I_nstalovat Všechny Ovladače"
+
+msgid "_Install All Drivers"
+msgstr "_Instalovat vše"
+
+msgid "_Install Driver"
+msgstr "_Instalovat Ovladač"
+
+msgid "_Manufacturer Name:"
+msgstr "_Jméno Výrobce:"
+
+msgid "_Name:"
+msgstr "_Jméno:"
+
+msgid "_OK"
+msgstr "O_K"
+
+msgid "_Refresh"
+msgstr "_Obnovit"
+
+msgid "_Show Details"
+msgstr "_Ukázat Podrobnosti"
+
+msgid "_Submit"
+msgstr "_Odeslat"
+
+msgid "_Submit..."
+msgstr "_Odeslat..."
+
+msgid "_UP"
+msgstr "_Nahoru"
