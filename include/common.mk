@@ -30,13 +30,17 @@ RM=/usr/bin/rm -f
 
 ARCH=$(shell uname -p)
 
+USRBIN=$(DESTDIR)/usr/bin
+
 USRDDU=$(DESTDIR)/usr/ddu
 
 USRDDUDATA=$(DESTDIR)/usr/ddu/data
 
+USRDDUTEXTUTILS=$(DESTDIR)/usr/ddu/ddu-text/utils
+
 BIN_ROOT=$(USRDDU)/bin/$(ARCH)
 
-I18N_ROOT=$(USRDDDU)/i18n
+I18N_ROOT=$(USRDDU)/i18n
 
 USRSHARE=$(DESTDIR)/usr/share
 USRSHAREAPPS=$(USRSHARE)/applications

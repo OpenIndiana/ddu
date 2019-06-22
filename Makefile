@@ -14,7 +14,7 @@
 
 include include/common.mk
 
-SUBDIRS = config data po utils usr
+SUBDIRS = config data ddu-text po utils usr
 
 all:		TARGET= all
 clean:		TARGET= clean 
