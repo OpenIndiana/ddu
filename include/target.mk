@@ -35,6 +35,9 @@ $(USRDDU):
 $(USRDDUDATA):
 	$(MKDIR) $@
 
+$(USRDDUGH):
+	$(MKDIR) $@
+
 $(USRDDULEGALDOCS):
 	$(MKDIR) $@
 
@@ -53,6 +56,9 @@ $(BIN_ROOT)/$(PROGRAM): $(PROGRAM)
 	$(INSTALL) $(PROGRAM) $@
 
 $(I18N_ROOT)/%/LC_MESSAGES/ddu.mo: %.mo
+	$(INSTALL) $< $@
+
+$(USRDDUGH)/%/ddu.xml: %.xml
 	$(INSTALL) $< $@
 
 $(PYTHON_VENDOR_DDU)/%: $(PYTHON_VENDOR_DDU)

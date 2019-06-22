@@ -42,6 +42,8 @@ USRDDU=$(DESTDIR)/usr/ddu
 
 USRDDUDATA=$(USRDDU)/data
 
+USRDDUGH=$(USRDDU)/help/gnome/help/ddu
+
 USRDDULEGALDOCS=$(USRDDU)/Legal_Documents
 
 USRDDUSCRIPTS=$(USRDDU)/scripts

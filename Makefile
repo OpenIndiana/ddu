@@ -14,7 +14,7 @@
 
 include include/common.mk
 
-SUBDIRS = config data ddu ddu-text po utils usr scripts Legal_Documents
+SUBDIRS = config data ddu ddu-text gnome-help po utils scripts Legal_Documents
 
 all:		TARGET= all
 clean:		TARGET= clean 
