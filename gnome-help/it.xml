@@ -140,7 +140,7 @@
   <title>Finestra principale di Utility driver</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-main.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Finestra principale di Utility driver</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-main.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Finestra principale di Utility driver</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -191,7 +191,7 @@ Nella colonna Tipi vengono visualizzati i nomi delle categorie di dispositivi. T
   <title>Finestra Ottieni informazioni di Utility driver</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Finestra Ottieni informazioni di Utility driver</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Finestra Ottieni informazioni di Utility driver</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -226,7 +226,7 @@ Nella colonna Tipi vengono visualizzati i nomi delle categorie di dispositivi. T
   <title>Finestra del browser di file di Utility driver</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-browse.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>Finestra del browser di file di Utility driver </phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-browse.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>Finestra del browser di file di Utility driver </phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -242,7 +242,7 @@ Nella colonna Tipi vengono visualizzati i nomi delle categorie di dispositivi. T
   <title>Finestra Installa driver di Utility driver</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Finestra Installa driver di Utility driver</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Finestra Installa driver di Utility driver</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -261,7 +261,7 @@ Nella colonna Tipi vengono visualizzati i nomi delle categorie di dispositivi. T
   <title>Finestra di aggiunta repository di Utility driver</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Finestra di aggiunta repository di Utility driver</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Finestra di aggiunta repository di Utility driver</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -283,7 +283,7 @@ Nella colonna Tipi vengono visualizzati i nomi delle categorie di dispositivi. T
   <title>Finestra di invio di Utility driver</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Finestra di invio di Utility driver</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Finestra di invio di Utility driver</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>

@@ -140,7 +140,7 @@
   <title>Fenêtre principale de l'Utilitaire des pilotes de périphérique</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-main.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>Fenêtre principale de l'Utilitaire des pilotes de périphérique</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-main.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>Fenêtre principale de l'Utilitaire des pilotes de périphérique</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -191,7 +191,7 @@ La colonne Types affiche la liste des noms de catégories de périphérique. Les
   <title>Fenêtre d'information de l'Utilitaire des pilotes de périphérique</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-detail.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>Fenêtre d'information de l'Utilitaire des pilotes de périphérique</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-detail.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>Fenêtre d'information de l'Utilitaire des pilotes de périphérique</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -226,7 +226,7 @@ La colonne Types affiche la liste des noms de catégories de périphérique. Les
   <title>Fenêtre d'explorateur de l'Utilitaire des pilotes de périphérique</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Fenêtre d'explorateur de l'Utilitaire des pilotes de périphérique</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Fenêtre d'explorateur de l'Utilitaire des pilotes de périphérique</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -242,7 +242,7 @@ La colonne Types affiche la liste des noms de catégories de périphérique. Les
   <title>Fenêtre du pilote d'installation de l'Utilitaire des pilotes de périphérique</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-install.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>Fenêtre du pilote d'installation de l'Utilitaire des pilotes de périphérique</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-install.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>Fenêtre du pilote d'installation de l'Utilitaire des pilotes de périphérique</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -261,7 +261,7 @@ La colonne Types affiche la liste des noms de catégories de périphérique. Les
   <title>Fenêtre Ajouter un référentiel de l'Utilitaire des pilotes de périphérique</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-addrepo.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>Fenêtre Ajouter un référentiel de l'Utilitaire des pilotes de périphérique</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-addrepo.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>Fenêtre Ajouter un référentiel de l'Utilitaire des pilotes de périphérique</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -283,7 +283,7 @@ La colonne Types affiche la liste des noms de catégories de périphérique. Les
   <title>Fenêtre d'envoi de l'Utilitaire des pilotes de périphérique </title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="png" srccredit="Andreas"/> </imageobject> <textobject><phrase>Fenêtre d'envoi de l'Utilitaire des pilotes de périphérique</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject><phrase>Fenêtre d'envoi de l'Utilitaire des pilotes de périphérique</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>

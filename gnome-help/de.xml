@@ -140,7 +140,7 @@
   <title>Gerätetreiber-Dienstprogramm - Hauptfenster</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-main.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Gerätetreiber-Dienstprogramm - Hauptfenster</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-main.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Gerätetreiber-Dienstprogramm - Hauptfenster</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -191,7 +191,7 @@ In der Spalte „Types“ (Typen) werden die Gerätekategorienamen angezeigt. Zu
   <title>Gerätetreiber-Dienstprogramm - Fenster „Detaillierte Informationen“</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Gerätetreiber-Dienstprogramm - Fenster „Detaillierte Informationen“</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Gerätetreiber-Dienstprogramm - Fenster „Detaillierte Informationen“</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -226,7 +226,7 @@ In der Spalte „Types“ (Typen) werden die Gerätekategorienamen angezeigt. Zu
   <title>Gerätetreiber-Dienstprogramm - Fenster zum Suchen nach Dateien</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Gerätetreiber-Dienstprogramm - Fenster zum Suchen nach Dateien</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Gerätetreiber-Dienstprogramm - Fenster zum Suchen nach Dateien</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -242,7 +242,7 @@ In der Spalte „Types“ (Typen) werden die Gerätekategorienamen angezeigt. Zu
   <title>Gerätetreiber-Dienstprogramm - Fenster „Treiber installieren“</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Gerätetreiber-Dienstprogramm - Fenster „Treiber installieren“</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Gerätetreiber-Dienstprogramm - Fenster „Treiber installieren“</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -261,7 +261,7 @@ In der Spalte „Types“ (Typen) werden die Gerätekategorienamen angezeigt. Zu
   <title>Fenster zum Hinzufügen von Repositorys im Gerätetreiber-Dienstprogramm</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Fenster zum Hinzufügen von Repositorys im Gerätetreiber-Dienstprogramm</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Fenster zum Hinzufügen von Repositorys im Gerätetreiber-Dienstprogramm</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -283,7 +283,7 @@ In der Spalte „Types“ (Typen) werden die Gerätekategorienamen angezeigt. Zu
   <title>Gerätetreiber-Dienstprogramm - Fenster zum Senden</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-submit.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>Gerätetreiber-Dienstprogramm - Fenster zum Senden</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-submit.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>Gerätetreiber-Dienstprogramm - Fenster zum Senden</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>

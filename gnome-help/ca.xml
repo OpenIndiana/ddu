@@ -180,7 +180,7 @@ content, products, or services.</para>
   <title>Finestra principal de la Utilitat de Controladors de Dispositius</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-main.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Finestra principal de la Utilitat de Controladors de Dispositius</phrase></textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-main.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Finestra principal de la Utilitat de Controladors de Dispositius</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -231,7 +231,7 @@ La columna de Tipus mostra el nom de la categoria del dispositiu. Algunes catego
   <title>Finestra d'informació de la Utilitat de Controladors de Dispositius</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Finestra d'informació detallada de la Utilitat de Controladors de Dispositius</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Finestra d'informació detallada de la Utilitat de Controladors de Dispositius</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -266,7 +266,7 @@ La columna de Tipus mostra el nom de la categoria del dispositiu. Algunes catego
   <title>Finestra de Navegació per a fitxers de la Utilitat de Controladors de Dispositius</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Finestra de Navegació per a fitxers de la Utilitat de Controladors de Dispositius</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Finestra de Navegació per a fitxers de la Utilitat de Controladors de Dispositius</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -282,7 +282,7 @@ La columna de Tipus mostra el nom de la categoria del dispositiu. Algunes catego
   <title>Finestra d'instal·lació de controladors de la Utilitat de Controladors de Dispositius</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Finestra d'instal·lació de controladors de la Utilitat de Controladors de Dispositius</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Finestra d'instal·lació de controladors de la Utilitat de Controladors de Dispositius</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -301,7 +301,7 @@ La columna de Tipus mostra el nom de la categoria del dispositiu. Algunes catego
   <title>Finestra per afegir un repositori en la Utilitat de Controladors de Dispositius</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Finestra per afegir un repositori en la Utilitat de Controladors de Dispositius</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Finestra per afegir un repositori en la Utilitat de Controladors de Dispositius</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -323,7 +323,7 @@ La columna de Tipus mostra el nom de la categoria del dispositiu. Algunes catego
   <title>Finestra d'enviament de la Utilitat de Controladors de Dispositius</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Finestra d'enviament de la Utilitat de Controladors de Dispositius</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Finestra d'enviament de la Utilitat de Controladors de Dispositius</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>

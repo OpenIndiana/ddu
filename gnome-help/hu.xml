@@ -180,7 +180,7 @@ content, products, or services.</para>
   <title>Eszközkezelő Fő Ablaka</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-main.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>Eszközkezelő Fő Ablaka</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-main.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>Eszközkezelő Fő Ablaka</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -231,7 +231,7 @@ A Típus oszlop az eszközkategóriák nevét mutatja. Különböző eszközkate
   <title>Eszközkezelő Részletes Információs Ablaka</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-detail.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>Eszközkezelő Részletes Információs Ablaka</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-detail.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>Eszközkezelő Részletes Információs Ablaka</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -266,7 +266,7 @@ A Típus oszlop az eszközkategóriák nevét mutatja. Különböző eszközkate
   <title>Eszközkezelő Fájl Tallózás Ablaka</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Eszközkezelő Fájl Tallózás Ablaka</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Eszközkezelő Fájl Tallózás Ablaka</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -282,7 +282,7 @@ A Típus oszlop az eszközkategóriák nevét mutatja. Különböző eszközkate
   <title>Eszközkezelő Meghajtó Telepítő Ablaka</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Eszközkezelő Meghajtó Telepítő Ablaka</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Eszközkezelő Meghajtó Telepítő Ablaka</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -301,7 +301,7 @@ A Típus oszlop az eszközkategóriák nevét mutatja. Különböző eszközkate
   <title>Eszközkezelő Telepítési Forrás Hozzáadás Ablaka</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-addrepo.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>Eszközkezelő Telepítési Forrás Hozzáadás Ablaka</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-addrepo.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>Eszközkezelő Telepítési Forrás Hozzáadás Ablaka</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -323,7 +323,7 @@ A Típus oszlop az eszközkategóriák nevét mutatja. Különböző eszközkate
   <title>Eszközkezelő Küldés Ablaka</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Eszközkezelő Küldés Ablaka</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Eszközkezelő Küldés Ablaka</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>

@@ -180,7 +180,7 @@ content, products, or services.</para>
   <title>Device Driver Utility - huvudfönster</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-main.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>Device Driver Utility - huvudfönster</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-main.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>Device Driver Utility - huvudfönster</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -231,7 +231,7 @@ I kolumnen Typer visas namn på enhetskategorier. Olika enhetskategorier är lju
   <title>Device Driver Utility - fönster med detaljerad information</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility - fönster med detaljerad information</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility - fönster med detaljerad information</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -266,7 +266,7 @@ I kolumnen Typer visas namn på enhetskategorier. Olika enhetskategorier är lju
   <title>Device Driver Utility - fönster för filbläddring</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility - fönster för filbläddring</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility - fönster för filbläddring</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -282,7 +282,7 @@ I kolumnen Typer visas namn på enhetskategorier. Olika enhetskategorier är lju
   <title>Device Driver Utility - fönster för installation av drivrutin</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility - fönster för installation av drivrutin</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility - fönster för installation av drivrutin</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -301,7 +301,7 @@ I kolumnen Typer visas namn på enhetskategorier. Olika enhetskategorier är lju
   <title>Device Driver Utility - lägga till RepoWindow</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility - lägga till RepoWindow</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility - lägga till RepoWindow</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -324,7 +324,7 @@ Compability List):</para>
   <title>Device Driver Utility - sändningsfönster</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility - sändningsfönster</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility - sändningsfönster</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>

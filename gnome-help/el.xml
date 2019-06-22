@@ -180,7 +180,7 @@ content, products, or services.</para>
   <title>Κύριο παράθυρο του εργαλείου οδηγών συσκευών</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-main.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Κύριο παράθυρο του εργαλείου οδηγών συσκευών</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-main.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Κύριο παράθυρο του εργαλείου οδηγών συσκευών</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -231,7 +231,7 @@ content, products, or services.</para>
   <title>Device Driver Utility Detail Information Window</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility Detail Information Window</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility Detail Information Window</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -266,7 +266,7 @@ content, products, or services.</para>
   <title>Device Driver Utility File Browser Window</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility File Browse Window</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility File Browse Window</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -282,7 +282,7 @@ content, products, or services.</para>
   <title>Device Driver Utility Install Driver Window</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility Install Driver Window</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility Install Driver Window</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -301,7 +301,7 @@ content, products, or services.</para>
   <title>Device Driver Utility Add RepoWindow</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility Add RepoWindow</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility Add RepoWindow</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -323,7 +323,7 @@ content, products, or services.</para>
   <title>Device Driver Utility Submission Window</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility Submission Window</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility Submission Window</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>

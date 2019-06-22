@@ -180,7 +180,7 @@ content, products, or services.</para>
   <title>Apparaat bestuurder hulpmiddel hoofd venster</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-main.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Hoofd venster voor aparaatbestuurder hulpmiddel </phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-main.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Hoofd venster voor aparaatbestuurder hulpmiddel </phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -231,7 +231,7 @@ De types kolom vertoont de namen van de apparaat categorie. Verschillende catego
   <title>Apparaatbestuurder hulpmiddel venster voor gedetailleerde informatie</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Apparaatbestuurder hulpmiddel venster voor gedetailleerde informatie</phrase></textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Apparaatbestuurder hulpmiddel venster voor gedetailleerde informatie</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -266,7 +266,7 @@ De types kolom vertoont de namen van de apparaat categorie. Verschillende catego
   <title>Device Driver Utility zoekvenster</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility Zoekvenster</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility Zoekvenster</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -282,7 +282,7 @@ De types kolom vertoont de namen van de apparaat categorie. Verschillende catego
   <title>Apparaatbestuurder hulpmiddel installeer bestuurder venster</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-install.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>Apparaatbestuurder hulpmiddel Installeer bestuurder venster</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-install.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>Apparaatbestuurder hulpmiddel Installeer bestuurder venster</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -301,7 +301,7 @@ De types kolom vertoont de namen van de apparaat categorie. Verschillende catego
   <title>Device Driver Utility Add RepoVenster</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-addrepo.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>Device Driver Utility</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-addrepo.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>Device Driver Utility</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -323,7 +323,7 @@ De types kolom vertoont de namen van de apparaat categorie. Verschillende catego
   <title>Device Driver Utility indienvenster</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility Indienvenster</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility Indienvenster</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>

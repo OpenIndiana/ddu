@@ -180,7 +180,7 @@ content, products, or services.</para>
   <title>Główne okno Zarządzania sterownikami urządzeń</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-main.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Główne okno Zarządzania sterownikami urządzeń</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-main.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Główne okno Zarządzania sterownikami urządzeń</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -231,7 +231,7 @@ Kolumna Rodzaje pokazuje nazwy kategorii urządzeń. Różne kategorie urządze�
   <title>Okno Informacyjne Zarządzania sterownikami urządzeń</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Okno Informacyjne Zarządzania sterownikami urządzeń</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Okno Informacyjne Zarządzania sterownikami urządzeń</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -266,7 +266,7 @@ Kolumna Rodzaje pokazuje nazwy kategorii urządzeń. Różne kategorie urządze�
   <title>Device Driver Utility File Browser Window</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility File Browse Window</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility File Browse Window</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -282,7 +282,7 @@ Kolumna Rodzaje pokazuje nazwy kategorii urządzeń. Różne kategorie urządze�
   <title>Okno Instalacji sterowników Narzędzia zarządzania sterownikami</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Okno Instalacji sterowników Narzędzia zarządzania sterownikami</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Okno Instalacji sterowników Narzędzia zarządzania sterownikami</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -301,7 +301,7 @@ Kolumna Rodzaje pokazuje nazwy kategorii urządzeń. Różne kategorie urządze�
   <title>Device Driver Utility Add RepoWindow</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility Add RepoWindow</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility Add RepoWindow</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -323,7 +323,7 @@ Kolumna Rodzaje pokazuje nazwy kategorii urządzeń. Różne kategorie urządze�
   <title>Device Driver Utility Submission Window</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility Submission Window</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Device Driver Utility Submission Window</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>

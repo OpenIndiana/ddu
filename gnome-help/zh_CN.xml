@@ -140,7 +140,7 @@
   <title>设备驱动实用程序主窗口</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-main.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>设备驱动实用程序主窗口</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-main.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>设备驱动实用程序主窗口</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -191,7 +191,7 @@
   <title>设备驱动实用程序详细信息窗口</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-detail.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>设备驱动实用程序详细信息窗口</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-detail.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>设备驱动实用程序详细信息窗口</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -226,7 +226,7 @@
   <title>设备驱动实用程序文件浏览器窗口</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-browse.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>设备驱动实用程序文件浏览窗口</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-browse.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>设备驱动实用程序文件浏览窗口</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -242,7 +242,7 @@
   <title>设备驱动实用程序安装驱动程序窗口</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-install.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>设备驱动实用程序安装驱动程序窗口</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-install.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>设备驱动实用程序安装驱动程序窗口</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -261,7 +261,7 @@
   <title>设备驱动实用程序添加系统信息库窗口</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-addrepo.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>设备驱动实用程序添加系统信息库窗口</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-addrepo.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>设备驱动实用程序添加系统信息库窗口</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -283,7 +283,7 @@
   <title>设备驱动实用程序提交窗口</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-submit.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>设备驱动实用程序提交窗口</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-submit.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>设备驱动实用程序提交窗口</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>

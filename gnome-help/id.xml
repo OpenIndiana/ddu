@@ -180,7 +180,7 @@ content, products, or services.</para>
   <title>Jendela Utama Utilitas Driver Perangkat</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-main.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Jendela Utama Utilitas Driver Perangkat</phrase></textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-main.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Jendela Utama Utilitas Driver Perangkat</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -231,7 +231,7 @@ Jenis kolom menunjukkan kategori nama device. Berbagai macam kategori devices te
   <title>Jendela Rincian Informasi Utilitas Driver Perangkat</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Jendela Rincian Informasi Utilitas Driver Perangkat</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Jendela Rincian Informasi Utilitas Driver Perangkat</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -266,7 +266,7 @@ Jenis kolom menunjukkan kategori nama device. Berbagai macam kategori devices te
   <title>Jendela Jelajah Berkas Utilitas Driver Perangkat</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-browse.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>Jendela Jelajah Berkas Utilitas Driver Perangkat</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-browse.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>Jendela Jelajah Berkas Utilitas Driver Perangkat</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -282,7 +282,7 @@ Jenis kolom menunjukkan kategori nama device. Berbagai macam kategori devices te
   <title>Jendela Instalasi Driver Utilitas Driver Perangkat</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Jendela Instalasi Driver Utilitas Driver Perangkat</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Jendela Instalasi Driver Utilitas Driver Perangkat</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -301,7 +301,7 @@ Jenis kolom menunjukkan kategori nama device. Berbagai macam kategori devices te
   <title>Tambah RepoWindow Utilitas Driver Perangkat</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Tambah RepoWindow Utilitas Driver Perangkat</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Tambah RepoWindow Utilitas Driver Perangkat</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -323,7 +323,7 @@ Jenis kolom menunjukkan kategori nama device. Berbagai macam kategori devices te
   <title>Jendela Pengiriman Utilitas Driver Perangkat</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Jendela Pengiriman Utilitas Driver Perangkat</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Jendela Pengiriman Utilitas Driver Perangkat</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>

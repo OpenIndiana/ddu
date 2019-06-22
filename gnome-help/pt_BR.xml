@@ -140,7 +140,7 @@
   <title>Janela principal do Utilitário de Drivers de Dispositivos</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-main.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Janela principal do Utilitário de Drivers de Dispositivos</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-main.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Janela principal do Utilitário de Drivers de Dispositivos</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -191,7 +191,7 @@ A coluna Tipos mostra os nomes das categorias de dispositivos. Várias categoria
   <title>Janela Informações Detalhadas do Utilitário de Drivers de Dispositivos</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Janela Informação Detalhada do Utilitário de Drivers de Dispositivos</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Janela Informação Detalhada do Utilitário de Drivers de Dispositivos</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -226,7 +226,7 @@ A coluna Tipos mostra os nomes das categorias de dispositivos. Várias categoria
   <title>Janela de busca de arquivo do utilitário de drivers de dispositivos</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Janela de busca de arquivo do utilitário de drivers de dispositivos</phrase></textobject>  
+    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Janela de busca de arquivo do utilitário de drivers de dispositivos</phrase></textobject>  
   </mediaobject>
   </screenshot>
  </figure>
@@ -242,7 +242,7 @@ A coluna Tipos mostra os nomes das categorias de dispositivos. Várias categoria
   <title>Janela Instalar Driver do Utilitário de Drivers de Dispositivos</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Janela Instalar Driver do Utilitário de Drivers de Dispositivos</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Janela Instalar Driver do Utilitário de Drivers de Dispositivos</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -261,7 +261,7 @@ A coluna Tipos mostra os nomes das categorias de dispositivos. Várias categoria
   <title>Janela Adicionar Repositório do Utilitário de Drivers de Dispositivos</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Janela Adicionar Repositório do Utilitário de Drivers de Dispositivos</phrase></textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Janela Adicionar Repositório do Utilitário de Drivers de Dispositivos</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -283,7 +283,7 @@ A coluna Tipos mostra os nomes das categorias de dispositivos. Várias categoria
   <title>Janela de Submissão do Utilítário de Drivers de Dispositivos</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Janela de Submissão do Utilítário de Drivers de Dispositivos</phrase></textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Janela de Submissão do Utilítário de Drivers de Dispositivos</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>

@@ -140,7 +140,7 @@
   <title>Ventana principal de la Utilidad de controlador de dispositivos</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-main.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>Ventana principal de la Utilidad de controlador de dispositivos</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-main.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>Ventana principal de la Utilidad de controlador de dispositivos</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -191,7 +191,7 @@ La columna Tipos muestra los nombres de categoría de los dispositivos. Diversas
   <title>Ventana de información detallada de la Utilidad de controlador de dispositivos</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-detail.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>Ventana de información detallada de la Utilidad de controlador de dispositivos</phrase> </textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-detail.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>Ventana de información detallada de la Utilidad de controlador de dispositivos</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -226,7 +226,7 @@ La columna Tipos muestra los nombres de categoría de los dispositivos. Diversas
   <title>Ventana Explorador de archivos de la Utilidad de controlador de dispositivos</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Ventana de exploración de archivos de la Utilidad de controlador de dispositivos</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Ventana de exploración de archivos de la Utilidad de controlador de dispositivos</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -242,7 +242,7 @@ La columna Tipos muestra los nombres de categoría de los dispositivos. Diversas
   <title>Ventana de instalación de controladores de la Utilidad de controlador de dispositivos</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-install.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>Ventana de instalación de controladores de la Utilidad de controlador de dispositivos</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-install.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>Ventana de instalación de controladores de la Utilidad de controlador de dispositivos</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -261,7 +261,7 @@ La columna Tipos muestra los nombres de categoría de los dispositivos. Diversas
   <title>Ventana Agregar depósito de la Utilidad de controlador de dispositivos</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Ventana Agregar depósito de la Utilidad de controlador de dispositivos</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Ventana Agregar depósito de la Utilidad de controlador de dispositivos</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -283,7 +283,7 @@ La columna Tipos muestra los nombres de categoría de los dispositivos. Diversas
   <title>Ventana de envío de la Utilidad de controlador de dispositivos</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Ventana de envío de la Utilidad de controlador de dispositivos</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Ventana de envío de la Utilidad de controlador de dispositivos</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>

@@ -262,7 +262,7 @@ license par X/Open Company, Ltd.</para>
   <screenshot>
     <mediaobject> 
     <imageobject>
-  <imagedata fileref="figures/DDU-main.png" format="png" srccredit="Andreas"/>
+  <imagedata fileref="figures/DDU-main.png" format="PNG" srccredit="Andreas"/>
    </imageobject>
     <textobject> 
       <phrase>Device Driver Utility Main Window</phrase> 
@@ -318,7 +318,7 @@ The Types column shows the device category names. Various device categories are 
   <screenshot>
     <mediaobject> 
     <imageobject>
-  <imagedata fileref="figures/DDU-detail.png" format="png" srccredit="Andreas"/>
+  <imagedata fileref="figures/DDU-detail.png" format="PNG" srccredit="Andreas"/>
    </imageobject>
     <textobject> 
       <phrase>Device Driver Utility Detail Information Window</phrase> 
@@ -358,7 +358,7 @@ The Types column shows the device category names. Various device categories are 
   <screenshot>
     <mediaobject> 
     <imageobject>
-  <imagedata fileref="figures/DDU-browse.png" format="png" srccredit="Andreas"/>
+  <imagedata fileref="figures/DDU-browse.png" format="PNG" srccredit="Andreas"/>
    </imageobject>
     <textobject> 
       <phrase>Device Driver Utility File Browse Window</phrase> 
@@ -379,7 +379,7 @@ The Types column shows the device category names. Various device categories are 
   <screenshot>
     <mediaobject> 
     <imageobject>
-  <imagedata fileref="figures/DDU-install.png" format="png" srccredit="Andreas"/>
+  <imagedata fileref="figures/DDU-install.png" format="PNG" srccredit="Andreas"/>
    </imageobject>
     <textobject> 
       <phrase>Device Driver Utility Install Driver Window</phrase> 
@@ -403,7 +403,7 @@ The Types column shows the device category names. Various device categories are 
   <screenshot>
     <mediaobject> 
     <imageobject>
-  <imagedata fileref="figures/DDU-addrepo.png" format="png" srccredit="Andreas"/>
+  <imagedata fileref="figures/DDU-addrepo.png" format="PNG" srccredit="Andreas"/>
    </imageobject>
     <textobject> 
       <phrase>Device Driver Utility Add RepoWindow</phrase> 
@@ -430,7 +430,7 @@ The Types column shows the device category names. Various device categories are 
   <screenshot>
     <mediaobject> 
     <imageobject>
-  <imagedata fileref="figures/DDU-submit.png" format="png" srccredit="Andreas"/>
+  <imagedata fileref="figures/DDU-submit.png" format="PNG" srccredit="Andreas"/>
    </imageobject>
     <textobject> 
       <phrase>Device Driver Utility Submission Window</phrase> 

@@ -140,7 +140,7 @@
   <title>デバイスドライバユーティリティーメインウィンドウ</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-main.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>デバイスドライバユーティリティーメインウィンドウ</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-main.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>デバイスドライバユーティリティーメインウィンドウ</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -191,7 +191,7 @@
   <title>デバイスドライバユーティリティー「詳細情報」ウィンドウ</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>デバイスドライバユーティリティー「詳細情報」ウィンドウ</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>デバイスドライバユーティリティー「詳細情報」ウィンドウ</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -226,7 +226,7 @@
   <title>デバイスドライバユーティリティーファイル参照ウィンドウ</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-browse.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>デバイスドライバユーティリティーファイル参照ウィンドウ</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-browse.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>デバイスドライバユーティリティーファイル参照ウィンドウ</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -242,7 +242,7 @@
   <title>デバイスドライバユーティリティー「ドライバのインストール」ウィンドウ</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>デバイスドライバユーティリティー「ドライバのインストール」ウィンドウ</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>デバイスドライバユーティリティー「ドライバのインストール」ウィンドウ</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -261,7 +261,7 @@
   <title>デバイスドライバユーティリティーリポジトリ追加ウィンドウ</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-addrepo.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>デバイスドライバユーティリティーリポジトリ追加ウィンドウ</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-addrepo.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>デバイスドライバユーティリティーリポジトリ追加ウィンドウ</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -283,7 +283,7 @@
   <title>「ハードウェア互換リストに情報を送信」ウィンドウ</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-submit.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>「ハードウェア互換リストに情報を送信」ウィンドウ</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-submit.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>「ハードウェア互換リストに情報を送信」ウィンドウ</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>

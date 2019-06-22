@@ -183,7 +183,7 @@ na ploše Aplikace->Systém->Device Driver Utility. Okno Device Driver Utility j
   <title>Hlavní okno Device Driver Utility</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-main.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Hlavní okno Device Driver Utility</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-main.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Hlavní okno Device Driver Utility</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -234,7 +234,7 @@ Sloupec Typ zobrazuje název kategorie zařízení. Různé kategorie zařízen�
   <title>Okno Podrobné Informace Device Driver Utility</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Okno Podrobné Informace Device Driver Utility</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Okno Podrobné Informace Device Driver Utility</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -272,7 +272,7 @@ kroky pro instalaci tohoto ovladače:</para>
   <title>Okno Device Driver Utility  Prohlížeč souborů </title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Okno Device Driver Utility Prohlížeč souborů</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Okno Device Driver Utility Prohlížeč souborů</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -288,7 +288,7 @@ kroky pro instalaci tohoto ovladače:</para>
   <title>Okno Instalovat Ovladač Device Driver Utility</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Okno Instalovat Ovladač Device Driver Utility</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Okno Instalovat Ovladač Device Driver Utility</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -307,7 +307,7 @@ kroky pro instalaci tohoto ovladače:</para>
   <title>Okno Přidat repozitář do Device Driver Utility</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-addrepo.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>Okno Přidat repozitář do Device Driver Utility</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-addrepo.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>Okno Přidat repozitář do Device Driver Utility</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -329,7 +329,7 @@ kroky pro instalaci tohoto ovladače:</para>
   <title>Okno Device Driver Utility Odesílání</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-submit.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>Okno Device Driver Utility Odesílání</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-submit.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>Okno Device Driver Utility Odesílání</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>

@@ -140,7 +140,7 @@
   <title>裝置驅動公用程式主視窗</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-main.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>裝置驅動公用程式主視窗</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-main.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>裝置驅動公用程式主視窗</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -191,7 +191,7 @@
   <title>裝置驅動公用程式詳細資訊視窗</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-detail.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>裝置驅動公用程式詳細資訊視窗</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-detail.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>裝置驅動公用程式詳細資訊視窗</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -226,7 +226,7 @@
   <title>裝置驅動公用程式檔案瀏覽器視窗</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>裝置驅動公用程式檔案瀏覽視窗</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>裝置驅動公用程式檔案瀏覽視窗</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -242,7 +242,7 @@
   <title>裝置驅動公用程式安裝驅動程式視窗</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-install.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>裝置驅動公用程式安裝驅動程式視窗</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-install.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>裝置驅動公用程式安裝驅動程式視窗</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -261,7 +261,7 @@
   <title>裝置驅動公用程式增加儲存庫視窗</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>裝置驅動公用程式增加儲存庫視窗</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>裝置驅動公用程式增加儲存庫視窗</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -283,7 +283,7 @@
   <title>裝置驅動公用程式提交視窗</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>裝置驅動公用程式提交視窗</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>裝置驅動公用程式提交視窗</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>

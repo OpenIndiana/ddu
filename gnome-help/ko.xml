@@ -140,7 +140,7 @@
   <title>장치 드라이버 유틸리티 기본 창</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-main.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>장치 드라이버 유틸리티 기본 창</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-main.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>장치 드라이버 유틸리티 기본 창</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -191,7 +191,7 @@
   <title>장치 드라이버 유틸리티 세부 정보 창</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>장치 드라이버 유틸리티 세부 정보 창</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>장치 드라이버 유틸리티 세부 정보 창</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -226,7 +226,7 @@
   <title>장치 드라이버 유틸리티 파일 브라우저 창</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>장치 드라이버 유틸리티 파일 브라우저 창</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>장치 드라이버 유틸리티 파일 브라우저 창</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -242,7 +242,7 @@
   <title>장치 드라이버 유틸리티 드라이버 설치 창</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>장치 드라이버 유틸리티 드라이버 설치 창</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>장치 드라이버 유틸리티 드라이버 설치 창</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -261,7 +261,7 @@
   <title>장치 드라이버 유틸리티 저장소 추가 창</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>장치 드라이버 유틸리티 저장소 추가 창</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>장치 드라이버 유틸리티 저장소 추가 창</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -283,7 +283,7 @@
   <title>장치 드라이버 유틸리티 제출 창</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>장치 드라이버 유틸리티 제출 창</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>장치 드라이버 유틸리티 제출 창</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>

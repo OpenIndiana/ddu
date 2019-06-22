@@ -183,7 +183,7 @@ content, products, or services.</para>
   <title>القائمة الرئيسية لبرنامج إدارة التجهيزات </title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-main.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase> القائمة الرئيسية لبرنامج إدارة التجهيزات  </phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-main.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase> القائمة الرئيسية لبرنامج إدارة التجهيزات  </phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -238,7 +238,7 @@ Oracle Solaris hardware compatibility list (HCL) </para>
   <title>نافذة تفاصيل المعلومات لبرنامج إدارة التجهيزات </title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase> نافذة تفاصيل المعلومات لبرنامج إدارة التجهيزات </phrase> </textobject>. 
+    <imageobject> <imagedata fileref="../C/figures/DDU-detail.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase> نافذة تفاصيل المعلومات لبرنامج إدارة التجهيزات </phrase> </textobject>. 
   </mediaobject>
   </screenshot>
  </figure>
@@ -274,7 +274,7 @@ Oracle Solaris hardware compatibility list (HCL) </para>
   <title>نافذة تصفح أداة تعريف التجهيزات </title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>نافذة تصفح أداة تعريف التجهيزات </phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>نافذة تصفح أداة تعريف التجهيزات </phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -290,7 +290,7 @@ Oracle Solaris hardware compatibility list (HCL) </para>
   <title>نافذة تنصيب التعريفات لبرنامج إدارة التجهيزات </title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase> تنصيب التعريفات لبرنامج إدارة التجهيزات  </phrase> </textobject> . 
+    <imageobject> <imagedata fileref="../C/figures/DDU-install.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase> تنصيب التعريفات لبرنامج إدارة التجهيزات  </phrase> </textobject> . 
   </mediaobject>
   </screenshot>
  </figure>
@@ -309,7 +309,7 @@ Oracle Solaris hardware compatibility list (HCL) </para>
   <title>أداة تعريف التجهيزات إضافة RepoWindow</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>أداة تعريف التجهيزات إضافة RepoWindow</phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-addrepo.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>أداة تعريف التجهيزات إضافة RepoWindow</phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -331,7 +331,7 @@ Oracle Solaris hardware compatibility list (HCL) </para>
   <title>أداة تعريف التجهيزات نافذة الإرسال </title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>أداة تعريف التجهيزات نافذة الإرسال </phrase> </textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-submit.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>أداة تعريف التجهيزات نافذة الإرسال </phrase> </textobject> 
   </mediaobject>
   </screenshot>
  </figure>

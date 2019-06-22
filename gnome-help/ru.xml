@@ -180,7 +180,7 @@ content, products, or services.</para>
   <title>Главное окно служебной программы драйверов устройств</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-main.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>Главное окно служебной программы драйверов устройств</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-main.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>Главное окно служебной программы драйверов устройств</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -231,7 +231,7 @@ content, products, or services.</para>
   <title>Окно «Подробные сведения об аппаратном обеспечении» служебной программы драйверов устройств</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-detail.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>Окно "Подробные сведения об аппаратном обеспечении" служебной программы драйверов устройств</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-detail.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>Окно "Подробные сведения об аппаратном обеспечении" служебной программы драйверов устройств</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -266,7 +266,7 @@ content, products, or services.</para>
   <title>Окно обзора файлов служебной программы драйверов устройств</title>
   <screenshot>
     <mediaobject> 
-    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="png" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Окно обзора файлов служебной программы драйверов устройств</phrase></textobject> 
+    <imageobject> <imagedata fileref="../C/figures/DDU-browse.png" format="PNG" srccredit="Andreas"/> </imageobject> <textobject> <phrase>Окно обзора файлов служебной программы драйверов устройств</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -282,7 +282,7 @@ content, products, or services.</para>
   <title>Окно «Установка драйвера» служебной программы драйверов устройств</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-install.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>Окно «Установка драйвера» служебной программы драйверов устройств</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-install.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>Окно «Установка драйвера» служебной программы драйверов устройств</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -301,7 +301,7 @@ content, products, or services.</para>
   <title>Окно добавления хранилища служебной программы драйверов устройств</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-addrepo.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>Окно добавления хранилища служебной программы драйверов устройств</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-addrepo.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>Окно добавления хранилища служебной программы драйверов устройств</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
@@ -323,7 +323,7 @@ content, products, or services.</para>
   <title>Окно отправки служебной программы драйверов устройств</title>
   <screenshot>
     <mediaobject> 
-    <imageobject><imagedata fileref="../C/figures/DDU-submit.png" format="png" srccredit="Andreas"/></imageobject><textobject><phrase>Окно отправки служебной программы драйверов устройств</phrase></textobject> 
+    <imageobject><imagedata fileref="../C/figures/DDU-submit.png" format="PNG" srccredit="Andreas"/></imageobject><textobject><phrase>Окно отправки служебной программы драйверов устройств</phrase></textobject> 
   </mediaobject>
   </screenshot>
  </figure>
