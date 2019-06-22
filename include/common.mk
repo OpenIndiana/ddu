@@ -36,6 +36,8 @@ USRDDU=$(DESTDIR)/usr/ddu
 
 USRDDUDATA=$(DESTDIR)/usr/ddu/data
 
+USRDDUSCRIPTS=$(DESTDIR)/usr/ddu/scripts
+
 USRDDUTEXTUTILS=$(DESTDIR)/usr/ddu/ddu-text/utils
 
 BIN_ROOT=$(USRDDU)/bin/$(ARCH)
