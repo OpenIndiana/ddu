@@ -52,7 +52,6 @@ try:
 except AttributeError:
     pass
 
-os.putenv('LD_LIBRARY_PATH', '/usr/ddu/lib')
 from utils import DetailInf
 from utils import SubmitDlg
 from utils import InstDrv
@@ -63,6 +62,7 @@ from utils import RepoDlg
 
 gobject.type_register(CellRendererUrl)
 
+os.putenv('DDU_DATABASE', '%s/data/driver.db' % ABSPATH)
 
 gtk.glade.textdomain('ddu')
 _ = gettext.gettext
