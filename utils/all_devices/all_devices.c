@@ -52,9 +52,10 @@ unsigned int	arg_bus_id;
 unsigned int	arg_dev_id;
 unsigned int	arg_func_id;
 
-/*JAS why are some of the above arg_ and others not?
-
-JAS make everything not used outside of this module static.*/
+/*
+ * JAS why are some of the above arg_ and others not?
+ * JAS make everything not used outside of this module static.
+ */
 
 int get_con_id(di_node_t node, dev_id* pId);
 int get_usb_id(di_node_t node, dev_id* pId);
@@ -72,7 +73,10 @@ int (*get_dev_id[])(di_node_t, dev_id*) = {
 };
 
 /* devices id functions index */
-/*JAS: Mention that this enum must be in sync with the get_dev_id array above. */
+/*
+ * JAS: Mention that this enum must be in sync
+ * with the get_dev_id array above.
+ */
 
 enum id_index {
 	CON_ID,
@@ -89,11 +93,12 @@ char *(*get_name_info[])(di_node_t) = {
 	NULL
 };
 
-/* devices name functions index */
-/* JAS: as above, mention that this enum must be in sync with get_name_info array
-above.
-JAS: mention that MODEL_INFO has to come before the other items to accommodate
-search order of some functions. */
+/*
+ * devices name functions index
+ * This enum must be in sync with get_name_info array.
+ * MODEL_INFO has to come before the other items to accommodate
+ * search order of some functions.
+ */
 enum name_index {
 	MODEL_INFO,
 	INQUIRY_INFO,
@@ -194,12 +199,12 @@ process_arg(char *arg)
 	arg_func_id = 0;
 
 /*
-JAS Looks like this function does two different things: process PCI bdf in the
-"if" case, and extract device ID and vendor ID for the else case.  If this
-function will always do one thing when it is called from a certain place in the
-code (example: always does the "if" if called from location X in the code),
-then I would split into two separate functions.
-*/
+ * JAS Looks like this function does two different things: process PCI bdf in
+ * the "if" case, and extract device ID and vendor ID for the else case.  If
+ * this function will always do one thing when it is called from a certain
+ * place in the code (example: always does the "if" if called from location X
+ * in the code), then I would split into two separate functions.
+ */
 
 	if (arg[0] == '[') {
 		pci_path = arg;
@@ -322,8 +327,10 @@ prt_prop(di_prop_t prop, int wides)
 				printf("%s", str_type);
 			}
 			break;
-/*JAS How to tell whether a boolean property is false vs whether a property is
-not there? (See di_prop_bytes(3DEVINFO).) */
+/*
+ * JAS How to tell whether a boolean property is false vs whether a property is
+ * not there? (See di_prop_bytes(3DEVINFO).)
+ */
 		case DI_PROP_TYPE_BOOLEAN:
 			printf("TRUE");
 			break;
@@ -561,8 +568,7 @@ get_con_id(di_node_t node, dev_id *pId)
  *	      "revision_id"
  *
  *	input:
-JAS Nit say device node handle of a USB device
- *	node: device node handle
+ *	node: device node handle of a USB device
  *	pId:  device id structure.
  *
  *	return:
@@ -638,7 +644,7 @@ get_con_name(dev_id *pId, dev_id_name *pName)
  *	pName: usb name structure.
  *
  *	return:
- *	0: Information returned in pName structure	
+ *	0: Information returned in pName structure
  *	1: Fail to get controllername.
  */
 int
@@ -753,7 +759,7 @@ prt_node_info(di_node_t node, int wides)
 		printf("unknown\n");
 	}
 
-	/* 
+	/*
 	 * get devices id. Try device as a PCI device and then as a USB device.
 	 */
 	for (i = 0; i < ID_END; i++) {
@@ -916,7 +922,8 @@ get_inq_ven_info(di_node_t node)
 {
 	char 	*prop_str;
 
-	if (lookup_node_strings(node, PROM_INQUIRY_VENDOR_ID, (char **)&prop_str) >0) {
+	if (lookup_node_strings(node, PROM_INQUIRY_VENDOR_ID,
+	    (char **)&prop_str) > 0) {
 		return (prop_str);
 	}
 	return (NULL);
@@ -936,7 +943,8 @@ get_inq_pro_info(di_node_t node)
 {
 	char 	*prop_str;
 
-	if (lookup_node_strings(node, PROM_INQUIRY_PRODUCT_ID, (char **)&prop_str) > 0) {
+	if (lookup_node_strings(node, PROM_INQUIRY_PRODUCT_ID,
+	    (char **)&prop_str) > 0) {
 		return (prop_str);
 	}
 	return (NULL);
@@ -956,7 +964,8 @@ get_usb_pro_info(di_node_t node)
 {
 	char 	*prop_str;
 
-	if (lookup_node_strings(node, USB_PRODUCT_NAME, (char **)&prop_str) > 0) {
+	if (lookup_node_strings(node, USB_PRODUCT_NAME,
+	    (char **)&prop_str) > 0) {
 		return (prop_str);
 	}
 	return (NULL);
@@ -1184,7 +1193,7 @@ prt_dev_info(di_node_t node, int wides)
 		switch (i) {
 			case INQUIRY_INFO:
 				str = get_inq_pro_info(node);
-				
+
 				if (str) {
 					printf(" ");
 					prt_info(str);
@@ -1343,9 +1352,11 @@ prt_type_info(di_node_t node, int wides)
 	}
 	printf(":");
 
-/* JAS: from the beginning of this function to this point, all code is duplicated
-from prt_dev_info.  Please make a function out of it, and call it from
-prt_dev_info and prt_type_info. */
+/*
+ * JAS: from the beginning of this function to this point, all code is
+ * duplicated from prt_dev_info.  Please make a function out of it, and
+ * call it from prt_dev_info and prt_type_info.
+ */
 
 	/* print device id information */
 	if (id.dev_id != NODEVICE) {
@@ -1469,7 +1480,7 @@ prt_minor_links(di_devlink_t devlink, void *arg)
 	if (di_devlink_path(devlink) != NULL) {
 		str = di_minor_nodetype(arg);
 
-		printf ("[%s]", (str != NULL) ? str : "unknown");
+		printf("[%s]", (str != NULL) ? str : "unknown");
 
 		printf("%s=%s\n", di_devlink_path(devlink),
 		    di_devlink_content(devlink));
