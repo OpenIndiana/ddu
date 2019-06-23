@@ -1,7 +1,11 @@
 Device Driver Utility (DDU) 1.3.1
 
-This version is extracted from the OpenIndiana repository and provided as blob
-until all closed source tools are replaced.
+This version is extracted from the OpenIndiana repository.
+Initially all missing binary parts present in DDU 1.2 sources are taken from there.
+Parts for which there was no source code, were rewritten.
+Source code for all_devices was updated based on code from 1.3.1 webrev.
+
+Committed C code should be cstyle-clean.
 
 20150529 - Aurélien Larcher <aurelien.larcher@gmail.com>
 * ddu.conf adds possibility to configure vendor and HCL parameters
