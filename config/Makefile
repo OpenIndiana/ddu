@@ -15,11 +15,13 @@
 include ../include/common.mk
 
 DESTDIRS= \
+	$(EXECATTRD) \
 	$(USRSHARE)/applications \
 	$(USRSHARE)/pixmaps \
 	$(USRDDU)
 
 DESTFILES = \
+	$(EXECATTRD)/ddu \
 	$(USRSHARE)/applications/ddu.desktop \
 	$(USRSHARE)/pixmaps/ddu.png \
 	$(USRDDU)/ddu.conf

@@ -36,6 +36,8 @@ PYTHON_VENDOR=$(DESTDIR)/usr/lib/python$(PYTHON_VERSION)/vendor-packages
 
 PYTHON_VENDOR_DDU=$(PYTHON_VENDOR)/DDU
 
+EXECATTRD=$(DESTDIR)/etc/security/exec_attr.d
+
 USRBIN=$(DESTDIR)/usr/bin
 
 USRDDU=$(DESTDIR)/usr/ddu

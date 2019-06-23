@@ -17,6 +17,9 @@ CLEANOBJS += $(OBJS)
 $(BIN_ROOT):
 	$(MKDIR) $@
 
+$(EXECATTRD):
+	$(MKDIR) $@
+
 $(PYTHON_VENDOR_DDU):
 	$(MKDIR) $@
 
@@ -61,6 +64,8 @@ $(I18N_ROOT)/%/LC_MESSAGES/ddu.mo: %.mo
 $(USRDDUGH)/%/ddu.xml: %.xml
 	$(INSTALL) $< $@
 
+$(EXECATTRD)/%: $(EXECATTRD)
+
 $(PYTHON_VENDOR_DDU)/%: $(PYTHON_VENDOR_DDU)
 
 $(USRBIN)/%: $(USRBIN)
@@ -84,6 +89,9 @@ $(USRDDUSCRIPTS)/%: MODE=0755
 $(USRDDUTEXTUTILS)/%: $(USRDDUTEXTUTILS)
 
 $(USRDDUUTILS)/%: $(USRDDUUTILS)
+
+$(EXECATTRD)/%: %
+	$(INSTALL) $< $@
 
 $(PYTHON_VENDOR_DDU)/%: %
 	$(INSTALL) $< $@
