@@ -24,8 +24,10 @@
  
 #define	NODE_CPU	"cpu"
 
+#define	PROP_DEV_TYPE	"device_type"
 #define	PROP_CPU_BRAND	"brand-string"
 #define	PROP_CPU_MHZ	"cpu-mhz"
+#define	PROP_CPU_CLOCK	"clock-frequency"
 #define PROP_INIT_PORT	"initiator-port"
 
 #define PROM_CLASS	"class-code"

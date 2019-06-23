@@ -18,8 +18,7 @@ PROGRAM	=all_devices
 
 SRCS	=	\
 	all_devices.c \
-	pci.c \
-	usb.c
+	ids.c
 
 OBJS	=	$(SRCS:.c=.o)
 
