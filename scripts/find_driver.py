@@ -15,7 +15,7 @@
 #
 
 #
-# Find driver by pci id in DDU database
+# Find driver by a list of compatible names in DDU database
 #
 
 #
@@ -61,8 +61,7 @@ def main():
         print("%s: specify pci id of the device" % (progname), file=sys.stderr)
         sys.exit(1)
 
-    pci_id = sys.argv[1].strip()
-    found = False
+    pci_ids = sys.argv[1].strip()
 
     dbfile = os.getenv("DDU_DATABASE")
     if dbfile is None or len(dbfile) == 0:
@@ -76,21 +75,21 @@ def main():
                 ln = line.split()
                 if len(ln) < 5:
                     continue
-                if ln[0] == pci_id:
-                    driver_name = ln[1]
-                    driver_type = ln[2]
-                    download_url = ln[3]
-                    driver_version = ln[4]
-                    if driver_type == "i":
-                        found = True
-                        print("1|%s|%s" % (driver_name, download_url))
+                for pci_id in pci_ids.split():
+                    if ln[0] == pci_id:
+                        driver_name = ln[1]
+                        driver_type = ln[2]
+                        download_url = ln[3]
+                        driver_version = ln[4]
+                        if driver_type == "i":
+                            print("1|%s|%s" % (driver_name, download_url))
+                            exit(0)
     except IOError:
         print("%s: DDU device database was not found at %s" % (progname, DDU_DATABASE),
             file=sys.stderr)
 
-    if not found:
-         print("0||")
-         sys.exit(1)
+    print("0||")
+    sys.exit(1)
 
 if __name__ == "__main__":
     main()
