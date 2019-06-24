@@ -69,13 +69,15 @@ def main():
 
     try:
         with open(dbfile) as fl:
-            for line in fl:
-                if len(line) == 0 or line[0] == "#" or line[0] == "-":
-                    continue
-                ln = line.split()
-                if len(ln) < 5:
-                    continue
-                for pci_id in pci_ids.split():
+            lines = fl.readlines()
+            for pci_id in pci_ids.split():
+                for line in lines:
+                    line = line.strip()
+                    if len(line) == 0 or line[0] == "#" or line[0] == "-":
+                        continue
+                    ln = line.split()
+                    if len(ln) < 5:
+                        continue
                     if ln[0] == pci_id:
                         driver_name = ln[1]
                         driver_type = ln[2]
