@@ -52,4 +52,57 @@ $(USRDDU)/%:	%
 
 install: $(DESTDIRS) $(DESTFILES)
 
+TMPDIR=tmp
+
+CLEANOBJS += $(TMPDIR)
+
+$(TMPDIR):
+	$(MKDIR) $@
+
+MANIFEST_DIRS?=
+
+# You can regenerate driver.db using the following command:
+#
+# gmake MANIFEST_DIRS="~/srcs/oi-userland/components/openindiana/nvidia/ \
+#	~/srcs/gfx-drm/gfx-drm/usr/src/pkg/manifests/ \
+#	~/srcs/illumos-gate/usr/src/pkg/manifests/" generate-driver-db
+
+generate-driver-db: $(TMPDIR)/driver.db
+	cp $(TMPDIR)/driver.db driver.db
+
+$(TMPDIR)/.collect_manifests: $(TMPDIR)
+	for dir in $(MANIFEST_DIRS); do \
+		for file in `$(FIND) $$dir -name \*.p5m -o -name \*.mf`; do \
+			$(GREP) -q -E '^set name=variant.arch value=sparc$$' "$$file" || \
+			{ \
+				DESTFILE="$(TMPDIR)/`basename $$file`"; \
+				DESTFILE=`echo $$DESTFILE | $(SED) -e 's:\.mf$$:.p5m:'`; \
+				$(CP) "$$file" "$$DESTFILE".tmp ; \
+				$(PKGFMT) -u "$$DESTFILE".tmp ; \
+				$(GREP) -E '^(\$$\(.*\))?driver' "$$DESTFILE".tmp |\
+					 $(GREP) alias > "$$DESTFILE" ;\
+				$(RM) "$$DESTFILE".tmp ;\
+			} \
+		done \
+	done
+	$(TOUCH) $@
+
+$(TMPDIR)/.extract_driver_aliases: $(TMPDIR)/.collect_manifests
+	$(PKGMOGRIFY) -D i386_ONLY="" -D sparc_ONLY="$(POUND_SIGN)" \
+		 $(TMPDIR)/*.p5m driver_transform | \
+	$(GREP) -v '^#' |grep -v '^$$' | \
+	$(TR) '\n' ';' |\
+	$(NAWK) ' BEGIN { RS=";" } \
+		{  \
+			printf("%s\t%s\ti\topenindiana.org\t0.5.11\n", $$1, $$2); \
+		}' | \
+	$(SORT) -k 2 > $@
+
+$(TMPDIR)/driver.db.header: $(TMPDIR) driver.db.header
+	CURRENT_DATE=`$(DATE) '+%Y %m %d'`; \
+	$(CAT) driver.db.header | $(SED) -e "s:<DATE>:$$CURRENT_DATE:" > $@
+
+$(TMPDIR)/driver.db: $(TMPDIR)/driver.db.header $(TMPDIR)/.extract_driver_aliases
+	$(CAT) $(TMPDIR)/driver.db.header $(TMPDIR)/.extract_driver_aliases > $@
+
 include $(WS_TOP)/include/target.mk

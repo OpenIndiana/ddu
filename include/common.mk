@@ -21,12 +21,26 @@ DESTDIR?=/
 
 SUDO?=sudo
 
+PRE_POUND=pre\#
+POUND_SIGN=$(PRE_POUND:pre%=%)
+
+CAT=/usr/bin/cat
 CP=/usr/bin/cp -rp
+DATE=/usr/bin/date
+FIND=/usr/bin/find
+GREP=/usr/bin/grep
 LN=/usr/bin/ln -f
 MKDIR=/usr/bin/mkdir -p
 MSGFMT=/usr/bin/msgfmt
+NAWK=/usr/bin/nawk
 PKG=/usr/bin/pkg
+PKGFMT=/usr/bin/pkgfmt
+PKGMOGRIFY=/usr/bin/pkgmogrify
 RM=/usr/bin/rm -f
+SED=/usr/bin/sed
+SORT=/usr/bin/sort
+TOUCH=/usr/bin/touch
+TR=/usr/bin/tr
 
 PYTHON_VERSION = 2.7
 
@@ -67,8 +81,6 @@ MODE=0644
 INSTALL=/usr/gnu/bin/install -m $(MODE)
 
 CC:=/usr/bin/gcc
-
-#AS=/usr/bin/gas
 
 CPPFLAGS = -I$(WS_TOP)/include
 

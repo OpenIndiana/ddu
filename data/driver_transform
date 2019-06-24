@@ -1,0 +1,3 @@
+<transform driver name=(.*) -> \
+             print %(alias;sep=";";suffix=" %<1>")>
+<transform -> drop>

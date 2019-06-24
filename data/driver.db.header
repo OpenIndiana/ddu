@@ -1,0 +1,24 @@
+#
+# This file and its contents are supplied under the terms of the
+# Common Development and Distribution License ("CDDL"). You may
+# only use this file in accordance with the terms of the CDDL.
+#
+# A full copy of the text of the CDDL should have accompanied this
+# source. A copy of the CDDL is also available via the Internet at
+# http://www.illumos.org/license/CDDL.
+#
+
+#
+# Copyright 2019 Alexander Pyhalov
+#
+
+# Auto-generated DDU driver database
+# Last updated on <DATE>
+# Syntax:
+# pci_string    drver_name      driver_type     driver_location driver_version
+#       pci_string:     PCI ID of the device
+#       driver_name:    name of driver used for device
+#       driver_type:    i ->    illumos driver
+#       driver_location:        for illumos-type driver is always openindiana.org
+#       driver_version: for now always 0.5.11
+---OpenIndiana bundled driver---
