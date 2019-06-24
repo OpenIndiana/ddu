@@ -26,6 +26,7 @@
 #include <stdlib.h>
 #include <sys/mnttab.h>
 #include <sys/poll.h>
+#include <sys/stat.h>
 #include <sys/types.h>
 #include <unistd.h>
 
@@ -40,6 +41,7 @@ main(int argc, char *argv[])
 	port_event_t ev;
 	char buf[BUFLEN];
 	struct file_obj fobj;
+	struct stat st;
 
 	progname = basename(argv[0]);
 
@@ -57,24 +59,34 @@ main(int argc, char *argv[])
 
 	port = port_create();
 	if (port < 0) {
-		fprintf(stderr, "%s: Couldn't start monitor for %s\n",
+		fprintf(stderr, "%s: Couldn't create monitor for %s\n",
 		    progname, MNTTAB);
 		return (1);
 	}
 
 	fobj.fo_name = MNTTAB;
 
-	if (port_associate(port, PORT_SOURCE_FILE, (uintptr_t)&fobj,
-	    FILE_MODIFIED, NULL) != 0) {
-		fprintf(stderr, "%s: Couldn't start monitor for %s\n",
-		    progname, MNTTAB);
-		close(port);
-		return (1);
-	}
+	do {
+		if (stat(MNTTAB, &st) != 0) {
+			fprintf(stderr, "%s: Couldn't stat %s\n", progname,
+			    MNTTAB);
+			close(port);
+			return (1);
+		}
 
-	while (1) {
+		fobj.fo_atime = st.st_atim;
+		fobj.fo_mtime = st.st_mtim;
+		fobj.fo_ctime = st.st_ctim;
+
+		if (port_associate(port, PORT_SOURCE_FILE, (uintptr_t)&fobj,
+		    FILE_MODIFIED, NULL) != 0) {
+			fprintf(stderr, "%s: Couldn't start monitor for %s\n",
+			    progname, MNTTAB);
+			close(port);
+			return (1);
+		}
+
 		errno = 0;
-
 		if (port_get(port, &ev, NULL) == -1) {
 			if (errno == EINTR)
 				continue;
@@ -87,15 +99,7 @@ main(int argc, char *argv[])
 		printf("Got event %d %d\n", ev.portev_source, ev.portev_events);
 #endif
 		kill(pid, SIGUSR2);
-
-		if (port_associate(port, PORT_SOURCE_FILE, (uintptr_t)&fobj,
-		    FILE_MODIFIED, NULL) != 0) {
-			fprintf(stderr, "%s: Couldn't start monitor for %s\n",
-			    progname, MNTTAB);
-			close(port);
-			return (1);
-		}
-	}
+	} while (1);
 
 	return (0);
 }
