@@ -78,7 +78,7 @@ function probe_s
     for i in $(/usr/bin/pfexec ${bin_dir}/cd_detect -l | \
         awk -F':' '{print $3,"|",$1}' 2>>$err_log); do
 
-        dev_path=$(echo $i | cut -d'|' -f1 | sed 's/rdsk/dsk/' | tr -d " ")
+        dev_path=$(echo $i | cut -d'|' -f1 | tr -d " " | sed -e 's/rdsk/dsk/' -e 's/s2$//')
         name=$(echo $i | cut -d'|' -f2 | tr -d " ")
         /usr/sbin/mount | grep $dev_path >/dev/null 2>&1
         if [ $? -eq 0 ]; then
