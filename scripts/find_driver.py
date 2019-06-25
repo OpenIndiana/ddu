@@ -39,13 +39,14 @@
 
 # The parser is simple:
 # 1) ignore empty lines and lines starting from # or -
-# 2) returns driver name for pci id
+# 2) reads DDU database and searches for the first match
+#    from the given list of pci ids
 
 # Return format
 # driver_type|driver_name|download_url
 # 	driver_type - 1 - native illumos driver, 0 - not supported
 #	driver_name - name of the driver
-#	download_url - URL for driver download (always empty for now)
+#	download_url - URL for driver download (taken from DDU database)
 
 from __future__ import print_function
 from __future__ import with_statement
