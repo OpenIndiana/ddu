@@ -90,7 +90,7 @@ $(TMPDIR)/.collect_manifests: $(TMPDIR)
 $(TMPDIR)/.extract_driver_aliases: $(TMPDIR)/.collect_manifests
 	$(PKGMOGRIFY) -D i386_ONLY="" -D sparc_ONLY="$(POUND_SIGN)" \
 		 $(TMPDIR)/*.p5m driver_transform | \
-	$(GREP) -v '^#' |grep -v '^$$' | \
+	$(GREP) -v '^#' |$(GREP) -v '^$$' | \
 	$(TR) '\n' ';' |\
 	$(NAWK) ' BEGIN { RS=";" } \
 		{  \
