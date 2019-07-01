@@ -153,8 +153,6 @@
     </listitem>
     <listitem><para>SVR4：表示系统中没有驱动程序，但是存在 SVR4（System V Revision 4，系统 V 修订版 4）软件包。“信息”链接提供了相应的 SVR4 软件包信息。</para>
     </listitem>
-    <listitem><para>DU：表示系统中没有驱动程序，但是存在 DU 软件包。“信息”链接提供了相关的 DU 软件包信息。 </para>
-    </listitem>
     <listitem><para>UNK：表示驱动程序的状态是未知的，并且可能没有适用于相应设备的驱动程序。</para>
     </listitem>
     </itemizedlist>

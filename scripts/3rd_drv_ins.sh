@@ -29,7 +29,7 @@
 #
 #              Usage:
 #              3rd_drv_int.sh pkg_type download_url root_path
-#              $1 is for package type.(IPS, DU, SVR4, P5I, UNK)
+#              $1 is for package type.(IPS, SVR4, P5I, UNK)
 #              $2 is the driver download URL 
 #              $3 is root path for installation, can be null.
 #
@@ -80,7 +80,7 @@ fi
 #
 
 case $1 in
-IPS | DU | SVR4 | P5I | UNK);;
+IPS | SVR4 | P5I | UNK);;
 *) print -u2 "\n... $0: $1 is not valid."; exit 1;;
 esac
 

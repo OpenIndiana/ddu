@@ -279,8 +279,6 @@ The Types column shows the device category names. Various device categories are 
     </listitem>
     <listitem><para>SVR4: Indicates that there is no driver in the system but a SVR4 (System V Revision 4) package exists. The Info link provides the corresponding SVR4 package information.</para>
     </listitem>
-    <listitem><para>DU: Indicates that there is no driver in the system but a DU package exists. The Info link provides the relative DU package information. </para>
-    </listitem>
     <listitem><para>UNK: Indicates that the status of the driver is unknown and probably there is no driver for the corresponding device.</para>
     </listitem>
     </itemizedlist>

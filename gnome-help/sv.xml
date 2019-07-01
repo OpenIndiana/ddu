@@ -193,8 +193,6 @@ I kolumnen Typer visas namn på enhetskategorier. Olika enhetskategorier är lju
     </listitem>
     <listitem><para>SVR4: Indikerar att det inte finns någon drivrutin i systemet, men däremot ett SVR4-paket (System V Revision 4). Informationslänken leder till information om det aktuella SVR4-paketet.</para>
     </listitem>
-    <listitem><para>DU: Indikerar att det inte finns någon drivrutin i systemet, men däremot ett DU-paket. Informationslänken leder till information om det aktuella DU-paketet. </para>
-    </listitem>
     <listitem><para>UNK: Innebär att drivrutinens status är okänd och att det troligen inte finns någon drivrutin för den aktuella enheten.</para>
     </listitem>
     </itemizedlist>

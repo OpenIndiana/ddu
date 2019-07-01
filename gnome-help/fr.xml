@@ -153,8 +153,6 @@ La colonne Types affiche la liste des noms de catégories de périphérique. Les
     </listitem>
     <listitem><para>SVR4: indique qu'un package SVR4 (Système V révision 4) existe, mais qu'il n'est pas installé sur le système. Le lien Info fournit les informations sur le package SVR4 correspondant.</para>
     </listitem>
-    <listitem><para>PND (DU): indique qu'un package PND (DU) existe, mais qu'il n'est pas installé sur le système. Le lien Info fournit les informations sur le package PND (DU) correspondant. </para>
-    </listitem>
     <listitem><para>INC (UNK): indique que l'état du pilote est inconnu et qu'il n'existe probablement pas de pilote pour le périphérique correspondant. </para>
     </listitem>
     </itemizedlist>

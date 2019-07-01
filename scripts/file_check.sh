@@ -27,7 +27,7 @@
 #
 #              Usage:
 #              file_check.sh pkg_type file_name file_path Root_path
-#              $1 is package type (IPS, SVR4, DU, UNK and P5I)
+#              $1 is package type (IPS, SVR4, UNK and P5I)
 #              $2 is file name
 #              (it can be *, ne file name, multi file names seperated by comma.) 
 #              $3 is file path(it can be the local dir, http/ftp url)
@@ -60,7 +60,7 @@ fi
 #
 
 case $1 in
-IPS | DU | SVR4 | P5I | UNK);;
+IPS | SVR4 | P5I | UNK);;
 *) print -u2 "\n... $0: $1 is not valid."; exit 1;;
 esac
 

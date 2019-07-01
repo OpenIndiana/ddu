@@ -193,8 +193,6 @@ La columna de Tipus mostra el nom de la categoria del dispositiu. Algunes catego
     </listitem>
     <listitem><para>SVR4: Indica que no hi ha cap controlador però existeix un paquet SVR4 (System V Revision 4). L'enllaç d'informació proporciona la informació corresponent al paquet SRV4.</para>
     </listitem>
-    <listitem><para>DU: Indica que no hi ha cap controlador en el sistema pero existeix un paquet DU. L'enllaç d'informació proporciona la informació relacionada amb el paquet DU. </para>
-    </listitem>
     <listitem><para>UNK: Indica que l'estat del controlador és desconegut, i probablement no hi ha cap controlador pel dispositiu corresponent.</para>
     </listitem>
     </itemizedlist>

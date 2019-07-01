@@ -424,10 +424,10 @@ def ddu_install_package(ddu_package_ob, root_install,
     ${ddu directory}/scripts/file_check.sh
     """
     pkg_type = ddu_package_ob.get_pkg_type()
-    if not (pkg_type in ["PKG", "SVR4", "DU", "P5I"]):
+    if not (pkg_type in ["PKG", "SVR4", "P5I"]):
         raise ddu_errors.PackageTypeInvalid((
                                     '"Package %s invalid. Type must be' +
-                                    '"PKG", "SVR4", "DU", "P5I"') % pkg_type)
+                                    '"PKG", "SVR4", "P5I"') % pkg_type)
 
     pkg_location = ddu_package_ob.get_pkg_location()
     if pkg_location == "":
@@ -472,7 +472,7 @@ def ddu_install_package(ddu_package_ob, root_install,
             raise ddu_errors.InstallPkgFail(
                          "Error installing package: name:%s, locn:%s" %
                          (pkg_name, pkg_location))
-    elif pkg_type in  ["SVR4", "DU", "P5I"]:
+    elif pkg_type in  ["SVR4", "P5I"]:
         status, output = commands.getstatusoutput(
                        "%s/scripts/file_check.sh %s \"%s\" %s %s" %
                        (ABSPATH, pkg_type, pkg_name,pkg_location, root_install))

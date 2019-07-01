@@ -153,8 +153,6 @@ La columna Tipos muestra los nombres de categoría de los dispositivos. Diversas
     </listitem>
     <listitem><para>SVR4: indica que no hay un controlador en el sistema pero que existe un paquete SVR4 (Sistema V Revisión 4). El vínculo Información proporciona la información del paquete SVR4 correspondiente.</para>
     </listitem>
-    <listitem><para>DU: indica que no hay un controlador en el sistema pero que existe un paquete DU. El vínculo Información proporciona la información del paquete DU correspondiente. </para>
-    </listitem>
     <listitem><para>UNK: indica que el estado del controlador es desconocido y que, probablemente, no haya un controlador para el dispositivo correspondiente.</para>
     </listitem>
     </itemizedlist>

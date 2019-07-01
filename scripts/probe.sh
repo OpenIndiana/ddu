@@ -624,7 +624,7 @@ typeset    ctl_file=/tmp/dvt_ctl_file
 #
 typeset net_stat=0
 typeset matched_drv=
-typeset matched_drv_pkg_type= #SVR4,IPS,DU,UNK
+typeset matched_drv_pkg_type= #SVR4,IPS,UNK
 typeset chg_format="sed -e 's/DEVID=//' -e 's/CLASS=//' -e 's/VENDOR=//'"
 
 #

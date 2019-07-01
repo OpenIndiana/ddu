@@ -23,14 +23,14 @@
 # Copyright (c) 2008, 2010, Oracle and/or its affiliates. All rights reserved.
 #
 # Description: Install driver packages. driver package formats
-#              can be SVR4, ITU, P5I, IPS. If the driver package
+#              can be SVR4, P5I, IPS. If the driver package
 #              format is unknown, this script will try to install
 #              the driver package with all the formats.
 #
 #              Usage:
 #              load_driver.sh pkg_type pkg_loc [ips_svr] Root_path
 #
-#              $1 is package type, can be SVR4, DU, P5I,IPS, UNK.
+#              $1 is package type, can be SVR4, P5I,IPS, UNK.
 #              $2 is package location.
 #              $3 is optional, IPS server name
 #              $4 is root path of the driver package, optional.
@@ -123,88 +123,6 @@ eof
     else
         return 1
     fi
-}
-
-#
-# Install ITU package
-#
-function ITU_install
-{
-    typeset ret_val MACH MAJ MIN VERS ipath icmd
-
-    ret_val=1
-    ITU_media="$1"
-    if [ -z "$ITU_media" ]; then
-        print -u2 "Invalid parameters for ITU installation!"
-        return 1
-    fi
-
-    #
-    # If it's an iso file, mount it first
-    #
-
-    if [[ "$ITU_media" == ~(E).*\.iso$ ]]; then
-        lofi_file=$(pfexec /usr/sbin/lofiadm -a $ITU_media)
-        if [ $? -ne 0 ]; then
-            print -u2 "Error executing:" \
-                " pfexec /usr/sbin/lofiadm -a $ITU_media"
-            return 1
-        fi
-        mkdir -p /tmp/lofi_$$ >/dev/null 2>&1
-        pfexec /usr/sbin/mount -F hsfs $lofi_file /tmp/lofi_$$
-        if [ $? -ne 0 ]; then
-            print -u2 "Error on mounting $lofi_file."
-            return 1
-        fi
-        ITU_media="/tmp/lofi_$$"
-    fi
-
-    MACH=$(/bin/uname -m)
-
-    /bin/uname -r | nawk -F "." '{ print $1 " " $2 }' | read MAJ MIN
-    if [ $MAJ == "5" ] ; then
-	MAJ="2"
-    else
-	print -u2 "DU processing does not support systems with OS" \
-		"major version number $MAJ"
-	return 1
-    fi
-    icmd="./install.sh"
-    for ((min_count = $MIN; min_count >= 0; min_count--)) ; do
-	VERS=${MAJ}${min_count}
-	ipath="$ITU_media/DU/sol_$VERS/$MACH/Tools/"
-	if [ -x "$ipath/$icmd" ] ; then
-	    cd "$ipath"
-	    pfexec "${icmd}" ${args} <<eof
-y
-
-y
-
-y
-eof
-	    if [ "$?" == "0" ] ; then
-                ret_val=0
-		break
-	    fi
-	fi
-    done
-
-    /usr/bin/pkgadm sync $args -q 2>&1 >/dev/null
-
-    if [ -d /tmp/lofi_$$ ]; then
-        cd $base_dir
-        pfexec /usr/sbin/umount /tmp/lofi_$$
-        if [ $? -ne 0 ]; then
-            print -u2 "Error on umounting /tmp/lofi_$$."
-        fi
-        pfexec /usr/sbin/lofiadm -d $lofi_file
-        if [ $? -ne 0 ]; then
-            print -u2 "Error on deleting $lofi_file."
-        fi
-        rm -rf /tmp/lofi_$$
-    fi
-
-    return $ret_val
 }
 
 #
@@ -360,15 +278,6 @@ SVR4)
         print -u1 "$load_method Install Successful!"
     fi
 ;;
-DU)
-    ITU_install "$2"
-    if [ $? -ne 0 ]; then
-        print -u2 "$load_method Install Failed!"
-        exit 1
-    else
-        print -u1 "$load_method Install Successful!"
-    fi
-;;
 P5I)
     p5i_install "$2"
     if [ $? -ne 0 ]; then
@@ -383,20 +292,13 @@ UNK)
     p5i_install "$2" 
     if [ $? -ne 0 ]; then
         print -u2 "P5I install failed."
-        print -u2 "Try DU install..."
-        ITU_install "$2" 
+        print -u2 "Try SVR4 install..."
+        SVR4_install "$2" 
         if [ $? -ne 0 ]; then
-            print -u2 "DU install failed."
-            print -u2 "Try SVR4 install..."
-            SVR4_install "$2" 
-            if [ $? -ne 0 ]; then
-                print -u2 "SVR4 Install Failed!"
-                exit 1
-            else
-                print -u2 "SVR4 Install Successful!"
-            fi
+            print -u2 "SVR4 Install Failed!"
+            exit 1
         else
-            print -u2 "DU Install Successful!"
+            print -u2 "SVR4 Install Successful!"
         fi
     else
         print -u2 "P5I Install Successful!"

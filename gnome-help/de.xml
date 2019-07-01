@@ -153,8 +153,6 @@ In der Spalte „Types“ (Typen) werden die Gerätekategorienamen angezeigt. Zu
     </listitem>
     <listitem><para>SVR4: Zeigt an, dass kein Treiber im System vorhanden ist, jedoch ein SVR4-Paket (System V Revision 4). Der Infolink stellt Informationen über das SVR4-Paket bereit.</para>
     </listitem>
-    <listitem><para>DU: Zeigt an, dass kein Treiber im System vorhanden ist, jedoch ein DU-Paket. Der Infolink stellt Informationen über das entsprechende DU-Paket bereit. </para>
-    </listitem>
     <listitem><para>UNK: Zeigt an, dass der Status des Treibers unbekannt ist und wahrscheinlich kein Treiber für das entsprechende Gerät vorhanden ist.</para>
     </listitem>
     </itemizedlist>

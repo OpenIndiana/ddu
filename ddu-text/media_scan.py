@@ -109,7 +109,7 @@ class MediaScreen(BaseScreen):
         win_size_y, win_size_x = self.main_win.central_area.window.getmaxyx()
         self.y_loc = 1
 
-        intro = _('''Select a SVR4, DU or P5i driver file. Use the up/down arrows to highlight a device/directory and press ENTER to select it. Repeat until the desired file has been selected. CDs, DVDs, and USB devices are automatically mounted in /media. USB devices are umounted when unplugged. To umount a CD/DVD, highlight it and press F5.''')
+        intro = _('''Select a SVR4 or P5i driver file. Use the up/down arrows to highlight a device/directory and press ENTER to select it. Repeat until the desired file has been selected. CDs, DVDs, and USB devices are automatically mounted in /media. USB devices are umounted when unplugged. To umount a CD/DVD, highlight it and press F5.''')
 
         self.main_win.central_area.add_paragraph(
                       intro, self.y_loc , 1, max_x = win_size_x - 1)
@@ -140,7 +140,7 @@ class MediaScreen(BaseScreen):
         win_size_y, win_size_x = self.main_win.central_area.window.getmaxyx()
         self.y_loc = 1
 
-        intro = _('''Select a SVR4, DU or P5i driver file. Use the up/down arrows to highlight a device/directory and press ENTER to select it. Repeat until the desired file has been selected. CDs, DVDs, and USB devices are automatically mounted in /media. USB devices are umounted when unplugged. To umount a CD/DVD, highlight it and press F5.''')
+        intro = _('''Select a SVR4 or P5i driver file. Use the up/down arrows to highlight a device/directory and press ENTER to select it. Repeat until the desired file has been selected. CDs, DVDs, and USB devices are automatically mounted in /media. USB devices are umounted when unplugged. To umount a CD/DVD, highlight it and press F5.''')
 
         self.main_win.central_area.add_paragraph(
                                    intro,

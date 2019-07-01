@@ -153,8 +153,6 @@
     </listitem>
     <listitem><para>SVR4：指出系統中沒有該驅動程式，但有 SVR4 (System V 修訂版 4) 套裝軟體。資訊連結會提供對應的 SVR4 套裝軟體資訊。</para>
     </listitem>
-    <listitem><para>DU：指出系統中沒有驅動程式，但有 DU 套裝軟體。資訊連結會提供相對的 DU 套裝軟體資訊。 </para>
-    </listitem>
     <listitem><para>UNK：指出驅動程式狀態為不明，並可能沒有對應裝置的驅動程式。</para>
     </listitem>
     </itemizedlist>

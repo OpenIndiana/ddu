@@ -193,8 +193,6 @@ De types kolom vertoont de namen van de apparaat categorie. Verschillende catego
     </listitem>
     <listitem><para>SVR4: geeft aan dat er geen driver is in het systeem maar een SVR4 (Systeem V Revisie 4) beschikbaar is. De info-link geeft informatie over het corresponderende SVR4-pakket.</para>
     </listitem>
-    <listitem><para>DU: geeft aan dat er geen driver is in het systeem maar er een DU-pakket bestaat. De link geeft relatieve DU-pakketinformatie. </para>
-    </listitem>
     <listitem><para>UNK: geeft aan dat de status van de driver onbekend is en er waarschijnlijk geen driver is voor het apparaat.</para>
     </listitem>
     </itemizedlist>

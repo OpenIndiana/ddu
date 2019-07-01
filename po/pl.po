@@ -32,8 +32,8 @@ msgstr "<span foreground=\"#FF0000\">Wysyłanie nie powiodło się!</span>"
 msgid "<span foreground=\"blue\"><b>*Submission Tips</b></span>"
 msgstr "<span foreground=\"blue\"><b>*Przedstaw Porady</b></span>"
 
-msgid "<span size=\"small\" color=\"gray\">SVR4, DU, or p5i</span>"
-msgstr "<span size=\"small\" color=\"gray\">SVR4, DU, or p5i</span>"
+msgid "<span size=\"small\" color=\"gray\">SVR4 or p5i</span>"
+msgstr "<span size=\"small\" color=\"gray\">SVR4 or p5i</span>"
 
 msgid ""
 "<span size=\"smaller\">Oracle respects your privacy. We will use your "

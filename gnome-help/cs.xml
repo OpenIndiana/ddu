@@ -196,8 +196,6 @@ Sloupec Typ zobrazuje název kategorie zařízení. Různé kategorie zařízen�
     </listitem>
     <listitem><para>SVR4: ovladač není v systému ale balíček SVR4 (System V Revision 4) existuje. Odkaz poskytuje informace o odpovídajícím balíčku SVR4.</para>
     </listitem>
-    <listitem><para>DU: ovladač není v systému, ale DU balíček existuje. Odkaz poskytuje informace o DU balíčku. </para>
-    </listitem>
     <listitem><para>UNK: stav ovladače je neznámý a pravděpodobně neexistuje odpovídající balíček pro ovladač.</para>
     </listitem>
     </itemizedlist>

@@ -267,7 +267,7 @@
                             <child>
                               <widget class="GtkLabel" id="label18">
                                 <property name="visible">True</property>
-                                <property name="label" translatable="yes">&lt;span size="small" color="gray"&gt;SVR4, DU, or p5i&lt;/span&gt;</property>
+                                <property name="label" translatable="yes">&lt;span size="small" color="gray"&gt;SVR4 or p5i&lt;/span&gt;</property>
                                 <property name="use_markup">True</property>
                               </widget>
                               <packing>

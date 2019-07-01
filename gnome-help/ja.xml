@@ -153,8 +153,6 @@
     </listitem>
     <listitem><para>SVR4: システム内にはドライバがないが SVR4 (System V Revision 4) パッケージが存在することを示します。Info リンクは対応する SVR4 パッケージ情報を提供します。</para>
     </listitem>
-    <listitem><para>DU: システム内にはドライバがないが DU パッケージが存在することを示します。Info リンクは関連する DU パッケージ情報を提供します。 </para>
-    </listitem>
     <listitem><para>未知: ドライバの状態が未知であり、おそらく対応するデバイス用のドライバがないことを示します。</para>
     </listitem>
     </itemizedlist>

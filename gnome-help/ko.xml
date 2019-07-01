@@ -153,8 +153,6 @@
     </listitem>
     <listitem><para>SVR4: 시스템에는 드라이버가 없지만 SVR4(System V Revision 4) 패키지가 있음을 나타냅니다. 정보 링크는 해당 SVR4 패키지 정보를 제공합니다.</para>
     </listitem>
-    <listitem><para>DU: 시스템에는 드라이버가 없지만 DU 패키지가 있음을 나타냅니다. 정보 링크는 관련 DU 패키지 정보를 제공합니다. </para>
-    </listitem>
     <listitem><para>UNK: 드라이버의 상태를 알 수 없으며 해당 장치에 대한 드라이버가 없을 수 있음을 나타냅니다.</para>
     </listitem>
     </itemizedlist>

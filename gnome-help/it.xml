@@ -153,8 +153,6 @@ Nella colonna Tipi vengono visualizzati i nomi delle categorie di dispositivi. T
     </listitem>
     <listitem><para>SVR4: indica che non è presente alcun driver nel sistema, ma che esiste un pacchetto SVR4 (System V Revision 4). Il link Info fornisce informazioni sul corrispondente pacchetto SVR4.</para>
     </listitem>
-    <listitem><para>DU: indica che non è presente alcun driver nel sistema, ma che esiste un pacchetto DU. Il link Info fornisce informazioni sul corrispondente pacchetto DU. </para>
-    </listitem>
     <listitem><para>UNK: indica che lo stato del driver è sconosciuto e che probabilmente non è presente alcun driver per il dispositivo corrispondente.</para>
     </listitem>
     </itemizedlist>

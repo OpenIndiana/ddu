@@ -202,7 +202,7 @@ class DeviceScreen(BaseScreen):
                                             menu_item_desc_max)
         y_loc += 1
         self.main_win.central_area.add_text(
-                      _("SVR4, DU, or p5i file. F4 to browse media"),
+                      _("SVR4 or p5i file. F4 to browse media"),
                       y_loc,
                       menu_item_offset,
                       menu_item_desc_max)

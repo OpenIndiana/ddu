@@ -193,8 +193,6 @@ A Típus oszlop az eszközkategóriák nevét mutatja. Különböző eszközkate
     </listitem>
     <listitem><para>SVR4: Jelzi, hogy nincs meghajtó a rendszeren, de SVR4 (System V Revision 4) csomag létezik. Az info hivatkozás a megfelelő SVR4 csomagról ad információt.</para>
     </listitem>
-    <listitem><para>DU: Jelzi, hogy nincs meghajtó a rendszeren, de létezik DU csomag hozzá. Az info hivatkozás a megfelelő DU csomagról ad információt. </para>
-    </listitem>
     <listitem><para>UNK: Jelzi, hogy a meghajtó állapota ismeretlen és feltehetően nincs meghajtóprogram az érintett eszközhöz.</para>
     </listitem>
     </itemizedlist>

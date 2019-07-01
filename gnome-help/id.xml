@@ -193,8 +193,6 @@ Jenis kolom menunjukkan kategori nama device. Berbagai macam kategori devices te
     </listitem>
     <listitem><para>SVR4: Menunjukkan bahwa tidak ada driver dalam sistem tetapi paket SVR4 (System V Revisi 4) ada. Info link yang menyediakan informasi paket yang sesuai SVR4.</para>
     </listitem>
-    <listitem><para>DU: Menunjukkan bahwa tidak ada driver dalam sistem, tetapi sebuah paket DU ada. Info link yang menyediakan informasi paket DU yang relatif. </para>
-    </listitem>
     <listitem><para>UNK: Menunjukkan bahwa status driver tidak diketahui dan mungkin tidak ada driver untuk perangkat yang sesuai.</para>
     </listitem>
     </itemizedlist>
