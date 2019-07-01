@@ -1,4 +1,4 @@
-#! /usr/bin/python2.7
+#! /usr/bin/python3.5
 #
 # CDDL HEADER START
 #
@@ -25,7 +25,7 @@
 """
 Download file from http/ftp server
 """
-import urllib2
+import urllib.request
 import sys
 import os
 import re
@@ -41,9 +41,9 @@ def checkurl(url):
     for file_down in url_files:
         filename = os.path.join(url_protocol, file_down)
         try:
-            urllib2.urlopen(filename)
+            urllib.request.urlopen(filename)
         except IOError:
-            print "Error found when checking %s!" % url
+            print("Error found when checking %s!" % url)
             return 1
     return 0
 
@@ -59,18 +59,22 @@ def downloadurl(url):
             try:
                 filename = os.path.join(url_protocol, file_down)
                 tempfile = os.path.join('/tmp', file_down)
-                net_content = urllib2.urlopen(filename)
-                doc_content = net_content.read( )
-                local_file = open(tempfile, "w+")
+                net_content = urllib.request.urlopen(filename)
+                doc_content = net_content.read()
+                local_file = open(tempfile, "wb+")
                 local_file.write(doc_content)
                 local_file.close()
                 net_content.close()
-                print tempfile
+                print(tempfile)
             except IOError:
-                print "Error found when downloading %s!" % filename
+                print("Error found when downloading %s!" % filename)
                 return 1
     elif re.compile('^ftp://').search(url_protocol):
-        user_pass = url_protocol.split('@')[0].split('//')[1]
+        tmp = url_protocol.split('@')[0].split('//')
+        if len(tmp) > 1:
+            user_pass=tmp[1]
+        else:
+            user_pass=""
         check_user = len(re.compile(':').findall(user_pass))
         if check_user == 0:
             ftp_user = 'anonymous'
@@ -80,22 +84,27 @@ def downloadurl(url):
             ftp_user, ftp_pass = user_pass.split(':')
             ftp_server = url_protocol.split('@')[1].split('/')[0]
         else:
-            print "Error found when checking ftp authority"
+            print("Error found when checking ftp authority")
             return 1
         for file_down in url_files:
             try:
+                tmp =  url.split('@')
+                if len(tmp) > 1:
+                    remaining_part = tmp[1].split('/', 1)[1]
+                else:
+                    remaining_part = url.split('//')[1].split('/', 1)[1]
                 filename = os.path.join('/',
                                         os.path.dirname(
-                                        url.split('@')[1].split('/', 1)[1]),
+                                        remaining_part),
                                         file_down
                                         )
                 tempfile = os.path.join('/tmp', file_down)
                 ftp = ftplib.FTP(ftp_server)
                 ftp.login(ftp_user, ftp_pass)
                 ftp.retrbinary('RETR ' + filename, open(tempfile,"wb").write)
-                print tempfile
+                print(tempfile)
             except IOError:
-                print "Error found when downloading %s!" % url
+                print("Error found when downloading %s!" % url)
                 return 1
     return 0
 
