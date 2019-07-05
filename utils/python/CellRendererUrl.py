@@ -1,4 +1,4 @@
-#! /usr/bin/python2.7
+#! /usr/bin/python3.5
 #
 # CDDL HEADER START
 #
@@ -26,24 +26,28 @@
 """
 Used for info column
 """
-import gtk
-import gobject
+try:
+    import gi
+    gi.require_version('Gtk','3.0')
+    from gi.repository import Gtk, GObject, Gdk
+except:
+    sys.exit(1)
 
-class CellRendererUrl(gtk.CellRendererText):
+class CellRendererUrl(Gtk.CellRendererText):
     """
-    This class used for creating a subclass from gtk.CellRendererText.
+    This class used for creating a subclass from Gtk.CellRendererText.
     It will be put into a treemodel column and then enabled or disabled
     if the context is useful
     """
-    __gproperties__ = { "information": (gobject.TYPE_PYOBJECT,
+    __gproperties__ = { "information": (GObject.TYPE_PYOBJECT,
                                       "information property",
                                       "information property",
-                                      gobject.PARAM_READWRITE) }
+                                      GObject.ParamFlags.READWRITE) }
     def __init__(self):
-        self.__gobject_init__()
-        gtk.CellRendererText.__init__(self)
+        GObject.GObject.__init__(self)
+        Gtk.CellRendererText.__init__(self)
         self.set_property("xalign", 0.5)
-        self.set_property("mode", gtk.CELL_RENDERER_MODE_ACTIVATABLE)
+        self.set_property("mode", Gtk.CellRendererMode.ACTIVATABLE)
         self.information = None
         self.table = None
 
@@ -78,7 +82,7 @@ class CellRendererUrl(gtk.CellRendererText):
         del wid, cell_area
         return (0, 0, 0, 0)
 
-    def do_render(self, window, wid, bg_area, cell_area, expose_area, flags):
+    def do_render(self, window, wid, bg_area, cell_area, flags):
         """
         render this object
         """
@@ -87,13 +91,16 @@ class CellRendererUrl(gtk.CellRendererText):
 
         ypad = self.get_property("ypad")
 
-        wid.get_style().paint_box(window, 0, 0, cell_area, wid, "label", 
+        Gtk.paint_box(wid.get_style(),window, Gtk.StateType.NORMAL, Gtk.ShadowType.NONE, wid, "label",
 				  0, 0, 0, 0)
-        flags = flags & ~gtk.STATE_SELECTED
-        gtk.CellRendererText.do_render(self, window, wid, bg_area, 
-                                      (cell_area[0], cell_area[1] + ypad, 
-                                      cell_area[2],cell_area[3]), 
-                                      expose_area, flags)
+        flags = Gtk.CellRendererState(flags & ~Gtk.CellRendererState.SELECTED)
+        rect = Gdk.Rectangle()
+        rect.height = cell_area.height
+        rect.width = cell_area.width + ypad
+        rect.x = cell_area.x
+        rect.y = cell_area.y
+        Gtk.CellRendererText.do_render(self, window, wid, bg_area,
+                                      rect, flags)
 
     def do_activate(self, event, wid, path, bg_area, cell_area, flags):
         """
@@ -104,4 +111,3 @@ class CellRendererUrl(gtk.CellRendererText):
         if cb != None :
             cb(path)
         return True
-
