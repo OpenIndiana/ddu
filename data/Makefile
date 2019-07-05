@@ -23,7 +23,7 @@ DATAFILES = \
 	DVD.png \
 	file.png \
 	folder.png \
-	hdd.glade \
+	hdd.ui \
 	hdd.xml \
 	icon.png \
 	info.png \
