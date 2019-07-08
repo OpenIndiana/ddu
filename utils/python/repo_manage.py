@@ -1,4 +1,4 @@
-#! /usr/bin/python2.7
+#! /usr/bin/python3.5
 #
 # CDDL HEADER START
 #
@@ -27,18 +27,17 @@ manipulate repo dialog
 """
 import os
 import sys
-import gtk
-import gtk.glade
 import gettext
-import commands
+import locale
+import subprocess
 
 from message_box import MessageBox
-from ConfigParser import ConfigParser
+from configparser import ConfigParser
 try:
-    import pygtk
-    pygtk.require("2.0")
-except ImportError:
-    print "Please install pyGTK or GTKv2 or set your PYTHONPATH correctly"
+    import gi
+    gi.require_version('Gtk','3.0')
+    from gi.repository import Gtk, Gdk
+except:
     sys.exit(1)
 
 DDUCONFIG = ConfigParser()
@@ -47,9 +46,10 @@ DDUCONFIG.read(os.path.join(os.path.dirname(os.path.realpath(
 ABSPATH = DDUCONFIG.get('general','abspath')
 
 try:
+    locale.setlocale(locale.LC_ALL, '')
+    locale.bindtextdomain('ddu', '%s/i18n' % ABSPATH)
     gettext.bindtextdomain('ddu','%s/i18n' % ABSPATH)
     gettext.textdomain('ddu')
-    gtk.glade.bindtextdomain('ddu','%s/i18n' % ABSPATH)
 except AttributeError:
     pass
 
@@ -60,34 +60,36 @@ class RepoDlg:
     manipulate repo dialog
     """
     def __init__(self):
-        gladepath = ABSPATH + '/data/hdd.glade'
-        xml = gtk.glade.XML(gladepath,'repo_dlg')
-        self.repo_dlg = xml.get_widget('repo_dlg')
-        self.repo_dlg.connect("response", self.on_response)
+        uipath = ABSPATH + '/data/hdd.ui'
+        builder = Gtk.Builder()
+        builder.set_translation_domain('ddu')
+        builder.add_from_file(uipath)
+        self.repo_dlg = builder.get_object('repo_dlg')
+        self.repo_dlg.connect("destroy", self.on_destroy)
 
-        label_new = xml.get_widget('label_new')
+        label_new = builder.get_object('label_new')
         label_new.set_alignment(0, 0)
 
-        ag = gtk.AccelGroup()
-        self.repo_dlg .add_accel_group(ag)
+        ag = Gtk.AccelGroup()
+        self.repo_dlg.add_accel_group(ag)
 
-        self.new_repo_name = xml.get_widget('entry_repo_name')
-        self.new_repo_url = xml.get_widget('entry_repo_url')
+        self.new_repo_name = builder.get_object('entry_repo_name')
+        self.new_repo_url = builder.get_object('entry_repo_url')
 
         self.new_repo_name.connect("changed", self.enter_callback)
         self.new_repo_url.connect("changed", self.enter_callback)
 
-        self.repo_add = xml.get_widget('repo_add')
-        repo_cancel = xml.get_widget('cancel_repo')
+        self.repo_add = builder.get_object('repo_add')
+        repo_cancel = builder.get_object('cancel_repo')
 
         self.repo_add.connect('clicked', self.finish_repo)
         self.repo_add.set_sensitive(False)
         repo_cancel.connect("clicked", self.on_close)
 
         self.repo_add.add_accelerator("clicked", ag, ord('a'),
-                                      gtk.gdk.MOD1_MASK,gtk.ACCEL_VISIBLE)
+                                      Gdk.ModifierType.MOD1_MASK,Gtk.AccelFlags.VISIBLE)
         repo_cancel.add_accelerator("clicked", ag, ord('c'),
-                                    gtk.gdk.MOD1_MASK,gtk.ACCEL_VISIBLE)
+                                    Gdk.ModifierType.MOD1_MASK,Gtk.AccelFlags.VISIBLE)
         return
 
     def enter_callback(self, widget):
@@ -97,11 +99,10 @@ class RepoDlg:
             self.new_repo_url.get_text().strip() != "":
             self.repo_add.set_sensitive(True)
 
-    def on_response(self, widget, response):
+    def on_destroy(self, widget):
         """destroy dialog"""
         del widget
-        if response == gtk.RESPONSE_DELETE_EVENT:
-            self.repo_dlg.destroy()
+        self.repo_dlg.destroy()
 
     def run(self):
         """show dialog"""
@@ -118,7 +119,7 @@ class RepoDlg:
         new_repo_name = self.new_repo_name.get_text().strip()
         new_repo_url = self.new_repo_url.get_text().strip()
 
-        status, output = commands.getstatusoutput(
+        status, output = subprocess.getstatusoutput(
                                   '%s/scripts/pkg_relate.sh add %s %s' %
                                   (ABSPATH, new_repo_name, new_repo_url))
         if status == 0:
@@ -130,3 +131,8 @@ class RepoDlg:
                              _('The repo name or URL is invalid.'))
             msg.run()
         return True
+
+if __name__ == '__main__':
+    repo = RepoDlg()
+    repo.run()
+    Gtk.main()
