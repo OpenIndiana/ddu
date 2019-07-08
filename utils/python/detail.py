@@ -1,4 +1,4 @@
-#! /usr/bin/python2.7
+#! /usr/bin/python3.5
 #
 # CDDL HEADER START
 #
@@ -28,18 +28,16 @@ Show a dialog to display hardware detail information
 
 import os
 import sys
-import gtk
-import gtk.glade
-import pango
 import re
 from functions import insert_one_tag_into_buffer
-from ConfigParser import ConfigParser
+from configparser import ConfigParser
 import gettext
+import subprocess
 try:
-    import pygtk
-    pygtk.require("2.0")
-except ImportError:
-    print "Please install pyGTK or GTKv2 or set your PYTHONPATH correctly"
+    import gi
+    gi.require_version('Gtk','3.0')
+    from gi.repository import Gtk, Pango
+except:
     sys.exit(1)
 
 DDUCONFIG = ConfigParser()
@@ -50,7 +48,6 @@ ABSPATH = DDUCONFIG.get('general','abspath')
 try:
     gettext.bindtextdomain('ddu','%s/i18n' % ABSPATH)
     gettext.textdomain('ddu')
-    gtk.glade.bindtextdomain('ddu','%s/i18n' % ABSPATH)
 except AttributeError:
     pass
 
@@ -79,32 +76,34 @@ class DetailInf:
     def __init__(self, data='', driver='', device='', fg=''):
         if DetailInf.__instance is None:
             DetailInf.__instance = DetailInf._impl()
+            uipath = ABSPATH + '/data/hdd.ui'
+            builder = Gtk.Builder()
+            builder.set_translation_domain('ddu')
+            builder.add_from_file(uipath)
             self.__setattr__("abspath", ABSPATH)
-            self.__setattr__("gladepath", self.__getattr__("abspath") + 
-                             '/data/hdd.glade')
-            self.__setattr__("detail_inf_inst", gtk.glade.XML(
-                             self.__getattr__("gladepath"), 'detail_inf_dlg'))
+            self.__setattr__("uipath", uipath)
+            self.__setattr__("detail_inf_inst", builder)
             self.__setattr__("detail_infdlg", 
-                             self.__getattr__("detail_inf_inst").get_widget( 
+                             self.__getattr__("detail_inf_inst").get_object( 
                              'detail_inf_dlg'))
             self.__setattr__("det_label", self.__getattr__(
-                             "detail_inf_inst").get_widget('det_label'))
+                             "detail_inf_inst").get_object('det_label'))
             self.__getattr__("detail_infdlg").connect(
                              "response",self.on_response)
             self.__getattr__("detail_infdlg").connect( 
                              "focus_out_event", lambda a1, a2:None)
             self.__setattr__("close_button", self.__getattr__( 
-                             "detail_inf_inst").get_widget('close_button2'))
+                             "detail_inf_inst").get_object('close_button2'))
             self.__getattr__("close_button").connect( 
                              "clicked", self.on_close)
             self.__setattr__("detailtext_view", self.__getattr__( 
-                             "detail_inf_inst").get_widget('detailtext_view'))
+                             "detail_inf_inst").get_object('detailtext_view'))
             self.__getattr__("detailtext_view").modify_font( 
-                             pango.FontDescription('DejaVu Sans mono'))
+                             Pango.FontDescription('DejaVu Sans mono'))
             self.__setattr__("textbuffer", self.__getattr__( 
                              "detailtext_view").get_buffer())
             insert_one_tag_into_buffer(self.__getattr__("textbuffer"), 
-                             "bold", "weight", pango.WEIGHT_BOLD)
+                             "bold", "weight", Pango.Weight.BOLD)
             self.data = data
 
         self.__dict__['_Singleton__instance'] = DetailInf.__instance
@@ -208,8 +207,13 @@ class DetailInf:
             os.remove(self.data)
         except OSError:
             pass
-        if response == gtk.RESPONSE_DELETE_EVENT:
-            self.__getattr__("detail_infdlg").destroy()
-            DetailInf.__instance = None
-            self.__dict__['_Singleton__instance'] = None
+        self.__getattr__("detail_infdlg").destroy()
+        DetailInf.__instance = None
+        self.__dict__['_Singleton__instance'] = None
         return
+
+if __name__ == '__main__':
+    output = subprocess.check_output('T=$(mktemp) ; ps ax> $T; printf $T', shell=True)
+    d = DetailInf(output,'','',fg = 'reload')
+    print(d.spam())
+    Gtk.main()

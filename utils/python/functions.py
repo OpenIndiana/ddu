@@ -56,7 +56,7 @@ _ = gettext.gettext
 
 def insert_one_tag_into_buffer(textbuffer, name, *params):
     """insert tag in to text area"""
-    tag = Gtk.TextTag(name)
+    tag = Gtk.TextTag.new(name)
     while(params):
         tag.set_property(params[0], params[1])
         params = params[2:]
