@@ -319,7 +319,7 @@ def insert_col(name_ent, email_ent, server_com, manu_text, manu_modle, \
     gennotes = doc.createElement("genNotes")
     hclsubmittal.appendChild(gennotes)
     gennotestext = doc.createTextNode(textbuffer_g.get_text(startiter, \
-                                                            enditer))
+                                                            enditer, False))
     gennotes.appendChild(gennotestext)
 
     numcomponents = doc.createElement("numComponents")

@@ -1,4 +1,4 @@
-#! /usr/bin/python2.7
+#! /usr/bin/python3.5
 #
 # CDDL HEADER START
 #
@@ -27,26 +27,25 @@ show submission dialog
 """
 import os
 import sys
-import gtk
-import gtk.glade
-import gobject
 import threading
-import httplib
-import pango
+import http.client
 import gettext
+import locale
 
 from functions import insert_conf
 from functions import insert_one_tag_into_buffer
 from functions import insert_col_info
 from functions import insert_col
 from message_box import MessageBox
-from ConfigParser import ConfigParser
+from configparser import ConfigParser
+
 
 try:
-    import pygtk
-    pygtk.require("2.0")
-except ImportError:
-    print "Please install pyGTK or GTKv2 or set your PYTHONPATH correctly"
+    import gi
+    gi.require_version('Gtk','3.0')
+    gi.require_version('Vte', '2.91')
+    from gi.repository import Gtk, Gdk, GObject, Pango
+except:
     sys.exit(1)
 
 DDUCONFIG = ConfigParser()
@@ -59,9 +58,11 @@ HCL_SITE      = DDUCONFIG.get('hcl','site')
 HCL_CGI       = DDUCONFIG.get('hcl','cgi')
 
 try:
+    locale.setlocale(locale.LC_ALL, '')
+    locale.bindtextdomain('ddu', '%s/i18n' % ABSPATH)
     gettext.bindtextdomain('ddu','%s/i18n' % ABSPATH)
     gettext.textdomain('ddu')
-    gtk.glade.bindtextdomain('ddu','%s/i18n' % ABSPATH)
+    Gtk.glade.bindtextdomain('ddu','%s/i18n' % ABSPATH)
 except AttributeError:
     pass
 
@@ -74,9 +75,11 @@ class SubmitDlg:
     __finish = False
     __success = False
     def __init__(self, dev_submit):
-        gladepath = ABSPATH + '/data/hdd.glade'
-        xml = gtk.glade.XML(gladepath, 'submit_dlg')
-        self.submit_dlg = xml.get_widget('submit_dlg')
+        uipath = ABSPATH + '/data/hdd.ui'
+        builder = Gtk.Builder()
+        builder.set_translation_domain('ddu')
+        builder.add_from_file(uipath)
+        self.submit_dlg = builder.get_object('submit_dlg')
 
         if not HCL_ENABLE in ("yes", "true", "t", "1"):
             inst = MessageBox(self.submit_dlg, _('Submit'),
@@ -85,9 +88,9 @@ class SubmitDlg:
             inst.run()
             return
 
-        self.submit_dlg.connect("response", self.on_response)
+        self.submit_dlg.connect("destroy", self.on_destroy)
 
-        conn = httplib.HTTPSConnection(HCL_SITE)
+        conn = http.client.HTTPSConnection(HCL_SITE)
         try:
             conn.request("GET",HCL_CGI)
             resp = conn.getresponse()
@@ -106,79 +109,79 @@ class SubmitDlg:
         conn.close()
 
         """Necessary text value"""
-        self.submit_notebook = xml.get_widget("submit_notebook")
+        self.submit_notebook = builder.get_object("submit_notebook")
 
-        self.pro_sub = xml.get_widget('pro_sub')
-        self.submit_button = xml.get_widget('submit_button')
+        self.pro_sub = builder.get_object('pro_sub')
+        self.submit_button = builder.get_object('submit_button')
         self.submit_button.connect("clicked", self.act_submit)
 
-        self.close_button = xml.get_widget('close_button')
+        self.close_button = builder.get_object('close_button')
         self.close_button.connect("clicked", 
                                   lambda w:self.submit_dlg.destroy())
 
-        self.save_button = xml.get_widget('submit_save')
+        self.save_button = builder.get_object('submit_save')
         self.save_button.connect("clicked", self.act_save)
 
-        self.manu_text = xml.get_widget('Manuf_name')
-        self.manu_modle = xml.get_widget('Manuf_modle')
+        self.manu_text = builder.get_object('Manuf_name')
+        self.manu_modle = builder.get_object('Manuf_modle')
         self.manu_modle.set_sensitive(False)
 
-        self.cpu_type = xml.get_widget('CPU_type')
-        self.firmware_maker = xml.get_widget('Firmware_maker')
+        self.cpu_type = builder.get_object('CPU_type')
+        self.firmware_maker = builder.get_object('Firmware_maker')
         insert_conf(self.manu_text, self.manu_modle, 
                     self.cpu_type, self.firmware_maker)
 
-        self.name_ent = xml.get_widget('Name_ent')
-        self.email_ent = xml.get_widget('Email_ent')
+        self.name_ent = builder.get_object('Name_ent')
+        self.email_ent = builder.get_object('Email_ent')
 
-        self.server_com = xml.get_widget('Server_com')
+        self.server_com = builder.get_object('Server_com')
         self.server_com.set_active(0)
 
-        self.bios_set = xml.get_widget('Bios_set')
+        self.bios_set = builder.get_object('Bios_set')
 
-        self.general_ent = xml.get_widget('General_ent')
-        self.inform_c = xml.get_widget('Information_c')
-        self.label_warning = xml.get_widget('label_warning')
+        self.general_ent = builder.get_object('General_ent')
+        self.inform_c = builder.get_object('Information_c')
+        self.label_warning = builder.get_object('label_warning')
 
         textbuffer = self.inform_c.get_buffer()
         insert_one_tag_into_buffer(textbuffer, "bold", 
-                                   "weight", pango.WEIGHT_BOLD)
+                                   "weight", Pango.Weight.BOLD)
 	
-        ag = gtk.AccelGroup()
+        ag = Gtk.AccelGroup()
         self.submit_dlg.add_accel_group(ag)
 
         self.submit_button.add_accelerator("clicked", ag, ord('s'), 
-                                          gtk.gdk.MOD1_MASK, gtk.ACCEL_VISIBLE)
+                                          Gdk.ModifierType.MOD1_MASK,Gtk.AccelFlags.VISIBLE)
         self.close_button.add_accelerator("clicked", ag, ord('c'), 
-                                          gtk.gdk.MOD1_MASK,gtk.ACCEL_VISIBLE)
+                                          Gdk.ModifierType.MOD1_MASK,Gtk.AccelFlags.VISIBLE)
         self.save_button.add_accelerator("clicked", ag, ord('a'), 
-                                          gtk.gdk.MOD1_MASK,gtk.ACCEL_VISIBLE)
+                                          Gdk.ModifierType.MOD1_MASK,Gtk.AccelFlags.VISIBLE)
 
-        self.label17 = xml.get_widget('label17')
+        self.label17 = builder.get_object('label17')
         self.label17.set_mnemonic_widget(self.server_com)
 
-        self.label15 = xml.get_widget('label15')
+        self.label15 = builder.get_object('label15')
         self.label15.set_mnemonic_widget(self.manu_text)
 
-        self.label11 = xml.get_widget('label11')
+        self.label11 = builder.get_object('label11')
         self.label11.set_mnemonic_widget(self.firmware_maker)
 
-        self.label9 = xml.get_widget('label9')
+        self.label9 = builder.get_object('label9')
         self.label9.set_mnemonic_widget(self.cpu_type)
 
-        self.label7 = xml.get_widget('label7')
+        self.label7 = builder.get_object('label7')
         self.label7.set_mnemonic_widget(self.inform_c)
 
-        self.label12 = xml.get_widget('label12')
+        self.label12 = builder.get_object('label12')
         self.label12.set_mnemonic_widget(self.name_ent)
 
-        self.label16 = xml.get_widget('label16')
+        self.label16 = builder.get_object('label16')
         self.label16.set_mnemonic_widget(self.email_ent)
 
-        self.label19 = xml.get_widget('label19')
+        self.label19 = builder.get_object('label19')
         self.label19.set_mnemonic_widget(self.general_ent)
 
-        xml.get_widget('label23').set_alignment(0, 0)
+        builder.get_object('label23').set_alignment(0, 0)
 
         insert_col_info(self.name_ent, self.email_ent, self.server_com, 
                         self.manu_text, self.manu_modle, self.cpu_type, 
@@ -192,31 +195,30 @@ class SubmitDlg:
         self.submit_dlg.run()
         return
 
-    def on_response(self, widget, response):
+    def on_destroy(self, widget):
         """quit dialog"""
         del widget
-        if response == gtk.RESPONSE_DELETE_EVENT:
-            self.submit_dlg.destroy()
+        self.submit_dlg.destroy()
 
     def act_save(self, widget):
         """save submission in a local file"""
         del widget
-        dialog = gtk.FileChooserDialog(_("Save..."),
+        dialog = Gtk.FileChooserDialog(_("Save..."),
                                None,
-                               gtk.FILE_CHOOSER_ACTION_SAVE,
-                               (gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL,
-                               gtk.STOCK_SAVE, gtk.RESPONSE_OK))
-        dialog.set_default_response(gtk.RESPONSE_OK)
+                               Gtk.FileChooserAction.SAVE,
+                               (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
+                               Gtk.STOCK_SAVE, Gtk.ResponseType.OK))
+        dialog.set_default_response(Gtk.ResponseType.OK)
         dialog.set_do_overwrite_confirmation(True)
         dialog.set_current_name("DDU.submit")
 
-        file_filter = gtk.FileFilter()
+        file_filter = Gtk.FileFilter()
         file_filter.set_name(_("All files"))
         file_filter.add_pattern("*")
         dialog.add_filter(file_filter)
 
         response = dialog.run()
-        if response == gtk.RESPONSE_OK:
+        if response == Gtk.ResponseType.OK:
             self.doc = insert_col(self.name_ent, self.email_ent,
                                   self.server_com, self.manu_text,
                                   self.manu_modle, self.cpu_type,
@@ -227,7 +229,7 @@ class SubmitDlg:
             filesave.write(self.doc.toprettyxml())
             filesave.close()
 	     
-        elif response == gtk.RESPONSE_CANCEL:
+        elif response == Gtk.ResponseType.CANCEL:
             pass
         dialog.destroy()
 
@@ -237,7 +239,7 @@ class SubmitDlg:
     def act_submit(self, widget):
         """do submit"""
         del widget
-        conn = httplib.HTTPSConnection(HCL_SITE)
+        conn = http.client.HTTPSConnection(HCL_SITE)
         try:
             conn.request("GET",HCL_CGI)
             resp = conn.getresponse()
@@ -258,10 +260,10 @@ class SubmitDlg:
         self.submit_notebook.set_current_page(1)
         self.submit_button.set_sensitive(False)
 	
-        while gtk.gdk.events_pending():
-            gtk.main_iteration(False)
-        gobject.timeout_add(100, self.pro)
-        gobject.timeout_add(20000, self.destroy_actor)
+        while Gtk.events_pending():
+            Gtk.main_iteration()
+        GObject.timeout_add(100, self.pro)
+        GObject.timeout_add(20000, self.destroy_actor)
 	
         thread = threading.Thread(target = self.submit_run)
         thread.start()
@@ -289,21 +291,20 @@ class SubmitDlg:
         local_data.append('--' + boundary + '--')
         local_data.append('')
 
-        body = crlf.join(local_data)
+        body = crlf.join(local_data).encode('utf-8')
    
         content_type = 'multipart/form-data; boundary=%s' % boundary
 
         try:
-            http_send = httplib.HTTPS(HCL_SITE)
+            http_send = http.client.HTTPSConnection(HCL_SITE)
             http_send.putrequest('POST', HCL_CGI)
             http_send.putheader('User-Agent','DDU 0.1')
             http_send.putheader('content-length', str(len(body)))
             http_send.putheader('content-type', content_type)
             http_send.endheaders()
             http_send.send(body)
-            errcode, errmsg, headers = http_send.getreply()
-            del errmsg, headers
-            statuscode = errcode
+            response = http_send.getresponse()
+            statuscode = response.status
             if statuscode != 200:
                 self.__success = False
             else:
@@ -328,6 +329,7 @@ class SubmitDlg:
                          'posted to the '+ VENDOR_SYSTEM +' HCL.\n')
                 msg += _('To get more '+ VENDOR_SYSTEM +' HCL information, See:\n')
                 msg += _(HCL_SITE)
+                msg += '\n'
                 msg += _('This window will be closed in a few seconds')
             else:
                 msg = _("Submission failed")
@@ -343,3 +345,9 @@ class SubmitDlg:
         if self.__success == True:
             self.submit_dlg.destroy()
         return not self.__success
+
+if __name__ == '__main__':
+    dev_submit = {}
+    dev_submit['Audio'] = [( '0,5,0', 'pci8086,2415.8086.0.1', 'audio810')]
+    d = SubmitDlg(dev_submit)
+    Gtk.main()
