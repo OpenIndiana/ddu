@@ -28,6 +28,7 @@ install driver dialog
 import os
 import sys
 import gettext
+import locale
 from executingterminal import ExecutingTerminal
 from configparser import ConfigParser
 
@@ -45,6 +46,8 @@ DDUCONFIG.read(os.path.join(os.path.dirname(os.path.realpath(
 ABSPATH = DDUCONFIG.get('general','abspath')
 
 try:
+    locale.setlocale(locale.LC_ALL, '')
+    locale.bindtextdomain('ddu', '%s/i18n' % ABSPATH)
     gettext.bindtextdomain('ddu','%s/i18n' % ABSPATH)
     gettext.textdomain('ddu')
 except AttributeError:

@@ -32,6 +32,7 @@ import re
 from functions import insert_one_tag_into_buffer
 from configparser import ConfigParser
 import gettext
+import locale
 import subprocess
 try:
     import gi
@@ -46,6 +47,8 @@ DDUCONFIG.read(os.path.join(
 ABSPATH = DDUCONFIG.get('general','abspath')
 
 try:
+    locale.setlocale(locale.LC_ALL, '')
+    locale.bindtextdomain('ddu', '%s/i18n' % ABSPATH)
     gettext.bindtextdomain('ddu','%s/i18n' % ABSPATH)
     gettext.textdomain('ddu')
 except AttributeError:
