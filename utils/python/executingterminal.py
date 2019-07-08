@@ -1,4 +1,4 @@
-#! /usr/bin/python2.7
+#! /usr/bin/python3.5
 #
 # CDDL HEADER START
 #
@@ -27,20 +27,20 @@ used for execute command in a virtual xterm
 """
 
 import sys
-import gtk
 try:
-    import vte
-except ImportError:
-    sys.path.append('/usr/lib/python2.7/vendor-packages/gtk-2.0')
-    import vte
+    import gi
+    gi.require_version('Gtk','3.0')
+    gi.require_version('Vte', '2.91')
+    from gi.repository import Gtk, Vte, GLib
+except:
+    sys.exit(1)
 
-
-class ExecutingTerminal(vte.Terminal):
+class ExecutingTerminal(Vte.Terminal):
     """
     run a system command in a virtual xterm
     """
     def __init__(self):
-        vte.Terminal.__init__(self)
+        Vte.Terminal.__init__(self)
 
         self.connect('eof', self.execute_finish_callback)
         self.connect('child-exited', self.execute_finish_callback)
@@ -49,16 +49,30 @@ class ExecutingTerminal(vte.Terminal):
     def execute_command(self, action, args):
         """execute a command"""
         self.execution = True
-        pid = self.fork_command(action, ( 
-                                str(action), str(args["install_method"]),
-                                str(args["install_media"]), 
-                                str(args["install_server"])))
+        self.status = 0
+        status, pid = self.spawn_sync(Vte.PtyFlags.DEFAULT, None,
+                                [str(action), str(args["install_method"]),
+                                    str(args["install_media"]),
+                                    str(args["install_server"])],
+                                None,
+                                GLib.SpawnFlags.DEFAULT,
+                                None,
+                                None,
+                                None
+                                )
+        if status == False:
+            self.status = -1
         return pid
-        while self.execution:
-            gtk.main_iteration()
 
-    def execute_finish_callback(self, terminal):
+    def execute_finish_callback(self, terminal, status=0):
         """exit command"""
         del terminal
 
         self.execution = False
+        if status != 0:
+            self.status = status
+
+    def getStatus(self):
+        """get return status"""
+        return self.status
+

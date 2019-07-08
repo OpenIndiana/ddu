@@ -1,4 +1,4 @@
-#! /usr/bin/python2.7
+#! /usr/bin/python3.5
 #
 # CDDL HEADER START
 #
@@ -27,12 +27,17 @@ install driver dialog
 """
 import os
 import sys
-import gtk
-import gtk.glade
-import gobject
 import gettext
 from executingterminal import ExecutingTerminal
-from ConfigParser import ConfigParser
+from configparser import ConfigParser
+
+try:
+    import gi
+    gi.require_version('Gtk','3.0')
+    gi.require_version('Vte', '2.91')
+    from gi.repository import Gtk, Vte, GObject
+except:
+    sys.exit(1)
 
 DDUCONFIG = ConfigParser()
 DDUCONFIG.read(os.path.join(os.path.dirname(os.path.realpath( 
@@ -42,7 +47,6 @@ ABSPATH = DDUCONFIG.get('general','abspath')
 try:
     gettext.bindtextdomain('ddu','%s/i18n' % ABSPATH)
     gettext.textdomain('ddu')
-    gtk.glade.bindtextdomain('ddu','%s/i18n' % ABSPATH)
 except AttributeError:
     pass
 
@@ -56,21 +60,23 @@ class InstDrv:
         self.action = action
         self.arg = arg
         self.install_pid = ''
-        gladepath = ABSPATH + '/data/hdd.glade'
-        xml = gtk.glade.XML(gladepath, 'Inst_dri_dlg')
-        self.inst_dlg = xml.get_widget('Inst_dri_dlg')
+        uipath = ABSPATH + '/data/hdd.ui'
+        builder = Gtk.Builder()
+        builder.set_translation_domain('ddu')
+        builder.add_from_file(uipath)
+        self.inst_dlg = builder.get_object('Inst_dri_dlg')
 
-        self.label_inst = xml.get_widget('label_inst')
-        self.label_list = xml.get_widget('label_list')
-        self.progressbar_inst = xml.get_widget('progressbar_inst')
-        self.button_ok = xml.get_widget('button_ok')
+        self.label_inst = builder.get_object('label_inst')
+        self.label_list = builder.get_object('label_list')
+        self.progressbar_inst = builder.get_object('progressbar_inst')
+        self.button_ok = builder.get_object('button_ok')
         self.button_ok.connect('clicked', lambda x: self.inst_dlg.destroy())
-        self.expander = xml.get_widget('expander1')
+        self.expander = builder.get_object('expander1')
         self.expander.connect("notify::expanded", self.expanded)
-        vtebox = xml.get_widget('hbox9')
+        vtebox = builder.get_object('hbox9')
         self.virterm = ExecutingTerminal()
-        vtebox.pack_start(self.virterm)
-        vtesb = gtk.VScrollbar(self.virterm.get_adjustment())
+        vtebox.pack_start(self.virterm, True, True, 0)
+        vtesb = Gtk.VScrollbar()
         vtebox.pack_start(vtesb, False, False, 0)
         self.inst_dlg.set_resizable(False)
         self.inst_dlg.connect('map_event', self.on_map_event)
@@ -92,14 +98,14 @@ class InstDrv:
     def on_map_event(self, event, param):
         """invoke install session"""
         del event, param
-        while gtk.gdk.events_pending():
-            gtk.main_iteration(False)
+        while Gtk.events_pending():
+            Gtk.main_iteration()
         self.button_ok.set_sensitive(False)
 
         self.install_pid = self.virterm.execute_command(self.action, self.arg)
 
-        gobject.timeout_add(100, self.pro)
-        gobject.timeout_add(12000, self.destroy_actor)
+        GObject.timeout_add(100, self.pro)
+        GObject.timeout_add(12000, self.destroy_actor)
 	
 
     def pro(self):
@@ -108,8 +114,7 @@ class InstDrv:
             os.kill(self.install_pid, 0)
             self.progressbar_inst.pulse()
         except OSError:
-            status = self.virterm.get_child_exit_status()
-            if status == 0:
+            if self.virterm.getStatus() == 0:
                 errmg = _("Installation Successful!")
                 msg = \
             _('Reboot your system after installing the driver if necessary\n')
@@ -131,3 +136,9 @@ class InstDrv:
         if self.__success == True:
             self.inst_dlg.destroy()
         return not self.__finish
+
+if __name__ == '__main__':
+    inst_dlg = InstDrv('/usr/ddu/scripts/file_check.sh', install_method = "IPS",
+                install_media = "shell/bash",
+                install_server = "openindiana.org")
+    inst_dlg.run()
