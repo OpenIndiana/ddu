@@ -188,7 +188,6 @@
               <object class="GtkHPaned" id="hpaned1">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="expand">True</property>
                 <child>
                   <object class="GtkAlignment" id="alignment35">
                     <property name="visible">True</property>
@@ -661,7 +660,6 @@
             <property name="bottom_padding">6</property>
             <property name="left_padding">6</property>
             <property name="right_padding">6</property>
-            <property name="expand">True</property>
             <child>
               <object class="GtkScrolledWindow" id="scrolledwindow1">
                 <property name="visible">True</property>
@@ -681,7 +679,7 @@
             </child>
           </object>
           <packing>
-            <property name="expand">False</property>
+            <property name="expand">True</property>
             <property name="fill">True</property>
             <property name="position">2</property>
           </packing>
@@ -692,10 +690,24 @@
       <action-widget response="0">close_button2</action-widget>
     </action-widgets>
   </object>
-  <object class="GtkMenu" id="detail_menu">
+  <object class="GtkImage" id="image9">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+    <property name="stock">gtk-info</property>
+    <property name="icon_size">1</property>
+  </object>
+  <object class="GtkMenu" id="detail_menu">
+    <property name="can_focus">False</property>
+    <child>
+      <object class="GtkImageMenuItem" id="detail_information">
+        <property name="label" translatable="yes">_Show Details</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="image">image9</property>
+        <property name="use_stock">False</property>
+        <property name="use_underline">True</property>
+      </object>
+    </child>
   </object>
   <object class="GtkListStore" id="model1">
     <columns>
@@ -972,17 +984,10 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkComboBox" id="combobox_ips">
+                              <object class="GtkComboBoxText" id="combobox_ips">
                                 <property name="width_request">110</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="model">model1</property>
-                                <child>
-                                  <object class="GtkCellRendererText" id="renderer1"/>
-                                  <attributes>
-                                    <attribute name="text">0</attribute>
-                                  </attributes>
-                                </child>
                               </object>
                               <packing>
                                 <property name="left_attach">2</property>
@@ -1725,7 +1730,6 @@
                                         <property name="bottom_padding">10</property>
                                         <property name="left_padding">20</property>
                                         <property name="right_padding">20</property>
-                                        <property name="expand">True</property>
                                         <child>
                                           <object class="GtkTable" id="table12">
                                             <property name="visible">True</property>
@@ -2067,7 +2071,7 @@
                                               <object class="GtkLabel" id="label23">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
-                                                <property name="label" translatable="yes">&lt;span size="smaller"&gt;We respect your privacy. We will use your personal information only for communications regarding your submission to the OpenIndiana: Hardware Compatibility List.</property>
+                                                <property name="label" translatable="yes">&lt;span size="smaller"&gt;We respect your privacy. We will use your personal information only for communications regarding your submission to the OpenIndiana: Hardware Compatibility List.&lt;/span&gt;</property>
                                                 <property name="use_markup">True</property>
                                                 <property name="wrap">True</property>
                                               </object>
@@ -2449,23 +2453,5 @@
       <action-widget response="0">cancel_repo</action-widget>
       <action-widget response="0">repo_add</action-widget>
     </action-widgets>
-  </object>
-  <object class="GtkUIManager" id="uimanager1">
-    <child>
-      <object class="GtkActionGroup" id="actiongroup1">
-        <child>
-          <object class="GtkAction" id="detail_information">
-            <property name="stock_id">gtk-info</property>
-            <property name="name">detail_information</property>
-            <property name="label" translatable="yes">_Show Details</property>
-          </object>
-        </child>
-      </object>
-    </child>
-    <ui>
-      <popup name="detail_menu">
-        <menuitem action="detail_information"/>
-      </popup>
-    </ui>
   </object>
 </interface>

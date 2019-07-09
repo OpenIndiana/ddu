@@ -25,10 +25,10 @@
 """
 export DDU modules
 """
-from detail import DetailInf
-from submit import SubmitDlg
-from install_drv  import InstDrv
-from message_box import MessageBox
-from CellRendererUrl import CellRendererUrl
-from browse_media import BrowseDlg
-from repo_manage import RepoDlg
+from .detail import DetailInf
+from .submit import SubmitDlg
+from .install_drv  import InstDrv
+from .message_box import MessageBox
+from .CellRendererUrl import CellRendererUrl
+from .browse_media import BrowseDlg
+from .repo_manage import RepoDlg

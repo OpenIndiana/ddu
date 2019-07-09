@@ -29,7 +29,7 @@ import os
 import sys
 import gettext
 import locale
-from executingterminal import ExecutingTerminal
+from .executingterminal import ExecutingTerminal
 from configparser import ConfigParser
 
 try:

@@ -1,4 +1,4 @@
-#! /usr/bin/python2.7
+#! /usr/bin/python3.5
 #
 
 #
@@ -13,22 +13,19 @@ import sys
 import os
 from xml.dom import minidom
 from xml.dom import Node
-import commands
+import subprocess
 
 try:
-    import pygtk
-    pygtk.require("2.0")
-except ImportError:
-    print "Please install pyGTK or GTKv2 or set your PYTHONPATH correctly"
+    import gi
+    gi.require_version('Gtk','3.0')
+    from gi.repository import Gtk, Gdk, GdkPixbuf, GObject, Pango
+except:
     sys.exit(1)
 
-import gtk
-import gtk.glade
-import gobject
-import pango
 import threading
 import gettext
-import pynotify
+import locale
+import notify2
 import webbrowser
 import subprocess
 from DDU.ddu_errors import DDUException
@@ -36,7 +33,7 @@ from DDU.ddu_function import ddu_devscan
 from DDU.ddu_function import ddu_package_lookup
 from DDU.ddu_function import ddu_install_package
 from DDU.ddu_package import ddu_package_object
-from ConfigParser import ConfigParser
+from configparser import ConfigParser
 
 DDUCONFIG = ConfigParser()
 
@@ -46,9 +43,10 @@ ABSPATH = DDUCONFIG.get('general','abspath')
 VENDOR_EMAIL = DDUCONFIG.get('vendor','email')
 
 try:
+    locale.setlocale(locale.LC_ALL, '')
+    locale.bindtextdomain('ddu', '%s/i18n' % ABSPATH)
     gettext.bindtextdomain('ddu','%s/i18n' % ABSPATH)
     gettext.textdomain('ddu')
-    gtk.glade.bindtextdomain('ddu','%s/i18n' % ABSPATH)
 except AttributeError:
     pass
 
@@ -60,25 +58,24 @@ from utils import CellRendererUrl
 from utils import BrowseDlg
 from utils import RepoDlg
 
-gobject.type_register(CellRendererUrl)
+GObject.type_register(CellRendererUrl)
 
 os.putenv('DDU_DATABASE', '%s/data/driver.db' % ABSPATH)
 
-gtk.glade.textdomain('ddu')
 _ = gettext.gettext
 
 COND = threading.Condition()
 
-class _IdleObject(gobject.GObject):
+class _IdleObject(GObject.GObject):
     """
     prototype of a thread class witch emit event to main thread
     """
     def __init__(self):
-        gobject.GObject.__init__(self)
+        GObject.GObject.__init__(self)
 
     def emit(self, *args):
         """
-        emit event to main thread, because of pygtk issue, all GTK even should
+        emit event to main thread, because of pygtk issue, all GTK events should
         be handled in main thread, so this class  and  its subclass will
         redirect the GTK request to main thread.
         the arguments includes GTK action and the arguments for this action.
@@ -90,7 +87,7 @@ class _IdleObject(gobject.GObject):
         insert_after: insert a a item after another item to device tree
         get_path:get a item path from the device tree 
         """
-        gobject.idle_add(gobject.GObject.emit, self, *args)
+        GObject.idle_add(GObject.GObject.emit, self, *args)
 	
 class DeviceTree(threading.Thread, _IdleObject):
     """
@@ -124,22 +121,22 @@ class DeviceTree(threading.Thread, _IdleObject):
     #          its path in device tree.
     
     __gsignals__ =  {
-        "clear":(gobject.SIGNAL_RUN_LAST, gobject.TYPE_NONE, []),
-        "append":(gobject.SIGNAL_RUN_LAST, gobject.TYPE_NONE, 
-                 [gobject.TYPE_STRING,gobject.TYPE_STRING, 
-                 gobject.TYPE_STRING,gobject.TYPE_STRING,gobject.TYPE_STRING, 
-                 gobject.TYPE_STRING,gobject.TYPE_BOOLEAN, 
-                 gobject.TYPE_BOOLEAN]),
-        "remove":(gobject.SIGNAL_RUN_LAST, gobject.TYPE_NONE,[]),
-        "update":(gobject.SIGNAL_RUN_LAST, gobject.TYPE_NONE, 
-                 [gobject.TYPE_PYOBJECT,gobject.TYPE_INT,gobject.TYPE_STRING]),
-        "insert_after":(gobject.SIGNAL_RUN_LAST,gobject.TYPE_NONE, 
-                 [gobject.TYPE_PYOBJECT,gobject.TYPE_STRING, 
-                 gobject.TYPE_STRING,gobject.TYPE_STRING,gobject.TYPE_STRING, 
-                 gobject.TYPE_STRING,gobject.TYPE_STRING,gobject.TYPE_STRING, 
-                 gobject.TYPE_BOOLEAN,gobject.TYPE_BOOLEAN]),
-        "get_path":(gobject.SIGNAL_RUN_LAST, gobject.TYPE_NONE, 
-                 [gobject.TYPE_PYOBJECT])
+        "clear":(GObject.SIGNAL_RUN_LAST, GObject.TYPE_NONE, []),
+        "append":(GObject.SIGNAL_RUN_LAST, GObject.TYPE_NONE, 
+                 [GObject.TYPE_STRING,GObject.TYPE_STRING, 
+                 GObject.TYPE_STRING,GObject.TYPE_STRING,GObject.TYPE_STRING, 
+                 GObject.TYPE_STRING,GObject.TYPE_BOOLEAN, 
+                 GObject.TYPE_BOOLEAN]),
+        "remove":(GObject.SIGNAL_RUN_LAST, GObject.TYPE_NONE,[]),
+        "update":(GObject.SIGNAL_RUN_LAST, GObject.TYPE_NONE, 
+                 [GObject.TYPE_PYOBJECT,GObject.TYPE_INT,GObject.TYPE_STRING]),
+        "insert_after":(GObject.SIGNAL_RUN_LAST,GObject.TYPE_NONE, 
+                 [GObject.TYPE_PYOBJECT,GObject.TYPE_STRING, 
+                 GObject.TYPE_STRING,GObject.TYPE_STRING,GObject.TYPE_STRING, 
+                 GObject.TYPE_STRING,GObject.TYPE_STRING,GObject.TYPE_STRING, 
+                 GObject.TYPE_BOOLEAN,GObject.TYPE_BOOLEAN]),
+        "get_path":(GObject.SIGNAL_RUN_LAST, GObject.TYPE_NONE, 
+                 [GObject.TYPE_PYOBJECT])
     }
     myiter = None
     tempiter = None
@@ -154,7 +151,7 @@ class DeviceTree(threading.Thread, _IdleObject):
         self.certdata = None
         self.dev_submit = {}
         self.dev_package = {}
-        status, self.default_repo = commands.getstatusoutput(
+        status, self.default_repo = subprocess.getstatusoutput(
             '%s/scripts/pkg_relate.sh list default | cut -f 1' % ABSPATH)
         if status != 0:
             sys.exit(1)
@@ -164,10 +161,10 @@ class DeviceTree(threading.Thread, _IdleObject):
         Build device tree and try to install driver if missing driver found on
         main repo
         """
-        status, output = commands.getstatusoutput( 
+        status, output = subprocess.getstatusoutput(
             '%s/scripts/probe.sh init' % ABSPATH)
         if status != 0:
-            print output
+            print(output)
             sys.exit(1)
        #step1:build device tree
         self.dev_tree, self.certdata, self.dev_submit = \
@@ -270,8 +267,7 @@ class DeviceTree(threading.Thread, _IdleObject):
                             #later will handle device type.
                                 if line.driver_name == '' :
                                 #handles controller which missing driver
-                                    if self.dev_package.has_key(
-                                                        str(line.item_id)):
+                                    if str(line.item_id) in self.dev_package:
                                     #dev_package store controllers which have
                                     #missing driver and later will try to look
                                     #for driver for them,
@@ -678,91 +674,95 @@ class HDDgui:
     repo_listdic = {}
 	
     def __init__(self):
-        xmlpath = ABSPATH + "/data/hdd.glade"
-        xml = gtk.glade.XML(xmlpath, root = 'topbox_main', domain='ddu')
-        self.window = xml.get_widget('topbox_main')
+        uipath = ABSPATH + "/data/hdd.ui"
+        builder = Gtk.Builder()
+        builder.set_translation_domain('ddu')
+        builder.add_from_file(uipath)
+        self.window = builder.get_object('topbox_main')
         self.window.connect("destroy", self.main_destroy)
         self.window.set_default_size(630, 700)
         self.window.set_resizable(True)
 
         #devtree_view is the area for displaying the device tree
-        self.devtreeview = xml.get_widget('devtree_view')
-        self.devtreemodel = gtk.ListStore( 
-        gtk.gdk.Pixbuf, gobject.TYPE_STRING, 
-        gobject.TYPE_STRING, gtk.gdk.Pixbuf, gobject.TYPE_STRING, 
-        gobject.TYPE_STRING, gobject.TYPE_STRING, gobject.TYPE_PYOBJECT, 
+        self.devtreeview = builder.get_object('devtree_view')
+        self.devtreemodel = Gtk.ListStore( 
+        GdkPixbuf.Pixbuf, GObject.TYPE_STRING, 
+        GObject.TYPE_STRING, GdkPixbuf.Pixbuf, GObject.TYPE_STRING, 
+        GObject.TYPE_STRING, GObject.TYPE_STRING, GObject.TYPE_PYOBJECT, 
         'gboolean', 'gboolean')
 
         self.devtreeview.set_model(self.devtreemodel)
         self.devtreeview.set_headers_visible(True)
 
-        menuxml = gtk.glade.XML(xmlpath, 'detail_menu')
-        self.popup_menu = menuxml.get_widget('detail_menu')
-        self.detail_information = menuxml.get_widget('detail_information')
-        self.install_driver = menuxml.get_widget('install_driver')
-        self.power_management = menuxml.get_widget('power_management')
+        self.popup_menu = builder.get_object('detail_menu')
+        self.detail_information = builder.get_object('detail_information')
+        self.install_driver = builder.get_object('install_driver')
+        self.power_management = builder.get_object('power_management')
 
         self.detail_information.connect('activate', self.on_detail_activate)
 
         self.devtreeview.connect('button-press-event', self.on_popup_menu)
 	
-        col0 = gtk.TreeViewColumn()
+        col0 = Gtk.TreeViewColumn()
         col0.set_title(_('Types'))
         col0.set_property("alignment", 0.5)
-        render_pixbuf0 = gtk.CellRendererPixbuf()
+        render_pixbuf0 = Gtk.CellRendererPixbuf()
         render_pixbuf0.set_property('cell-background', 'pink')
         col0.pack_start(render_pixbuf0, expand = False)
         col0.add_attribute(render_pixbuf0, 'pixbuf', 0)
         col0.add_attribute(render_pixbuf0, 'cell_background_set', 8)
 
 
-        render_text0 = gtk.CellRendererText()
+        render_text0 = Gtk.CellRendererText()
         render_text0.set_property('cell-background', 'pink')
         col0.pack_start(render_text0, expand=True)
         col0.add_attribute(render_text0, 'text', 1)
         col0.add_attribute(render_text0, 'cell_background_set', 8)
 
-        render_key1 = gtk.CellRendererText()
+        render_key1 = Gtk.CellRendererText()
         render_key1.set_property('visible', False)
         col0.pack_start(render_key1, expand = True)
         col0.add_attribute(render_key1, 'text', 2)
 
         col0.set_resizable(True)
 
-        col1 = gtk.TreeViewColumn()
+        col1 = Gtk.TreeViewColumn()
         col1.set_title(_('Device'))
         col1.set_property("alignment", 0.5)
-        render_pixbuf0 = gtk.CellRendererPixbuf()
+        render_pixbuf0 = Gtk.CellRendererPixbuf()
         render_pixbuf0.set_property('cell-background', 'pink')
         col1.pack_start(render_pixbuf0, expand=False)
 
         col1.add_attribute(render_pixbuf0, 'pixbuf', 3)
         col1.add_attribute(render_pixbuf0, 'cell_background_set', 8)
 
-        render_text1 = gtk.CellRendererText()
+        render_text1 = Gtk.CellRendererText()
         render_text1.set_property('cell-background', 'pink')
         col1.pack_start(render_text1, expand=True)
         render_text1.set_property('xalign', 0)
         col1.add_attribute(render_text1, 'text', 4)
         col1.add_attribute(render_text1, 'cell_background_set', 8)
 
-        col1.set_sizing(gtk.TREE_VIEW_COLUMN_FIXED)
+        col1.set_sizing(Gtk.TreeViewColumnSizing.FIXED)
         col1.set_expand(True)
         col1.set_resizable(True)
 
-        col2 = gtk.TreeViewColumn()
+        col2 = Gtk.TreeViewColumn()
         col2.set_title(_('Driver'))
         col2.set_property("alignment", 0.5)
 
-        render_type = gtk.CellRendererText()
+        render_type = Gtk.CellRendererText()
         render_type.set_property('cell-background', 'pink')
         render_type.set_property('xalign', 0.5)
 
-        render_text0 = gtk.CellRendererText()
+        render_text0 = Gtk.CellRendererText()
         render_text0.set_property('cell-background', 'pink')
         render_text0.set_property('xalign', 0.5)
-        render_text0.set_property('underline', pango.UNDERLINE_SINGLE)
-        render_text0.set_property('foreground-gdk', gtk.gdk.Color('blue'))
+        render_text0.set_property('underline', Pango.Underline.SINGLE)
+        
+        frgba = Gdk.RGBA()
+        frgba.parse('blue')
+        render_text0.set_property('foreground-rgba', frgba)
 
         render_label = CellRendererUrl()
         render_label.set_property('cell-background', 'pink')
@@ -787,83 +787,84 @@ class HDDgui:
 
         self.devtreeview.expand_all()
 
-        self.scrolledwindow_dev = xml.get_widget('scrolledwindow_dev')
+        self.scrolledwindow_dev = builder.get_object('scrolledwindow_dev')
 	
         self.devtreeview.show()
         self.scrolledwindow_dev.show()
 
         selection = self.devtreeview.get_selection()
-        selection.set_mode(gtk.SELECTION_SINGLE)
+        selection.set_mode(Gtk.SelectionMode.SINGLE)
+
         selection.connect('changed', self.on_selection_changed)
 
         #rescan_clicked handle the rescan action
-        self.rescan_button = xml.get_widget('button_rescan')
+        self.rescan_button = builder.get_object('button_rescan')
         self.rescan_button.connect("clicked", self.rescan_clicked)
 
 
-        close_button = xml.get_widget('button_close')
+        close_button = builder.get_object('button_close')
         close_button.connect("clicked", self.main_destroy)
 
         #drv_clicked handle the drv installation action
-        self.drv_button = xml.get_widget('button_drv_detect')
+        self.drv_button = builder.get_object('button_drv_detect')
         self.drv_button.connect("clicked", self.drv_clicked)
         self.drv_button.set_sensitive(True)
 
-        self.help_button = xml.get_widget('help_button')
+        self.help_button = builder.get_object('help_button')
         self.help_button.connect("clicked", self.help_clicked)
 
-        self.submit_button = xml.get_widget('button_submit')
+        self.submit_button = builder.get_object('button_submit')
         self.submit_button.connect("clicked", self.submit_clicked)
         self.submit_button.set_sensitive(False)
 
-        self.button_browser = xml.get_widget('button_browser')
+        self.button_browser = builder.get_object('button_browser')
         self.button_browser.connect("clicked", self.browser_cliked)
 
-        ag = gtk.AccelGroup()
+        ag = Gtk.AccelGroup()
         self.window.add_accel_group(ag)
 
         self.rescan_button.add_accelerator("clicked", ag, ord('r'), 
-        gtk.gdk.MOD1_MASK,gtk.ACCEL_VISIBLE)
+            Gdk.ModifierType.MOD1_MASK,Gtk.AccelFlags.VISIBLE)
         close_button.add_accelerator("clicked", ag, ord('c'), 
-        gtk.gdk.MOD1_MASK,gtk.ACCEL_VISIBLE)
+            Gdk.ModifierType.MOD1_MASK,Gtk.AccelFlags.VISIBLE)
         self.drv_button.add_accelerator("clicked", ag, ord('i'), 
-        gtk.gdk.MOD1_MASK,gtk.ACCEL_VISIBLE)
+            Gdk.ModifierType.MOD1_MASK,Gtk.AccelFlags.VISIBLE)
         self.submit_button.add_accelerator("clicked", ag, ord('s'), 
-        gtk.gdk.MOD1_MASK,gtk.ACCEL_VISIBLE)
+            Gdk.ModifierType.MOD1_MASK,Gtk.AccelFlags.VISIBLE)
         self.button_browser.add_accelerator("clicked", ag, ord('b'), 
-        gtk.gdk.MOD1_MASK,gtk.ACCEL_VISIBLE)
+            Gdk.ModifierType.MOD1_MASK,Gtk.AccelFlags.VISIBLE)       
 	
-        self.dev_view = xml.get_widget("dev_view")
-        self.hbox_msg = xml.get_widget("hbox_msg")
+        self.dev_view = builder.get_object("dev_view")
+        self.hbox_msg = builder.get_object("hbox_msg")
 
-        self.dev_viewport = xml.get_widget("dev_viewport")
-        self.devstatview = xml.get_widget("dev_stat")
+        self.dev_viewport = builder.get_object("dev_viewport")
+        self.devstatview = builder.get_object("dev_stat")
         self.devstatview.set_size_request(30, 0)
-        self.devstatview.connect('expose-event', self.drawstat)
-        self.dev_text = xml.get_widget("dev_text")
+        self.devstatview.connect('draw', self.drawstat)
+        self.dev_text = builder.get_object("dev_text")
 
-        self.statusbar = xml.get_widget("statusbar1")
+        self.statusbar = builder.get_object("statusbar1")
         context_id = self.statusbar.get_context_id("feedback alias")
         self.statusbar.push(context_id, _("Feedback alias: " + VENDOR_EMAIL))
 
-        xml.get_widget('label10').set_alignment(0, 0)
-        xml.get_widget('label18').set_alignment(0, 0)
+        builder.get_object('label10').set_alignment(0, 0)
+        builder.get_object('label18').set_alignment(0, 0)
 
-        self.server_com = xml.get_widget('combobox_ips')
+        self.server_com = builder.get_object('combobox_ips')
         self.server_com.set_active(0)
         self.repo_listdic[self.server_com.get_active_text()]=0
         self.lenth = 0
         self.lookup_repo()
         self.server_com.connect('changed', self.changed_cb)
 
-        self.entry_ips_info = xml.get_widget('entry1')
-        self.entry_file_info = xml.get_widget('entry2')
+        self.entry_ips_info = builder.get_object('entry1')
+        self.entry_file_info = builder.get_object('entry2')
 
         self.entry_ips_info.connect("changed", self.ipsenter_callback)
         self.entry_file_info.connect("changed", self.fileeenter_callback)
 
-        self.radio_ips_info = xml.get_widget('radiobutton1')
-        self.radio_file_info = xml.get_widget('radiobutton2')
+        self.radio_ips_info = builder.get_object('radiobutton1')
+        self.radio_file_info = builder.get_object('radiobutton2')
 
         def size_allocate_cb(wid, allocation):
             """handle window size"""
@@ -872,8 +873,8 @@ class HDDgui:
         self.dev_submit = {}
         self.location = None
         self.wid_get = None
+        self.cr = None
         self.dev_pbar = None
-        self.event_c = None
         self.rescan_thread = None
         self.align = None
         self.window.connect('size-allocate', size_allocate_cb)
@@ -903,7 +904,7 @@ class HDDgui:
                      data4, condition_back,condition_for):
         """append a item to device tree"""
         COND.acquire()
-        iconfile0 = gtk.gdk.pixbuf_new_from_file('%s/data/%s.png' % 
+        iconfile0 = GdkPixbuf.Pixbuf.new_from_file('%s/data/%s.png' % 
                                                  (ABSPATH,catename))
         self.myiter = self.devtreemodel.append([iconfile0, _(catename),
                                                category, data1, data2, data3,
@@ -968,7 +969,7 @@ class HDDgui:
         browser = BrowseDlg()
         result, location = browser.run()
 
-        if result == gtk.RESPONSE_OK:
+        if result == Gtk.ResponseType.OK:
             self.location = location
             self.radio_file_info.emit("clicked")
             self.entry_file_info.set_text(location)
@@ -984,19 +985,19 @@ class HDDgui:
 
     def lookup_repo(self):
         """fetch repo list"""
-        status, output = commands.getstatusoutput( 
+        status, output = subprocess.getstatusoutput(
         '%s/scripts/pkg_relate.sh list all' % ABSPATH)
         index = 1
         if status == 0:
             output_lines = output.splitlines()
             for line in output_lines:
                 repo_name = line.split('\t')
-                if not self.repo_listdic.has_key(repo_name[0]):
+                if repo_name[0] not in self.repo_listdic:
                     self.server_com.prepend_text(repo_name[0])
                     self.repo_listdic[repo_name[0]] = index
                     index = index + 1
             self.server_com.set_active(0)
-            self.lenth = len(self.repo_listdic.keys()) - 1
+            self.lenth = len(list(self.repo_listdic.keys())) - 1
         else:
             self.drv_button.set_sensitive(False)
             self.server_com.set_sensitive(False)
@@ -1041,7 +1042,7 @@ class HDDgui:
         del data
  
         subprocess.Popen(["/bin/pkill", "-TERM", "-g", str(os.getpid())])
-        gtk.main_quit()
+        Gtk.main_quit()
 
     def on_popup_menu(self, item_tree, event=None):
         """show device tree context"""
@@ -1072,7 +1073,7 @@ class HDDgui:
             item_tree.grab_focus()
             item_tree.set_cursor(path, item_tree.get_columns()[0], 0)
 
-        self.popup_menu.popup(None, None, None, button, event_time)
+        self.popup_menu.popup(None, None, None, None, button, event_time)
         return True
 
     def on_detail_activate(self, menu):
@@ -1101,7 +1102,7 @@ class HDDgui:
                     classcode = ''
                     driver_info = ''
                 scriptsdir = ABSPATH + '/scripts'
-                status, detail_output = commands.getstatusoutput( 
+                status, detail_output = subprocess.getstatusoutput(
                 '%s/det_info.sh %s CLASS=%s' % 
                 (scriptsdir, devpath, classcode))
                 if status == 0:
@@ -1165,8 +1166,8 @@ class HDDgui:
 
         self.devtreeview.collapse_all()
         self.devtreeview.queue_draw()
-        while gtk.events_pending():
-            gtk.main_iteration()
+        while Gtk.events_pending():
+            Gtk.main_iteration()
 
         self.devtreeview.set_sensitive(False)
         self.drv_button.set_sensitive(False)
@@ -1174,15 +1175,15 @@ class HDDgui:
         self.__rescan = True
         self.dev_view.remove(self.hbox_msg)
 
-        self.align = gtk.Alignment(0.5, 0.5, 1, 0)
-        self.dev_pbar = gtk.ProgressBar()
+        self.align = Gtk.Alignment.new(0.5, 0.5, 1, 0)
+        self.dev_pbar = Gtk.ProgressBar()
         self.align.add(self.dev_pbar)
         self.dev_pbar.show()
         self.align.show()
 
         self.dev_view.add(self.align)
 
-        gobject.timeout_add(1000, self.profunc)
+        GObject.timeout_add(1000, self.profunc)
 
         self.rescan_button.set_sensitive(False)
 
@@ -1221,17 +1222,17 @@ class HDDgui:
 
             self.dev_view.remove(self.align)
 
-            self.hbox_msg = gtk.HBox(False, 0)
+            self.hbox_msg = Gtk.HBox(False, 0)
             self.dev_view.add(self.hbox_msg)
-            self.dev_viewport = gtk.Viewport()
-            self.dev_viewport.set_shadow_type(gtk.SHADOW_NONE)
+            self.dev_viewport = Gtk.Viewport()
+            self.dev_viewport.set_shadow_type(Gtk.ShadowType.NONE)
             self.hbox_msg.pack_start(self.dev_viewport, False, False, 0)
-            self.devstatview = gtk.DrawingArea()
+            self.devstatview = Gtk.DrawingArea()
             self.devstatview.set_size_request(30, 0)
-            self.devstatview.connect('expose-event', self.drawstat)
+            self.devstatview.connect('draw', self.drawstat)
             self.dev_viewport.add(self.devstatview)
 
-            self.dev_text = gtk.Label("")
+            self.dev_text = Gtk.Label("")
             self.hbox_msg.pack_start(self.dev_text, False, False, 0)
 
             self.dev_view.show_all()
@@ -1241,20 +1242,20 @@ class HDDgui:
         return self.__rescan
 
 
-    def drawstat(self, widget, event):
+    def drawstat(self, widget, cr):
         """handle driver statistics info"""
         self.wid_get = widget
-        self.event_c = event
+        self.cr = cr
         self.__drawstat()
 
     def __drawstat(self):
         """show driver statistics info"""
-        crd = self.wid_get.window.cairo_create()
+        crd = self.cr
 
         yes_driver = 0
         no_driver = 0
         all_driver = 0
-        for iternum, iterdata in self.__dev_tree.iteritems():
+        for iternum, iterdata in self.__dev_tree.items():
             del iternum
             disp_type = iterdata[2]
             disp_collection = iterdata[1]
@@ -1270,16 +1271,16 @@ class HDDgui:
 
         del all_driver, yes_driver
         if self.__rescan == False:
-            drawable = self.wid_get.window
-            drawable.clear()
+            drawable = self.wid_get.get_window()
+            #drawable.clear()
 		
             if no_driver > 0:
-                iconfile = gtk.gdk.pixbuf_new_from_file(
+                iconfile = GdkPixbuf.Pixbuf.new_from_file(
                                           '%s/data/Missing-1.png' % ABSPATH)
             else:
-                iconfile = gtk.gdk.pixbuf_new_from_file( 
+                iconfile = GdkPixbuf.Pixbuf.new_from_file( 
                                           '%s/data/info.png' % ABSPATH)
-            crd.set_source_pixbuf(iconfile, 0, 15)
+            Gdk.cairo_set_source_pixbuf(crd, iconfile, 0, 15)
             crd.paint()
             crd.stroke()
             self.submit_button.set_sensitive(True)
@@ -1362,7 +1363,7 @@ class HDDgui:
                     driver_info = ''
                 try:
                     if selection.detail_inf_run.spam():
-                        status, detail_output = commands.getstatusoutput( 
+                        status, detail_output = subprocess.getstatusoutput(
                         '%s/det_info.sh %s CLASS=%s' % 
                         (scriptsdir, devpath, classcode))
                         del status
@@ -1378,29 +1379,25 @@ def callback(icon):
     if NOTIFICATION != None:
         try:
             NOTIFICATION.close()
-        except gobject.GError:
+        except GObject.GError:
             pass
         icon.set_visible(False)
         HDDgui()
-        gobject.threads_init()
-        gtk.gdk.threads_init()
-        gtk.gdk.threads_enter()
-        gtk.main()
-        gtk.gdk.threads_leave()
+        Gtk.main()
         sys.exit(0)
 
 if __name__ == '__main__':
     try:
-        gtk.init_check()
-    except RuntimeError, e:
-        print _("Unable to initialize gtk")
-        print str(e)
+        Gtk.init_check(sys.argv)
+    except RuntimeError as e:
+        print(_("Unable to initialize gtk"))
+        print(str(e))
         sys.exit(1)
     if len(sys.argv) >= 2 and sys.argv[1].startswith('--'):
         if sys.argv[1][2:]  == "silent":
-            pynotify.init("DDU project")
+            notify2.init("DDU project")
             FIND_MISSING_DRIVER = False
-            STATUS, OUTPUT = commands.getstatusoutput( 
+            STATUS, OUTPUT = subprocess.getstatusoutput(
             '%s/scripts/probe.sh init' % ABSPATH)
 
             SYSTEMXML = minidom.parse('%s/data/hdd.xml' % ABSPATH)
@@ -1415,7 +1412,7 @@ if __name__ == '__main__':
                     #Get The probe script for each category
                     if probedata.nodeType == Node.TEXT_NODE:
                         probecmd = ABSPATH + '/' + probedata.data
-                        STATUS, OUTPUT = commands.getstatusoutput(probecmd)
+                        STATUS, OUTPUT = subprocess.getstatusoutput(probecmd)
                         if len(OUTPUT) > 0 and OUTPUT.find("0x") > 0:
                             output_lines = OUTPUT.splitlines()
                             for line in output_lines:
@@ -1426,26 +1423,22 @@ if __name__ == '__main__':
                                     FIND_MISSING_DRIVER = True
                                     break
             if FIND_MISSING_DRIVER == True:
-                NOTIFICATION = pynotify.Notification(
+                NOTIFICATION = notify2.Notification(
                               "Missing Device Drivers",
                                "Click this box to display the devices\n"
                                "and to install the missing drivers.",
                                "%s/data/noti-dialog.png" % ABSPATH)
-                NOTIFICATION.set_urgency(pynotify.URGENCY_NORMAL)
-                NOTIFICATION.set_timeout(pynotify.EXPIRES_NEVER)
+                NOTIFICATION.set_urgency(notify2.URGENCY_NORMAL)
+                NOTIFICATION.set_timeout(notify2.EXPIRES_NEVER)
 
-                ICON = gtk.status_icon_new_from_file( 
+                ICON = Gtk.StatusIcon.new_from_file( 
                                                 "%s/data/icon.png" % ABSPATH)
                 ICON.connect('activate', callback)
                 NOTIFICATION.attach_to_status_icon(ICON)
                 NOTIFICATION.show()
             else:
                 sys.exit(0)
-            gtk.main()
+            Gtk.main()
     else:
         HDDgui()
-        gobject.threads_init()
-        gtk.gdk.threads_init()
-        gtk.gdk.threads_enter()
-        gtk.main()
-        gtk.gdk.threads_leave()
+        Gtk.main()

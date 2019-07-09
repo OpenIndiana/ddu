@@ -31,7 +31,7 @@ import gettext
 import locale
 import subprocess
 
-from message_box import MessageBox
+from .message_box import MessageBox
 from configparser import ConfigParser
 try:
     import gi

@@ -32,11 +32,11 @@ import http.client
 import gettext
 import locale
 
-from functions import insert_conf
-from functions import insert_one_tag_into_buffer
-from functions import insert_col_info
-from functions import insert_col
-from message_box import MessageBox
+from .functions import insert_conf
+from .functions import insert_one_tag_into_buffer
+from .functions import insert_col_info
+from .functions import insert_col
+from .message_box import MessageBox
 from configparser import ConfigParser
 
 

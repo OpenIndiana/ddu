@@ -29,7 +29,7 @@ Show a dialog to display hardware detail information
 import os
 import sys
 import re
-from functions import insert_one_tag_into_buffer
+from .functions import insert_one_tag_into_buffer
 from configparser import ConfigParser
 import gettext
 import locale
