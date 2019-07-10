@@ -690,22 +690,46 @@
       <action-widget response="0">close_button2</action-widget>
     </action-widgets>
   </object>
-  <object class="GtkImage" id="image9">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="stock">gtk-info</property>
-    <property name="icon_size">1</property>
-  </object>
   <object class="GtkMenu" id="detail_menu">
     <property name="can_focus">False</property>
+    <property name="reserve-toggle-size">False</property>
     <child>
-      <object class="GtkImageMenuItem" id="detail_information">
-        <property name="label" translatable="yes">_Show Details</property>
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="image">image9</property>
-        <property name="use_stock">False</property>
-        <property name="use_underline">True</property>
+      <object class="GtkMenuItem" id="detail_information">
+      <property name="visible">True</property>
+      <child>
+              <object class="GtkHBox" id="box99">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                     <object class="GtkImage" id="image9">
+                       <property name="visible">True</property>
+                       <property name="can_focus">False</property>
+                       <property name="stock">gtk-info</property>
+                       <property name="icon_size">1</property>
+                       <property name="margin">1px 20px 1px 20px</property>
+                     </object>
+                     <packing>
+                       <property name="expand">True</property>
+                       <property name="fill">True</property>
+                       <property name="position">0</property>
+                     </packing>
+                </child>
+                <child>
+                     <object class="GtkLabel" id="label141">
+                       <property name="visible">True</property>
+                       <property name="can_focus">False</property>
+                       <property name="label" translatable="yes">_Show Details</property>
+                       <property name="use_underline">True</property>
+                       <property name="margin">1px 20px 1px 20px</property>
+                     </object>
+                     <packing>
+                       <property name="expand">True</property>
+                       <property name="fill">True</property>
+                       <property name="position">1</property>
+                     </packing>
+                 </child>
+              </object>
+      </child>
       </object>
     </child>
   </object>
