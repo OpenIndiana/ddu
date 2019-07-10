@@ -28,7 +28,7 @@ class Action(object):
     
     def _do_action(self, screen = None):
         '''Private default function assigned to do_action'''
-        raise NotImplementedError, "Must override do_action before use"
+        raise NotImplementedError("Must override do_action before use")
     
     def __init__(self, key, text, do_action = None):
         '''

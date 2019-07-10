@@ -22,7 +22,7 @@
 # Copyright (c) 2008, 2010, Oracle and/or its affiliates. All rights reserved.
 #
 
-from inner_window import InnerWindow
+from .inner_window import InnerWindow
 import logging
 
 class Toplist_Window(InnerWindow):

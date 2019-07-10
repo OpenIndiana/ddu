@@ -27,13 +27,13 @@ import curses.ascii
 import curses.panel as panel
 import logging
 
-from __init__ import _
-import screen_list as screen_list
-from color_theme import ColorTheme
-from action import Action
-from inner_window import InnerWindow
-from window_area import WindowArea
-from error_window import ErrorWindow
+from .__init__ import _
+from . import screen_list as screen_list
+from .color_theme import ColorTheme
+from .action import Action
+from .inner_window import InnerWindow
+from .window_area import WindowArea
+from .error_window import ErrorWindow
 
 
 def show_help(current = None):
@@ -120,8 +120,8 @@ class MainWindow(object):
         length = len(header_text)
         max_x = self.header.window.getmaxyx()[1]
         if length > max_x:
-            raise ValueError, "Header Text exceeds maximum window width"
-        start_x = (max_x - length) / 2
+            raise ValueError("Header Text exceeds maximum window width")
+        start_x = int((max_x - length) / 2)
         self.header.window.addstr(0, start_x, header_text)
         self.header.window.noutrefresh()
     
@@ -151,7 +151,7 @@ class MainWindow(object):
         if not self.use_esc_sequence:
             length += (len("Esc-") - len("F")) * len(self.actions)
         if length > max_len:
-            raise ValueError, "Can't display footer actions"
+            raise ValueError("Can't display footer actions")
         self.footer.window.addstr(display_str)
         self.footer.window.noutrefresh()
     
@@ -166,7 +166,7 @@ class MainWindow(object):
         while True:
             input = self.getch()
             input = self.central_area.process(input)
-            if self.actions.has_key(input):
+            if input in self.actions:
                 return self.actions[input].do_action(current_screen)
             self.do_update()
     
@@ -176,4 +176,4 @@ class MainWindow(object):
     def show(self):
         self.do_update()
         self.header.window.getch()
-        raise NotImplementedError, "This method is not intended for general use"
+        raise NotImplementedError("This method is not intended for general use")

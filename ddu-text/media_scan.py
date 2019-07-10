@@ -22,17 +22,17 @@
 # Copyright (c) 2008, 2010, Oracle and/or its affiliates. All rights reserved.
 #
 
-from __init__ import _
-import main_window
-import commands
-from inner_window import InnerWindow
-from media_window import Media_Window
-from base_screen import BaseScreen
-from screen_list import get_next_group
-from window_area import WindowArea
-from action import Action
+from .__init__ import _
+from . import main_window
+import subprocess
+from .inner_window import InnerWindow
+from .media_window import Media_Window
+from .base_screen import BaseScreen
+from .screen_list import get_next_group
+from .window_area import WindowArea
+from .action import Action
 import curses
-import screen_list as screen_list
+from . import screen_list as screen_list
 import logging
 import os
 import re
@@ -189,7 +189,7 @@ class MediaScreen(BaseScreen):
         menu_item_max_width = 50
         menu_item_offset = 5
 
-        status, detail_output = commands.getstatusoutput(
+        status, detail_output = subprocess.getstatusoutput(
                                          '%s/scripts/find_media.sh probe_s' %
                                          (ABSPATH))
         output_lines = detail_output.splitlines()

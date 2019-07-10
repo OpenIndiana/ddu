@@ -23,15 +23,13 @@
 #
 
 import logging
-import types
 import curses
 from curses.ascii import ctrl
 from copy import copy
-import dircache
 import re
 import os
 import threading
-import commands
+import subprocess
 from DDU.ddu_errors import DDUException
 from DDU.ddu_package import ddu_package_object
 from DDU.ddu_devdata import ddu_dev_data
@@ -226,7 +224,7 @@ class InnerWindow(object):
         Integers that are out of bounds of the size of the objects list
         are shifted to be in bounds.
         '''
-        if type(index) != types.IntType:
+        if type(index) != int:
             index = self.objects.index(index)
         else:
             index = index % len(self.objects)
@@ -320,8 +318,8 @@ class InnerWindow(object):
     
     def on_key_down(self, input):
         global media_path
-        from toplist_window import Toplist_Window
-        from media_window import Media_Window
+        from .toplist_window import Toplist_Window
+        from .media_window import Media_Window
         logging.log(5, "InnerWindow.on_key_down")
         if self.active_object is not None:
             index = self.active_object + 1
@@ -367,8 +365,8 @@ class InnerWindow(object):
     
     def on_key_up(self, input):
         global media_path
-        from media_window import Media_Window
-        from toplist_window import Toplist_Window
+        from .media_window import Media_Window
+        from .toplist_window import Toplist_Window
         logging.log(5, "InnerWindow.on_key_up")
         if self.active_object is not None:
             index = self.active_object - 1
@@ -415,8 +413,8 @@ class InnerWindow(object):
     def on_key_enter(self, input):
         global media_path
         global installation_package
-        from toplist_window import Toplist_Window
-        from media_window import Media_Window
+        from .toplist_window import Toplist_Window
+        from .media_window import Media_Window
 
         if self.active_object is None:
             return input
@@ -435,9 +433,8 @@ class InnerWindow(object):
                               self.start_point])
                 index_start += 1
                 directory_start_bak = index_start
-                dircache.reset()
                 try:
-                    dirlist = dircache.listdir(
+                    dirlist = os.listdir(
                                      self.texts_full[self.active_object +
                                      self.start_point])
                     for diritem in dirlist:
@@ -483,9 +480,8 @@ class InnerWindow(object):
                 index_start += 1
 		
                 directory_start_bak = index_start
-                dircache.reset()
                 try:
-                    dirlist = dircache.listdir(
+                    dirlist = os.listdir(
                                        self.texts_full[self.active_object +
                                        self.start_point])
                     for diritem in dirlist:
@@ -515,9 +511,8 @@ class InnerWindow(object):
                               self.start_point])
                 index_start += 1
                 directory_start_bak = index_start
-                dircache.reset()
                 try:
-                    dirlist = dircache.listdir(
+                    dirlist = os.listdir(
                                      self.texts_full[self.active_object +
                                      self.start_point])
                     for diritem in dirlist:
@@ -609,9 +604,9 @@ class InnerWindow(object):
         global media_path
         global installation_package
         global repo_name
-        from toplist_window import Toplist_Window
-        from input_window import InputWindow
-        from media_window import Media_Window
+        from .toplist_window import Toplist_Window
+        from .input_window import InputWindow
+        from .media_window import Media_Window
         install_ok = False
 
         if isinstance(self, Toplist_Window):
@@ -680,7 +675,7 @@ class InnerWindow(object):
                              ))
                 tt.start()
 
-            status, output = commands.getstatusoutput(
+            status, output = subprocess.getstatusoutput(
                              '%s/scripts/file_check.sh UNK "%s" "%s"' %
 			     (ABSPATH,media,location))
 
@@ -710,7 +705,7 @@ class InnerWindow(object):
                                ))
                 tt.start()
 
-            status, output = commands.getstatusoutput(
+            status, output = subprocess.getstatusoutput(
                              '%s/scripts/file_check.sh UNK "%s" "%s"' % (
 			     ABSPATH, media, location))
 
@@ -736,7 +731,7 @@ class InnerWindow(object):
 			       args=(">>>Install driver...","status"))
                 tt.start()
 
-            status, output = commands.getstatusoutput(
+            status, output = subprocess.getstatusoutput(
                              '%s/scripts/file_check.sh IPS "%s" "%s"' % (
 			     ABSPATH, package_name, repo_name))
 
@@ -764,7 +759,7 @@ class InnerWindow(object):
 			       args = (">>>Install driver...","status"))
                 tt.start()
 
-            status, output = commands.getstatusoutput(
+            status, output = subprocess.getstatusoutput(
                              '%s/scripts/file_check.sh IPS "%s" "%s"' % (
 			     ABSPATH, package_name, repo_name))
             if status == 0:
@@ -813,7 +808,7 @@ class InnerWindow(object):
 
     def on_key_f5(self, input):
         global repo_name
-        from media_window import Media_Window
+        from .media_window import Media_Window
         if not isinstance(self.active_object, int):
             return None
         if isinstance(self.objects[self.active_object], Media_Window):
@@ -822,11 +817,11 @@ class InnerWindow(object):
             media2 = self.texts_full[self.active_object +
                                      self.start_point].split('/')[2]
             eject_name = '/' + media1 + '/' + media2
-            status, output = commands.getstatusoutput(
+            status, output = subprocess.getstatusoutput(
                              '/usr/bin/eject -l| grep \"%s\"' % eject_name)
             if status == 0:
                 eject_media = output.split(" ")[0]
-                status, output = commands.getstatusoutput(
+                status, output = subprocess.getstatusoutput(
                                 '/usr/bin/eject -f %s' % eject_media)
             self.super_obj.object_reset()
             self.super_obj.items_reset()
@@ -843,7 +838,7 @@ class InnerWindow(object):
                     self.repo_index += 1
             except AttributeError:
                 repo_list = []
-                status, output = commands.getstatusoutput(
+                status, output = subprocess.getstatusoutput(
                                          '%s/scripts/pkg_relate.sh list all' %
                                          ABSPATH)
                 if status == 0:
@@ -933,8 +928,8 @@ class InnerWindow(object):
         elif input == curses.KEY_F2:
             input = curses.KEY_F2
         elif input == curses.KEY_F3:
-            from toplist_window import Toplist_Window
-            from media_window import Media_Window
+            from .toplist_window import Toplist_Window
+            from .media_window import Media_Window
             if isinstance(self, Toplist_Window):
                 input = curses.KEY_ENTER
                 return input
@@ -943,9 +938,9 @@ class InnerWindow(object):
             else:
                 return None
         elif input == curses.KEY_F4:
-            from toplist_window import Toplist_Window
-            from input_window import InputWindow
-            from media_window import Media_Window
+            from .toplist_window import Toplist_Window
+            from .input_window import InputWindow
+            from .media_window import Media_Window
             if isinstance(self, Toplist_Window) or \
                   isinstance(self, InputWindow):
                 pass
@@ -958,9 +953,9 @@ class InnerWindow(object):
                 self.super_obj.items_reset()
                 return None
         elif input == ord(ctrl('L')):
-            from toplist_window import Toplist_Window
-            from input_window import InputWindow
-            from media_window import Media_Window
+            from .toplist_window import Toplist_Window
+            from .input_window import InputWindow
+            from .media_window import Media_Window
             if isinstance(self, Toplist_Window) or \
                   isinstance(self, InputWindow):
                 InnerWindow.just_reshow = True

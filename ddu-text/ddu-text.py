@@ -1,4 +1,4 @@
-#!/usr/bin/python2.7
+#!/usr/bin/python3.5
 #
 # CDDL HEADER START
 #
@@ -23,18 +23,28 @@
 # Copyright (c) 2008, 2010, Oracle and/or its affiliates. All rights reserved.
 #
 
+import os
 import signal
+import sys
 import curses
 import logging
 from sys import exit
 
 
-from __init__ import _
-from screen_list import start_screen_list
-from main_window import MainWindow
-from media_scan import MediaScreen
-from device_scan import DeviceScreen
+from configparser import ConfigParser
 
+DDUCONFIG = ConfigParser()
+DDUCONFIG.read(os.path.join(os.path.dirname(
+            os.path.realpath(sys.argv[0])),"ddu.conf"))
+ABSPATH = DDUCONFIG.get('general','abspath')
+
+sys.path.insert(0, "%s/ddu-text" % ABSPATH)
+
+from utils.__init__ import _
+from utils.screen_list import start_screen_list
+from utils.main_window import MainWindow
+from utils.media_scan import MediaScreen
+from utils.device_scan import DeviceScreen
 
 LOG_LOCATION = "/tmp/ddu_log"
 LOG_FORMAT = "%(asctime)s - %(levelname)-8s: %(filename)s:%(lineno)d %(message)s"
@@ -62,7 +72,7 @@ def cleanup_curses():
 
 def exit_text_installer():
     logging.info("**** END ****")
-    print _("Exiting Text Installer. Log is available at:\n%s") % LOG_LOCATION
+    print(_("Exiting Text Installer. Log is available at:\n%s") % LOG_LOCATION)
     exit()
 
 
@@ -87,7 +97,7 @@ if __name__ == '__main__':
         win_size_y, win_size_x = initscr.getmaxyx()
         if win_size_y < 24 or win_size_x < 80:
             cleanup_curses()
-            print _("Terminal too small. Min size is 80x24\n"), "\r"
+            print(_("Terminal too small. Min size is 80x24\n"), "\r")
             exit_text_installer()
         main_win = MainWindow(initscr)
         win_list = make_screen_list(main_win)
