@@ -44,6 +44,8 @@ TR=/usr/bin/tr
 
 PYTHON_VERSION = 3.5
 
+PYV = $(subst .,,$(PYTHON_VERSION))
+
 ARCH=$(shell uname -p)
 
 PYTHON_VENDOR=$(DESTDIR)/usr/lib/python$(PYTHON_VERSION)/vendor-packages
@@ -90,6 +92,10 @@ LINK.c  = $(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LIBS)
 
 REQUIRED_PACKAGES += developer/gcc-7
 REQUIRED_PACKAGES += developer/versioning/git
+REQUIRED_PACKAGES += library/python/notify2-$(PYV)
+REQUIRED_PACKAGES += library/python/pygobject-3-$(PYV)
+REQUIRED_PACKAGES += library/python/simplejson-$(PYV)
+REQUIRED_PACKAGES += runtime/python-$(PYV)
 REQUIRED_PACKAGES += service/hal
 REQUIRED_PACKAGES += system/header
 REQUIRED_PACKAGES += system/library/libdbus
