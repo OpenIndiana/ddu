@@ -232,10 +232,10 @@ class DeviceTree(threading.Thread, _IdleObject):
         systemxml = minidom.parse('%s/data/hdd.xml' % ABSPATH)
 
         category = systemxml.getElementsByTagName('category')
-        #abnormal_path used to store fist no-driver or driver worked abnormally
+        #abnormal_path is used to store the first no-driver or driver worked abnormally
         #component item in device tree, when the whole device tree has been
         #created, then on GUI the scrollbar will roll to this item.
-        abnormal_path = ''
+        abnormal_path = None
         
         for catelist in category:
             catename = catelist.attributes["name"].value
@@ -492,7 +492,7 @@ class DeviceTree(threading.Thread, _IdleObject):
                                                  str(line.item_id)] = [ \
                                                  self.tempiter,line,'c']
 
-                                    if abnormal_path == '':
+                                    if abnormal_path is None:
                                         if first_iter == True:
                                             self.emit("get_path", self.myiter)
                                             self.cond.notify()
@@ -556,7 +556,7 @@ class DeviceTree(threading.Thread, _IdleObject):
                                         self.dev_tree[str(line.item_id)] = \
                                         [self.tempiter,line,'c']
 
-                                    if abnormal_path == '':
+                                    if abnormal_path is None:
                                         if first_iter == True:
                                             self.emit("get_path", self.myiter)
                                             self.cond.notify()
@@ -670,7 +670,7 @@ class HDDgui:
     detail_inf_run = None
     myiter = None
     tempiter = None
-    abnormal_path = ''
+    abnormal_path = None
     repo_listdic = {}
 	
     def __init__(self):
@@ -1215,7 +1215,7 @@ class HDDgui:
             self.devtreeview.expand_all()
             self.devtreeview.set_sensitive(True)
 
-            if self.abnormal_path != '':
+            if self.abnormal_path is not None:
                 self.devtreeview.scroll_to_cell( 
                 self.abnormal_path,None,True,0.5,0)
             self.__rescan = False
