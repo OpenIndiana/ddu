@@ -1387,11 +1387,11 @@ def callback(icon):
         sys.exit(0)
 
 if __name__ == '__main__':
-    try:
-        Gtk.init_check(sys.argv)
-    except RuntimeError as e:
+    initialized, argv = Gtk.init_check(sys.argv)
+    if initialized:
+        sys.argv = list(argv)
+    else:
         print(_("Unable to initialize gtk"))
-        print(str(e))
         sys.exit(1)
     if len(sys.argv) >= 2 and sys.argv[1].startswith('--'):
         if sys.argv[1][2:]  == "silent":
