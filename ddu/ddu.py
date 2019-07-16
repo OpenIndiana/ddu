@@ -18,14 +18,14 @@ import subprocess
 try:
     import gi
     gi.require_version('Gtk','3.0')
-    from gi.repository import Gtk, Gdk, GdkPixbuf, GObject, Pango
+    gi.require_version('Notify','0.7')
+    from gi.repository import Gtk, Gdk, GdkPixbuf, GObject, Pango, Notify
 except:
     sys.exit(1)
 
 import threading
 import gettext
 import locale
-import notify2
 import webbrowser
 import subprocess
 from DDU.ddu_errors import DDUException
@@ -1374,14 +1374,13 @@ class HDDgui:
             else:
                 selection.__disp_data = ''
 
-def callback(icon):
+def callback(notification, action):
     """handle notification event"""
-    if NOTIFICATION != None:
+    if notification != None:
         try:
-            NOTIFICATION.close()
+            notification.close()
         except GObject.GError:
             pass
-        icon.set_visible(False)
         HDDgui()
         Gtk.main()
         sys.exit(0)
@@ -1395,7 +1394,7 @@ if __name__ == '__main__':
         sys.exit(1)
     if len(sys.argv) >= 2 and sys.argv[1].startswith('--'):
         if sys.argv[1][2:]  == "silent":
-            notify2.init("DDU project")
+            Notify.init("DDU project")
             FIND_MISSING_DRIVER = False
             STATUS, OUTPUT = subprocess.getstatusoutput(
             '%s/scripts/probe.sh init' % ABSPATH)
@@ -1423,18 +1422,15 @@ if __name__ == '__main__':
                                     FIND_MISSING_DRIVER = True
                                     break
             if FIND_MISSING_DRIVER == True:
-                NOTIFICATION = notify2.Notification(
+                NOTIFICATION = Notify.Notification.new(
                               "Missing Device Drivers",
-                               "Click this box to display the devices\n"
+                               "Click the button below to display the devices\n"
                                "and to install the missing drivers.",
                                "%s/data/noti-dialog.png" % ABSPATH)
-                NOTIFICATION.set_urgency(notify2.URGENCY_NORMAL)
-                NOTIFICATION.set_timeout(notify2.EXPIRES_NEVER)
+                NOTIFICATION.set_urgency(Notify.Urgency.NORMAL)
+                NOTIFICATION.set_timeout(Notify.EXPIRES_NEVER)
 
-                ICON = Gtk.StatusIcon.new_from_file( 
-                                                "%s/data/icon.png" % ABSPATH)
-                ICON.connect('activate', callback)
-                NOTIFICATION.attach_to_status_icon(ICON)
+                NOTIFICATION.add_action('Clicked', 'Show DDU', callback)
                 NOTIFICATION.show()
             else:
                 sys.exit(0)

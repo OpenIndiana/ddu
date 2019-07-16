@@ -92,7 +92,6 @@ LINK.c  = $(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LIBS)
 
 REQUIRED_PACKAGES += developer/gcc-7
 REQUIRED_PACKAGES += developer/versioning/git
-REQUIRED_PACKAGES += library/python/notify2-$(PYV)
 REQUIRED_PACKAGES += library/python/pygobject-3-$(PYV)
 REQUIRED_PACKAGES += library/python/simplejson-$(PYV)
 REQUIRED_PACKAGES += runtime/python-$(PYV)
