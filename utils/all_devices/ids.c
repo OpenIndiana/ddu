@@ -310,7 +310,7 @@ get_vendor_info(VendorInfo *pVen_Info, char *str)
 	pVen_Info->nDevice = 0;
 	pVen_Info->Device = NULL;
 	pVen_Info->VendorName =	NULL;
-	(void) sscanf(str, "%hx ", &pVen_Info->VendorID);
+	(void) sscanf(str, "%x ", &pVen_Info->VendorID);
 
 	p = strchr(str,	' ');
 
@@ -331,7 +331,7 @@ get_device_info(VendorInfo *pVen_Info, DeviceInfo *pDev_Info, char *str)
 	pDev_Info->nSubsystem =	0;
 	pDev_Info->Subsystem = NULL;
 	pDev_Info->DeviceName =	NULL;
-	(void) sscanf(str, "%hx ", &pDev_Info->DeviceID);
+	(void) sscanf(str, "%x ", &pDev_Info->DeviceID);
 
 	p = strchr(str,	' ');
 
@@ -356,7 +356,7 @@ SubsystemInfo *pSubsys_Info, char *str)
 
 	pSubsys_Info->SubsystemName = NULL;
 
-	(void) sscanf(str, "%hx ", &pSubsys_Info->VendorID);
+	(void) sscanf(str, "%x ", &pSubsys_Info->VendorID);
 
 	p = strchr(str,	' ');
 
@@ -364,7 +364,7 @@ SubsystemInfo *pSubsys_Info, char *str)
 		while (isblank(*p))
 			p++;
 
-		(void) sscanf(p, "%hx ", &pSubsys_Info->SubsystemID);
+		(void) sscanf(p, "%x ", &pSubsys_Info->SubsystemID);
 		p = strchr(p, ' ');
 
 		if (p) {
