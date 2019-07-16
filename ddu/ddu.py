@@ -1103,7 +1103,7 @@ class HDDgui:
                     driver_info = ''
                 scriptsdir = ABSPATH + '/scripts'
                 status, detail_output = subprocess.getstatusoutput(
-                '%s/det_info.sh %s CLASS=%s' % 
+                '%s/det_info.sh "%s" CLASS=%s' %
                 (scriptsdir, devpath, classcode))
                 if status == 0:
                     self.detail_inf_run = DetailInf(detail_output, 
@@ -1364,7 +1364,7 @@ class HDDgui:
                 try:
                     if selection.detail_inf_run.spam():
                         status, detail_output = subprocess.getstatusoutput(
-                        '%s/det_info.sh %s CLASS=%s' % 
+                        '%s/det_info.sh "%s" CLASS=%s' %
                         (scriptsdir, devpath, classcode))
                         del status
                         selection.detail_inf_run = DetailInf( 

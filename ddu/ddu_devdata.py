@@ -56,7 +56,7 @@ class ddu_dev_data(object):
     def get_compatible_name_string(self):
         """get device compatible string"""
         status, output = subprocess.getstatusoutput(
-                                  '%s/scripts/det_info.sh %s CLASS=%s' %
+                                  '%s/scripts/det_info.sh "%s" CLASS=%s' %
                                   (ABSPATH, str(self.pci_path),
                                   str(self.class_code)))
         status, output_find = subprocess.getstatusoutput(
@@ -71,7 +71,7 @@ class ddu_dev_data(object):
     def get_binding_name_string(self):
         """get device binding name string"""
         status, output = subprocess.getstatusoutput(
-                                  '%s/scripts/det_info.sh %s CLASS=%s' %
+                                  '%s/scripts/det_info.sh "%s" CLASS=%s' %
                                   (ABSPATH, str(self.pci_path),
                                   str(self.class_code)))
         status, output_find = subprocess.getstatusoutput(
