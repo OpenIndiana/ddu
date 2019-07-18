@@ -1,4 +1,4 @@
-#! /usr/bin/python2.7
+#! /usr/bin/python3.5
 #
 # CDDL HEADER START
 #
@@ -27,13 +27,19 @@ provide functions for DDU modules
 """
 import os
 import sys
-import gtk
-import commands
+import subprocess
 import gettext
 from xml.dom.minidom import Document
 from time import gmtime, strftime
 import re
-from ConfigParser import ConfigParser
+from configparser import ConfigParser
+
+try:
+    import gi
+    gi.require_version('Gtk','3.0')
+    from gi.repository import Gtk
+except:
+    sys.exit(1)
 
 DDUCONFIG = ConfigParser()
 DDUCONFIG.read(os.path.join(os.path.dirname(
@@ -43,7 +49,6 @@ ABSPATH = DDUCONFIG.get('general','abspath')
 try:
     gettext.bindtextdomain('ddu','%s/i18n' % ABSPATH)
     gettext.textdomain('ddu')
-    gtk.glade.bindtextdomain('ddu','%s/i18n' % ABSPATH)
 except AttributeError:
     pass
 
@@ -51,7 +56,7 @@ _ = gettext.gettext
 
 def insert_one_tag_into_buffer(textbuffer, name, *params):
     """insert tag in to text area"""
-    tag = gtk.TextTag(name)
+    tag = Gtk.TextTag.new(name)
     while(params):
         tag.set_property(params[0], params[1])
         params = params[2:]
@@ -65,27 +70,27 @@ def insert_conf(ent1, ent2, ent3, ent4):
     build system hardware configuration  for submission dialog.
     ent1-4 are label objects in submission dialog
     """
-    status, output = commands.getstatusoutput('/sbin/uname -p')
+    status, output = subprocess.getstatusoutput('/sbin/uname -p')
     bindir = ABSPATH + '/bin/' + output
-    status, output = commands.getstatusoutput('%s/dmi_info -S' % bindir)
+    status, output = subprocess.getstatusoutput('%s/dmi_info -S' % bindir)
     if status != 0:
-        print "can not get system info!"
+        print("can not get system info!")
         return
     inpt = output.splitlines()
     ent1.set_text(str(inpt[1].split(':')[1].strip()))
     ent2.set_text(str(inpt[2].split(':')[1].strip()))
 
-    status, output = commands.getstatusoutput('%s/dmi_info -C' % bindir)
+    status, output = subprocess.getstatusoutput('%s/dmi_info -C' % bindir)
     if status != 0:
-        print "can not get processor info!"
+        print("can not get processor info!")
         return
 
     inpt = output.splitlines()
     ent3.set_text(str(inpt[0].split(':')[1].strip()))
 
-    status, output = commands.getstatusoutput('%s/dmi_info -B' % bindir)
+    status, output = subprocess.getstatusoutput('%s/dmi_info -B' % bindir)
     if status != 0:
-        print "can not get BIOS info!"
+        print("can not get BIOS info!")
         return
 
     inpt = output.splitlines()
@@ -102,7 +107,7 @@ def insert_col_info(name_ent, email_ent, server_com, manu_text, manu_modle,
     text area
     """
     del name_ent, email_ent, server_com, cpu_type, bios_set, general_ent
-    status, output = commands.getstatusoutput('/sbin/uname -p')
+    status, output = subprocess.getstatusoutput('/sbin/uname -p')
     del status
     bindir = ABSPATH + '/bin/' + output
 	
@@ -121,7 +126,7 @@ def insert_col_info(name_ent, email_ent, server_com, manu_text, manu_modle,
                                        "\nManufacture model:", "bold")
     textbuffer.insert(line_iter, str(manu_modle.get_text().strip()))
 
-    status, output = commands.getstatusoutput('isainfo -b')
+    status, output = subprocess.getstatusoutput('isainfo -b')
 
     line_iter = textbuffer.get_end_iter()
     textbuffer.insert_with_tags_by_name (line_iter, "\n64 Bit:","bold")
@@ -130,12 +135,12 @@ def insert_col_info(name_ent, email_ent, server_com, manu_text, manu_modle,
     elif output == '64':
         textbuffer.insert(line_iter, 'True')
 
-    status, output = commands.getstatusoutput('uname -a')
+    status, output = subprocess.getstatusoutput('uname -a')
     line_iter = textbuffer.get_end_iter()
     textbuffer.insert_with_tags_by_name(line_iter, "\nOS version:", "bold")
     textbuffer.insert(line_iter, str(output.strip()))
 	
-    status, output = commands.getstatusoutput('%s/dmi_info -C' % bindir)
+    status, output = subprocess.getstatusoutput('%s/dmi_info -C' % bindir)
     inpt = output.splitlines()
     line_iter = textbuffer.get_end_iter()
     textbuffer.insert_with_tags_by_name (line_iter, "\nCPU Type:","bold")
@@ -162,17 +167,17 @@ def insert_col_info(name_ent, email_ent, server_com, manu_text, manu_modle,
 
     line_iter = textbuffer.get_end_iter()
     textbuffer.insert_with_tags_by_name (line_iter, "\nprtconf -pv:\n", "bold")
-    status, output = commands.getstatusoutput('/usr/sbin/prtconf -pv')
+    status, output = subprocess.getstatusoutput('/usr/sbin/prtconf -pv')
     textbuffer.insert(line_iter, output)
 
     line_iter = textbuffer.get_end_iter()
     textbuffer.insert_with_tags_by_name(line_iter, "\nprtdiag:\n","bold")
-    status, output = commands.getstatusoutput('/usr/sbin/prtdiag')
+    status, output = subprocess.getstatusoutput('/usr/sbin/prtdiag')
     textbuffer.insert(line_iter, output)
 
     line_iter = textbuffer.get_end_iter()
     textbuffer.insert_with_tags_by_name (line_iter, "\n\n","bold")
-    status, output = commands.getstatusoutput('%s/dmi_info' % bindir)
+    status, output = subprocess.getstatusoutput('%s/dmi_info' % bindir)
     textbuffer.insert(line_iter, output)
     return
 
@@ -181,27 +186,27 @@ def insert_col(name_ent, email_ent, server_com, manu_text, manu_modle, \
                inform_c, dev_submit):
     """build system config xml file for submission"""
     del cpu_type, bios_set, inform_c
-    status, output = commands.getstatusoutput('/sbin/uname -p')
+    status, output = subprocess.getstatusoutput('/sbin/uname -p')
     bindir = ABSPATH + '/bin/' + output
     scriptsdir = ABSPATH + '/scripts'
     model = server_com.get_model()
     active = server_com.get_active()
     server_inf = model[active][0]
 
-    status, isa_output = commands.getstatusoutput('isainfo -b')
+    status, isa_output = subprocess.getstatusoutput('isainfo -b')
 
-    status, os_output = commands.getstatusoutput('uname -a')
+    status, os_output = subprocess.getstatusoutput('uname -a')
 	
-    status, dmic_output = commands.getstatusoutput('%s/dmi_info -C' % bindir)
+    status, dmic_output = subprocess.getstatusoutput('%s/dmi_info -C' % bindir)
     dmic_inpt = dmic_output.splitlines()
 
     textbuffer_g = general_ent.get_buffer()
     startiter = textbuffer_g.get_start_iter()
     enditer = textbuffer_g.get_end_iter()
 
-    status, prt_output = commands.getstatusoutput('/usr/sbin/prtconf -pv')
-    status, prtd_output = commands.getstatusoutput('/usr/sbin/prtdiag')
-    status, dmi_output = commands.getstatusoutput('%s/dmi_info' % bindir)
+    status, prt_output = subprocess.getstatusoutput('/usr/sbin/prtconf -pv')
+    status, prtd_output = subprocess.getstatusoutput('/usr/sbin/prtdiag')
+    status, dmi_output = subprocess.getstatusoutput('%s/dmi_info' % bindir)
 
     doc = Document()
 	
@@ -314,7 +319,7 @@ def insert_col(name_ent, email_ent, server_com, manu_text, manu_modle, \
     gennotes = doc.createElement("genNotes")
     hclsubmittal.appendChild(gennotes)
     gennotestext = doc.createTextNode(textbuffer_g.get_text(startiter, \
-                                                            enditer))
+                                                            enditer, False))
     gennotes.appendChild(gennotestext)
 
     numcomponents = doc.createElement("numComponents")
@@ -377,7 +382,7 @@ def insert_col(name_ent, email_ent, server_com, manu_text, manu_modle, \
     systemdetails = doc.createElement("systemDetails")
     hclsubmittal.appendChild(systemdetails)
 
-    status, dmis_output = commands.getstatusoutput('%s/dmi_info -S' % bindir)
+    status, dmis_output = subprocess.getstatusoutput('%s/dmi_info -S' % bindir)
     dmis_inpt = dmis_output.splitlines()
 
     system_inf = doc.createElement("system")
@@ -409,23 +414,23 @@ def insert_col(name_ent, email_ent, server_com, manu_text, manu_modle, \
     disk_env = doc.createElement("DiskInfo")
     storage_env.appendChild(disk_env)
 
-    status, boot_output = commands.getstatusoutput(
+    status, boot_output = subprocess.getstatusoutput(
                                                   'pfexec df / | grep ramdisk')
     del boot_output
     if status == 0:
         boot_inftext = doc.createTextNode("No")
     else:
         boot_inftext = doc.createTextNode("Yes")
-        status, zpool_output = commands.getstatusoutput('pfexec zpool status')
+        status, zpool_output = subprocess.getstatusoutput('pfexec zpool status')
         zpool_envlist = doc.createTextNode(zpool_output)
         zpool_env.appendChild(zpool_envlist)
-        status, zfs_output = commands.getstatusoutput('pfexec zfs list')
+        status, zfs_output = subprocess.getstatusoutput('pfexec zfs list')
         zfs_envlist = doc.createTextNode(zfs_output)
         zfs_env.appendChild(zfs_envlist)
 
     boot_env.appendChild(boot_inftext)
 
-    status, dmib_output = commands.getstatusoutput('%s/dmi_info -B' % bindir)
+    status, dmib_output = subprocess.getstatusoutput('%s/dmi_info -B' % bindir)
     dmib_inpt = dmib_output.splitlines()
 
     bios_inf = doc.createElement("bios")
@@ -457,7 +462,7 @@ def insert_col(name_ent, email_ent, server_com, manu_text, manu_modle, \
     firmwarerevision_inf.appendChild(firmwarerevision_inftext)
 
 
-    status, dmim_output = commands.getstatusoutput('%s/dmi_info -M' % bindir)
+    status, dmim_output = subprocess.getstatusoutput('%s/dmi_info -M' % bindir)
     dmim_inpt = dmim_output.splitlines()
 
     motherboard_inf = doc.createElement("motherboard")
@@ -500,7 +505,7 @@ def insert_col(name_ent, email_ent, server_com, manu_text, manu_modle, \
     processor_inf = doc.createElement("Processor")
     systemdetails.appendChild(processor_inf)
 
-    status, dmic_output = commands.getstatusoutput('%s/dmi_info -C' % bindir)
+    status, dmic_output = subprocess.getstatusoutput('%s/dmi_info -C' % bindir)
     dmic_inpt = dmic_output.splitlines()
 
     cputype = doc.createElement("CpuType")
@@ -525,9 +530,9 @@ def insert_col(name_ent, email_ent, server_com, manu_text, manu_modle, \
 
     try:
         for loop in range(int(dmic_inpt[1].split(':')[1])):
-            status, dmi_output = commands.getstatusoutput(
+            status, dmi_output = subprocess.getstatusoutput(
                                           '%s/dmi_info' % bindir)
-            status, cpun_inf = commands.getstatusoutput( 
+            status, cpun_inf = subprocess.getstatusoutput( 
                                '%s/dmi_info | grep -n "Processor %s"' %
                                (bindir, str(loop)))
 	
@@ -577,10 +582,10 @@ def insert_col(name_ent, email_ent, server_com, manu_text, manu_modle, \
     except (AttributeError, ValueError):
         pass
 
-    status, dmim_output = commands.getstatusoutput('%s/dmi_info -m' % bindir)
+    status, dmim_output = subprocess.getstatusoutput('%s/dmi_info -m' % bindir)
     dmim_inpt = dmim_output.splitlines()
 
-    status, dmims_output = commands.getstatusoutput( 
+    status, dmims_output = subprocess.getstatusoutput( 
                            '%s/dmi_info -m | grep -n "Memory Subsystem"' %
                            bindir)
     dmims_inpt = dmims_output.splitlines()
@@ -681,13 +686,13 @@ def insert_col(name_ent, email_ent, server_com, manu_text, manu_modle, \
     pcidevices = doc.createElement("pciDevices")
     hclsubmittal.appendChild(pcidevices)
 	
-    for category, controllers in dev_submit.iteritems():
+    for category, controllers in dev_submit.items():
         del category
         if len(controllers) > 0:
             for pci_controller in controllers:
                 devices = doc.createElement("devices")
                 pcidevices.appendChild(devices)
-                status, detail_output = commands.getstatusoutput(
+                status, detail_output = subprocess.getstatusoutput(
                                         '%s/det_info.sh %s CLASS=%s' %
                                         (scriptsdir, pci_controller[0],
                                         pci_controller[1]))
@@ -804,7 +809,7 @@ def insert_col(name_ent, email_ent, server_com, manu_text, manu_modle, \
 
                     if disk_status == "Yes":
                         disk_status, \
-                        diskdetail_output = commands.getstatusoutput(
+                        diskdetail_output = subprocess.getstatusoutput(
                                                      '%s/hd_detect -c %s' %
                                                      (bindir,
                                                      pci_controller[0]))

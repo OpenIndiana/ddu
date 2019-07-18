@@ -1,4 +1,4 @@
-#!/usr/bin/python2.7
+#!/usr/bin/python3.5
 #
 # This file and its contents are supplied under the terms of the
 # Common Development and Distribution License ("CDDL"), version 1.0.
@@ -47,9 +47,6 @@
 # 	driver_type - 1 - native illumos driver, 0 - not supported
 #	driver_name - name of the driver
 #	download_url - URL for driver download (taken from DDU database)
-
-from __future__ import print_function
-from __future__ import with_statement
 
 import os
 import sys

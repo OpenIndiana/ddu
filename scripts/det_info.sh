@@ -74,7 +74,7 @@ if [ -z "$1" ]; then
     echo "$0: Invalid argument..." >>$err_log
     exit 1
 else
-    dev_path=$1
+    dev_path="$1"
 fi
 
 if [ "$1" == "cpu" ] || [ "$1" == "memory" ]; then
@@ -97,7 +97,7 @@ if [ "$1" == "cpu" ] || [ "$1" == "memory" ]; then
         ${bin_dir}/dmi_info -m >/tmp/$o_file 2>>$err_log
     fi
 else
-    o_file=$(echo $dev_path | tr -d '/@,')
+    o_file=$(echo "$dev_path" | tr -d '/@,[]')
 
     if [[ ! -x ${bin_dir}/all_devices ]]; then
         echo "$0: ${bin_dir}/all_devices not found or not executable." \
@@ -110,7 +110,7 @@ else
     #
     print -u1 "/tmp/$o_file" 
 
-    ${bin_dir}/all_devices -v -d $dev_path >/tmp/$o_file 2>>$err_log
+    ${bin_dir}/all_devices -v -d "$dev_path" >/tmp/$o_file 2>>$err_log
 fi
 
 chmod 666 /tmp/"$o_file" 2>/dev/null
@@ -121,7 +121,7 @@ if [ "$(wc /tmp/"$o_file" 2>/dev/null | awk '{print $1}')" -le 1 ]; then
              >>$err_log 
         exit 1
     fi
-    ${bin_dir}/bat_detect -d $dev_path >/tmp/$o_file 2>>$err_log
+    ${bin_dir}/bat_detect -d "$dev_path" >/tmp/$o_file 2>>$err_log
 fi
 
 if [ -z "$2" ]; then

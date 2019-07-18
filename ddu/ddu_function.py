@@ -30,7 +30,7 @@ from DDU.ddu_repo import ddu_repo_object
 from DDU.ddu_package import ddu_package_object
 from DDU.ddu_devdata import ddu_dev_data
 
-import commands
+import subprocess
 from xml.dom import minidom
 from xml.dom import Node
 import os
@@ -59,7 +59,7 @@ def ddu_build_repo_list(ips_repo_list):
         for repo_name, repo_url in ips_repo_list:
         #If repo name is already in your system repo list,
         #Add it directly in repo_obj_list repo_obj_list
-            status, output = commands.getstatusoutput(
+            status, output = subprocess.getstatusoutput(
                         "%s/scripts/pkg_relate.sh list %s 2>/dev/null" %
                         (ABSPATH,repo_name))
             repo_exist = False
@@ -79,13 +79,13 @@ def ddu_build_repo_list(ips_repo_list):
             if repo_exist == True:
                 repo_obj_list.append(ddu_repo_object(repo_name, repo_url))
             else:
-                status, output = commands.getstatusoutput( \
+                status, output = subprocess.getstatusoutput( \
                                         '%s/scripts/pkg_relate.sh add %s %s' %
                                         (ABSPATH,repo_name,repo_url))
                 if status == 0:
                     repo_obj_list.append(ddu_repo_object(repo_name, repo_url))
                 else:
-                    print >> sys.__stderr__, output
+                    print(output, file=sys.stderr)
                     raise ddu_errors.RepositoryCreatedException(repo_url)
     if len(repo_obj_list)  == 0:
         raise ddu_errors.RepositoryNotFoundException("No repositories found")
@@ -100,10 +100,10 @@ def ddu_devscan(return_missing_only = True, device_type = "all"):
     ${ddu directory}/scripts/probe.sh
     ${ddu directory}/scripts/det_info.sh
     """
-    status, output = commands.getstatusoutput(
+    status, output = subprocess.getstatusoutput(
                 "%s/scripts/probe.sh init" % ABSPATH)
     if status != 0:
-        print >> sys.__stderr__, output
+        print(output, file=sys.stderr)
         raise ddu_errors.DevScanNotStart("Error initializing for scan")
     drv_list = []
     #find all drivers list
@@ -117,9 +117,9 @@ def ddu_devscan(return_missing_only = True, device_type = "all"):
                     probecmd = ABSPATH+'/'+probedata.data
                     data_type = str(probedata.data).split(' ')[1]
                 #performing scanning script by hardware category
-                status, output = commands.getstatusoutput(probecmd)
+                status, output = subprocess.getstatusoutput(probecmd)
                 if status != 0:
-                    print >> sys.__stderr__, output
+                    print(output, file=sys.stderr)
                     raise ddu_errors.DevScanNotStart()
 
                 if len(output) > 0:
@@ -200,11 +200,11 @@ def ddu_devscan(return_missing_only = True, device_type = "all"):
     else:
         device_scan_cndi = device_type.split(',')
         for device_scan_index in device_scan_cndi:
-            status, output = commands.getstatusoutput(
+            status, output = subprocess.getstatusoutput(
                                       "%s/scripts/probe.sh %s" %
                                       (ABSPATH,device_scan_index))
             if status != 0:
-                print >> sys.__stderr__, output
+                print(output, file=sys.stderr)
                 raise ddu_errors.DevScanNotStart()
             if len(output) > 0:
                 output_lines = output.splitlines()
@@ -297,10 +297,10 @@ def ddu_package_lookup(ddu_dev_instance, repo_list):
     if len(repo_list) == 0:
         repo_search_all = True
 
-    status, output = commands.getstatusoutput(
+    status, output = subprocess.getstatusoutput(
                              '%s/scripts/probe.sh init' % ABSPATH)
     if status != 0:
-        print >> sys.__stderr__, output
+        print(output, file=sys.stderr)
         raise ddu_errors.DevScanNotStart()
     try:
         device_descriptor = ddu_dev_instance.get_description()
@@ -321,7 +321,7 @@ def ddu_package_lookup(ddu_dev_instance, repo_list):
                 raise ddu_errors.RepositorylistNotValid(
                                       "repo list argument is invalid")
 
-        status, output = commands.getstatusoutput(
+        status, output = subprocess.getstatusoutput(
                                  '%s/scripts/comp_lookup.sh \
                                  \"%s\" \"%s\" || \
                                  %s/scripts/comp_lookup.sh \
@@ -329,7 +329,7 @@ def ddu_package_lookup(ddu_dev_instance, repo_list):
                                  (ABSPATH, device_compatible, repo_names,
                                   ABSPATH, device_binding, repo_names))
     else:
-        status, output = commands.getstatusoutput(
+        status, output = subprocess.getstatusoutput(
                                  '%s/scripts/comp_lookup.sh \"%s\" || \
                                   %s/scripts/comp_lookup.sh \"%s\"' %
                                   (ABSPATH, device_compatible,
@@ -350,9 +350,9 @@ def ddu_package_lookup(ddu_dev_instance, repo_list):
     package_location = output.split(":")[0]
     if package_type in ["IPS", "SVR4", "UNK"]:
         if package_type == "IPS":
-            status, driver_package = commands.getstatusoutput(
+            status, driver_package = subprocess.getstatusoutput(
                            '/usr/bin/cat /tmp/%s_dlink.tmp' % package_location)
-            status, driver_repo = commands.getstatusoutput(
+            status, driver_repo = subprocess.getstatusoutput(
                            '/usr/bin/cat /tmp/%s_info.tmp' % package_location)
             return ddu_package_object(
                                 pkg_type = "PKG",
@@ -364,9 +364,9 @@ def ddu_package_lookup(ddu_dev_instance, repo_list):
                                 device_descriptor = device_descriptor,
                                 third_party_from_search = False)
         elif package_type == "SVR4":
-            status, driver_package = commands.getstatusoutput(
+            status, driver_package = subprocess.getstatusoutput(
                            '/usr/bin/cat /tmp/%s_dlink.tmp' % package_location)
-            status, driver_repo = commands.getstatusoutput(
+            status, driver_repo = subprocess.getstatusoutput(
                            '/usr/bin/cat /tmp/%s_info.tmp' % package_location)
             media = os.path.basename(driver_repo)
             location = os.path.dirname(driver_repo)
@@ -380,9 +380,9 @@ def ddu_package_lookup(ddu_dev_instance, repo_list):
                                 device_descriptor = device_descriptor,
                                 third_party_from_search = True)
         elif package_type == "UNK"  and package_location != "":
-            status, driver_package = commands.getstatusoutput(
+            status, driver_package = subprocess.getstatusoutput(
                            '/usr/bin/cat /tmp/%s_dlink.tmp' % package_location)
-            status, driver_repo = commands.getstatusoutput(
+            status, driver_repo = subprocess.getstatusoutput(
                            '/usr/bin/cat /tmp/%s_info.tmp' % package_location)
             media = os.path.basename(driver_package)
             location = os.path.dirname(driver_package)
@@ -445,23 +445,23 @@ def ddu_install_package(ddu_package_ob, root_install,
                                     "Installation of" +
                                     " insecure packages are not allowed")
     if pkg_type == "PKG":
-        status, output = commands.getstatusoutput(
+        status, output = subprocess.getstatusoutput(
                         "%s/scripts/pkg_relate.sh list all \
                         | nawk -F\"\t\" \'{ print $1 }\' 2>/dev/null" %
                         ABSPATH)
         if status != 0:
-            print >> sys.__stderr__, output
+            print(output, file=sys.stderr)
             raise ddu_errors.RepositoryNotReadyException(
                                       "Could not check repositories")
         else:
             if not (pkg_location in output.split("\n")):
                 raise ddu_errors.InstallAreaUnaccessible()
-        status, output = commands.getstatusoutput(
+        status, output = subprocess.getstatusoutput(
                          "%s/scripts/file_check.sh IPS %s %s %s" %
                          (ABSPATH,pkg_name,pkg_location, root_install))
 
         if status != 0:
-            print >> sys.__stdout__, output
+            print(output, file=sys.stdout)
             try:
                 logfile = open('/tmp/ddu_err.log', 'a')
                 logfile.write(str(output))
@@ -473,11 +473,11 @@ def ddu_install_package(ddu_package_ob, root_install,
                          "Error installing package: name:%s, locn:%s" %
                          (pkg_name, pkg_location))
     elif pkg_type in  ["SVR4", "P5I"]:
-        status, output = commands.getstatusoutput(
+        status, output = subprocess.getstatusoutput(
                        "%s/scripts/file_check.sh %s \"%s\" %s %s" %
                        (ABSPATH, pkg_type, pkg_name,pkg_location, root_install))
         if status != 0:
-            print >> sys.__stdout__, output
+            print(output, file=sys.stdout)
             try:
                 logfile = open('/tmp/ddu_err.log', 'a')
                 logfile.write(str(output))

@@ -24,7 +24,7 @@
 """
 device data
 """
-import commands
+import subprocess
 
 ABSPATH = '/usr/ddu'
 class ddu_dev_data(object):
@@ -55,11 +55,11 @@ class ddu_dev_data(object):
 
     def get_compatible_name_string(self):
         """get device compatible string"""
-        status, output = commands.getstatusoutput(
-                                  '%s/scripts/det_info.sh %s CLASS=%s' %
+        status, output = subprocess.getstatusoutput(
+                                  '%s/scripts/det_info.sh "%s" CLASS=%s' %
                                   (ABSPATH, str(self.pci_path),
                                   str(self.class_code)))
-        status, output_find = commands.getstatusoutput(
+        status, output_find = subprocess.getstatusoutput(
                                        "/usr/bin/grep \"compatible name:\" %s"
                                        % output)
         del status
@@ -70,11 +70,11 @@ class ddu_dev_data(object):
 
     def get_binding_name_string(self):
         """get device binding name string"""
-        status, output = commands.getstatusoutput(
-                                  '%s/scripts/det_info.sh %s CLASS=%s' %
+        status, output = subprocess.getstatusoutput(
+                                  '%s/scripts/det_info.sh "%s" CLASS=%s' %
                                   (ABSPATH, str(self.pci_path),
                                   str(self.class_code)))
-        status, output_find = commands.getstatusoutput(
+        status, output_find = subprocess.getstatusoutput(
                                        "/usr/bin/grep \"binding name:\" %s"
                                        % output)
         del status

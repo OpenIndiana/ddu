@@ -42,7 +42,9 @@ SORT=/usr/bin/sort
 TOUCH=/usr/bin/touch
 TR=/usr/bin/tr
 
-PYTHON_VERSION = 2.7
+PYTHON_VERSION = 3.5
+
+PYV = $(subst .,,$(PYTHON_VERSION))
 
 ARCH=$(shell uname -p)
 
@@ -90,6 +92,9 @@ LINK.c  = $(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LIBS)
 
 REQUIRED_PACKAGES += developer/gcc-7
 REQUIRED_PACKAGES += developer/versioning/git
+REQUIRED_PACKAGES += library/python/pygobject-3-$(PYV)
+REQUIRED_PACKAGES += library/python/simplejson-$(PYV)
+REQUIRED_PACKAGES += runtime/python-$(PYV)
 REQUIRED_PACKAGES += service/hal
 REQUIRED_PACKAGES += system/header
 REQUIRED_PACKAGES += system/library/libdbus

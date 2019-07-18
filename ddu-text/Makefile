@@ -19,7 +19,6 @@ SRCS = \
 	action.py \
 	base_screen.py \
 	color_theme.py \
-	ddu-text.py \
 	device_scan.py \
 	error_window.py \
 	inner_window.py \
@@ -31,21 +30,30 @@ SRCS = \
 	toplist_window.py \
 	window_area.py
 
+DDU_PROGRAM = ddu-text.py
+
 DESTFILES = $(SRCS:%=$(USRDDUTEXTUTILS)/%)
 
+DESTFILES += $(USRDDU)/$(DDU_PROGRAM)
 DESTFILES += $(USRBIN)/ddu-text
 
 DESTDIRS= \
         $(USRBIN) \
+        $(USRDDU) \
         $(USRDDUTEXTUTILS)
+
+$(USRBIN)/ddu-text: $(USRDDU)/$(DDU_PROGRAM)
+	$(LN) -s ../ddu/$(DDU_PROGRAM) $@
 
 all:
 
-$(USRDDUTEXTUTILS)/%:	%
+$(USRDDU)/$(DDU_PROGRAM): MODE=0755
+
+$(USRDDU)/%:    %
 	$(INSTALL) $< $@
 
-$(USRBIN)/ddu-text: $(USRDDUTEXTUTILS)/ddu-text.py
-	$(LN) -s ../../ddu-text/utils/ddu-text.py $@
+$(USRDDUTEXTUTILS)/%:	%
+	$(INSTALL) $< $@
 
 install: $(DESTDIRS) $(DESTFILES)
 

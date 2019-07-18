@@ -28,7 +28,7 @@ UI Component for displaying error messages
 import curses
 import logging
 
-from inner_window import InnerWindow
+from .inner_window import InnerWindow
 
 
 class ErrorWindow(InnerWindow):

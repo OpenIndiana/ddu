@@ -27,7 +27,7 @@ import curses
 from curses.textpad import Textbox
 from curses.ascii import isprint, ctrl
 
-from inner_window import InnerWindow
+from .inner_window import InnerWindow
 
 class InputWindow(InnerWindow):
     '''InputWindow represent editable text areas on the screen
@@ -105,7 +105,7 @@ class InputWindow(InnerWindow):
             return ord(ctrl('g'))
         else:
             self.input = None
-        if isprint(input):
+        if input is not None and isprint(input):
             self.text_buff.append(chr(input))
             self.text.append(input)
             if not self.is_valid():

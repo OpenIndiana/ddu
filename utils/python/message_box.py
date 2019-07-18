@@ -1,4 +1,4 @@
-#! /usr/bin/python2.7
+#! /usr/bin/python3.5
 #
 # CDDL HEADER START
 #
@@ -27,9 +27,15 @@ show message dialog
 """
 import os
 import sys
-import gtk
 import gettext
-from ConfigParser import ConfigParser
+from configparser import ConfigParser
+
+try:
+    import gi
+    gi.require_version('Gtk','3.0')
+    from gi.repository import Gtk
+except:
+    sys.exit(1)
 
 DDUCONFIG = ConfigParser()
 DDUCONFIG.read(os.path.join(os.path.dirname(os.path.realpath( 
@@ -39,7 +45,6 @@ ABSPATH = DDUCONFIG.get('general','abspath')
 try:
     gettext.bindtextdomain('ddu','%s/i18n' % ABSPATH)
     gettext.textdomain('ddu')
-    gtk.glade.bindtextdomain('ddu','%s/i18n' % ABSPATH)
 except AttributeError:
     pass
 
@@ -48,11 +53,11 @@ _ = gettext.gettext
 class MessageBox:
     """This Class is used to show error message box"""
     def __init__(self, winid, title, message, sec_message=''):
-        self.dialog = gtk.MessageDialog(
+        self.dialog = Gtk.MessageDialog(
                     parent = winid,
-                    flags = gtk.DIALOG_DESTROY_WITH_PARENT | gtk.DIALOG_MODAL,
-                    type = gtk.MESSAGE_ERROR,
-                    buttons = gtk.BUTTONS_CLOSE,
+                    flags = Gtk.DialogFlags.DESTROY_WITH_PARENT | Gtk.DialogFlags.MODAL,
+                    type = Gtk.MessageType.ERROR,
+                    buttons = Gtk.ButtonsType.CLOSE,
                     message_format = _(message))
         self.dialog.set_title(_(title))
         self.dialog.format_secondary_text(_(sec_message))
@@ -61,3 +66,8 @@ class MessageBox:
         """show dialog"""
         self.dialog.run()
         self.dialog.destroy()
+
+if __name__ == '__main__':
+    m = MessageBox(None, 'Submit', 'Test header', 'Test content')
+    m.run()
+    Gtk.main()

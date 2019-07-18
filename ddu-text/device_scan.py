@@ -28,17 +28,17 @@ diaplay missing driver device
 import curses
 import logging
 
-import main_window as main_window
-from __init__ import _
-import inner_window
-from inner_window import InnerWindow
-from window_area import WindowArea
-from toplist_window import Toplist_Window
-from input_window import InputWindow
-from base_screen import BaseScreen
-from action import Action
-from media_window import Media_Window
-import screen_list as screen_list
+from . import main_window as main_window
+from .__init__ import _
+from . import inner_window
+from .inner_window import InnerWindow
+from .window_area import WindowArea
+from .toplist_window import Toplist_Window
+from .input_window import InputWindow
+from .base_screen import BaseScreen
+from .action import Action
+from .media_window import Media_Window
+from . import screen_list as screen_list
 import threading, time
 from DDU.ddu_package import ddu_package_object
 from DDU.ddu_repo import ddu_repo_object
@@ -177,7 +177,7 @@ class DeviceScreen(BaseScreen):
 
         y_loc += 2
 
-        y_loc = win_size_y/2
+        y_loc = int(win_size_y/2)
         self.main_win.central_area.add_text(
               _("Driver location: Pathname/URL, or Repository and Package."),
               y_loc, 1, win_size_x - 1)
