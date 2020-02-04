@@ -41,15 +41,21 @@ builtin cat
 #
 # Set trap
 #
+PATH=/usr/bin:/usr/sbin:$PATH; export PATH
+LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/ddu/lib; export LD_LIBRARY_PATH
+
+if [ -z "$DDU_TMP_DIR" ]; then
+    print -u1 "DDU_TMP_DIR is not set.."
+    exit 1
+fi
+
 trap 'clean_up;exit 10' KILL INT
 trap 'clean_up' EXIT
 
-PATH=/usr/bin:/usr/sbin:$PATH; export PATH
-LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/ddu/lib; export LD_LIBRARY_PATH
 typeset -r base_dir=$(dirname $0)
 typeset -r platform=$(uname -p)
 typeset -r bin_dir=$(echo $base_dir | sed 's/scripts$/bin\//')${platform}
-typeset    err_log=/tmp/ddu_err.log
+typeset    err_log="${DDU_TMP_DIR}/ddu_err.log"
 
 function clean_up
 {
@@ -64,7 +70,7 @@ function clean_up
 #
 function probe_s
 {
-    rf_file=/tmp/find.media.$$
+    rf_file="${DDU_TMP_DIR}/find.media.$$"
     typeset dev_path name mp dev_name
     #
     #Ouput cd devices

@@ -34,11 +34,17 @@ import subprocess
 from xml.dom import minidom
 from xml.dom import Node
 import os
+import tempfile
 import sys
 
 ABSPATH = '/usr/ddu'
 DEVICE_PARENT_FIELD = 1
 DEVICE_DRIVER_NAME_FIELD = 6
+
+def ddu_create_tmp_dir():
+    """Creates temporary directory end exports its value as DDU_TMP_DIR
+    """
+    os.environ["DDU_TMP_DIR"] = tempfile.mkdtemp(prefix='ddu_',dir='/tmp')
 
 def ddu_build_repo_list(ips_repo_list):
     """Build a list of repository objects to be used by ddu_package_lookup()
@@ -297,6 +303,11 @@ def ddu_package_lookup(ddu_dev_instance, repo_list):
     if len(repo_list) == 0:
         repo_search_all = True
 
+    ddu_tmp_dir = os.environ.get('DDU_TMP_DIR')
+    if ddu_tmp_dir is None:
+        raise ddu_errors.DDuDevDataNotValid(
+                             "DDU_TMP_DIR is not specified.")
+
     status, output = subprocess.getstatusoutput(
                              '%s/scripts/probe.sh init' % ABSPATH)
     if status != 0:
@@ -351,9 +362,9 @@ def ddu_package_lookup(ddu_dev_instance, repo_list):
     if package_type in ["IPS", "SVR4", "UNK"]:
         if package_type == "IPS":
             status, driver_package = subprocess.getstatusoutput(
-                           '/usr/bin/cat /tmp/%s_dlink.tmp' % package_location)
+                           '/usr/bin/cat %s/%s_dlink.tmp' % (ddu_tmp_dir, package_location))
             status, driver_repo = subprocess.getstatusoutput(
-                           '/usr/bin/cat /tmp/%s_info.tmp' % package_location)
+                           '/usr/bin/cat %s/%s_info.tmp' % (ddu_tmp_dir, package_location))
             return ddu_package_object(
                                 pkg_type = "PKG",
                                 pkg_name = driver_package,
@@ -365,9 +376,9 @@ def ddu_package_lookup(ddu_dev_instance, repo_list):
                                 third_party_from_search = False)
         elif package_type == "SVR4":
             status, driver_package = subprocess.getstatusoutput(
-                           '/usr/bin/cat /tmp/%s_dlink.tmp' % package_location)
+                           '/usr/bin/cat %s/%s_dlink.tmp' % (ddu_tmp_dir, package_location))
             status, driver_repo = subprocess.getstatusoutput(
-                           '/usr/bin/cat /tmp/%s_info.tmp' % package_location)
+                           '/usr/bin/cat %s/%s_info.tmp' % (ddu_tmp_dir,package_location))
             media = os.path.basename(driver_repo)
             location = os.path.dirname(driver_repo)
             return ddu_package_object(
@@ -381,9 +392,9 @@ def ddu_package_lookup(ddu_dev_instance, repo_list):
                                 third_party_from_search = True)
         elif package_type == "UNK"  and package_location != "":
             status, driver_package = subprocess.getstatusoutput(
-                           '/usr/bin/cat /tmp/%s_dlink.tmp' % package_location)
+                           '/usr/bin/cat %s/%s_dlink.tmp' % (ddu_tmp_dir, package_location))
             status, driver_repo = subprocess.getstatusoutput(
-                           '/usr/bin/cat /tmp/%s_info.tmp' % package_location)
+                           '/usr/bin/cat %s/%s_info.tmp' % (ddu_tmp_dir, package_location))
             media = os.path.basename(driver_package)
             location = os.path.dirname(driver_package)
             return ddu_package_object(
@@ -397,7 +408,8 @@ def ddu_package_lookup(ddu_dev_instance, repo_list):
                                 third_party_from_search = True)
         elif package_type == "UNK"  and package_location == "":
             try:
-                logfile = open('/tmp/ddu_err.log', 'a')
+                logfilepath = '%s/ddu_err.log' % (ddu_tmp_dir)
+                logfile = open(logfilepath, 'a')
                 logfile.write("No proper package found for %s" %
                                     str(device_descriptor))
                 logfile.close()
@@ -423,6 +435,13 @@ def ddu_install_package(ddu_package_ob, root_install,
     ${ddu directory}/scripts/pkg_relate.sh
     ${ddu directory}/scripts/file_check.sh
     """
+
+    ddu_tmp_dir = os.environ.get('DDU_TMP_DIR')
+    if ddu_tmp_dir is None:
+        raise ddu_errors.InstallUnkFail("DDU_TMP_DIR is not specified")
+
+    logfilepath = '%s/ddu_err.log' % (ddu_tmp_dir)
+
     pkg_type = ddu_package_ob.get_pkg_type()
     if not (pkg_type in ["PKG", "SVR4", "P5I"]):
         raise ddu_errors.PackageTypeInvalid((
@@ -463,7 +482,7 @@ def ddu_install_package(ddu_package_ob, root_install,
         if status != 0:
             print(output, file=sys.stdout)
             try:
-                logfile = open('/tmp/ddu_err.log', 'a')
+                logfile = open(logfilepath, 'a')
                 logfile.write(str(output))
                 logfile.close()
             except IOError:
@@ -479,7 +498,7 @@ def ddu_install_package(ddu_package_ob, root_install,
         if status != 0:
             print(output, file=sys.stdout)
             try:
-                logfile = open('/tmp/ddu_err.log', 'a')
+                logfile = open(logfilepath, 'a')
                 logfile.write(str(output))
                 logfile.close()
             except IOError:

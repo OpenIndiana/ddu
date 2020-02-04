@@ -29,6 +29,7 @@ import locale
 import webbrowser
 import subprocess
 from DDU.ddu_errors import DDUException
+from DDU.ddu_function import ddu_create_tmp_dir
 from DDU.ddu_function import ddu_devscan
 from DDU.ddu_function import ddu_package_lookup
 from DDU.ddu_function import ddu_install_package
@@ -1386,6 +1387,8 @@ def callback(notification, action):
         sys.exit(0)
 
 if __name__ == '__main__':
+    if os.environ.get("DDU_TMP_DIR") is None:
+        ddu_create_tmp_dir()
     initialized, argv = Gtk.init_check(sys.argv)
     if initialized:
         sys.argv = list(argv)

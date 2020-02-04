@@ -51,6 +51,13 @@ if (( $# < 1 )) || (( $# > 2 )); then
 fi
 
 #
+# Confirm the $DDU_TMP_DIR is set
+#
+if [ -z "$DDU_TMP_DIR" ]; then
+   exit 1
+fi
+
+#
 # Confirm the $1 is not null
 #
 if [ -z "$1" ]; then
@@ -64,7 +71,7 @@ typeset matched_drv=
 typeset matched_drv_pkg_type=UNK #SVR4,IPS,P5I,UNK
 typeset com_name_str=$1
 typeset repo_candi=$2
-typeset err_log=/tmp/ddu_err.log
+typeset err_log=${DDU_TMP_DIR}/ddu_err.log
 
 #
 # Search through IPS for missing device driver by device 
@@ -72,7 +79,7 @@ typeset err_log=/tmp/ddu_err.log
 #
 function find_driver
 {
-    typeset s_result_file=/tmp/s_result.$$
+    typeset s_result_file=${DDU_TMP_DIR}/s_result.$$
     typeset ret_val s_result def_repo drv_type candi_drv
 
     if [[ ! -x $base_dir/pkg_relate.sh ]]; then
@@ -127,8 +134,8 @@ function find_driver
     if [ $ret_val -eq 0 ] && [ ! -z $s_result ]; then
         matched_drv=$com_name
         matched_drv_pkg_type=IPS
-        echo $s_result | awk '{print $1}' > /tmp/${matched_drv}_info.tmp    
-        echo $s_result | awk '{print $2}' > /tmp/${matched_drv}_dlink.tmp    
+        echo $s_result | awk '{print $1}' > ${DDU_TMP_DIR}/${matched_drv}_info.tmp    
+        echo $s_result | awk '{print $2}' > ${DDU_TMP_DIR}/${matched_drv}_dlink.tmp    
     else
         #
         # Search for the missing driver package via local driver db
@@ -167,19 +174,14 @@ function find_driver
                     matched_drv=$candi_drv
                     matched_drv_pkg_type=IPS
                     echo $s_result | awk '{print $1}' \
-                        > /tmp/${matched_drv}_info.tmp    
+                        > ${DDU_TMP_DIR}/${matched_drv}_info.tmp    
                     echo $s_result | awk '{print $2}' \
-                        > /tmp/${matched_drv}_dlink.tmp    
+                        > ${DDU_TMP_DIR}/${matched_drv}_dlink.tmp    
                 fi
             fi
         fi
     fi
-    if [ ! -z ${matched_drv} ]; then
-        pfexec chmod 666 /tmp/${matched_drv}_info.tmp \
-            /tmp/${matched_drv}_dlink.tmp >/dev/null 2>&1
-    fi
 }
-
 
 #main
 find_driver 

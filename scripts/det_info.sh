@@ -23,7 +23,7 @@
 # Copyright (c) 2008, 2010, Oracle and/or its affiliates. All rights reserved.
 #
 # Description: Output the device detail information to a file 
-#              under /tmp
+#              under DDU_TMP_DIR
 #              $1 is the device path
 #              $2 class code, optional
 
@@ -48,7 +48,12 @@ trap 'clean_up' EXIT
 PATH=/usr/bin:/usr/sbin:$PATH; export PATH
 LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/ddu/lib; export LD_LIBRARY_PATH
 
-typeset    err_log=/tmp/ddu_err.log
+if [ -z "$DDU_TMP_DIR" ]; then
+    print -u1 "DDU_TMP_DIR is not set.."
+    exit 1
+fi
+
+typeset    err_log="${DDU_TMP_DIR}/ddu_err.log"
 
 #
 # Confirm the correct number of commnad line argument
@@ -89,12 +94,12 @@ if [ "$1" == "cpu" ] || [ "$1" == "memory" ]; then
     #
     #Output the file name for GUI
     #
-    print -u1 "/tmp/$o_file"
+    print -u1 "${DDU_TMP_DIR}/$o_file"
 
     if [ "$1" == "cpu" ]; then
-        ${bin_dir}/dmi_info -C >/tmp/$o_file 2>>$err_log
+        ${bin_dir}/dmi_info -C >"${DDU_TMP_DIR}/$o_file" 2>>$err_log
     else
-        ${bin_dir}/dmi_info -m >/tmp/$o_file 2>>$err_log
+        ${bin_dir}/dmi_info -m >"${DDU_TMP_DIR}/$o_file" 2>>$err_log
     fi
 else
     o_file=$(echo "$dev_path" | tr -d '/@,[]')
@@ -108,20 +113,18 @@ else
     #
     #Output the file name for GUI
     #
-    print -u1 "/tmp/$o_file" 
+    print -u1 "${DDU_TMP_DIR}/$o_file" 
 
-    ${bin_dir}/all_devices -v -d "$dev_path" >/tmp/$o_file 2>>$err_log
+    ${bin_dir}/all_devices -v -d "$dev_path" >"${DDU_TMP_DIR}/$o_file" 2>>$err_log
 fi
 
-chmod 666 /tmp/"$o_file" 2>/dev/null
-
-if [ "$(wc /tmp/"$o_file" 2>/dev/null | awk '{print $1}')" -le 1 ]; then
+if [ "$(wc "${DDU_TMP_DIR}/$o_file" 2>/dev/null | awk '{print $1}')" -le 1 ]; then
     if [[ ! -x ${bin_dir}/bat_detect ]]; then
         echo "$0: ${bin_dir}/bat_detect not found or not executable." \
              >>$err_log 
         exit 1
     fi
-    ${bin_dir}/bat_detect -d "$dev_path" >/tmp/$o_file 2>>$err_log
+    ${bin_dir}/bat_detect -d "$dev_path" >"${DDU_TMP_DIR}/$o_file" 2>>$err_log
 fi
 
 if [ -z "$2" ]; then
@@ -146,18 +149,18 @@ if [ $? == 0 ]; then
     fi
     hd_info=$(pfexec ${bin_dir}/hd_detect -c $d_path | sort | uniq)
     if [ ! -z "$hd_info" ]; then
-        disk_info=/tmp/disk_info_tmp
+        disk_info="${DDU_TMP_DIR}/disk_info_tmp"
         for i in "$hd_info"; do
             disk_name=$(echo $i | cut -d: -f1)
             disk_path=$(echo $i | cut -d: -f3)
             pfexec ${bin_dir}/hd_detect -m $disk_path > $disk_info
             disk_driver=$(cat  $disk_info | grep driver | awk -F: '{print $2}')
             disk_capacity=$(cat $disk_info | grep Capacity | awk -F: '{print $2}')    
-            print -u1 "DISK :    ${disk_name}" >>/tmp/$o_file
-            print -u1 "   Capacity :    ${disk_capacity}" >>/tmp/$o_file
-            print -u1 "   Driver   :    ${disk_driver}" >>/tmp/$o_file
-            print -u1 "   Path     :    ${disk_path}" >>/tmp/$o_file
-            print -u1 "    " >>/tmp/$o_file
+            print -u1 "DISK :    ${disk_name}" >>"${DDU_TMP_DIR}/$o_file"
+            print -u1 "   Capacity :    ${disk_capacity}" >>"${DDU_TMP_DIR}/$o_file"
+            print -u1 "   Driver   :    ${disk_driver}" >>"${DDU_TMP_DIR}/$o_file"
+            print -u1 "   Path     :    ${disk_path}" >>"${DDU_TMP_DIR}/$o_file"
+            print -u1 "    " >>"${DDU_TMP_DIR}/$o_file"
         done
     fi
 fi

@@ -609,6 +609,12 @@ class InnerWindow(object):
         from .media_window import Media_Window
         install_ok = False
 
+        ddu_tmp_dir = os.environ.get('DDU_TMP_DIR')
+        if ddu_tmp_dir is None:
+            raise Exception("DDU_TMP_DIR is not specified")
+
+        logfilepath = '%s/ddu_err.log' % (ddu_tmp_dir)
+
         if isinstance(self, Toplist_Window):
             window_pointer = self.win.super_win
             inner_window_p = self.win
@@ -683,7 +689,7 @@ class InnerWindow(object):
                  install_ok = True
             else:
                 try:
-                    logfile = open('/tmp/ddu_err.log', 'a')
+                    logfile = open(logfilepath, 'a')
                     logfile.write(str(output))
                     logfile.close()
                 except IOError:
@@ -713,7 +719,7 @@ class InnerWindow(object):
                 install_ok = True
             else:
                 try:
-                    logfile = open('/tmp/ddu_err.log', 'a')
+                    logfile = open(logfilepath, 'a')
                     logfile.write(str(output))
                     logfile.close()
                 except IOError:
@@ -739,7 +745,7 @@ class InnerWindow(object):
                 install_ok = True
             else:
                 try:
-                    logfile = open('/tmp/ddu_err.log', 'a')
+                    logfile = open(logfilepath, 'a')
                     logfile.write(str(output))
                     logfile.close()
                 except IOError:
@@ -766,7 +772,7 @@ class InnerWindow(object):
                 install_ok = True
             else:
                 try:
-                    logfile = open('/tmp/ddu_err.log', 'a')
+                    logfile = open(logfilepath, 'a')
                     logfile.write(str(output))
                     logfile.close()
                 except IOError:

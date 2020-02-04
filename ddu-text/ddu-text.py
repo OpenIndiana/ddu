@@ -40,13 +40,15 @@ ABSPATH = DDUCONFIG.get('general','abspath')
 
 sys.path.insert(0, "%s/ddu-text" % ABSPATH)
 
+from DDU.ddu_function import ddu_create_tmp_dir
+
 from utils.__init__ import _
 from utils.screen_list import start_screen_list
 from utils.main_window import MainWindow
 from utils.media_scan import MediaScreen
 from utils.device_scan import DeviceScreen
 
-LOG_LOCATION = "/tmp/ddu_log"
+LOG_LOCATION = ""
 LOG_FORMAT = "%(asctime)s - %(levelname)-8s: %(filename)s:%(lineno)d %(message)s"
 LOG_LEVEL = 5
 
@@ -77,6 +79,9 @@ def exit_text_installer():
 
 
 def setup_logging():
+    global LOG_LOCATION
+    ddu_tmp_dir = os.environ.get('DDU_TMP_DIR')
+    LOG_LOCATION = "%s/ddu_log" % (ddu_tmp_dir)
     logging.basicConfig(filename = LOG_LOCATION, level = LOG_LEVEL,
                         filemode = 'a', format = LOG_FORMAT)
     logging.addLevelName(5, "INPUT")
@@ -91,6 +96,7 @@ def make_screen_list(main_win):
 
 
 if __name__ == '__main__':
+    ddu_create_tmp_dir()
     setup_logging()
     try:
         initscr = setup_curses()

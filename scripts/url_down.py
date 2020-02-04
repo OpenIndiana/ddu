@@ -51,6 +51,11 @@ def downloadurl(url):
     """
     download file from http/ftp server
     """
+    ddu_tmp_dir = os.environ.get('DDU_TMP_DIR')
+    if ddu_tmp_dir is None:
+        print("DDU_TMP_DIR is not defined")
+        return 1
+
     url_file = os.path.basename(url).replace(" ", "").replace("\t", "")
     url_files = url_file.split(",")
     url_protocol = os.path.dirname(url)
@@ -58,7 +63,7 @@ def downloadurl(url):
         for file_down in url_files:
             try:
                 filename = os.path.join(url_protocol, file_down)
-                tempfile = os.path.join('/tmp', file_down)
+                tempfile = os.path.join(ddu_tmp_dir, file_down)
                 net_content = urllib.request.urlopen(filename)
                 doc_content = net_content.read()
                 local_file = open(tempfile, "wb+")
@@ -98,7 +103,7 @@ def downloadurl(url):
                                         remaining_part),
                                         file_down
                                         )
-                tempfile = os.path.join('/tmp', file_down)
+                tempfile = os.path.join(ddu_tmp_dir, file_down)
                 ftp = ftplib.FTP(ftp_server)
                 ftp.login(ftp_user, ftp_pass)
                 ftp.retrbinary('RETR ' + filename, open(tempfile,"wb").write)

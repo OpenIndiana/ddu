@@ -158,14 +158,14 @@ function p5i_install
         repo_url=$(echo ${lines_todo} | awk '{ print $3}' 2>/dev/null)
 
         print -u1 "Checking repo ${repo_name}......"
-        ./pkg_relate.sh list all > /tmp/repo.list
-        repo_check=$(cat /tmp/repo.list |  grep ${repo_url} 2>/dev/null)
+        ./pkg_relate.sh list all > "${DDU_TMP_DIR}/repo.list"
+        repo_check=$(cat "${DDU_TMP_DIR}/repo.list" |  grep ${repo_url} 2>/dev/null)
 
         if [ ! -z ${repo_check} ]; then
             repo_name=$(echo ${repo_check} | nawk '{ print $1 }')
         else
             print -u1 "Adding repo ${repo_name}......"
-            name_check=$(cat /tmp/repo.list |  grep "^${repo_name}" \
+            name_check=$(cat "${DDU_TMP_DIR}/repo.list" |  grep "^${repo_name}" \
                 | nawk '{ print $1 }' 2>/dev/null)        
             if [ -z ${name_check} ]; then
                 ./pkg_relate.sh add ${repo_name} ${repo_url}
@@ -192,22 +192,16 @@ function p5i_install
 function clean_up
 {
     {
-        if [ -d /tmp/lofi_$$ ]; then
-            cd $base_dir
-            pfexec /usr/sbin/umount /tmp/lofi_$$
-            pfexec /usr/sbin/lofiadm -d $lofi_file
-            rm -rf /tmp/lofi_$$
-        fi
-        if [ -s /tmp/spe_repo_store ]; then
+        if [ -s "${DDU_TMP_DIR}/spe_repo_store" ]; then
            #
            # Restore original repo
            # 
-           arg1=$(head -1 /tmp/spe_repo_store)
-           arg2=$(tail -1 /tmp/spe_repo_store)
+           arg1=$(head -1 "${DDU_TMP_DIR}/spe_repo_store")
+           arg2=$(tail -1 "${DDU_TMP_DIR}/spe_repo_store")
            if [ ! -z $arg1 ] && [ ! -z $arg2 ]; then
                ./pkg_relate.sh restore "$arg1" "$arg2"
            fi
-           rm -f /tmp/spe_repo_store
+           rm -f ${DDU_TMP_DIR}/spe_repo_store
         fi
               
     } >/dev/null 2>&1
@@ -218,6 +212,11 @@ function clean_up
 
 PATH=/usr/bin:/usr/sbin:$PATH; export PATH
 LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/ddu/lib; export LD_LIBRARY_PATH
+
+if [ -z "$DDU_TMP_DIR" ]; then
+    print -u1 "DDU_TMP_DIR is not set.."
+    exit 1
+fi
 
 #
 # Confirm the correct number of commnad line argument
