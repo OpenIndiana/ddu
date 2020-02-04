@@ -156,10 +156,10 @@ function network
     typeset    NIC_keywords_file=$base_dir/NIC_keywords
     typeset    line total_IDs result devid
 
-    NIC_info_file=/tmp/dvt_network_info_file
+    NIC_info_file=${DDU_TMP_DIR}/dvt_network_info_file
 
-    temp_file=/tmp/dvt_network_temp
-    temp_file_2=/tmp/dvt_network_temp_2
+    temp_file=${DDU_TMP_DIR}/dvt_network_temp
+    temp_file_2=${DDU_TMP_DIR}/dvt_network_temp_2
 
     # Get the keywords of NIC.
     # CLASS=00020000 indicates a device is a NIC.
@@ -231,12 +231,12 @@ function storage
     typeset inst 
 
     index=100
-    c_file=/tmp/str_ctrl_file
-    c_file1=/tmp/str_ctrl_file_1
-    c_file2=/tmp/str_ctrl_file_2
-    c_file3=/tmp/str_ctrl_file_3
-    c_file4=/tmp/str_ctrl_file_4
-    c_file5=/tmp/str_ctrl_file_5
+    c_file=${DDU_TMP_DIR}/str_ctrl_file
+    c_file1=${DDU_TMP_DIR}/str_ctrl_file_1
+    c_file2=${DDU_TMP_DIR}/str_ctrl_file_2
+    c_file3=${DDU_TMP_DIR}/str_ctrl_file_3
+    c_file4=${DDU_TMP_DIR}/str_ctrl_file_4
+    c_file5=${DDU_TMP_DIR}/str_ctrl_file_5
     class_code_1="CLASS=000100|CLASS=000101|CLASS=000104|CLASS=000105"
     class_code_2="|CLASS=000106|CLASS=000107|CLASS=000180|CLASS=000c04"
     str_class_code=${class_code_1}${class_code_2}
@@ -352,9 +352,9 @@ function cd_dvd
     typeset dev_pci_path ctl_pci_path_1
 
     index=400
-    dvt_cd_dev_tmpfile=/tmp/dvt_cd_dev_tmpfile
-    dvt_cd_ctl_tmpfile=/tmp/dvt_cd_ctl_tmpfile
-    dvt_cd_ctl_tmpfile1=/tmp/dvt_cd_ctl_tmpfile1
+    dvt_cd_dev_tmpfile=${DDU_TMP_DIR}/dvt_cd_dev_tmpfile
+    dvt_cd_ctl_tmpfile=${DDU_TMP_DIR}/dvt_cd_ctl_tmpfile
+    dvt_cd_ctl_tmpfile1=${DDU_TMP_DIR}/dvt_cd_ctl_tmpfile1
     pfexec ${bin_dir}/all_devices -v -t ddi_block:cdrom | sort | uniq \
         |awk -F')' '{print $2}' > $dvt_cd_dev_tmpfile
     pfexec rm -f $dvt_cd_ctl_tmpfile
@@ -399,7 +399,7 @@ function usb
 
     index=500
     usb_class="CLASS=000c0300|CLASS=000c0310|CLASS=000c0320"
-    temp_file1=/tmp/dvt_tmp_file1
+    temp_file1=${DDU_TMP_DIR}/dvt_tmp_file1
     
     cat $ctl_file | egrep -e ${usb_class} > $temp_file1
     for i in $(cat $temp_file1); do
@@ -451,9 +451,9 @@ function battery
     typeset driver t_s  t_s1
 
     index=700
-    battery_tmpfile=/tmp/battery_tmpfile
-    battery_tmpfile1=/tmp/battery_tmpfile1
-    battery_tmpfile2=/tmp/battery_tmpfile2
+    battery_tmpfile=${DDU_TMP_DIR}/battery_tmpfile
+    battery_tmpfile1=${DDU_TMP_DIR}/battery_tmpfile1
+    battery_tmpfile2=${DDU_TMP_DIR}/battery_tmpfile2
     if [ -f ${bin_dir}/bat_detect ]; then
         ${bin_dir}/bat_detect -l > $battery_tmpfile 2>/dev/null
         for i in $(cat $battery_tmpfile); do
@@ -500,8 +500,8 @@ function cpu
 {
     typeset index cpu_tmpfile cpu_tmpfile1 cpu_num cpu_type cpu_core
     index=800
-    cpu_tmpfile=/tmp/cpu_tmpfile
-    cpu_tmpfile1=/tmp/cpu_tmpfile1
+    cpu_tmpfile=${DDU_TMP_DIR}/cpu_tmpfile
+    cpu_tmpfile1=${DDU_TMP_DIR}/cpu_tmpfile1
     cpu_num=$(${bin_dir}/dmi_info -C | grep "CPU Number" | cut -d":" -f2)
     cpu_type=$(${bin_dir}/dmi_info -C | grep "CPU Type" | cut -d":" -f2)
     cpu_core=$(${bin_dir}/dmi_info -C | grep "cores" | cut -d":" -f2)
@@ -575,12 +575,10 @@ function init
     pfexec ${bin_dir}/all_devices -c | egrep -v ${e_class} \
         > $ctl_file
     #
-    # Make /tmp/ddu_err.log writable for every user
+    # Create ${DDU_TMP_DIR}/ddu_err.log
     #
-    if [ -f /tmp/ddu_err.log ]; then
-        pfexec chmod 666 /tmp/ddu_err.log
-    else
-        touch /tmp/ddu_err.log; chmod 666 /tmp/ddu_err.log
+    if [ ! -f ${DDU_TMP_DIR}/ddu_err.log ]; then
+        touch ${DDU_TMP_DIR}/ddu_err.log
     fi
 }
 
@@ -611,10 +609,14 @@ if (( $# != 1 )); then
     exit 1
 fi
 
+if [ -z "$DDU_TMP_DIR" ]; then
+   exit 1
+fi
+
 typeset -r base_dir=$(dirname $0)
 typeset -r platform=$(uname -p)
 typeset -r bin_dir=$(echo $base_dir |sed 's/scripts$/bin\//')"$platform"
-typeset    ctl_file=/tmp/dvt_ctl_file
+typeset    ctl_file=${DDU_TMP_DIR}/dvt_ctl_file
 #
 # net_stat can be 0,1,2 or 3 
 # 0:can connet to IPS 

@@ -43,7 +43,11 @@ cd $(dirname $0)
 typeset -r base_dir=$(pwd)
 typeset -r platform=$(uname -p)
 
-typeset    dc_dir=/tmp/dc.$$
+if [ -z "$DDU_TMP_DIR" ]; then
+  exit 1;
+fi
+
+typeset    dc_dir=${DDU_TMP_DIR}/dc.$$
 typeset    f_name=${dc_dir}/$(basename $1)
 typeset -r file_type=("ZIP archive" "bzip2" "gzip" "compressed data" "tar archive")
 typeset -r action=("unzip" "bunzip2" "gzip -d" "compress -d" "tar -xvf") 
@@ -187,8 +191,8 @@ EOF
 function clean_up
 {
     {
-        if [ -s $dc_dir ] && [ $dc_dir != "/tmp/dc.$$" ]; then
-            rm -rf /tmp/dc.$$
+        if [ -s $dc_dir ] && [ $dc_dir != "${DDU_TMP_DIR}/dc.$$" ]; then
+            rm -rf ${DDU_TMP_DIR}/dc.$$
         fi
     } >/dev/null 2>&1
 }

@@ -52,20 +52,26 @@ function clean_up
             rm -f $f_dir_file
          fi
          if [ -s $pkg_loc ]; then
-             d_name=$(echo $pkg_loc | cut -d'/' -f3)
-             cd /tmp; rm -rf $d_name
+            d_name=$(dirname $pkg_loc)
+            case "$d_name" in "${DDU_TMP_DIR}/"*)
+                rm -fr "$d_name";
+            esac
          fi
     } >/dev/null 2>&1
 }
 
 
 #Main()
+PATH=/usr/bin:/usr/sbin:$PATH; export PATH
+LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/ddu/lib; export LD_LIBRARY_PATH
+
+if [ -z "$DDU_TMP_DIR" ]; then
+   print -u2 "\n... $0: DDU_TMP_DIR is not set."
+   exit 1
+fi
 
 trap 'clean_up;exit 10' KILL INT
 trap 'clean_up' EXIT
-
-PATH=/usr/bin:/usr/sbin:$PATH; export PATH
-LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/ddu/lib; export LD_LIBRARY_PATH
 
 #
 # Confirm the correct number of commnad line argument
@@ -112,7 +118,7 @@ if [[ ! -x $base_dir/url_down.py ]]; then
 fi
 
 typeset    pkg_info pkg_type pkg_loc
-typeset -r f_dir_file=/tmp/f_dir_file_$$
+typeset -r f_dir_file=${DDU_TMP_DIR}/f_dir_file_$$
 
 
 try_time=0

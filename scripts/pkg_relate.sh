@@ -46,15 +46,15 @@ builtin printf
 #
 function fetch_repo
 {
-    pfexec pkg publisher -H > /tmp/repo_temp_store 2>>$err_log
+    pfexec pkg publisher -H > "${DDU_TMP_DIR}/repo_temp_store" 2>>$err_log
     if [ $? -ne 0 ]; then
         print -u2 "$0: Error found when getting repo list"
         exit 1
     fi
-    repo_list=$(cat /tmp/repo_temp_store | cut -d " " -f 1 2>/dev/null)
-    repo_url=$(cat /tmp/repo_temp_store | nawk -F"http://" '{ print $2 }' \
+    repo_list=$(cat "${DDU_TMP_DIR}/repo_temp_store" | cut -d " " -f 1 2>/dev/null)
+    repo_url=$(cat "${DDU_TMP_DIR}/repo_temp_store" | nawk -F"http://" '{ print $2 }' \
         2>/dev/null)
-    repo_count=$(cat /tmp/repo_temp_store | wc -l 2>/dev/null)
+    repo_count=$(cat "${DDU_TMP_DIR}/repo_temp_store" | wc -l 2>/dev/null)
 }
 
 #
@@ -90,21 +90,21 @@ function list
         fetch_repo
         print_repo
     elif [ ${min_argu_1} == "default" ]; then #list default repo
-        pfexec pkg publisher -HP > /tmp/repo_default_store 2>>$err_log
-        repo_list=$(cat /tmp/repo_default_store | cut -d " " -f 1 2>/dev/null)
-        repo_url=$(cat /tmp/repo_default_store | nawk -F"http://" '{ print $2 }' \
+        pfexec pkg publisher -HP > "${DDU_TMP_DIR}/repo_default_store" 2>>$err_log
+        repo_list=$(cat "${DDU_TMP_DIR}/repo_default_store" | cut -d " " -f 1 2>/dev/null)
+        repo_url=$(cat "${DDU_TMP_DIR}/repo_default_store" | nawk -F"http://" '{ print $2 }' \
             2>/dev/null)
-        repo_count=$(cat /tmp/repo_default_store | wc -l 2>/dev/null)
+        repo_count=$(cat "${DDU_TMP_DIR}/repo_default_store" | wc -l 2>/dev/null)
         print_repo
     elif [ ! -z ${min_argu_1} ]; then #list a specific repo
 	repo_name=${min_argu_1}
         pfexec pkg publisher ${repo_name} | grep "URI" \
-            > /tmp/repo_spe_store 2>>$err_log
+            > "${DDU_TMP_DIR}/repo_spe_store" 2>>$err_log
         if [  $? != 0 ]; then
             print -u2 "$0: ${repo_name} is not a valid repo name!"
             exit 1
         fi
-        repo_url=$(cat /tmp/repo_spe_store | nawk -F"http://" '{ print $2 }' \
+        repo_url=$(cat "${DDU_TMP_DIR}/repo_spe_store" | nawk -F"http://" '{ print $2 }' \
             2>/dev/null)
 	for repo_urli in ${repo_url}
 	do
@@ -132,11 +132,11 @@ function search
     
             pfexec pkg search -p -s "${repo_urli}" "${min_argu_1}" \
                2>>/dev/null | nawk -F"@" '{ print $1 }' | \
-               nawk -F"pkg:/" '{ print $2 }' | uniq > /tmp/pkg_candi
+               nawk -F"pkg:/" '{ print $2 }' | uniq > "${DDU_TMP_DIR}/pkg_candi"
 
-            pkgname=$(grep driver /tmp/pkg_candi | tail -1 2>/dev/null)
+            pkgname=$(grep driver "${DDU_TMP_DIR}/pkg_candi" | tail -1 2>/dev/null)
             if [ -z ${pkgname} ]; then
-                pkgname=$(tail -1 /tmp/pkg_candi 2>/dev/null)
+                pkgname=$(tail -1 "${DDU_TMP_DIR}/pkg_candi" 2>/dev/null)
             fi
 
             if [[ $? != 0  ||  -z ${pkgname} ]]; then
@@ -178,11 +178,11 @@ function search
 
             pfexec pkg search -p -s "${repo_urli_i}" "${min_argu_1}" \
               2>>/dev/null | nawk -F"@" '{ print $1 }' | \
-              nawk -F"pkg:/" '{ print $2 }' | uniq > /tmp/pkg_candi
+              nawk -F"pkg:/" '{ print $2 }' | uniq > "${DDU_TMP_DIR}/pkg_candi"
 
-            pkgname=$(grep driver /tmp/pkg_candi | tail -1 2>/dev/null)
+            pkgname=$(grep driver "${DDU_TMP_DIR}/pkg_candi" | tail -1 2>/dev/null)
             if [ -z ${pkgname} ]; then
-                pkgname=$(tail -1 /tmp/pkg_candi 2>/dev/null)
+                pkgname=$(tail -1 "${DDU_TMP_DIR}/pkg_candi" 2>/dev/null)
             fi
             if [ ! -z ${pkgname} ]; then
                 break
@@ -261,13 +261,13 @@ function modify
     publisher_url=${min_argu_2}
 
      LC_ALL="C" pfexec pkg publisher ${publisher_name} > \
-        /tmp/spe_repo_temp_store 2>>$err_log
+        "${DDU_TMP_DIR}/spe_repo_temp_store" 2>>$err_log
 
 
-    origin_uri=`cat /tmp/spe_repo_temp_store | grep "Origin URI" | \
+    origin_uri=`cat "${DDU_TMP_DIR}/spe_repo_temp_store" | grep "Origin URI" | \
                 nawk -F ": " '{ print $2 }' 2>>$err_log`
 
-    mirror_uris=`cat /tmp/spe_repo_temp_store | grep "Mirror URI" | \
+    mirror_uris=`cat "${DDU_TMP_DIR}/spe_repo_temp_store" | grep "Mirror URI" | \
                 nawk -F ": " '{ print $2 }' 2>>$err_log`
 
     store_repo=" -O "${origin_uri}
@@ -295,12 +295,12 @@ function modify
             print -u2 "${publisher_name} ${publisher_url}"
             exit 1
         else
-            echo ${store_repo} > /tmp/spe_repo_store
-            echo ${extra_repo} >> /tmp/spe_repo_store
+            echo ${store_repo} > "${DDU_TMP_DIR}/spe_repo_store"
+            echo ${extra_repo} >> "${DDU_TMP_DIR}/spe_repo_store"
         fi
     else
-        echo ${store_repo} > /tmp/spe_repo_store
-        echo ${extra_repo} >> /tmp/spe_repo_store
+        echo ${store_repo} > "${DDU_TMP_DIR}/spe_repo_store"
+        echo ${extra_repo} >> "${DDU_TMP_DIR}/spe_repo_store"
     fi
 }
 
@@ -320,9 +320,9 @@ function restore
 function clean_up
 {
     {
-        rm -f  /tmp/repo_temp_store /tmp/repo_default_store \
-               /tmp/repo_spe_store \
-               /tmp/spe_repo_temp_store /tmp/pkg_candi
+        rm -f "${DDU_TMP_DIR}/repo_temp_store" "${DDU_TMP_DIR}/repo_default_store" \
+               "${DDU_TMP_DIR}/repo_spe_store" \
+               "${DDU_TMP_DIR}/spe_repo_temp_store" "${DDU_TMP_DIR}/pkg_candi"
     } >/dev/null 2>&1
 }
 
@@ -331,6 +331,11 @@ function clean_up
 
 PATH=/usr/bin:/usr/sbin:$PATH; export PATH
 LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/ddu/lib; export LD_LIBRARY_PATH
+
+if [ -z "$DDU_TMP_DIR" ]; then
+    print -u1 "DDU_TMP_DIR is not set.."
+    exit 1
+fi
 
 trap 'clean_up;exit 10' KILL INT
 trap 'clean_up' EXIT
@@ -362,7 +367,7 @@ typeset repo_list repo_url repo_count
 typeset repo_listi repo_urli repo_name pkgname 
 typeset depend_str pkg_ver pkgcondidate pakcage_found
 typeset index
-typeset  err_log=/tmp/ddu_err.log
+typeset  err_log="${DDU_TMP_DIR}/ddu_err.log"
 
 #
 # Copy /var/pkg to /tmp if booted off a ramdisk

@@ -24,7 +24,3 @@
 """
 This module provide DDU common library
 """
-import os
-
-if os.path.exists("/tmp/ddu_err.log"):
-    os.remove("/tmp/ddu_err.log")
