@@ -62,7 +62,6 @@ try:
     locale.bindtextdomain('ddu', '%s/i18n' % ABSPATH)
     gettext.bindtextdomain('ddu','%s/i18n' % ABSPATH)
     gettext.textdomain('ddu')
-    Gtk.glade.bindtextdomain('ddu','%s/i18n' % ABSPATH)
 except AttributeError:
     pass
 
