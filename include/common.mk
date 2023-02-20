@@ -42,7 +42,7 @@ SORT=/usr/bin/sort
 TOUCH=/usr/bin/touch
 TR=/usr/bin/tr
 
-PYTHON_VERSION = 3.5
+PYTHON_VERSION = 3.9
 
 PYV = $(subst .,,$(PYTHON_VERSION))
 
