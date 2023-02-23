@@ -95,6 +95,7 @@ $(EXECATTRD)/%: %
 
 $(PYTHON_VENDOR_DDU)/%: %
 	$(INSTALL) $< $@
+	python3 -m compileall $< $@
 
 $(USRDDUDATA)/%: %
 	$(INSTALL) $< $@
